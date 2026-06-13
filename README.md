@@ -24,7 +24,7 @@ Before starting, make sure the new computer has the following installed:
 
 2. **Navigate into the project directory**:
    ```bash
-   cd "English AI Study App"
+   cd mobile-app-flutter-project
    ```
 
 3. **Install Dependencies**:
