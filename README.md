@@ -19,12 +19,12 @@ Before starting, make sure the new computer has the following installed:
 1. **Clone the repository**:
    Open a terminal on the new computer and clone the project:
    ```bash
-   git clone https://github.com/PANHA006/repository-name.git
+   git clone https://github.com/PANHA006/mobile-app-flutter-project
    ```
 
 2. **Navigate into the project directory**:
    ```bash
-   cd "English AI Study App"
+   cd mobile-app-flutter-project
    ```
 
 3. **Install Dependencies**:
