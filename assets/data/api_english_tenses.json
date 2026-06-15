@@ -1,0 +1,686 @@
+[
+  {
+    "tense_name": "Present Simple",
+    "meaning_kh": "បច្ចុប្បន្នកាលធម្មតា",
+    "usage": "Used for habits, general truths, and regular actions.",
+    "usage_kh": "ប្រើសម្រាប់ទម្លាប់ ការពិតទូទៅ និងសកម្មភាពជាប្រចាំ។",
+    "positive": {
+      "formula": "S + V1 (s/es)",
+      "examples": [
+        {
+          "sentence": "I eat breakfast at 7.",
+          "meaning_kh": "ខ្ញុំញ៉ាំអាហារពេលព្រឹកនៅម៉ោង ៧។"
+        },
+        {
+          "sentence": "She reads a book every day.",
+          "meaning_kh": "នាងអានសៀវភៅរៀងរាល់ថ្ងៃ។"
+        },
+        {
+          "sentence": "They play football on Saturdays.",
+          "meaning_kh": "ពួកគេលេងបាល់ទាត់នៅថ្ងៃសៅរ៍។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + do/does + not + V1",
+      "examples": [
+        {
+          "sentence": "I do not eat breakfast at 7.",
+          "meaning_kh": "ខ្ញុំមិនញ៉ាំអាហារពេលព្រឹកនៅម៉ោង ៧ទេ។"
+        },
+        {
+          "sentence": "She does not read a book every day.",
+          "meaning_kh": "នាងមិនអានសៀវភៅរៀងរាល់ថ្ងៃទេ។"
+        },
+        {
+          "sentence": "They do not play football on Saturdays.",
+          "meaning_kh": "ពួកគេមិនលេងបាល់ទាត់នៅថ្ងៃសៅរ៍ទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Do/Does + S + V1?",
+      "examples": [
+        {
+          "sentence": "Do I eat breakfast at 7?",
+          "meaning_kh": "តើខ្ញុំញ៉ាំអាហារពេលព្រឹកនៅម៉ោង ៧ មែនទេ?"
+        },
+        {
+          "sentence": "Does she read a book every day?",
+          "meaning_kh": "តើនាងអានសៀវភៅរៀងរាល់ថ្ងៃមែនទេ?"
+        },
+        {
+          "sentence": "Do they play football on Saturdays?",
+          "meaning_kh": "តើពួកគេលេងបាល់ទាត់នៅថ្ងៃសៅរ៍មែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Present Continuous",
+    "meaning_kh": "បច្ចុប្បន្នកាលកំពុងបន្ត",
+    "usage": "Used for actions happening right now.",
+    "usage_kh": "ប្រើសម្រាប់សកម្មភាពដែលកំពុងកើតឡើងនៅពេលនេះ។",
+    "positive": {
+      "formula": "S + am/is/are + V-ing",
+      "examples": [
+        {
+          "sentence": "I am eating breakfast right now.",
+          "meaning_kh": "ខ្ញុំកំពុងញ៉ាំអាហារពេលព្រឹកនៅពេលនេះ。"
+        },
+        {
+          "sentence": "She is reading a book at the moment.",
+          "meaning_kh": "នាងកំពុងអានសៀវភៅនៅពេលនេះ។"
+        },
+        {
+          "sentence": "They are playing football now.",
+          "meaning_kh": "ពួកគេកំពុងលេងបាល់ទាត់ឥឡូវនេះ。"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + am/is/are + not + V-ing",
+      "examples": [
+        {
+          "sentence": "I am not eating breakfast right now.",
+          "meaning_kh": "ខ្ញុំមិនកំពុងញ៉ាំអាហារពេលព្រឹកនៅពេលនេះទេ។"
+        },
+        {
+          "sentence": "She is not reading a book at the moment.",
+          "meaning_kh": "នាងមិនកំពុងអានសៀវភៅនៅពេលនេះទេ។"
+        },
+        {
+          "sentence": "They are not playing football now.",
+          "meaning_kh": "ពួកគេមិនកំពុងលេងបាល់ទាត់ឥឡូវនេះទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Am/Is/Are + S + V-ing?",
+      "examples": [
+        {
+          "sentence": "Am I eating breakfast right now?",
+          "meaning_kh": "តើខ្ញុំកំពុងញ៉ាំអាហារពេលព្រឹកនៅពេលនេះមែនទេ?"
+        },
+        {
+          "sentence": "Is she reading a book at the moment?",
+          "meaning_kh": "តើនាងកំពុងអានសៀវភៅនៅពេលនេះមែនទេ?"
+        },
+        {
+          "sentence": "Are they playing football now?",
+          "meaning_kh": "តើពួកគេកំពុងលេងបាល់ទាត់ឥឡូវនេះមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Present Perfect",
+    "meaning_kh": "បច្ចុប្បន្នកាលបរិបូណ៌",
+    "usage": "Used for actions that happened in the past but have a connection to the present.",
+    "usage_kh": "ប្រើសម្រាប់សកម្មភាពដែលបានកើតឡើងក្នុងអតីតកាល ប៉ុន្តែមានការទាក់ទងនឹងបច្ចុប្បន្ន។",
+    "positive": {
+      "formula": "S + have/has + V3",
+      "examples": [
+        {
+          "sentence": "I have eaten breakfast already.",
+          "meaning_kh": "ខ្ញុំបានញ៉ាំអាហារពេលព្រឹករួចហើយ។"
+        },
+        {
+          "sentence": "She has read that book twice.",
+          "meaning_kh": "នាងបានអានសៀវភៅនោះពីរដងហើយ។"
+        },
+        {
+          "sentence": "They have played football before.",
+          "meaning_kh": "ពួកគេធ្លាប់លេងបាល់ទាត់ពីមុនមក។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + have/has + not + V3",
+      "examples": [
+        {
+          "sentence": "I have not eaten breakfast yet.",
+          "meaning_kh": "ខ្ញុំមិនទាន់បានញ៉ាំអាហារពេលព្រឹកនៅឡើយទេ។"
+        },
+        {
+          "sentence": "She has not read that book yet.",
+          "meaning_kh": "នាងមិនទាន់បានអានសៀវភៅនោះនៅឡើយទេ។"
+        },
+        {
+          "sentence": "They have not played football before.",
+          "meaning_kh": "ពួកគេមិនដែលលេងបាល់ទាត់ពីមុនមកទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Have/Has + S + V3?",
+      "examples": [
+        {
+          "sentence": "Have I eaten breakfast already?",
+          "meaning_kh": "តើខ្ញុំបានញ៉ាំអាហារពេលព្រឹករួចហើយមែនទេ?"
+        },
+        {
+          "sentence": "Has she read that book twice?",
+          "meaning_kh": "តើនាងបានអានសៀវភៅនោះពីរដងហើយមែនទេ?"
+        },
+        {
+          "sentence": "Have they played football before?",
+          "meaning_kh": "តើពួកគេធ្លាប់លេងបាល់ទាត់ពីមុនមកមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Present Perfect Continuous",
+    "meaning_kh": "បច្ចុប្បន្នកាលបរិបូណ៌កំពុងបន្ត",
+    "usage": "Used to show that an action started in the past and has continued up to the present moment.",
+    "usage_kh": "ប្រើដើម្បីបង្ហាញថាសកម្មភាពមួយបានចាប់ផ្តើមក្នុងអតីតកាល ហើយបានបន្តរហូតមកដល់បច្ចុប្បន្ន។",
+    "positive": {
+      "formula": "S + have/has + been + V-ing",
+      "examples": [
+        {
+          "sentence": "I have been eating breakfast for ten minutes.",
+          "meaning_kh": "ខ្ញុំបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីហើយ។"
+        },
+        {
+          "sentence": "She has been reading a book since morning.",
+          "meaning_kh": "នាងបានកំពុងអានសៀវភៅតាំងពីព្រឹកមកម៉្លេះ។"
+        },
+        {
+          "sentence": "They have been playing football for an hour.",
+          "meaning_kh": "ពួកគេបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងហើយ។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + have/has + not + been + V-ing",
+      "examples": [
+        {
+          "sentence": "I have not been eating breakfast for ten minutes.",
+          "meaning_kh": "ខ្ញុំមិនបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីទេ។"
+        },
+        {
+          "sentence": "She has not been reading a book since morning.",
+          "meaning_kh": "នាងមិនបានកំពុងអានសៀវភៅតាំងពីព្រឹកមកទេ។"
+        },
+        {
+          "sentence": "They have not been playing football for an hour.",
+          "meaning_kh": "ពួកគេមិនបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Have/Has + S + been + V-ing?",
+      "examples": [
+        {
+          "sentence": "Have I been eating breakfast for ten minutes?",
+          "meaning_kh": "តើខ្ញុំបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីហើយមែនទេ?"
+        },
+        {
+          "sentence": "Has she been reading a book since morning?",
+          "meaning_kh": "តើនាងបានកំពុងអានសៀវភៅតាំងពីព្រឹកមកម៉្លេះមែនទេ?"
+        },
+        {
+          "sentence": "Have they been playing football for an hour?",
+          "meaning_kh": "តើពួកគេបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងហើយមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Simple Past",
+    "meaning_kh": "អតីតកាលធម្មតា",
+    "usage": "Used for completed actions in the past.",
+    "usage_kh": "ប្រើសម្រាប់សកម្មភាពដែលបានបញ្ចប់ទាំងស្រុងក្នុងអតីតកាល។",
+    "positive": {
+      "formula": "S + V2",
+      "examples": [
+        {
+          "sentence": "I ate breakfast yesterday.",
+          "meaning_kh": "ខ្ញុំបានញ៉ាំអាហារពេលព្រឹកកាលពីម្សិលមិញ។"
+        },
+        {
+          "sentence": "She read a book last night.",
+          "meaning_kh": "នាងបានអានសៀវភៅកាលពីយប់មិញ។"
+        },
+        {
+          "sentence": "They played football last Saturday.",
+          "meaning_kh": "ពួកគេបានលេងបាល់ទាត់កាលពីថ្ងៃសៅរ៍មុន។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + did + not + V1",
+      "examples": [
+        {
+          "sentence": "I did not eat breakfast yesterday.",
+          "meaning_kh": "ខ្ញុំមិនបានញ៉ាំអាហារពេលព្រឹកកាលពីម្សិលមិញទេ។"
+        },
+        {
+          "sentence": "She did not read a book last night.",
+          "meaning_kh": "នាងមិនបានអានសៀវភៅកាលពីយប់មិញទេ។"
+        },
+        {
+          "sentence": "They did not play football last Saturday.",
+          "meaning_kh": "ពួកគេមិនបានលេងបាល់ទាត់កាលពីថ្ងៃសៅរ៍មុនទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Did + S + V1?",
+      "examples": [
+        {
+          "sentence": "Did I eat breakfast yesterday?",
+          "meaning_kh": "តើខ្ញុំបានញ៉ាំអាហារពេលព្រឹកកាលពីម្សិលមិញមែនទេ?"
+        },
+        {
+          "sentence": "Did she read a book last night?",
+          "meaning_kh": "តើនាងបានអានសៀវភៅកាលពីយប់មិញមែនទេ?"
+        },
+        {
+          "sentence": "Did they play football last Saturday?",
+          "meaning_kh": "តើពួកគេបានលេងបាល់ទាត់កាលពីថ្ងៃសៅរ៍មុនមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Past Continuous",
+    "meaning_kh": "អតីតកាលកំពុងបន្ត",
+    "usage": "Used for an action that was in progress at a specific time in the past.",
+    "usage_kh": "ប្រើសម្រាប់សកម្មភាពដែលកំពុងតែបន្តកើតឡើងនៅពេលជាក់លាក់ណាមួយក្នុងអតីតកាល។",
+    "positive": {
+      "formula": "S + was/were + V-ing",
+      "examples": [
+        {
+          "sentence": "I was eating breakfast when you called.",
+          "meaning_kh": "ខ្ញុំកំពុងតែញ៉ាំអាហារពេលព្រឹកនៅពេលអ្នកទូរស័ព្ទមក។"
+        },
+        {
+          "sentence": "She was reading a book at 8 PM yesterday.",
+          "meaning_kh": "នាងកំពុងតែអានសៀវភៅនៅម៉ោង ៨ យប់កាលពីម្សិលមិញ។"
+        },
+        {
+          "sentence": "They were playing football when it started to rain.",
+          "meaning_kh": "ពួកគេកំពុងតែលេងបាល់ទាត់នៅពេលមេឃចាប់ផ្តើមភ្លៀង។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + was/were + not + V-ing",
+      "examples": [
+        {
+          "sentence": "I was not eating breakfast when you called.",
+          "meaning_kh": "ខ្ញុំមិនកំពុងតែញ៉ាំអាហារពេលព្រឹកនៅពេលអ្នកទូរស័ព្ទមកទេ។"
+        },
+        {
+          "sentence": "She was not reading a book at 8 PM yesterday.",
+          "meaning_kh": "នាងមិនកំពុងតែអានសៀវភៅនៅម៉ោង ៨ យប់កាលពីម្សិលមិញទេ។"
+        },
+        {
+          "sentence": "They were not playing football when it started to rain.",
+          "meaning_kh": "ពួកគេមិនកំពុងតែលេងបាល់ទាត់នៅពេលមេឃចាប់ផ្តើមភ្លៀងទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Was/Were + S + V-ing?",
+      "examples": [
+        {
+          "sentence": "Was I eating breakfast when you called?",
+          "meaning_kh": "តើខ្ញុំកំពុងតែញ៉ាំអាហារពេលព្រឹកនៅពេលអ្នកទូរស័ព្ទមកមែនទេ?"
+        },
+        {
+          "sentence": "Was she reading a book at 8 PM yesterday?",
+          "meaning_kh": "តើនាងកំពុងតែអានសៀវភៅនៅម៉ោង ៨ យប់កាលពីម្សិលមិញមែនទេ?"
+        },
+        {
+          "sentence": "Were they playing football when it started to rain?",
+          "meaning_kh": "តើពួកគេកំពុងតែលេងបាល់ទាត់នៅពេលមេឃចាប់ផ្តើមភ្លៀងមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Past Perfect",
+    "meaning_kh": "អតីតកាលបរិបូណ៌",
+    "usage": "Used to show that one action happened before another action in the past.",
+    "usage_kh": "ប្រើដើម្បីបង្ហាញថាសកម្មភាពមួយបានកើតឡើងមុនសកម្មភាពមួយទៀតក្នុងអតីតកាល។",
+    "positive": {
+      "formula": "S + had + V3",
+      "examples": [
+        {
+          "sentence": "I had eaten breakfast before I went to work.",
+          "meaning_kh": "ខ្ញុំបានញ៉ាំអាហារពេលព្រឹករួចហើយ មុនពេលខ្ញុំទៅធ្វើការ។"
+        },
+        {
+          "sentence": "She had read the book before the exam started.",
+          "meaning_kh": "នាងបានអានសៀវភៅនោះរួចហើយ មុនពេលការប្រឡងចាប់ផ្តើម។"
+        },
+        {
+          "sentence": "They had played football before it grew dark.",
+          "meaning_kh": "ពួកគេបានលេងបាល់ទាត់រួចហើយ មុនពេលមេឃងងឹត។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + had + not + V3",
+      "examples": [
+        {
+          "sentence": "I had not eaten breakfast before I went to work.",
+          "meaning_kh": "ខ្ញុំមិនទាន់បានញ៉ាំអាហារពេលព្រឹកទេ មុនពេលខ្ញុំទៅធ្វើការ។"
+        },
+        {
+          "sentence": "She had not read the book before the exam started.",
+          "meaning_kh": "នាងមិនទាន់បានអានសៀវភៅនោះទេ មុនពេលការប្រឡងចាប់ផ្តើម។"
+        },
+        {
+          "sentence": "They had not played football before it grew dark.",
+          "meaning_kh": "ពួកគេមិនទាន់បានលេងបាល់ទាត់ទេ មុនពេលមេឃងងឹត។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Had + S + V3?",
+      "examples": [
+        {
+          "sentence": "Had I eaten breakfast before I went to work?",
+          "meaning_kh": "តើខ្ញុំបានញ៉ាំអាហារពេលព្រឹករួចហើយមែនទេ មុនពេលខ្ញុំទៅធ្វើការ?"
+        },
+        {
+          "sentence": "Had she read the book before the exam started?",
+          "meaning_kh": "តើនាងបានអានសៀវភៅនោះរួចហើយមែនទេ មុនពេលការប្រឡងចាប់ផ្តើម?"
+        },
+        {
+          "sentence": "Had they played football before it grew dark?",
+          "meaning_kh": "តើពួកគេបានលេងបាល់ទាត់រួចហើយមែនទេ មុនពេលមេឃងងឹត?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Past Perfect Continuous",
+    "meaning_kh": "អតីតកាលបរិបូណ៌កំពុងបន្ត",
+    "usage": "Used to show that an action started in the past and continued up until another time in the past.",
+    "usage_kh": "ប្រើដើម្បីបង្ហាញថាសកម្មភាពមួយបានចាប់ផ្តើមក្នុងអតីតកាល ហើយបានបន្តរហូតដល់ពេលមួយទៀតក្នុងអតីតកាល។",
+    "positive": {
+      "formula": "S + had + been + V-ing",
+      "examples": [
+        {
+          "sentence": "I had been eating breakfast for ten minutes when the doorbell rang.",
+          "meaning_kh": "ខ្ញុំបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីហើយ នៅពេលកណ្ដឹងទ្វាររោទ៍។"
+        },
+        {
+          "sentence": "She had been reading a book for hours before she fell asleep.",
+          "meaning_kh": "នាងបានកំពុងអានសៀវភៅអស់រយៈពេលជាច្រើនម៉ោង មុនពេលនាងគេងលក់។"
+        },
+        {
+          "sentence": "They had been playing football for an hour before the coach arrived.",
+          "meaning_kh": "ពួកគេបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងហើយ មុនពេលគ្រូបង្វឹកមកដល់។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + had + not + been + V-ing",
+      "examples": [
+        {
+          "sentence": "I had not been eating breakfast for ten minutes when the doorbell rang.",
+          "meaning_kh": "ខ្ញុំមិនបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីទេ នៅពេលកណ្ដឹងទ្វាររោទ៍។"
+        },
+        {
+          "sentence": "She had not been reading a book for hours before she fell asleep.",
+          "meaning_kh": "នាងមិនបានកំពុងអានសៀវភៅអស់រយៈពេលជាច្រើនម៉ោងទេ មុនពេលនាងគេងលក់។"
+        },
+        {
+          "sentence": "They had not been playing football for an hour before the coach arrived.",
+          "meaning_kh": "ពួកគេមិនបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងទេ មុនពេលគ្រូបង្វឹកមកដល់។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Had + S + been + V-ing?",
+      "examples": [
+        {
+          "sentence": "Had I been eating breakfast for ten minutes when the doorbell rang?",
+          "meaning_kh": "តើខ្ញុំបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីហើយមែនទេ នៅពេលកណ្ដឹងទ្វាររោទ៍?"
+        },
+        {
+          "sentence": "Had she been reading a book for hours before she fell asleep?",
+          "meaning_kh": "តើនាងបានកំពុងអានសៀវភៅអស់រយៈពេលជាច្រើនម៉ោងមែនទេ មុនពេលនាងគេងលក់?"
+        },
+        {
+          "sentence": "Had they been playing football for an hour before the coach arrived?",
+          "meaning_kh": "តើពួកគេបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងហើយមែនទេ មុនពេលគ្រូបង្វឹកមកដល់?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Simple Future",
+    "meaning_kh": "អនាគតកាលធម្មតា",
+    "usage": "Used for actions that will happen in the future.",
+    "usage_kh": "ប្រើសម្រាប់សកម្មភាពដែលនឹងកើតឡើងនាពេលអនាគត។",
+    "positive": {
+      "formula": "S + will + V1",
+      "examples": [
+        {
+          "sentence": "I will eat breakfast tomorrow at 7.",
+          "meaning_kh": "ខ្ញុំនឹងញ៉ាំអាហារពេលព្រឹកនៅថ្ងៃស្អែកម៉ោង ៧។"
+        },
+        {
+          "sentence": "She will read a book tonight.",
+          "meaning_kh": "នាងនឹងអានសៀវភៅនៅយប់នេះ។"
+        },
+        {
+          "sentence": "They will play football next Saturday.",
+          "meaning_kh": "ពួកគេនឹងលេងបាល់ទាត់នៅថ្ងៃសៅរ៍ក្រោយ។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + will + not + V1",
+      "examples": [
+        {
+          "sentence": "I will not eat breakfast tomorrow at 7.",
+          "meaning_kh": "ខ្ញុំនឹងមិនញ៉ាំអាហារពេលព្រឹកនៅថ្ងៃស្អែកម៉ោង ៧ទេ។"
+        },
+        {
+          "sentence": "She will not read a book tonight.",
+          "meaning_kh": "នាងនឹងមិនអានសៀវភៅនៅយប់នេះទេ។"
+        },
+        {
+          "sentence": "They will not play football next Saturday.",
+          "meaning_kh": "ពួកគេនឹងមិនលេងបាល់ទាត់នៅថ្ងៃសៅរ៍ក្រោយទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Will + S + V1?",
+      "examples": [
+        {
+          "sentence": "Will I eat breakfast tomorrow at 7?",
+          "meaning_kh": "តើខ្ញុំនឹងញ៉ាំអាហារពេលព្រឹកនៅថ្ងៃស្អែកម៉ោង ៧ មែនទេ?"
+        },
+        {
+          "sentence": "Will she read a book tonight?",
+          "meaning_kh": "តើនាងនឹងអានសៀវភៅនៅយប់នេះមែនទេ?"
+        },
+        {
+          "sentence": "Will they play football next Saturday?",
+          "meaning_kh": "តើពួកគេនឹងលេងបាល់ទាត់នៅថ្ងៃសៅរ៍ក្រោយមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Future Continuous",
+    "meaning_kh": "អនាគតកាលកំពុងបន្ត",
+    "usage": "Used for actions that will be in progress at a specific time in the future.",
+    "usage_kh": "ប្រើសម្រាប់សកម្មភាពដែលនឹងកំពុងបន្តកើតឡើងនៅពេលជាក់លាក់ណាមួយនាពេលអនាគត។",
+    "positive": {
+      "formula": "S + will + be + V-ing",
+      "examples": [
+        {
+          "sentence": "I will be eating breakfast at 7 AM tomorrow.",
+          "meaning_kh": "ខ្ញុំនឹងកំពុងញ៉ាំអាហារពេលព្រឹកនៅម៉ោង ៧ ព្រឹកថ្ងៃស្អែក។"
+        },
+        {
+          "sentence": "She will be reading a book when you arrive.",
+          "meaning_kh": "នាងនឹងកំពុងអានសៀវភៅនៅពេលអ្នកមកដល់។"
+        },
+        {
+          "sentence": "They will be playing football this time next week.",
+          "meaning_kh": "ពួកគេនឹងកំពុងលេងបាល់ទាត់នៅម៉ោងនេះនាសប្ដាហ៍ក្រោយ។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + will + not + be + V-ing",
+      "examples": [
+        {
+          "sentence": "I will not be eating breakfast at 7 AM tomorrow.",
+          "meaning_kh": "ខ្ញុំនឹងមិនកំពុងញ៉ាំអាហារពេលព្រឹកនៅម៉ោង ៧ ព្រឹកថ្ងៃស្អែកទេ។"
+        },
+        {
+          "sentence": "She will not be reading a book when you arrive.",
+          "meaning_kh": "នាងនឹងមិនកំពុងអានសៀវភៅនៅពេលអ្នកមកដល់ទេ។"
+        },
+        {
+          "sentence": "They will not be playing football this time next week.",
+          "meaning_kh": "ពួកគេនឹងមិនកំពុងលេងបាល់ទាត់នៅម៉ោងនេះនាសប្ដាហ៍ក្រោយទេ។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Will + S + be + V-ing?",
+      "examples": [
+        {
+          "sentence": "Will I be eating breakfast at 7 AM tomorrow?",
+          "meaning_kh": "តើខ្ញុំនឹងកំពុងញ៉ាំអាហារពេលព្រឹកនៅម៉ោង ៧ ព្រឹកថ្ងៃស្អែកមែនទេ?"
+        },
+        {
+          "sentence": "Will she be reading a book when you arrive?",
+          "meaning_kh": "តើនាងនឹងកំពុងអានសៀវភៅនៅពេលអ្នកមកដល់មែនទេ?"
+        },
+        {
+          "sentence": "Will they be playing football this time next week?",
+          "meaning_kh": "តើពួកគេនឹងកំពុងលេងបាល់ទាត់នៅម៉ោងនេះនាសប្ដាហ៍ក្រោយមែនទេ?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Future Perfect",
+    "meaning_kh": "អនាគតកាលបរិបូណ៌",
+    "usage": "Used to show that an action will be completed before a specific time in the future.",
+    "usage_kh": "ប្រើដើម្បីបង្ហាញថាសកម្មភាពមួយនឹងត្រូវបានបញ្ចប់រួចរាល់ មុនពេលកំណត់ជាក់លាក់ណាមួយនាពេលអនាគត។",
+    "positive": {
+      "formula": "S + will + have + V3",
+      "examples": [
+        {
+          "sentence": "I will have eaten breakfast by the time you wake up.",
+          "meaning_kh": "ខ្ញុំនឹងបានញ៉ាំអាហារពេលព្រឹករួចហើយ នៅពេលអ្នកភ្ញាក់ពីគេង។"
+        },
+        {
+          "sentence": "She will have read the book before the class starts.",
+          "meaning_kh": "នាងនឹងបានអានសៀវភៅនោះរួចហើយ មុនពេលថ្នាក់រៀនចាប់ផ្តើម។"
+        },
+        {
+          "sentence": "They will have played football before the sun sets.",
+          "meaning_kh": "ពួកគេនឹងបានលេងបាល់ទាត់រួចហើយ មុនពេលព្រះអាទិត្យលិច។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + will + not + have + V3",
+      "examples": [
+        {
+          "sentence": "I will not have eaten breakfast by the time you wake up.",
+          "meaning_kh": "Contrast to positive, I will not have eaten breakfast by the time you wake up."
+        },
+        {
+          "sentence": "She will not have read the book before the class starts.",
+          "meaning_kh": "នាងនឹងមិនទាន់បានអានសៀវភៅនោះទេ មុនពេលថ្នាក់រៀនចាប់ផ្តើម។"
+        },
+        {
+          "sentence": "They will not have played football before the sun sets.",
+          "meaning_kh": "ពួកគេនឹងមិនទាន់បានលេងបាល់ទាត់ទេ មុនពេលព្រះអាទិត្យលិច។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Will + S + have + V3?",
+      "examples": [
+        {
+          "sentence": "Will I have eaten breakfast by the time you wake up?",
+          "meaning_kh": "តើខ្ញុំនឹងបានញ៉ាំអាហារពេលព្រឹករួចហើយមែនទេ នៅពេលអ្នកភ្ញាក់ពីគេង?"
+        },
+        {
+          "sentence": "Will she have read the book before the class starts?",
+          "meaning_kh": "តើនាងនឹងបានអានសៀវភៅនោះរួចហើយមែនទេ មុនពេលថ្នាក់រៀនចាប់ផ្តើម?"
+        },
+        {
+          "sentence": "Will they have played football before the sun sets?",
+          "meaning_kh": "តើពួកគេនឹងបានលេងបាល់ទាត់រួចហើយមែនទេ មុនពេលព្រះអាទិត្យលិច?"
+        }
+      ]
+    }
+  },
+  {
+    "tense_name": "Future Perfect Continuous",
+    "meaning_kh": "អនាគតកាលបរិបូណ៌កំពុងបន្ត",
+    "usage": "Used to show that an action will continue up to a specific point in the future.",
+    "usage_kh": "ប្រើដើម្បីបង្ហាញថាសកម្មភាពមួយនឹងបន្តរហូតដល់ចំណុចជាក់លាក់ណាមួយនាពេលអនាគត។",
+    "positive": {
+      "formula": "S + will + have + been + V-ing",
+      "examples": [
+        {
+          "sentence": "I will have been eating breakfast for ten minutes when you join me.",
+          "meaning_kh": "ខ្ញុំនឹងបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីហើយ នៅពេលអ្នកមកចូលរួមជាមួយខ្ញុំ។"
+        },
+        {
+          "sentence": "She will have been reading a book for two hours by noon.",
+          "meaning_kh": "នាងនឹងបានកំពុងអានសៀវភៅអស់រយៈពេលពីរម៉ោងហើយ នៅត្រឹមថ្ងៃត្រង់។"
+        },
+        {
+          "sentence": "They will have been playing football for an hour before the game ends.",
+          "meaning_kh": "ពួកគេនឹងបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងហើយ មុនពេលការប្រកួតបញ្ចប់។"
+        }
+      ]
+    },
+    "negative": {
+      "formula": "S + will + not + have + been + V-ing",
+      "examples": [
+        {
+          "sentence": "I will not have been eating breakfast for ten minutes when you join me.",
+          "meaning_kh": "ខ្ញុំនឹងមិនបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីទេ នៅពេលអ្នកមកចូលរួមជាមួយខ្ញុំ។"
+        },
+        {
+          "sentence": "She will not have been reading a book for two hours by noon.",
+          "meaning_kh": "នាងនឹងមិនបានកំពុងអានសៀវភៅអស់រយៈពេលពីរម៉ោងទេ នៅត្រឹមថ្ងៃត្រង់។"
+        },
+        {
+          "sentence": "They will not have been playing football for an hour before the game ends.",
+          "meaning_kh": "ពួកគេនឹងមិនបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងទេ មុនពេលការប្រកួតបញ្ចប់។"
+        }
+      ]
+    },
+    "question": {
+      "formula": "Will + S + have + been + V-ing?",
+      "examples": [
+        {
+          "sentence": "Will I have been eating breakfast for ten minutes when you join me?",
+          "meaning_kh": "តើខ្ញុំនឹងបានកំពុងញ៉ាំអាហារពេលព្រឹកអស់រយៈពេលដប់នាទីហើយមែនទេ នៅពេលអ្នកមកចូលរួមជាមួយខ្ញុំ?"
+        },
+        {
+          "sentence": "Will she have been reading a book for two hours by noon?",
+          "meaning_kh": "តើនាងនឹងបានកំពុងអានសៀវភៅអស់រយៈពេលពីរម៉ោងហើយមែនទេ នៅត្រឹមថ្ងៃត្រង់?"
+        },
+        {
+          "sentence": "Will they have been playing football for an hour before the game ends?",
+          "meaning_kh": "តើពួកគេនឹងបានកំពុងលេងបាល់ទាត់អស់រយៈពេលមួយម៉ោងហើយមែនទេ មុនពេលការប្រកួតបញ្ចប់?"
+        }
+      ]
+    }
+  }
+]

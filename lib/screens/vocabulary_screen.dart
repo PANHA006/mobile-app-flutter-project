@@ -1,56 +1,51 @@
+import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
+import 'package:hive/hive.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class WordItem {
-  final int id;
   final String word;
-  final String meaning;
+  final String meaningKh;
   final String example;
   final String level;
-  final String category;
+  final String phonetic;
+  final String audioUrl;
 
   const WordItem({
-    required this.id,
     required this.word,
-    required this.meaning,
+    required this.meaningKh,
     required this.example,
     required this.level,
-    required this.category,
+    required this.phonetic,
+    required this.audioUrl,
   });
+
+  factory WordItem.fromJson(Map<String, dynamic> json, String selectedLevel) {
+    return WordItem(
+      word: json['word_en'] ?? json['word'] ?? '',
+      meaningKh: json['word_kh'] ?? json['meaning_kh'] ?? '',
+      example: json['example'] ?? '',
+      level: selectedLevel.toUpperCase(),
+      phonetic: json['phonetic'] ?? '',
+      audioUrl: json['audio_url'] ?? json['audio'] ?? '',
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'word_en': word,
+      'word_kh': meaningKh,
+      'example': example,
+      'level': level,
+      'phonetic': phonetic,
+      'audio_url': audioUrl,
+    };
+  }
 }
-
-const List<WordItem> WORDS = [
-  WordItem(id: 1, word: 'Eloquent', meaning: 'Fluent and persuasive in speaking or writing.', example: 'She gave an eloquent speech.', level: 'B2', category: 'Academic'),
-  WordItem(id: 2, word: 'Resilient', meaning: 'Able to recover quickly from difficulties.', example: 'He remained resilient through hardship.', level: 'B2', category: 'Character'),
-  WordItem(id: 3, word: 'Ambiguous', meaning: 'Open to more than one interpretation.', example: 'The instruction was ambiguous.', level: 'C1', category: 'Academic'),
-  WordItem(id: 4, word: 'Diligent', meaning: 'Showing careful and persistent effort.', example: 'She is a diligent student.', level: 'B1', category: 'Character'),
-  WordItem(id: 5, word: 'Innovative', meaning: 'Featuring new methods or ideas.', example: 'The company launched an innovative product.', level: 'B2', category: 'Business'),
-  WordItem(id: 6, word: 'Profound', meaning: 'Having deep insight or intensity.', example: 'A profound change in attitude.', level: 'C1', category: 'Academic'),
-  WordItem(id: 7, word: 'Meticulous', meaning: 'Showing great attention to detail.', example: 'He was meticulous in his research.', level: 'C1', category: 'Character'),
-  WordItem(id: 8, word: 'Concise', meaning: 'Giving a lot of information in few words.', example: 'Please be concise in your answer.', level: 'B1', category: 'Academic'),
-  WordItem(id: 9, word: 'Empathy', meaning: 'The ability to understand others\' feelings.', example: 'She showed great empathy to her friend.', level: 'B2', category: 'Emotion'),
-  WordItem(id: 10, word: 'Pragmatic', meaning: 'Dealing with things sensibly and realistically.', example: 'A pragmatic approach to solving problems.', level: 'C1', category: 'Character'),
-  WordItem(id: 11, word: 'Versatile', meaning: 'Able to adapt to many functions.', example: 'She is a versatile musician.', level: 'B2', category: 'Character'),
-  WordItem(id: 12, word: 'Integrity', meaning: 'The quality of being honest and having principles.', example: 'He acted with integrity throughout.', level: 'B2', category: 'Character'),
-];
-
-const Map<String, Color> levelBgs = {
-  'B1': Color(0xFFDBEAFE),
-  'B2': Color(0xFFEDE9FE),
-  'C1': Color(0xFFFEF3C7),
-};
-
-const Map<String, Color> levelTexts = {
-  'B1': Color(0xFF1E3A8A),
-  'B2': Color(0xFF4C1D95),
-  'C1': Color(0xFF92400E),
-};
-
-const Map<String, String> aiExplanations = {
-  'Eloquent': 'Think of \'eloquent\' as the upgrade to \'good speaker\'. When someone speaks eloquently, their words flow smoothly and powerfully, convincing people and painting vivid pictures.',
-  'Resilient': '\'Resilient\' comes from rubber — it bounces back! A resilient person faces problems, bends a bit, but springs right back to normal.',
-  'Ambiguous': 'Something ambiguous is like a shadow — you\'re not sure what it is. The same sentence or situation could mean two different things.',
-};
 
 class VocabularyScreen extends StatefulWidget {
   const VocabularyScreen({super.key});
@@ -60,300 +55,443 @@ class VocabularyScreen extends StatefulWidget {
 }
 
 class _VocabularyScreenState extends State<VocabularyScreen> {
-  String _search = '';
-  final Set<int> _favorites = {1, 3};
-  String _tab = 'all'; // 'all', 'favorites'
+  final AudioPlayer _audioPlayer = AudioPlayer();
   final _searchController = TextEditingController();
+  final FocusNode _searchFocusNode = FocusNode();
+  Timer? _debounceTimer;
 
-  void _toggleFav(int id) {
-    setState(() {
-      if (_favorites.contains(id)) {
-        _favorites.remove(id);
-      } else {
-        _favorites.add(id);
+  // Selected level: 'beginner', 'intermediate', 'advanced'
+  String _selectedLevel = 'beginner';
+  List<WordItem> _loadedWords = [];
+  bool _isLoading = false;
+
+  // Favorites Set (stored in Hive)
+  final Set<String> _favorites = {};
+
+  // Tab state
+  String _activeTab = 'Words'; // 'Words', 'Tenses', 'Numbers'
+
+  // Top Search Bar Translation State
+  bool _isSearching = false;
+  String _searchQuery = '';
+  String _searchResultWord = '';
+  String _searchResultMeaning = '';
+  String _searchResultPhonetic = '';
+  String _searchResultExample = '';
+  String _searchResultAudio = '';
+
+  // Tenses State
+  List<dynamic> _tensesData = [];
+  bool _isLoadingTenses = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadFavorites();
+    _fetchWords(_selectedLevel);
+  }
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose();
+    _searchController.dispose();
+    _searchFocusNode.dispose();
+    _debounceTimer?.cancel();
+    super.dispose();
+  }
+
+  Future<void> _loadFavorites() async {
+    try {
+      final Box box = Hive.isBoxOpen('vocabulary_box')
+          ? Hive.box('vocabulary_box')
+          : await Hive.openBox('vocabulary_box');
+      final List<dynamic>? favs = box.get('favorites_list');
+      if (favs != null) {
+        setState(() {
+          _favorites.clear();
+          _favorites.addAll(favs.cast<String>());
+        });
       }
+    } catch (_) {}
+  }
+
+  Future<void> _toggleFav(String word) async {
+    if (word.isEmpty) return;
+    final w = word.trim().toLowerCase();
+    setState(() {
+      if (_favorites.contains(w)) {
+        _favorites.remove(w);
+      } else {
+        _favorites.add(w);
+      }
+    });
+    try {
+      final Box box = Hive.isBoxOpen('vocabulary_box')
+          ? Hive.box('vocabulary_box')
+          : await Hive.openBox('vocabulary_box');
+      await box.put('favorites_list', _favorites.toList());
+    } catch (_) {}
+  }
+
+  Future<void> _playAudio(String url) async {
+    if (url.isEmpty) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Audio pronunciation not available.'),
+          duration: Duration(seconds: 2),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+      return;
+    }
+    try {
+      await _audioPlayer.stop();
+      await _audioPlayer.play(UrlSource(url));
+    } catch (_) {}
+  }
+
+  // Fetch and enrich 25 daily words
+  Future<void> _fetchWords(String level, {bool forceRefresh = false}) async {
+    setState(() {
+      _isLoading = true;
+      _selectedLevel = level;
+      _loadedWords = [];
+    });
+
+    try {
+      final Box box = Hive.isBoxOpen('vocabulary_box')
+          ? Hive.box('vocabulary_box')
+          : await Hive.openBox('vocabulary_box');
+
+      final todayStr = DateTime.now().toIso8601String().split('T')[0]; // yyyy-MM-dd
+      final todayKey = "daily_words_${todayStr}_$level";
+
+      // 1. Check Date Cache
+      if (!forceRefresh && box.containsKey(todayKey)) {
+        final cachedString = box.get(todayKey);
+        if (cachedString != null) {
+          try {
+            final List<dynamic> cachedList = json.decode(cachedString);
+            setState(() {
+              _loadedWords = cachedList
+                  .map((item) => WordItem.fromJson(Map<String, dynamic>.from(item), level))
+                  .toList();
+              _isLoading = false;
+            });
+            return;
+          } catch (_) {}
+        }
+      }
+
+      // 2. Load Local Asset JSON
+      final jsonStr = await rootBundle
+          .loadString('assets/data/api_vocabulary.json');
+      final Map<String, dynamic> data = json.decode(jsonStr);
+      final List<dynamic> levelWords = data[level] ?? [];
+
+      if (levelWords.isEmpty) {
+        throw Exception("No words found for level $level in api_vocabulary.json");
+      }
+
+      // 3. Select 25 Random Words
+      final allWords = List<Map<String, dynamic>>.from(
+        levelWords.map((e) => Map<String, dynamic>.from(e))
+      );
+      allWords.shuffle();
+      final selected = allWords.take(25).toList();
+
+      List<WordItem> enrichedWords = [];
+
+      // 4. Enrich each word with translation and dictionary API (in parallel)
+      final List<Future<WordItem>> futures = selected.map((w) async {
+        final wordEn = w['word_en']?.toString().trim() ?? '';
+        
+        // Google Translate API
+        String wordKh = '';
+        try {
+          final transUri = Uri.parse(
+              'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=km&dt=t&q=${Uri.encodeComponent(wordEn)}');
+          final transRes = await http.get(transUri).timeout(const Duration(seconds: 4));
+          if (transRes.statusCode == 200) {
+            final transData = json.decode(transRes.body);
+            wordKh = transData[0][0][0] ?? '';
+          }
+        } catch (_) {}
+        if (wordKh.isEmpty) {
+          wordKh = '...';
+        }
+
+        // Free Dictionary API
+        String phonetic = '/.../';
+        String example = '"..."';
+        String audioUrl = '';
+        try {
+          final dictRes = await http.get(Uri.parse(
+              'https://api.dictionaryapi.dev/api/v2/entries/en/$wordEn'))
+              .timeout(const Duration(seconds: 4));
+          if (dictRes.statusCode == 200) {
+            final dictData = json.decode(dictRes.body);
+            if (dictData is List && dictData.isNotEmpty) {
+              final entry = dictData[0];
+              phonetic = entry['phonetic'] ?? '';
+              
+              if (entry['phonetics'] != null) {
+                final audioObj = entry['phonetics'].firstWhere(
+                  (p) =>
+                      p['audio'] != null &&
+                      p['audio'].toString().startsWith('http'),
+                  orElse: () => null,
+                );
+                if (audioObj != null) {
+                  audioUrl = audioObj['audio'] ?? '';
+                }
+              }
+              if (phonetic.isEmpty && entry['phonetics'] != null && entry['phonetics'].isNotEmpty) {
+                for (final p in entry['phonetics']) {
+                  if (p['text'] != null && p['text'].toString().isNotEmpty) {
+                    phonetic = p['text'];
+                    break;
+                  }
+                }
+              }
+
+              if (entry['meanings'] != null && entry['meanings'].isNotEmpty) {
+                bool foundExample = false;
+                for (final meaning in entry['meanings']) {
+                  if (meaning['definitions'] != null) {
+                    for (final def in meaning['definitions']) {
+                      if (def['example'] != null && def['example'].toString().isNotEmpty) {
+                        example = def['example'].toString();
+                        foundExample = true;
+                        break;
+                      }
+                    }
+                  }
+                  if (foundExample) break;
+                }
+              }
+            }
+          }
+        } catch (_) {}
+
+        if (phonetic.isEmpty) {
+          phonetic = '/.../';
+        } else {
+          if (!phonetic.startsWith('/')) phonetic = '/$phonetic';
+          if (!phonetic.endsWith('/')) phonetic = '$phonetic/';
+        }
+        if (example.isEmpty || example == '"..."') {
+          example = '"..."';
+        } else {
+          if (example.startsWith('"') && example.endsWith('"')) {
+            example = example.substring(1, example.length - 1);
+          }
+        }
+
+        return WordItem(
+          word: wordEn,
+          meaningKh: wordKh,
+          example: example,
+          level: level.toUpperCase(),
+          phonetic: phonetic,
+          audioUrl: audioUrl,
+        );
+      }).toList();
+
+      enrichedWords = await Future.wait(futures);
+
+      // Save to cache
+      final serialized = enrichedWords.map((e) => e.toJson()).toList();
+      await box.put(todayKey, json.encode(serialized));
+
+      setState(() {
+        _loadedWords = enrichedWords;
+        _isLoading = false;
+      });
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+      });
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Failed to load words: $e'),
+          backgroundColor: Colors.redAccent,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
+  }
+
+  // Load tenses data
+  Future<void> _loadTensesData() async {
+    if (_tensesData.isNotEmpty) return;
+    setState(() {
+      _isLoadingTenses = true;
+    });
+    try {
+      final jsonStr = await rootBundle.loadString('assets/data/api_english_tenses.json');
+      final List<dynamic> decoded = json.decode(jsonStr);
+      setState(() {
+        _tensesData = decoded;
+        _isLoadingTenses = false;
+      });
+    } catch (_) {
+      setState(() {
+        _isLoadingTenses = false;
+      });
+    }
+  }
+
+  // Top Search Bar real-time translation logic
+  void _onSearchTextChanged(String text) {
+    setState(() {
+      _searchQuery = text;
+    });
+
+    if (_debounceTimer?.isActive ?? false) _debounceTimer!.cancel();
+    if (text.trim().isEmpty) {
+      setState(() {
+        _isSearching = false;
+        _searchResultWord = '';
+        _searchResultMeaning = '';
+        _searchResultPhonetic = '';
+        _searchResultExample = '';
+        _searchResultAudio = '';
+      });
+      return;
+    }
+
+    _debounceTimer = Timer(const Duration(milliseconds: 600), () {
+      _performSearchTranslation(text);
     });
   }
 
-  void _showDetailModal(WordItem w) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: const Color(0xFFF7F8FF),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(28),
-          topRight: Radius.circular(28),
-        ),
-      ),
-      builder: (context) {
-        return StatefulBuilder(
-          builder: (context, setModalState) {
-            final isSaved = _favorites.contains(w.id);
-            final aiExpl = aiExplanations[w.word];
+  Future<void> _performSearchTranslation(String text) async {
+    final cleanText = text.trim();
+    if (cleanText.isEmpty) return;
 
-            return DraggableScrollableSheet(
-              expand: false,
-              initialChildSize: 0.75,
-              maxChildSize: 0.9,
-              minChildSize: 0.5,
-              builder: (context, scrollController) {
-                return SingleChildScrollView(
-                  controller: scrollController,
-                  child: Column(
-                    children: [
-                      // Header panel
-                      Container(
-                        width: double.infinity,
-                        color: const Color(0xFF4F46E5),
-                        padding: const EdgeInsets.only(top: 24, bottom: 40, left: 20, right: 20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Align(
-                              alignment: Alignment.topRight,
-                              child: GestureDetector(
-                                onTap: () => Navigator.pop(context),
-                                child: Container(
-                                  width: 36,
-                                  height: 36,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white.withOpacity(0.2),
-                                  ),
-                                  child: const Icon(Icons.close, color: Colors.white, size: 18),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: Text(
-                                w.category,
-                                style: GoogleFonts.inter(color: Colors.white, fontSize: 11),
-                              ),
-                            ),
-                            const SizedBox(height: 12),
-                            Text(
-                              w.word,
-                              style: GoogleFonts.outfit(
-                                fontSize: 36,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.white,
-                              ),
-                            ),
-                            const SizedBox(height: 8),
-                            Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                  decoration: BoxDecoration(
-                                    color: levelBgs[w.level] ?? const Color(0xFFEDE9FE),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Text(
-                                    w.level,
-                                    style: GoogleFonts.outfit(
-                                      color: levelTexts[w.level] ?? const Color(0xFF4C1D95),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(width: 16),
-                                Icon(Icons.volume_up, color: Colors.white.withOpacity(0.7), size: 18),
-                                const SizedBox(width: 6),
-                                Text(
-                                  'Pronounce',
-                                  style: GoogleFonts.inter(
-                                    color: Colors.white.withOpacity(0.7),
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
+    setState(() {
+      _isSearching = true;
+    });
 
-                      // Details
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          children: [
-                            _buildSection('Meaning', w.meaning),
-                            const SizedBox(height: 16),
-                            _buildSection('Example', '"${w.example}"', italic: true),
-                            const SizedBox(height: 16),
+    try {
+      final hasKhmer = RegExp(r'[\u1780-\u17FF]').hasMatch(cleanText);
+      final sl = hasKhmer ? 'km' : 'en';
+      final tl = hasKhmer ? 'en' : 'km';
 
-                            if (aiExpl != null) ...[
-                              Container(
-                                padding: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFEEF0FF),
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: const Border(
-                                    left: BorderSide(color: Color(0xFF4F46E5), width: 3.5),
-                                  ),
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        const Icon(Icons.auto_awesome, color: Color(0xFF4F46E5), size: 16),
-                                        const SizedBox(width: 8),
-                                        Text(
-                                          'AI Explanation',
-                                          style: GoogleFonts.outfit(
-                                            color: const Color(0xFF4F46E5),
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      aiExpl,
-                                      style: GoogleFonts.inter(
-                                        color: const Color(0xFF0F0E2A),
-                                        fontSize: 13,
-                                        height: 1.65,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(height: 20),
-                            ],
+      // 1. Google Translate API
+      final transUri = Uri.parse(
+          'https://translate.googleapis.com/translate_a/single?client=gtx&sl=$sl&tl=$tl&dt=t&q=${Uri.encodeComponent(cleanText)}');
+      final transRes = await http.get(transUri).timeout(const Duration(seconds: 4));
+      
+      String translatedText = '';
+      if (transRes.statusCode == 200) {
+        final transData = json.decode(transRes.body);
+        translatedText = transData[0][0][0] ?? '';
+      }
 
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: OutlinedButton.icon(
-                                    onPressed: () {
-                                      _toggleFav(w.id);
-                                      setModalState(() {});
-                                      setState(() {});
-                                    },
-                                    style: OutlinedButton.styleFrom(
-                                      side: BorderSide(
-                                        color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF4F46E5).withOpacity(0.12),
-                                      ),
-                                      backgroundColor: isSaved ? const Color(0xFFFFFBEB) : Colors.white,
-                                      minimumSize: const Size(0, 50),
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                    ),
-                                    icon: Icon(
-                                      isSaved ? Icons.star : Icons.star_border,
-                                      color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF6B6B8A),
-                                      size: 20,
-                                    ),
-                                    label: Text(
-                                      isSaved ? 'Saved' : 'Save',
-                                      style: GoogleFonts.outfit(
-                                        color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF6B6B8A),
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                Expanded(
-                                  child: ElevatedButton(
-                                    onPressed: () => Navigator.pop(context),
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: const Color(0xFF4F46E5),
-                                      foregroundColor: Colors.white,
-                                      minimumSize: const Size(0, 50),
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                                    ),
-                                    child: Text(
-                                      'Got it!',
-                                      style: GoogleFonts.outfit(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+      final englishWord = hasKhmer ? translatedText : cleanText;
+      final khmerTranslation = hasKhmer ? cleanText : translatedText;
+
+      // 2. Free Dictionary API
+      String phonetic = '/.../';
+      String example = '"..."';
+      String audioUrl = '';
+
+      if (englishWord.isNotEmpty && RegExp(r'^[a-zA-Z\s\-]+$').hasMatch(englishWord)) {
+        try {
+          final dictRes = await http.get(Uri.parse(
+              'https://api.dictionaryapi.dev/api/v2/entries/en/${englishWord.split(' ')[0]}'))
+              .timeout(const Duration(seconds: 4));
+          if (dictRes.statusCode == 200) {
+            final dictData = json.decode(dictRes.body);
+            if (dictData is List && dictData.isNotEmpty) {
+              final entry = dictData[0];
+              phonetic = entry['phonetic'] ?? '';
+              
+              if (entry['phonetics'] != null) {
+                final audioObj = entry['phonetics'].firstWhere(
+                  (p) =>
+                      p['audio'] != null &&
+                      p['audio'].toString().startsWith('http'),
+                  orElse: () => null,
                 );
-              },
-            );
-          },
-        );
-      },
-    );
-  }
+                if (audioObj != null) {
+                  audioUrl = audioObj['audio'] ?? '';
+                }
+              }
+              if (phonetic.isEmpty && entry['phonetics'] != null && entry['phonetics'].isNotEmpty) {
+                for (final p in entry['phonetics']) {
+                  if (p['text'] != null && p['text'].toString().isNotEmpty) {
+                    phonetic = p['text'];
+                    break;
+                  }
+                }
+              }
 
-  Widget _buildSection(String title, String content, {bool italic = false}) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFF4F46E5).withOpacity(0.12)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title.toUpperCase(),
-            style: GoogleFonts.outfit(
-              color: const Color(0xFF4F46E5),
-              fontWeight: FontWeight.w600,
-              fontSize: 12,
-              letterSpacing: 0.8,
-            ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            content,
-            style: GoogleFonts.inter(
-              color: const Color(0xFF0F0E2A),
-              fontSize: 14,
-              height: 1.6,
-              fontStyle: italic ? FontStyle.italic : FontStyle.normal,
-            ),
-          ),
-        ],
-      ),
-    );
+              if (entry['meanings'] != null && entry['meanings'].isNotEmpty) {
+                bool foundExample = false;
+                for (final meaning in entry['meanings']) {
+                  if (meaning['definitions'] != null) {
+                    for (final def in meaning['definitions']) {
+                      if (def['example'] != null && def['example'].toString().isNotEmpty) {
+                        example = def['example'].toString();
+                        foundExample = true;
+                        break;
+                      }
+                    }
+                  }
+                  if (foundExample) break;
+                }
+              }
+            }
+          }
+        } catch (_) {}
+      }
+
+      if (phonetic.isEmpty) {
+        phonetic = '/.../';
+      } else {
+        if (!phonetic.startsWith('/')) phonetic = '/$phonetic';
+        if (!phonetic.endsWith('/')) phonetic = '$phonetic/';
+      }
+      if (example.isEmpty || example == '"..."') {
+        example = '"..."';
+      } else {
+        if (example.startsWith('"') && example.endsWith('"')) {
+          example = example.substring(1, example.length - 1);
+        }
+      }
+
+      setState(() {
+        _searchResultWord = englishWord;
+        _searchResultMeaning = khmerTranslation;
+        _searchResultPhonetic = phonetic;
+        _searchResultExample = example;
+        _searchResultAudio = audioUrl;
+        _isSearching = false;
+      });
+    } catch (_) {
+      setState(() {
+        _isSearching = false;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = const Color(0xFF4F46E5);
-    final secondaryColor = const Color(0xFFEEF0FF);
+    const primaryColor = Color(0xFF4F46E5);
     final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.12);
-
-    final filtered = WORDS.where((w) {
-      final q = _search.toLowerCase();
-      final matches = w.word.toLowerCase().contains(q) || w.meaning.toLowerCase().contains(q);
-      if (_tab == 'favorites') {
-        return matches && _favorites.contains(w.id);
-      }
-      return matches;
-    }).toList();
+    final isSearchActive = _searchQuery.trim().isNotEmpty;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F8FF),
+      backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        toolbarHeight: 80,
+        toolbarHeight: 96,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
           child: Container(
@@ -363,238 +501,620 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Vocabulary',
+              'Words',
               style: GoogleFonts.outfit(
                 color: const Color(0xFF0F172A),
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 3),
             Text(
-              '${WORDS.length} words • ${_favorites.length} saved',
+              'Learning vocabulary',
               style: GoogleFonts.inter(
                 color: const Color(0xFF64748B),
-                fontSize: 11,
+                fontSize: 12,
               ),
             ),
           ],
         ),
       ),
-      body: Column(
-        children: [
-
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
-              child: Column(
-                children: [
-                  // Search field
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF0F1FA),
-                      borderRadius: BorderRadius.circular(16),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Search Bar Container
+              Container(
+                height: 52,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: const Color(0xFFE2E8F0)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.02),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Row(
+                  ],
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: _searchController,
+                        focusNode: _searchFocusNode,
+                        onChanged: _onSearchTextChanged,
+                        style: GoogleFonts.inter(
+                          fontSize: 15,
+                          color: const Color(0xFF0F172A),
+                          fontWeight: FontWeight.w500,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'Search words...',
+                          hintStyle: GoogleFonts.inter(color: const Color(0xFF94A3B8)),
+                          border: InputBorder.none,
+                          isDense: true,
+                        ),
+                      ),
+                    ),
+                    const Icon(Icons.search, color: Color(0xFF64748B), size: 20),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 18),
+
+              // Tab pills row
+              Row(
+                children: ['Words', 'Tenses', 'Numbers'].map((tab) {
+                  final isSelected = _activeTab == tab;
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _activeTab = tab;
+                      });
+                      if (tab == 'Tenses') {
+                        _loadTensesData();
+                      }
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(right: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: isSelected ? primaryColor : const Color(0xFFF1F5F9),
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(
+                          color: isSelected ? Colors.transparent : const Color(0xFFE2E8F0),
+                        ),
+                      ),
+                      child: Text(
+                        tab,
+                        style: GoogleFonts.inter(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: isSelected ? Colors.white : const Color(0xFF64748B),
+                        ),
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+              const SizedBox(height: 20),
+
+              // Vocabulary/Tenses Scrollable Container Block
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(color: cardBorderColor),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.02),
+                      blurRadius: 16,
+                      offset: const Offset(0, 6),
+                    ),
+                  ],
+                ),
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Header inside card
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Icon(Icons.search, color: Color(0xFF6B6B8A), size: 20),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: TextField(
-                            controller: _searchController,
-                            onChanged: (val) {
-                              setState(() {
-                                _search = val;
-                              });
-                            },
-                            decoration: const InputDecoration(
-                              hintText: 'Search words...',
-                              border: InputBorder.none,
-                            ),
-                          ),
-                        ),
-                        if (_search.isNotEmpty)
-                          GestureDetector(
-                            onTap: () {
-                              _searchController.clear();
-                              setState(() {
-                                _search = '';
-                              });
-                            },
-                            child: const Icon(Icons.close, color: Color(0xFF6B6B8A), size: 18),
-                          ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Tab switcher
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFECECF5),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    padding: const EdgeInsets.all(4),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                _tab = 'all';
-                              });
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: _tab == 'all' ? Colors.white : Colors.transparent,
-                                borderRadius: BorderRadius.circular(12),
-                                boxShadow: _tab == 'all'
-                                    ? [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4, offset: const Offset(0, 1))]
-                                    : null,
-                              ),
-                              padding: const EdgeInsets.symmetric(vertical: 8),
-                              alignment: Alignment.center,
-                              child: Text(
-                                'All Words',
-                                style: GoogleFonts.outfit(
-                                  color: _tab == 'all' ? primaryColor : const Color(0xFF6B6B8A),
-                                  fontWeight: FontWeight.w600,
-                                ),
+                        Row(
+                          children: [
+                            Text(
+                              _activeTab == 'Tenses' ? 'Tenses 12 In English' : _activeTab,
+                              style: GoogleFonts.outfit(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: const Color(0xFF0F172A),
                               ),
                             ),
-                          ),
-                        ),
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                _tab = 'favorites';
-                              });
-                            },
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: _tab == 'favorites' ? Colors.white : Colors.transparent,
-                                borderRadius: BorderRadius.circular(12),
-                                boxShadow: _tab == 'favorites'
-                                    ? [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4, offset: const Offset(0, 1))]
-                                    : null,
-                              ),
-                              padding: const EdgeInsets.symmetric(vertical: 8),
-                              alignment: Alignment.center,
-                              child: Text(
-                                '⭐ Saved (${_favorites.length})',
-                                style: GoogleFonts.outfit(
-                                  color: _tab == 'favorites' ? primaryColor : const Color(0xFF6B6B8A),
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Word list
-                  Expanded(
-                    child: filtered.isEmpty
-                        ? Center(
-                            child: Text(
-                              'No words found.',
-                              style: GoogleFonts.inter(
-                                color: const Color(0xFF6B6B8A),
-                                fontSize: 15,
-                              ),
-                            ),
-                          )
-                        : ListView.builder(
-                            itemCount: filtered.length,
-                            padding: const EdgeInsets.only(bottom: 20),
-                            itemBuilder: (context, index) {
-                              final w = filtered[index];
-                              final isSaved = _favorites.contains(w.id);
-
-                              return Container(
-                                margin: const EdgeInsets.only(bottom: 10),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  border: Border.all(color: cardBorderColor),
-                                ),
-                                child: Material(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(20),
-                                  clipBehavior: Clip.antiAlias,
-                                  child: ListTile(
-                                    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                                    onTap: () => _showDetailModal(w),
-                                  title: Row(
+                            const SizedBox(width: 8),
+                            // Popup selector for user level (only show for Words)
+                            if (_activeTab == 'Words')
+                              PopupMenuButton<String>(
+                                initialValue: _selectedLevel,
+                                onSelected: (String level) {
+                                  _fetchWords(level);
+                                },
+                                itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                                  const PopupMenuItem<String>(
+                                    value: 'beginner',
+                                    child: Text('Beginner'),
+                                  ),
+                                  const PopupMenuItem<String>(
+                                    value: 'intermediate',
+                                    child: Text('Intermediate'),
+                                  ),
+                                  const PopupMenuItem<String>(
+                                    value: 'advanced',
+                                    child: Text('Advanced'),
+                                  ),
+                                ],
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFEEF0FF),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Row(
                                     children: [
                                       Text(
-                                        w.word,
-                                        style: GoogleFonts.outfit(
+                                        _selectedLevel == 'beginner'
+                                            ? 'Beginner'
+                                            : _selectedLevel == 'intermediate'
+                                                ? 'Intermediate'
+                                                : 'Advanced',
+                                        style: GoogleFonts.inter(
+                                          fontSize: 11,
+                                          color: primaryColor,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 16,
-                                          color: const Color(0xFF0F0E2A),
                                         ),
                                       ),
-                                      const SizedBox(width: 8),
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                        decoration: BoxDecoration(
-                                          color: levelBgs[w.level] ?? const Color(0xFFEDE9FE),
-                                          borderRadius: BorderRadius.circular(6),
-                                        ),
-                                        child: Text(
-                                          w.level,
-                                          style: GoogleFonts.inter(
-                                            color: levelTexts[w.level] ?? const Color(0xFF4C1D95),
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 10,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  subtitle: Padding(
-                                    padding: const EdgeInsets.only(top: 4.0),
-                                    child: Text(
-                                      w.meaning,
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.inter(
-                                        color: const Color(0xFF6B6B8A),
-                                        fontSize: 14,
-                                      ),
-                                    ),
-                                  ),
-                                  trailing: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      IconButton(
-                                        onPressed: () => _toggleFav(w.id),
-                                        icon: Icon(
-                                          isSaved ? Icons.star : Icons.star_border,
-                                          color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF6B6B8A),
-                                          size: 20,
-                                        ),
-                                      ),
-                                      const Icon(Icons.arrow_forward_ios, size: 14, color: Color(0xFF6B6B8A)),
+                                      const Icon(Icons.arrow_drop_down, color: primaryColor, size: 14),
                                     ],
                                   ),
                                 ),
                               ),
-                            );
+                          ],
+                        ),
+                        // Refresh Button (only show for Words)
+                        if (_activeTab == 'Words')
+                          GestureDetector(
+                            onTap: () {
+                              if (!isSearchActive && !_isLoading) {
+                                _fetchWords(_selectedLevel, forceRefresh: true);
+                              }
                             },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFEEF0FF),
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              child: Row(
+                                children: [
+                                  const Icon(Icons.refresh, color: primaryColor, size: 14),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    'Refresh',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                      color: primaryColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
+                      ],
+                    ),
+                    const SizedBox(height: 18),
+
+                    // ScrollView content inside the container
+                    if (_activeTab == 'Numbers')
+                      Container(
+                        alignment: Alignment.center,
+                        padding: const EdgeInsets.symmetric(vertical: 40),
+                        child: Text(
+                          'Numbers section is coming soon!',
+                          style: GoogleFonts.inter(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF64748B),
+                          ),
+                        ),
+                      )
+                    else if (_activeTab == 'Tenses')
+                      _isLoadingTenses
+                          ? Container(
+                              alignment: Alignment.center,
+                              padding: const EdgeInsets.symmetric(vertical: 60),
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+                              ),
+                            )
+                          : _tensesData.isEmpty
+                              ? Container(
+                                  alignment: Alignment.center,
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  child: Text(
+                                    'Failed to load tenses.',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 14,
+                                      color: const Color(0xFF64748B),
+                                    ),
+                                  ),
+                                )
+                              : ListView.separated(
+                                  shrinkWrap: true,
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  itemCount: _tensesData.length,
+                                  separatorBuilder: (context, index) => const Divider(
+                                    color: Color(0xFFF1F5F9),
+                                    thickness: 1,
+                                    height: 20, // Clean vertical spacing around the divider
+                                  ),
+                                  itemBuilder: (context, index) {
+                                    final tense = _tensesData[index];
+                                    return _buildTenseCard(tense, primaryColor);
+                                  },
+                                )
+                    else // Words tab
+                      isSearchActive
+                          ? _buildSearchTranslationResult(primaryColor)
+                          : _isLoading
+                              ? Container(
+                                  alignment: Alignment.center,
+                                  padding: const EdgeInsets.symmetric(vertical: 60),
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+                                  ),
+                                )
+                              : _loadedWords.isEmpty
+                                  ? Container(
+                                      alignment: Alignment.center,
+                                      padding: const EdgeInsets.symmetric(vertical: 40),
+                                      child: Text(
+                                        'No words loaded.',
+                                        style: GoogleFonts.inter(
+                                          fontSize: 14,
+                                          color: const Color(0xFF64748B),
+                                        ),
+                                      ),
+                                    )
+                                  : ListView.builder(
+                                      shrinkWrap: true,
+                                      physics: const NeverScrollableScrollPhysics(),
+                                      itemCount: _loadedWords.length,
+                                      itemBuilder: (context, index) {
+                                        final item = _loadedWords[index];
+                                        return _buildWordCard(item, primaryColor);
+                                      },
+                                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildWordCard(WordItem item, Color primaryColor) {
+    final isSaved = _favorites.contains(item.word.toLowerCase());
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 12),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // English word
+            Flexible(
+              child: Text(
+                item.word,
+                overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.outfit(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF0F172A),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            // Phonetic
+            Flexible(
+              child: Text(
+                item.phonetic,
+                overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.inter(
+                  fontSize: 13,
+                  color: const Color(0xFF64748B),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            // Pronunciation Speaker Icon
+            if (item.audioUrl.isNotEmpty) ...[
+              const SizedBox(width: 8),
+              IconButton(
+                onPressed: () => _playAudio(item.audioUrl),
+                icon: Icon(Icons.volume_up, color: primaryColor, size: 18),
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
+              ),
+            ],
+            const SizedBox(width: 12),
+            // Favorite Heart Icon
+            GestureDetector(
+              onTap: () => _toggleFav(item.word),
+              child: Icon(
+                isSaved ? Icons.favorite : Icons.favorite_border,
+                color: isSaved ? const Color(0xFFEF4444) : const Color(0xFF94A3B8),
+                size: 22,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 4),
+        // Khmer meaning
+        Text(
+          item.meaningKh,
+          style: GoogleFonts.inter(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: primaryColor,
+          ),
+        ),
+        const SizedBox(height: 4),
+        // Example sentence
+        Text(
+          item.example.isEmpty || item.example == '"..."' ? '"..."' : '"${item.example}"',
+          style: GoogleFonts.inter(
+            fontSize: 13,
+            color: const Color(0xFF334155),
+            height: 1.4,
+          ),
+        ),
+        const SizedBox(height: 14),
+        const Divider(color: Color(0xFFF1F5F9), thickness: 1),
+      ],
+    );
+  }
+
+  Widget _buildTenseCard(Map<String, dynamic> tense, Color primaryColor) {
+    return Theme(
+      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+      child: Material(
+        color: Colors.transparent,
+        child: ExpansionTile(
+          tilePadding: EdgeInsets.zero,
+          childrenPadding: const EdgeInsets.only(bottom: 12),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                tense['tense_name'] ?? '',
+                style: GoogleFonts.outfit(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF0F172A),
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                tense['meaning_kh'] ?? '',
+                style: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: primaryColor,
+                ),
+              ),
+            ],
+          ),
+          trailing: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: const BoxDecoration(
+              color: Color(0xFFEEF0FF),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.keyboard_arrow_down,
+              color: primaryColor,
+              size: 20,
+            ),
+          ),
+          children: [
+            const SizedBox(height: 8),
+            // Usage description displayed inside expanded state
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    tense['usage'] ?? '',
+                    style: GoogleFonts.inter(fontSize: 13, color: const Color(0xFF1E293B)),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    tense['usage_kh'] ?? '',
+                    style: GoogleFonts.inter(fontSize: 12.5, color: const Color(0xFF64748B), fontStyle: FontStyle.italic),
                   ),
                 ],
               ),
             ),
+            _buildTenseFormulaSection('Positive', tense['positive'], primaryColor),
+            const SizedBox(height: 12),
+            _buildTenseFormulaSection('Negative', tense['negative'], primaryColor),
+            const SizedBox(height: 12),
+            _buildTenseFormulaSection('Question', tense['question'], primaryColor),
+            const SizedBox(height: 4),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTenseFormulaSection(String label, Map<String, dynamic>? formulaData, Color primaryColor) {
+    if (formulaData == null) return const SizedBox.shrink();
+
+    final formula = formulaData['formula'] ?? '';
+    final List<dynamic> examples = formulaData['examples'] ?? [];
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                decoration: BoxDecoration(
+                  color: primaryColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Text(
+                  label,
+                  style: GoogleFonts.inter(
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  formula,
+                  style: GoogleFonts.outfit(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF0F172A),
+                  ),
+                ),
+              ),
+            ],
           ),
+          if (examples.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            ...examples.map((ex) {
+              final sentence = ex['sentence'] ?? '';
+              final meaningKh = ex['meaning_kh'] ?? '';
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('• ', style: TextStyle(color: Colors.black54)),
+                        Expanded(
+                          child: Text(
+                            sentence,
+                            style: GoogleFonts.inter(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0xFF334155),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0, top: 1.0),
+                      child: Text(
+                        meaningKh,
+                        style: GoogleFonts.inter(
+                          fontSize: 12,
+                          color: const Color(0xFF64748B),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ],
         ],
       ),
+    );
+  }
+
+  Widget _buildSearchTranslationResult(Color primaryColor) {
+    if (_isSearching) {
+      return Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(vertical: 40),
+        child: CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+        ),
+      );
+    }
+
+    if (_searchResultWord.isEmpty && _searchResultMeaning.isEmpty) {
+      return Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(vertical: 40),
+        child: Text(
+          'Type a word to view real-time translation results.',
+          style: GoogleFonts.inter(
+            fontSize: 13,
+            color: const Color(0xFF64748B),
+          ),
+        ),
+      );
+    }
+
+    final searchItem = WordItem(
+      word: _searchResultWord,
+      meaningKh: _searchResultMeaning,
+      example: _searchResultExample,
+      level: 'SEARCH',
+      phonetic: _searchResultPhonetic,
+      audioUrl: _searchResultAudio,
+    );
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: Text(
+            'Search Result',
+            style: GoogleFonts.outfit(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF64748B),
+            ),
+          ),
+        ),
+        _buildWordCard(searchItem, primaryColor),
+      ],
     );
   }
 }

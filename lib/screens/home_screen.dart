@@ -1,7 +1,12 @@
+import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
+import 'package:audioplayers/audioplayers.dart';
+import 'package:hive/hive.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   final Map<String, String> user;
   final Function(int) onNavigate;
 
@@ -12,12 +17,201 @@ class HomeScreen extends StatelessWidget {
   });
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen>
+    with AutomaticKeepAliveClientMixin {
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  final _translateController = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
+  Timer? _debounceTimer;
+
+  // Translator state
+  String _sourceLang = 'en';
+  String _targetLang = 'km';
+  String _translationResult = ''; 
+  String _phonetic = '';
+  String _audioUrl = '';
+  String _example = '';
+  bool _isTranslating = false;
+
+  final Set<String> _homeFavorites = {'computer'};
+
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
+  void initState() {
+    super.initState();
+    _translateController.text = '';
+    _loadFavorites();
+  }
+
+  Future<void> _loadFavorites() async {
+    try {
+      final Box box = Hive.isBoxOpen('vocabulary_box')
+          ? Hive.box('vocabulary_box')
+          : await Hive.openBox('vocabulary_box');
+      // Sync local favorite set with Hive cache if needed
+    } catch (_) {}
+  }
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose();
+    _translateController.dispose();
+    _focusNode.dispose();
+    _debounceTimer?.cancel();
+    super.dispose();
+  }
+
+  void _swapLanguages() {
+    setState(() {
+      final temp = _sourceLang;
+      _sourceLang = _targetLang;
+      _targetLang = temp;
+    });
+    _onTextChanged(_translateController.text);
+  }
+
+  void _onTextChanged(String text) {
+    if (_debounceTimer?.isActive ?? false) _debounceTimer!.cancel();
+    _debounceTimer = Timer(const Duration(milliseconds: 600), () {
+      _performTranslation(text);
+    });
+  }
+
+  Future<void> _performTranslation(String text) async {
+    final cleanText = text.trim();
+    if (cleanText.isEmpty) {
+      setState(() {
+        _translationResult = '';
+        _phonetic = '';
+        _audioUrl = '';
+        _example = '';
+        _isTranslating = false;
+      });
+      return;
+    }
+
+    setState(() {
+      _isTranslating = true;
+    });
+
+    try {
+      final transUri = Uri.parse(
+          'https://translate.googleapis.com/translate_a/single?client=gtx&sl=$_sourceLang&tl=$_targetLang&dt=t&q=${Uri.encodeComponent(cleanText)}');
+      final transRes =
+          await http.get(transUri).timeout(const Duration(seconds: 5));
+      if (transRes.statusCode == 200) {
+        final transData = json.decode(transRes.body);
+        final translation = transData[0][0][0] ?? '';
+
+        final englishWordForDict =
+            _sourceLang == 'en' ? cleanText : translation;
+
+        String phonetic = '';
+        String audioUrl = '';
+        String example = '';
+
+        if (englishWordForDict.isNotEmpty &&
+            RegExp(r'^[a-zA-Z\s\-]+$').hasMatch(englishWordForDict)) {
+          try {
+            final dictRes = await http
+                .get(Uri.parse(
+                    'https://api.dictionaryapi.dev/api/v2/entries/en/${englishWordForDict.split(' ')[0]}'))
+                .timeout(const Duration(seconds: 3));
+
+            if (dictRes.statusCode == 200) {
+              final dictData = json.decode(dictRes.body);
+              if (dictData is List && dictData.isNotEmpty) {
+                final entry = dictData[0];
+                phonetic = entry['phonetic'] ?? '';
+
+                if (entry['phonetics'] != null) {
+                  final audioObj = entry['phonetics'].firstWhere(
+                    (p) =>
+                        p['audio'] != null &&
+                        p['audio'].toString().startsWith('http'),
+                    orElse: () => null,
+                  );
+                  if (audioObj != null) {
+                    audioUrl = audioObj['audio'] ?? '';
+                  }
+                }
+
+                if (entry['meanings'] != null && entry['meanings'].isNotEmpty) {
+                  for (final meaning in entry['meanings']) {
+                    if (meaning['definitions'] != null &&
+                        meaning['definitions'].isNotEmpty) {
+                      example = meaning['definitions'][0]['example'] ?? '';
+                      if (example.isNotEmpty) break;
+                    }
+                  }
+                }
+              }
+            }
+          } catch (_) {}
+        }
+
+        setState(() {
+          _translationResult = translation;
+          _phonetic = phonetic;
+          _audioUrl = audioUrl;
+          _example = example;
+          _isTranslating = false;
+        });
+      } else {
+        setState(() {
+          _isTranslating = false;
+        });
+      }
+    } catch (_) {
+      setState(() {
+        _isTranslating = false;
+      });
+    }
+  }
+
+  Future<void> _playAudio(String url) async {
+    if (url.isEmpty) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Audio pronunciation not available.'),
+          duration: Duration(seconds: 2),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+      return;
+    }
+    try {
+      await _audioPlayer.stop();
+      await _audioPlayer.play(UrlSource(url));
+    } catch (_) {}
+  }
+
+  void _toggleFav(String word) {
+    if (word.isEmpty) return;
+    setState(() {
+      final w = word.toLowerCase();
+      if (_homeFavorites.contains(w)) {
+        _homeFavorites.remove(w);
+      } else {
+        _homeFavorites.add(w);
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    super.build(context); // Required by KeepAliveClientMixin
+
     final primaryColor = const Color(0xFF4F46E5);
-    final secondaryColor = const Color(0xFF6366F1);
     final statsBorderColor = const Color(0xFF4F46E5).withOpacity(0.08);
 
-    final firstName = user['name']?.split(' ')[0] ?? 'Student';
+    final firstName = widget.user['name']?.split(' ')[0] ?? 'Student';
     final hour = DateTime.now().hour;
     final greeting = hour < 12
         ? 'Good morning'
@@ -83,6 +277,9 @@ class HomeScreen extends StatelessWidget {
         'tab': 1
       },
     ];
+
+    final currentInput = _translateController.text.trim().toLowerCase();
+    final isSaved = _homeFavorites.contains(currentInput);
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFC),
@@ -161,7 +358,7 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 18.0),
             child: GestureDetector(
-              onTap: () => onNavigate(4), // navigate to profile
+              onTap: () => widget.onNavigate(4), // navigate to profile
               child: Container(
                 width: 42,
                 height: 42,
@@ -335,166 +532,244 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
 
-                  // Word of the day card
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(22),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [primaryColor, const Color(0xFF7C3AED)],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      borderRadius: BorderRadius.circular(28),
-                      boxShadow: [
-                        BoxShadow(
-                          color: primaryColor.withOpacity(0.25),
-                          blurRadius: 24,
-                          offset: const Offset(0, 12),
+                  // Real-time Translate Card
+                  GestureDetector(
+                    onTap: () {
+                      _focusNode.requestFocus();
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.only(
+                          left: 22, right: 22, top: 18, bottom: 14),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [primaryColor, const Color(0xFF7C3AED)],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
                         ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
+                        borderRadius: BorderRadius.circular(28),
+                        boxShadow: [
+                          BoxShadow(
+                            color: primaryColor.withOpacity(0.25),
+                            blurRadius: 24,
+                            offset: const Offset(0, 12),
+                          ),
+                        ],
+                      ),
+                      child: SizedBox(
+                        height: 240,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 5),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.16),
-                                borderRadius: BorderRadius.circular(100),
-                                border: Border.all(
-                                    color: Colors.white.withOpacity(0.15)),
-                              ),
-                              child: Row(
-                                children: [
-                                  const Icon(Icons.auto_awesome,
-                                      color: Colors.white, size: 12),
-                                  const SizedBox(width: 6),
-                                  Text(
-                                    'Word of the Day',
-                                    style: GoogleFonts.inter(
-                                      color: Colors.white,
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.w600,
+                            // Card Header Row
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0.16),
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        border: Border.all(
+                                            color:
+                                                Colors.white.withOpacity(0.15)),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          const Icon(Icons.translate,
+                                              color: Colors.white, size: 12),
+                                          const SizedBox(width: 6),
+                                          Text(
+                                            'real-time translate',
+                                            style: GoogleFonts.inter(
+                                              color: Colors.white,
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    // Flag English + Khmer + Swap button
+                                    GestureDetector(
+                                      onTap: _swapLanguages,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 12, vertical: 5),
+                                        decoration: BoxDecoration(
+                                          color: Colors.white.withOpacity(0.15),
+                                          borderRadius:
+                                              BorderRadius.circular(100),
+                                          border: Border.all(
+                                              color: Colors.white.withOpacity(0.15)),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              _sourceLang == 'en'
+                                                  ? '🇬🇧 EN'
+                                                  : '🇰🇭 KH',
+                                              style: GoogleFonts.inter(
+                                                color: Colors.white,
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            const Padding(
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 4.0),
+                                              child: Icon(Icons.swap_horiz,
+                                                  color: Colors.white,
+                                                  size: 12),
+                                            ),
+                                            Text(
+                                              _targetLang == 'en'
+                                                  ? '🇬🇧 EN'
+                                                  : '🇰🇭 KH',
+                                              style: GoogleFonts.inter(
+                                                color: Colors.white,
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                IconButton(
+                                  onPressed: () =>
+                                      _toggleFav(_translateController.text),
+                                  icon: Icon(
+                                    isSaved ? Icons.star : Icons.star_border,
+                                    color: isSaved
+                                        ? const Color(0xFFF59E0B)
+                                        : Colors.white,
+                                    size: 24,
+                                  ),
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints(),
+                                ),
+                              ],
+                            ),
+                            // Input field for translating
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: SizedBox(
+                                    height: 75,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        TextField(
+                                          controller: _translateController,
+                                          focusNode: _focusNode,
+                                          onChanged: _onTextChanged,
+                                          cursorColor: Colors.white,
+                                          style: GoogleFonts.outfit(
+                                            fontSize: 34,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            letterSpacing: -0.5,
+                                          ),
+                                          decoration: InputDecoration(
+                                            hintText: _sourceLang == 'en'
+                                                ? 'Type English...'
+                                                : 'វាយបញ្ចូលពាក្យខ្មែរ...',
+                                            hintStyle: TextStyle(
+                                                color: Colors.white
+                                                    .withOpacity(0.5)),
+                                            border: InputBorder.none,
+                                            isDense: true,
+                                            contentPadding: EdgeInsets.zero,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          _phonetic.isNotEmpty ? _phonetic : '/.../',
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: GoogleFonts.inter(
+                                            color:
+                                                Colors.white.withOpacity(0.65),
+                                            fontSize: 14.5,
+                                            letterSpacing: 0.5,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 4),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFFF59E0B),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Text(
-                                'B2',
-                                style: GoogleFonts.outfit(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 11,
                                 ),
-                              ),
+                                GestureDetector(
+                                  onTap: () => _playAudio(_audioUrl),
+                                  child: Container(
+                                    width: 35,
+                                    height: 35,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(0.2),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(Icons.volume_up,
+                                        color: Colors.white, size: 18),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 16),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                            // Translation result and example sentence column
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Eloquent',
-                                  style: GoogleFonts.outfit(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                    letterSpacing: -0.5,
+                                if (_isTranslating)
+                                  const SizedBox(
+                                    width: 14,
+                                    height: 14,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                          Colors.white),
+                                    ),
+                                  )
+                                else
+                                  Text(
+                                    _translationResult.isNotEmpty
+                                        ? _translationResult
+                                        : '...',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: GoogleFonts.inter(
+                                      color: const Color(0xFFFCD34D),
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                      height: 1.8,
+                                    ),
                                   ),
-                                ),
+                                const SizedBox(height: 4),
                                 Text(
-                                  '/ˈel.ə.kwənt/',
+                                  _example.isNotEmpty ? '"$_example"' : '"..."',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                   style: GoogleFonts.inter(
-                                    color: Colors.white.withOpacity(0.65),
-                                    fontSize: 14.5,
-                                    letterSpacing: 0.5,
+                                    color: const Color.fromARGB(255, 255, 255, 255),
+                                    fontSize: 13.5,
+                                    fontStyle: FontStyle.italic,
+                                    height: 1.5,
                                   ),
                                 ),
                               ],
-                            ),
-                            Container(
-                              width: 44,
-                              height: 44,
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.2),
-                                shape: BoxShape.circle,
-                              ),
-                              child: const Icon(Icons.volume_up,
-                                  color: Colors.white, size: 20),
                             ),
                           ],
                         ),
-                        const SizedBox(height: 16),
-                        Text(
-                          'Fluent or persuasive in speaking or writing.',
-                          style: GoogleFonts.inter(
-                            color: Colors.white.withOpacity(0.92),
-                            fontSize: 14.5,
-                            height: 1.4,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '"She gave an eloquent speech that moved the entire audience."',
-                          style: GoogleFonts.inter(
-                            color: Colors.white.withOpacity(0.65),
-                            fontSize: 12.5,
-                            fontStyle: FontStyle.italic,
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        GestureDetector(
-                          onTap: () => onNavigate(1), // Go to words tab
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.06),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 12),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text(
-                                  'Explore details',
-                                  style: GoogleFonts.outfit(
-                                    color: primaryColor,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14.5,
-                                  ),
-                                ),
-                                const SizedBox(width: 8),
-                                Icon(Icons.arrow_forward,
-                                    size: 15, color: primaryColor),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 28),
@@ -542,7 +817,7 @@ class HomeScreen extends StatelessWidget {
                       final tab = cat['tab'] as int;
 
                       return GestureDetector(
-                        onTap: () => onNavigate(tab),
+                        onTap: () => widget.onNavigate(tab),
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 8),
@@ -616,7 +891,7 @@ class HomeScreen extends StatelessWidget {
 
                   // AI Chat CTA Banner
                   GestureDetector(
-                    onTap: () => onNavigate(2), // go to AI chat
+                    onTap: () => widget.onNavigate(2), // go to AI chat
                     child: Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
