@@ -44,3 +44,30 @@ Before starting, make sure the new computer has the following installed:
    ```bash
    flutter run
    ```
+
+### 3. Running the Backend Server (AI Chat)
+
+The chat feature relies on a local Node.js backend to communicate with the Gemini API securely.
+
+1. **Navigate to the backend directory**:
+   ```bash
+   cd backend
+   ```
+
+2. **Install Node.js dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**:
+   Create a `.env` file inside the `backend` directory and add your Gemini API Key:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. **Start the backend server**:
+   ```bash
+   npm start
+   ```
+   The server will run on `http://localhost:3000` (or `http://10.0.2.2:3000` for Android emulators).
+
