@@ -1,0 +1,908 @@
+[
+  {
+    "word_en": "one",
+    "phonetic": "/wʌn/",
+    "meaning_kh": "មួយ",
+    "example": "I have one pencil."
+  },
+  {
+    "word_en": "two",
+    "phonetic": "/tuː/",
+    "meaning_kh": "ពីរ",
+    "example": "A bicycle has two wheels."
+  },
+  {
+    "word_en": "three",
+    "phonetic": "/θriː/",
+    "meaning_kh": "បី",
+    "example": "A triangle has three sides."
+  },
+  {
+    "word_en": "four",
+    "phonetic": "/fɔːr/",
+    "meaning_kh": "បួន",
+    "example": "There are four seasons in a year: spring, summer, autumn, and winter."
+  },
+  {
+    "word_en": "five",
+    "phonetic": "/faɪv/",
+    "meaning_kh": "ប្រាំ",
+    "example": "A glove has five fingers."
+  },
+  {
+    "word_en": "six",
+    "phonetic": "/sɪks/",
+    "meaning_kh": "ប្រាំមួយ",
+    "example": "A honeybee's honeycomb cell has six sides."
+  },
+  {
+    "word_en": "seven",
+    "phonetic": "/ˈsɛv.ən/",
+    "meaning_kh": "ប្រាំពីរ",
+    "example": "There are seven days in a week."
+  },
+  {
+    "word_en": "eight",
+    "phonetic": "/eɪt/",
+    "meaning_kh": "ប្រាំបី",
+    "example": "A spider has eight legs."
+  },
+  {
+    "word_en": "nine",
+    "phonetic": "/naɪn/",
+    "meaning_kh": "ប្រាំបួន",
+    "example": "A baseball game normally lasts nine innings."
+  },
+  {
+    "word_en": "ten",
+    "phonetic": "/tɛn/",
+    "meaning_kh": "ដប់",
+    "example": "Human hands have ten fingers in total."
+  },
+  {
+    "word_en": "eleven",
+    "phonetic": "/ɪˈlɛv.ən/",
+    "meaning_kh": "ដប់មួយ",
+    "example": "A soccer team has eleven players on the field."
+  },
+  {
+    "word_en": "twelve",
+    "phonetic": "/twɛlv/",
+    "meaning_kh": "ដប់ពីរ",
+    "example": "There are twelve months in a single year."
+  },
+  {
+    "word_en": "thirteen",
+    "phonetic": "/θɜː(ɹ)ˈtiːn/",
+    "meaning_kh": "ដប់បី",
+    "example": "In some cultures, thirteen is considered an unlucky number."
+  },
+  {
+    "word_en": "fourteen",
+    "phonetic": "/fɔː(ɹ)ˈtiːn/",
+    "meaning_kh": "ដប់បួន",
+    "example": "A fortnight is a period of exactly fourteen days."
+  },
+  {
+    "word_en": "fifteen",
+    "phonetic": "/fɪfˈtiːn/",
+    "meaning_kh": "ដប់ប្រាំ",
+    "example": "We will have a fifteen-minute break after this lesson."
+  },
+  {
+    "word_en": "sixteen",
+    "phonetic": "/sɪksˈtiːn/",
+    "meaning_kh": "ដប់ប្រាំមួយ",
+    "example": "You must be sixteen years old to drive in some countries."
+  },
+  {
+    "word_en": "seventeen",
+    "phonetic": "/sɛv.ənˈtiːn/",
+    "meaning_kh": "ដប់ប្រាំពីរ",
+    "example": "The number seventeen is a prime number."
+  },
+  {
+    "word_en": "eighteen",
+    "phonetic": "/eɪˈtiːn/",
+    "meaning_kh": "ដប់ប្រាំបី",
+    "example": "In many countries, you become a legal adult at eighteen."
+  },
+  {
+    "word_en": "nineteen",
+    "phonetic": "/naɪnˈtiːn/",
+    "meaning_kh": "ដប់ប្រាំបួន",
+    "example": "The nineteen-year-old student won the national spelling bee."
+  },
+  {
+    "word_en": "twenty",
+    "phonetic": "/ˈtwɛn.ti/",
+    "meaning_kh": "ម្ភៃ",
+    "example": "There are twenty clean pages left in my notebook."
+  },
+  {
+    "word_en": "twenty-one",
+    "phonetic": "/ˌtwɛn.ti-ˈwʌn/",
+    "meaning_kh": "ម្ភៃមួយ",
+    "example": "She bought twenty-one roses for her mother's birthday."
+  },
+  {
+    "word_en": "twenty-two",
+    "phonetic": "/ˌtwɛn.ti-ˈtuː/",
+    "meaning_kh": "ម្ភៃពីរ",
+    "example": "The teacher graded twenty-two exams this afternoon."
+  },
+  {
+    "word_en": "twenty-three",
+    "phonetic": "/ˌtwɛn.ti-ˈθriː/",
+    "meaning_kh": "ម្ភៃបី",
+    "example": "We traveled across twenty-three different countries last summer."
+  },
+  {
+    "word_en": "twenty-four",
+    "phonetic": "/ˌtwɛn.ti-ˈfɔːr/",
+    "meaning_kh": "ម្ភៃបួន",
+    "example": "A day is divided into twenty-four hours."
+  },
+  {
+    "word_en": "twenty-five",
+    "phonetic": "/ˌtwɛn.ti-ˈfaɪv/",
+    "meaning_kh": "ម្ភៃប្រាំ",
+    "example": "The recipe requires twenty-five grams of sugar."
+  },
+  {
+    "word_en": "twenty-six",
+    "phonetic": "/ˌtwɛn.ti-ˈsɪks/",
+    "meaning_kh": "ម្ភៃប្រាំមួយ",
+    "example": "There are twenty-six letters in the English alphabet."
+  },
+  {
+    "word_en": "twenty-seven",
+    "phonetic": "/ˌtwɛn.ti-ˈsɛv.ən/",
+    "meaning_kh": "ម្ភៃប្រាំពីរ",
+    "example": "He counted twenty-seven stars in the night sky."
+  },
+  {
+    "word_en": "twenty-eight",
+    "phonetic": "/ˌtwɛn.ti-ˈeɪt/",
+    "meaning_kh": "ម្ភៃប្រាំបី",
+    "example": "The marathon runner finished in twenty-eight minutes."
+  },
+  {
+    "word_en": "twenty-nine",
+    "phonetic": "/ˌtwɛn.ti-ˈnaɪn/",
+    "meaning_kh": "ម្ភៃប្រាំបួន",
+    "example": "The bus route has twenty-nine stops in total."
+  },
+  {
+    "word_en": "thirty",
+    "phonetic": "/ˈθɜː(ɹ).ti/",
+    "meaning_kh": "សាមសិប",
+    "example": "The month of September has thirty days."
+  },
+  {
+    "word_en": "thirty-one",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈwʌn/",
+    "meaning_kh": "សាមសិបមួយ",
+    "example": "There are thirty-one days in October."
+  },
+  {
+    "word_en": "thirty-two",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈtuː/",
+    "meaning_kh": "សាមសិបពីរ",
+    "example": "The human mouth typically contains thirty-two teeth."
+  },
+  {
+    "word_en": "thirty-three",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈθriː/",
+    "meaning_kh": "សាមសិបបី",
+    "example": "He owns thirty-three classic vinyl records."
+  },
+  {
+    "word_en": "thirty-four",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈfɔːr/",
+    "meaning_kh": "សាមសិបបួន",
+    "example": "The temperature reached thirty-four degrees Celsius."
+  },
+  {
+    "word_en": "thirty-five",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈfaɪv/",
+    "meaning_kh": "សាមសិបប្រាំ",
+    "example": "She has thirty-five employees working in her company."
+  },
+  {
+    "word_en": "thirty-six",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈsɪks/",
+    "meaning_kh": "សាមសិបប្រាំមួយ",
+    "example": "A yard is equal to thirty-six inches."
+  },
+  {
+    "word_en": "thirty-seven",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈsɛv.ən/",
+    "meaning_kh": "សាមសិបប្រាំពីរ",
+    "example": "The plane ticket cost thirty-seven dollars."
+  },
+  {
+    "word_en": "thirty-eight",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈeɪt/",
+    "meaning_kh": "សាមសិបប្រាំបី",
+    "example": "The book has thirty-eight pages of illustrations."
+  },
+  {
+    "word_en": "thirty-nine",
+    "phonetic": "/ˌθɜː(ɹ).ti-ˈnaɪn/",
+    "meaning_kh": "សាមសិបប្រាំបួន",
+    "example": "The train was delayed for thirty-nine minutes."
+  },
+  {
+    "word_en": "forty",
+    "phonetic": "/ˈfɔː(ɹ).ti/",
+    "meaning_kh": "សែសិប",
+    "example": "The temperature outside is forty degrees Celsius."
+  },
+  {
+    "word_en": "forty-one",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈwʌn/",
+    "meaning_kh": "សែសិបមួយ",
+    "example": "He completed forty-one tasks on his to-do list."
+  },
+  {
+    "word_en": "forty-two",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈtuː/",
+    "meaning_kh": "សែសិបពីរ",
+    "example": "There are forty-two students enrolled in the chemistry class."
+  },
+  {
+    "word_en": "forty-three",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈθriː/",
+    "meaning_kh": "សែសិបបី",
+    "example": "She has forty-three unread emails in her inbox."
+  },
+  {
+    "word_en": "forty-four",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈfɔːr/",
+    "meaning_kh": "សែសិបបួន",
+    "example": "The keyboard has forty-four keys."
+  },
+  {
+    "word_en": "forty-five",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈfaɪv/",
+    "meaning_kh": "សែសិបប្រាំ",
+    "example": "The meeting lasted for forty-five minutes."
+  },
+  {
+    "word_en": "forty-six",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈsɪks/",
+    "meaning_kh": "សែសិបប្រាំមួយ",
+    "example": "The farmer owns forty-six cows on his ranch."
+  },
+  {
+    "word_en": "forty-seven",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈsɛv.ən/",
+    "meaning_kh": "សែសិបប្រាំពីរ",
+    "example": "They drove forty-seven miles to see the concert."
+  },
+  {
+    "word_en": "forty-eight",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈeɪt/",
+    "meaning_kh": "សែសិបប្រាំបី",
+    "example": "There are forty-eight crayons in the box."
+  },
+  {
+    "word_en": "forty-nine",
+    "phonetic": "/ˌfɔː(ɹ).ti-ˈnaɪn/",
+    "meaning_kh": "សែសិបប្រាំបួន",
+    "example": "The museum exhibits forty-nine historical artifacts."
+  },
+  {
+    "word_en": "fifty",
+    "phonetic": "/ˈfɪf.ti/",
+    "meaning_kh": "ហាសិប",
+    "example": "My grandparents celebrated their fifty-year wedding anniversary."
+  },
+  {
+    "word_en": "fifty-one",
+    "phonetic": "/ˌfɪf.ti-ˈwʌn/",
+    "meaning_kh": "ហាសិបមួយ",
+    "example": "The building has fifty-one floors."
+  },
+  {
+    "word_en": "fifty-two",
+    "phonetic": "/ˌfɪf.ti-ˈtuː/",
+    "meaning_kh": "ហាសិបពីរ",
+    "example": "A deck of cards has fifty-two cards."
+  },
+  {
+    "word_en": "fifty-three",
+    "phonetic": "/ˌfɪf.ti-ˈθriː/",
+    "meaning_kh": "ហាសិបបី",
+    "example": "He has fifty-three coins in his collection."
+  },
+  {
+    "word_en": "fifty-four",
+    "phonetic": "/ˌfɪf.ti-ˈfɔːr/",
+    "meaning_kh": "ហាសិបបួន",
+    "example": "She solved fifty-four math puzzles today."
+  },
+  {
+    "word_en": "fifty-five",
+    "phonetic": "/ˌfɪf.ti-ˈfaɪv/",
+    "meaning_kh": "ហាសិបប្រាំ",
+    "example": "The bus seats fifty-five passengers comfortably."
+  },
+  {
+    "word_en": "fifty-six",
+    "phonetic": "/ˌfɪf.ti-ˈsɪks/",
+    "meaning_kh": "ហាសិបប្រាំមួយ",
+    "example": "He works fifty-six hours a week."
+  },
+  {
+    "word_en": "fifty-seven",
+    "phonetic": "/ˌfɪf.ti-ˈsɛv.ən/",
+    "meaning_kh": "ហាសិបប្រាំពីរ",
+    "example": "The country is divided into fifty-seven districts."
+  },
+  {
+    "word_en": "fifty-eight",
+    "phonetic": "/ˌfɪf.ti-ˈeɪt/",
+    "meaning_kh": "ហាសិបប្រាំបី",
+    "example": "She bought fifty-eight new books for the library."
+  },
+  {
+    "word_en": "fifty-nine",
+    "phonetic": "/ˌfɪf.ti-ˈnaɪn/",
+    "meaning_kh": "ហាសិបប្រាំបួន",
+    "example": "The highway speed limit is fifty-nine miles per hour."
+  },
+  {
+    "word_en": "sixty",
+    "phonetic": "/ˈsɪks.ti/",
+    "meaning_kh": "ហុកសិប",
+    "example": "There are sixty seconds in one minute."
+  },
+  {
+    "word_en": "sixty-one",
+    "phonetic": "/ˌsɪks.ti-ˈwʌn/",
+    "meaning_kh": "ហុកសិបមួយ",
+    "example": "The grandmother has sixty-one descendants."
+  },
+  {
+    "word_en": "sixty-two",
+    "phonetic": "/ˌsɪks.ti-ˈtuː/",
+    "meaning_kh": "ហុកសិបពីរ",
+    "example": "He is sixty-two years old and ready to retire."
+  },
+  {
+    "word_en": "sixty-three",
+    "phonetic": "/ˌsɪks.ti-ˈθriː/",
+    "meaning_kh": "ហុកសិបបី",
+    "example": "The museum is sixty-three miles away from here."
+  },
+  {
+    "word_en": "sixty-four",
+    "phonetic": "/ˌsɪks.ti-ˈfɔːr/",
+    "meaning_kh": "ហុកសិបបួន",
+    "example": "A chessboard has sixty-four squares."
+  },
+  {
+    "word_en": "sixty-five",
+    "phonetic": "/ˌsɪks.ti-ˈfaɪv/",
+    "meaning_kh": "ហុកសិបប្រាំ",
+    "example": "They sold sixty-five tickets to the show."
+  },
+  {
+    "word_en": "sixty-six",
+    "phonetic": "/ˌsɪks.ti-ˈsɪks/",
+    "meaning_kh": "ហុកសិបប្រាំមួយ",
+    "example": "Route sixty-six is a very famous highway in America."
+  },
+  {
+    "word_en": "sixty-seven",
+    "phonetic": "/ˌsɪks.ti-ˈsɛv.ən/",
+    "meaning_kh": "ហុកសិបប្រាំពីរ",
+    "example": "The temperature dropped to sixty-seven degrees."
+  },
+  {
+    "word_en": "sixty-eight",
+    "phonetic": "/ˌsɪks.ti-ˈeɪt/",
+    "meaning_kh": "ហុកសិបប្រាំបី",
+    "example": "The company has sixty-eight active clients."
+  },
+  {
+    "word_en": "sixty-nine",
+    "phonetic": "/ˌsɪks.ti-ˈnaɪn/",
+    "meaning_kh": "ហុកសិបប្រាំបួន",
+    "example": "The book was published sixty-nine years ago."
+  },
+  {
+    "word_en": "seventy",
+    "phonetic": "/ˈsɛv.ən.ti/",
+    "meaning_kh": "ចិតសិប",
+    "example": "The speed limit on the highway is seventy miles per hour."
+  },
+  {
+    "word_en": "seventy-one",
+    "phonetic": "/ˌsɛv.ən.ti-ˈwʌn/",
+    "meaning_kh": "ចិតសិបមួយ",
+    "example": "They collected seventy-one plastic bottles for recycling."
+  },
+  {
+    "word_en": "seventy-two",
+    "phonetic": "/ˌsɛv.ən.ti-ˈtuː/",
+    "meaning_kh": "ចិតសិបពីរ",
+    "example": "It took seventy-two hours to restore the power."
+  },
+  {
+    "word_en": "seventy-three",
+    "phonetic": "/ˌsɛv.ən.ti-ˈθriː/",
+    "meaning_kh": "ចិតសិបបី",
+    "example": "She has seventy-three contacts saved in her phone."
+  },
+  {
+    "word_en": "seventy-four",
+    "phonetic": "/ˌsɛv.ən.ti-ˈfɔːr/",
+    "meaning_kh": "ចិតសិបបួន",
+    "example": "The theater can hold seventy-four spectators."
+  },
+  {
+    "word_en": "seventy-five",
+    "phonetic": "/ˌsɛv.ən.ti-ˈfaɪv/",
+    "meaning_kh": "ចិតសិបប្រាំ",
+    "example": "He scored seventy-five points on the exam."
+  },
+  {
+    "word_en": "seventy-six",
+    "phonetic": "/ˌsɛv.ən.ti-ˈsɪks/",
+    "meaning_kh": "ចិតសិបប្រាំមួយ",
+    "example": "The tree is seventy-six years old."
+  },
+  {
+    "word_en": "seventy-seven",
+    "phonetic": "/ˌsɛv.ən.ti-ˈsɛv.ən/",
+    "meaning_kh": "ចិតសិបប្រាំពីរ",
+    "example": "The country code for that region is seventy-seven."
+  },
+  {
+    "word_en": "seventy-eight",
+    "phonetic": "/ˌsɛv.ən.ti-ˈeɪt/",
+    "meaning_kh": "ចិតសិបប្រាំបី",
+    "example": "We spent seventy-eight dollars on dinner last night."
+  },
+  {
+    "word_en": "seventy-nine",
+    "phonetic": "/ˌsɛv.ən.ti-ˈnaɪn/",
+    "meaning_kh": "ចិតសិបប្រាំបួន",
+    "example": "There are seventy-nine steps to the top of the tower."
+  },
+  {
+    "word_en": "eighty",
+    "phonetic": "/ˈeɪ.ti/",
+    "meaning_kh": "ប៉ែតសិប",
+    "example": "The textbook contains eighty pages of illustrations."
+  },
+  {
+    "word_en": "eighty-one",
+    "phonetic": "/ˌeɪ.ti-ˈwʌn/",
+    "meaning_kh": "ប៉ែតសិបមួយ",
+    "example": "The puzzle has eighty-one pieces."
+  },
+  {
+    "word_en": "eighty-two",
+    "phonetic": "/ˌeɪ.ti-ˈtuː/",
+    "meaning_kh": "ប៉ែតសិបពីរ",
+    "example": "She lived to be eighty-two years old."
+  },
+  {
+    "word_en": "eighty-three",
+    "phonetic": "/ˌeɪ.ti-ˈθriː/",
+    "meaning_kh": "ប៉ែតសិបបី",
+    "example": "They planted eighty-three trees in the park."
+  },
+  {
+    "word_en": "eighty-four",
+    "phonetic": "/ˌeɪ.ti-ˈfɔːr/",
+    "meaning_kh": "ប៉ែតសិបបួន",
+    "example": "He owns eighty-four acres of land."
+  },
+  {
+    "word_en": "eighty-five",
+    "phonetic": "/ˌeɪ.ti-ˈfaɪv/",
+    "meaning_kh": "ប៉ែតសិបប្រាំ",
+    "example": "The store offers eighty-five different types of tea."
+  },
+  {
+    "word_en": "eighty-six",
+    "phonetic": "/ˌeɪ.ti-ˈsɪks/",
+    "meaning_kh": "ប៉ែតសិបប្រាំមួយ",
+    "example": "The hotel features eighty-six guest rooms."
+  },
+  {
+    "word_en": "eighty-seven",
+    "phonetic": "/ˌeɪ.ti-ˈsɛv.ən/",
+    "meaning_kh": "ប៉ែតសិបប្រាំពីរ",
+    "example": "The radio station plays eighty-seven hits in a row."
+  },
+  {
+    "word_en": "eighty-eight",
+    "phonetic": "/ˌeɪ.ti-ˈeɪt/",
+    "meaning_kh": "ប៉ែតសិបប្រាំបី",
+    "example": "A piano has eighty-eight keys."
+  },
+  {
+    "word_en": "eighty-nine",
+    "phonetic": "/ˌeɪ.ti-ˈnaɪn/",
+    "meaning_kh": "ប៉ែតសិបប្រាំបួន",
+    "example": "She has eighty-nine followers on her blog."
+  },
+  {
+    "word_en": "ninety",
+    "phonetic": "/ˈnaɪn.ti/",
+    "meaning_kh": "កៅសិប",
+    "example": "A right angle is exactly ninety degrees."
+  },
+  {
+    "word_en": "ninety-one",
+    "phonetic": "/ˌnaɪn.ti-ˈwʌn/",
+    "meaning_kh": "កៅសិបមួយ",
+    "example": "The recipe makes ninety-one cookies."
+  },
+  {
+    "word_en": "ninety-two",
+    "phonetic": "/ˌnaɪn.ti-ˈtuː/",
+    "meaning_kh": "កៅសិបពីរ",
+    "example": "The train journey covers ninety-two miles."
+  },
+  {
+    "word_en": "ninety-three",
+    "phonetic": "/ˌnaɪn.ti-ˈθriː/",
+    "meaning_kh": "កៅសិបបី",
+    "example": "There are ninety-three elements found in nature."
+  },
+  {
+    "word_en": "ninety-four",
+    "phonetic": "/ˌnaɪn.ti-ˈfɔːr/",
+    "meaning_kh": "កៅសិបបួន",
+    "example": "The school has ninety-four teachers."
+  },
+  {
+    "word_en": "ninety-five",
+    "phonetic": "/ˌnaɪn.ti-ˈfaɪv/",
+    "meaning_kh": "កៅសិបប្រាំ",
+    "example": "The car travelled ninety-five kilometers per hour."
+  },
+  {
+    "word_en": "ninety-six",
+    "phonetic": "/ˌnaɪn.ti-ˈsɪks/",
+    "meaning_kh": "កៅសិបប្រាំមួយ",
+    "example": "The baby took ninety-six steps today."
+  },
+  {
+    "word_en": "ninety-seven",
+    "phonetic": "/ˌnaɪn.ti-ˈsɛv.ən/",
+    "meaning_kh": "កៅសិបប្រាំពីរ",
+    "example": "The dictionary contains ninety-seven pages of definitions."
+  },
+  {
+    "word_en": "ninety-eight",
+    "phonetic": "/ˌnaɪn.ti-ˈeɪt/",
+    "meaning_kh": "កៅសិបប្រាំបី",
+    "example": "He scored ninety-eight percent on the test."
+  },
+  {
+    "word_en": "ninety-nine",
+    "phonetic": "/ˌnaɪn.ti-ˈnaɪn/",
+    "meaning_kh": "កៅសិបប្រាំបួន",
+    "example": "The book has ninety-nine chapters."
+  },
+  {
+    "word_en": "hundred",
+    "phonetic": "/ˈhʌn.drəd/",
+    "meaning_kh": "មួយរយ",
+    "example": "There are one hundred cents in a dollar."
+  },
+  {
+    "word_en": "two hundred",
+    "phonetic": "/tuː ˈhʌn.drəd/",
+    "meaning_kh": "ពីររយ",
+    "example": "The bakery sells two hundred loaves of bread every day."
+  },
+  {
+    "word_en": "three hundred",
+    "phonetic": "/θriː ˈhʌn.drəd/",
+    "meaning_kh": "បីរយ",
+    "example": "The stadium has a seating capacity of three hundred people."
+  },
+  {
+    "word_en": "four hundred",
+    "phonetic": "/fɔːr ˈhʌn.drəd/",
+    "meaning_kh": "បួនរយ",
+    "example": "The library has over four hundred thousand books."
+  },
+  {
+    "word_en": "five hundred",
+    "phonetic": "/faɪv ˈhʌn.drəd/",
+    "meaning_kh": "ប្រាំរយ",
+    "example": "We need five hundred dollars to buy the new computer."
+  },
+  {
+    "word_en": "six hundred",
+    "phonetic": "/sɪks ˈhʌn.drəd/",
+    "meaning_kh": "ប្រាំមួយរយ",
+    "example": "The marathon runners covered six hundred miles."
+  },
+  {
+    "word_en": "seven hundred",
+    "phonetic": "/ˈsɛv.ən ˈhʌn.drəd/",
+    "meaning_kh": "ប្រាំពីររយ",
+    "example": "She has seven hundred followers on social media."
+  },
+  {
+    "word_en": "eight hundred",
+    "phonetic": "/eɪt ˈhʌn.drəd/",
+    "meaning_kh": "ប្រាំបីរយ",
+    "example": "The hotel has eight hundred rooms available."
+  },
+  {
+    "word_en": "nine hundred",
+    "phonetic": "/naɪn ˈhʌn.drəd/",
+    "meaning_kh": "ប្រាំបួនរយ",
+    "example": "It will take nine hundred hours to complete the project."
+  },
+  {
+    "word_en": "one thousand",
+    "phonetic": "/wʌn ˈθaʊ.zənd/",
+    "meaning_kh": "មួយពាន់",
+    "example": "The concert was attended by one thousand fans."
+  },
+  {
+    "word_en": "two thousand",
+    "phonetic": "/tuː ˈθaʊ.zənd/",
+    "meaning_kh": "ពីរពាន់",
+    "example": "The company sold two thousand units last month."
+  },
+  {
+    "word_en": "three thousand",
+    "phonetic": "/θriː ˈθaʊ.zənd/",
+    "meaning_kh": "បីពាន់",
+    "example": "The new bridge cost three thousand dollars to build."
+  },
+  {
+    "word_en": "four thousand",
+    "phonetic": "/fɔːr ˈθaʊ.zənd/",
+    "meaning_kh": "បួនពាន់",
+    "example": "She earned four thousand points in the game."
+  },
+  {
+    "word_en": "five thousand",
+    "phonetic": "/faɪv ˈθaʊ.zənd/",
+    "meaning_kh": "ប្រាំពាន់",
+    "example": "The charity raised five thousand dollars for the cause."
+  },
+  {
+    "word_en": "six thousand",
+    "phonetic": "/sɪks ˈθaʊ.zənd/",
+    "meaning_kh": "ប្រាំមួយពាន់",
+    "example": "The recipe calls for six thousand grams of flour."
+  },
+  {
+    "word_en": "seven thousand",
+    "phonetic": "/ˈsɛv.ən ˈθaʊ.zənd/",
+    "meaning_kh": "ប្រាំពីរពាន់",
+    "example": "We drove seven thousand kilometers during our trip."
+  },
+  {
+    "word_en": "eight thousand",
+    "phonetic": "/eɪt ˈθaʊ.zənd/",
+    "meaning_kh": "ប្រាំបីពាន់",
+    "example": "There are eight thousand islands in this archipelago."
+  },
+  {
+    "word_en": "nine thousand",
+    "phonetic": "/naɪn ˈθaʊ.zənd/",
+    "meaning_kh": "ប្រាំបួនពាន់",
+    "example": "The university has nine thousand students enrolled."
+  },
+  {
+    "word_en": "ten thousand",
+    "phonetic": "/tɛn ˈθaʊ.zənd/",
+    "meaning_kh": "មួយម៉ឺន",
+    "example": "The prize money for the competition is ten thousand dollars."
+  },
+  {
+    "word_en": "one hundred thousand",
+    "phonetic": "/wʌn ˈhʌn.drəd ˈθaʊ.zənd/",
+    "meaning_kh": "មួយសែន",
+    "example": "The population of the town is one hundred thousand."
+  },
+  {
+    "word_en": "one million",
+    "phonetic": "/wʌn ˈmɪl.jən/",
+    "meaning_kh": "មួយលាន",
+    "example": "The lottery jackpot reached one million dollars."
+  },
+  {
+    "word_en": "one billion",
+    "phonetic": "/wʌn ˈbɪl.jən/",
+    "meaning_kh": "មួយពាន់លាន",
+    "example": "The company's annual revenue is over one billion dollars."
+  },
+  {
+    "word_en": "first",
+    "phonetic": "/fɜːst/",
+    "meaning_kh": "ទីមួយ",
+    "example": "He finished first in the race."
+  },
+  {
+    "word_en": "second",
+    "phonetic": "/ˈsɛk.ənd/",
+    "meaning_kh": "ទីពីរ",
+    "example": "She is the second person to arrive."
+  },
+  {
+    "word_en": "third",
+    "phonetic": "/θɜːd/",
+    "meaning_kh": "ទីបី",
+    "example": "This is the third time I've visited this place."
+  },
+  {
+    "word_en": "fourth",
+    "phonetic": "/fɔːθ/",
+    "meaning_kh": "ទីបួន",
+    "example": "The fourth chapter of the book is about history."
+  },
+  {
+    "word_en": "fifth",
+    "phonetic": "/fɪfθ/",
+    "meaning_kh": "ទីប្រាំ",
+    "example": "He is the fifth member of our team."
+  },
+  {
+    "word_en": "sixth",
+    "phonetic": "/sɪksθ/",
+    "meaning_kh": "ទីប្រាំមួយ",
+    "example": "They bought a sixth-floor apartment."
+  },
+  {
+    "word_en": "seventh",
+    "phonetic": "/ˈsɛv.ənθ/",
+    "meaning_kh": "ទីប្រាំពីរ",
+    "example": "She was born on the seventh day of the month."
+  },
+  {
+    "word_en": "eighth",
+    "phonetic": "/eɪtθ/",
+    "meaning_kh": "ទីប្រាំបី",
+    "example": "This is the eighth time I've told you."
+  },
+  {
+    "word_en": "ninth",
+    "phonetic": "/naɪnθ/",
+    "meaning_kh": "ទីប្រាំបួន",
+    "example": "We live on the ninth floor."
+  },
+  {
+    "word_en": "tenth",
+    "phonetic": "/tɛnθ/",
+    "meaning_kh": "ទីដប់",
+    "example": "She has won her tenth award so far."
+  },
+  {
+    "word_en": "eleventh",
+    "phonetic": "/ɪˈlɛv.ənθ/",
+    "meaning_kh": "ទីដប់មួយ",
+    "example": "The eleventh hour is too late to change plans."
+  },
+  {
+    "word_en": "twelfth",
+    "phonetic": "/twɛlfθ/",
+    "meaning_kh": "ទីដប់ពីរ",
+    "example": "The twelfth night is a traditional festival."
+  },
+  {
+    "word_en": "thirteenth",
+    "phonetic": "/θɜː(ɹ)ˈtiːnθ/",
+    "meaning_kh": "ទីដប់បី",
+    "example": "She is a very lucky thirteenth child."
+  },
+  {
+    "word_en": "fourteenth",
+    "phonetic": "/fɔː(ɹ)ˈtiːnθ/",
+    "meaning_kh": "ទីដប់បួន",
+    "example": "The Fourteenth Amendment guarantees equal protection."
+  },
+  {
+    "word_en": "fifteenth",
+    "phonetic": "/fɪfˈtiːnθ/",
+    "meaning_kh": "ទីដប់ប្រាំ",
+    "example": "He scored the fifteenth point in the game."
+  },
+  {
+    "word_en": "sixteenth",
+    "phonetic": "/sɪksˈtiːnθ/",
+    "meaning_kh": "ទីដប់ប្រាំមួយ",
+    "example": "The sixteenth century was a time of great change."
+  },
+  {
+    "word_en": "seventeenth",
+    "phonetic": "/sɛv.ənˈtiːnθ/",
+    "meaning_kh": "ទីដប់ប្រាំពីរ",
+    "example": "The seventeenth-century furniture is very valuable."
+  },
+  {
+    "word_en": "eighteenth",
+    "phonetic": "/eɪˈtiːnθ/",
+    "meaning_kh": "ទីដប់ប្រាំបី",
+    "example": "She received her eighteenth birthday gift."
+  },
+  {
+    "word_en": "nineteenth",
+    "phonetic": "/naɪnˈtiːnθ/",
+    "meaning_kh": "ទីដប់ប្រាំបួន",
+    "example": "The nineteenth-century building is now a museum."
+  },
+  {
+    "word_en": "twentieth",
+    "phonetic": "/ˈtwɛn.ti.əθ/",
+    "meaning_kh": "ទីម្ភៃ",
+    "example": "The twentieth century saw many technological advancements."
+  },
+  {
+    "word_en": "thirtieth",
+    "phonetic": "/ˈθɜː(ɹ).ti.əθ/",
+    "meaning_kh": "ទីសាមសិប",
+    "example": "The thirtieth anniversary is a special occasion."
+  },
+  {
+    "word_en": "fortieth",
+    "phonetic": "/ˈfɔː(ɹ).ti.əθ/",
+    "meaning_kh": "ទីសែសិប",
+    "example": "This is the fortieth year of the company's operation."
+  },
+  {
+    "word_en": "fiftieth",
+    "phonetic": "/ˈfɪf.ti.əθ/",
+    "meaning_kh": "ទីហាសិប",
+    "example": "The fiftieth state admitted to the Union was Hawaii."
+  },
+  {
+    "word_en": "sixtieth",
+    "phonetic": "/ˈsɪks.ti.əθ/",
+    "meaning_kh": "ទីហុកសិប",
+    "example": "She is celebrating her sixtieth birthday today."
+  },
+  {
+    "word_en": "seventieth",
+    "phonetic": "/ˈsɛv.ən.ti.əθ/",
+    "meaning_kh": "ទីចិតសិប",
+    "example": "He celebrated his seventieth birthday."
+  },
+  {
+    "word_en": "eightieth",
+    "phonetic": "/ˈeɪ.ti.əθ/",
+    "meaning_kh": "ទីប៉ែតសិប",
+    "example": "The museum celebrated its eightieth anniversary."
+  },
+  {
+    "word_en": "ninetieth",
+    "phonetic": "/ˈnaɪn.ti.əθ/",
+    "meaning_kh": "ទីកៅសិប",
+    "example": "This is the ninetieth year of the school's existence."
+  },
+  {
+    "word_en": "hundredth",
+    "phonetic": "/ˈhʌn.drədθ/",
+    "meaning_kh": "ទីមួយរយ",
+    "example": "The hundredth customer received a special prize."
+  },
+  {
+    "word_en": "thousandth",
+    "phonetic": "/ˈθaʊ.zəndθ/",
+    "meaning_kh": "ទីមួយពាន់",
+    "example": "This is the thousandth time I've heard that joke."
+  },
+  {
+    "word_en": "millionth",
+    "phonetic": "/ˈmɪl.jənθ/",
+    "meaning_kh": "ទីមួយលាន",
+    "example": "The millionth visitor to the museum was greeted with fanfare."
+  }
+]

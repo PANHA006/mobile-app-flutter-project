@@ -47,6 +47,20 @@ class WordItem {
   }
 }
 
+class NumberGroup {
+  final String title;
+  final String meaningKh;
+  final int startIndex;
+  final int endIndex;
+
+  const NumberGroup({
+    required this.title,
+    required this.meaningKh,
+    required this.startIndex,
+    required this.endIndex,
+  });
+}
+
 class VocabularyScreen extends StatefulWidget {
   const VocabularyScreen({super.key});
 
@@ -83,6 +97,10 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   // Tenses State
   List<dynamic> _tensesData = [];
   bool _isLoadingTenses = false;
+
+  // Numbers State
+  List<WordItem> _numbersData = [];
+  bool _isLoadingNumbers = false;
 
   @override
   void initState() {
@@ -201,105 +219,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
       allWords.shuffle();
       final selected = allWords.take(25).toList();
 
-      List<WordItem> enrichedWords = [];
-
-      // 4. Enrich each word with translation and dictionary API (in parallel)
-      final List<Future<WordItem>> futures = selected.map((w) async {
-        final wordEn = w['word_en']?.toString().trim() ?? '';
-        
-        // Google Translate API
-        String wordKh = '';
-        try {
-          final transUri = Uri.parse(
-              'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=km&dt=t&q=${Uri.encodeComponent(wordEn)}');
-          final transRes = await http.get(transUri).timeout(const Duration(seconds: 4));
-          if (transRes.statusCode == 200) {
-            final transData = json.decode(transRes.body);
-            wordKh = transData[0][0][0] ?? '';
-          }
-        } catch (_) {}
-        if (wordKh.isEmpty) {
-          wordKh = '...';
-        }
-
-        // Free Dictionary API
-        String phonetic = '/.../';
-        String example = '"..."';
-        String audioUrl = '';
-        try {
-          final dictRes = await http.get(Uri.parse(
-              'https://api.dictionaryapi.dev/api/v2/entries/en/$wordEn'))
-              .timeout(const Duration(seconds: 4));
-          if (dictRes.statusCode == 200) {
-            final dictData = json.decode(dictRes.body);
-            if (dictData is List && dictData.isNotEmpty) {
-              final entry = dictData[0];
-              phonetic = entry['phonetic'] ?? '';
-              
-              if (entry['phonetics'] != null) {
-                final audioObj = entry['phonetics'].firstWhere(
-                  (p) =>
-                      p['audio'] != null &&
-                      p['audio'].toString().startsWith('http'),
-                  orElse: () => null,
-                );
-                if (audioObj != null) {
-                  audioUrl = audioObj['audio'] ?? '';
-                }
-              }
-              if (phonetic.isEmpty && entry['phonetics'] != null && entry['phonetics'].isNotEmpty) {
-                for (final p in entry['phonetics']) {
-                  if (p['text'] != null && p['text'].toString().isNotEmpty) {
-                    phonetic = p['text'];
-                    break;
-                  }
-                }
-              }
-
-              if (entry['meanings'] != null && entry['meanings'].isNotEmpty) {
-                bool foundExample = false;
-                for (final meaning in entry['meanings']) {
-                  if (meaning['definitions'] != null) {
-                    for (final def in meaning['definitions']) {
-                      if (def['example'] != null && def['example'].toString().isNotEmpty) {
-                        example = def['example'].toString();
-                        foundExample = true;
-                        break;
-                      }
-                    }
-                  }
-                  if (foundExample) break;
-                }
-              }
-            }
-          }
-        } catch (_) {}
-
-        if (phonetic.isEmpty) {
-          phonetic = '/.../';
-        } else {
-          if (!phonetic.startsWith('/')) phonetic = '/$phonetic';
-          if (!phonetic.endsWith('/')) phonetic = '$phonetic/';
-        }
-        if (example.isEmpty || example == '"..."') {
-          example = '"..."';
-        } else {
-          if (example.startsWith('"') && example.endsWith('"')) {
-            example = example.substring(1, example.length - 1);
-          }
-        }
-
-        return WordItem(
-          word: wordEn,
-          meaningKh: wordKh,
-          example: example,
-          level: level.toUpperCase(),
-          phonetic: phonetic,
-          audioUrl: audioUrl,
-        );
+      List<WordItem> enrichedWords = selected.map((w) {
+        return WordItem.fromJson(w, level);
       }).toList();
-
-      enrichedWords = await Future.wait(futures);
 
       // Save to cache
       final serialized = enrichedWords.map((e) => e.toJson()).toList();
@@ -340,6 +262,36 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     } catch (_) {
       setState(() {
         _isLoadingTenses = false;
+      });
+    }
+  }
+
+  // Load numbers data
+  Future<void> _loadNumbersData() async {
+    if (_numbersData.isNotEmpty) return;
+    setState(() {
+      _isLoadingNumbers = true;
+    });
+    try {
+      final jsonStr = await rootBundle.loadString('assets/data/api_vocabulary_number.json');
+      final List<dynamic> decoded = json.decode(jsonStr);
+      setState(() {
+        _numbersData = List<WordItem>.from(decoded.map((item) {
+          final mapItem = item as Map<String, dynamic>;
+          return WordItem(
+            word: mapItem['word_en'] ?? '',
+            meaningKh: mapItem['meaning_kh'] ?? '',
+            example: mapItem['example'] ?? '',
+            level: 'NUMBERS',
+            phonetic: mapItem['phonetic'] ?? '',
+            audioUrl: mapItem['audio'] ?? mapItem['audio_url'] ?? '',
+          );
+        }));
+        _isLoadingNumbers = false;
+      });
+    } catch (_) {
+      setState(() {
+        _isLoadingNumbers = false;
       });
     }
   }
@@ -534,17 +486,17 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                 height: 52,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(100),
                   border: Border.all(color: const Color(0xFFE2E8F0)),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.02),
-                      blurRadius: 10,
+                      color: Colors.black.withOpacity(0.06),
+                      blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
                   ],
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   children: [
                     Expanded(
@@ -582,6 +534,8 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                       });
                       if (tab == 'Tenses') {
                         _loadTensesData();
+                      } else if (tab == 'Numbers') {
+                        _loadNumbersData();
                       }
                     },
                     child: Container(
@@ -617,9 +571,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                   border: Border.all(color: cardBorderColor),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.02),
-                      blurRadius: 16,
-                      offset: const Offset(0, 6),
+                      color: Colors.black.withOpacity(0.06),
+                      blurRadius: 20,
+                      offset: const Offset(0, 8),
                     ),
                   ],
                 ),
@@ -726,18 +680,40 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
 
                     // ScrollView content inside the container
                     if (_activeTab == 'Numbers')
-                      Container(
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(vertical: 40),
-                        child: Text(
-                          'Numbers section is coming soon!',
-                          style: GoogleFonts.inter(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                            color: const Color(0xFF64748B),
-                          ),
-                        ),
-                      )
+                      _isLoadingNumbers
+                          ? Container(
+                              alignment: Alignment.center,
+                              padding: const EdgeInsets.symmetric(vertical: 60),
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+                              ),
+                            )
+                          : _numbersData.isEmpty
+                              ? Container(
+                                  alignment: Alignment.center,
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  child: Text(
+                                    'Failed to load numbers.',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 14,
+                                      color: const Color(0xFF64748B),
+                                    ),
+                                  ),
+                                )
+                              : ListView.separated(
+                                  shrinkWrap: true,
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  itemCount: _numberGroups.length,
+                                  separatorBuilder: (context, index) => const Divider(
+                                    color: Color(0xFFF1F5F9),
+                                    thickness: 1,
+                                    height: 20,
+                                  ),
+                                  itemBuilder: (context, index) {
+                                    final group = _numberGroups[index];
+                                    return _buildNumberGroupCard(group, primaryColor);
+                                  },
+                                )
                     else if (_activeTab == 'Tenses')
                       _isLoadingTenses
                           ? Container(
@@ -825,41 +801,47 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // English word
-            Flexible(
-              child: Text(
-                item.word,
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.outfit(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFF0F172A),
-                ),
+            Expanded(
+              child: Row(
+                children: [
+                  // English word
+                  Flexible(
+                    child: Text(
+                      item.word,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.outfit(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF0F172A),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  // Phonetic
+                  Flexible(
+                    child: Text(
+                      item.phonetic,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.inter(
+                        fontSize: 13,
+                        color: const Color(0xFF64748B),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  // Pronunciation Speaker Icon
+                  if (item.audioUrl.isNotEmpty) ...[
+                    const SizedBox(width: 6),
+                    IconButton(
+                      onPressed: () => _playAudio(item.audioUrl),
+                      icon: Icon(Icons.volume_up, color: primaryColor, size: 18),
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(),
+                    ),
+                  ],
+                ],
               ),
             ),
-            const SizedBox(width: 12),
-            // Phonetic
-            Flexible(
-              child: Text(
-                item.phonetic,
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.inter(
-                  fontSize: 13,
-                  color: const Color(0xFF64748B),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            // Pronunciation Speaker Icon
-            if (item.audioUrl.isNotEmpty) ...[
-              const SizedBox(width: 8),
-              IconButton(
-                onPressed: () => _playAudio(item.audioUrl),
-                icon: Icon(Icons.volume_up, color: primaryColor, size: 18),
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(),
-              ),
-            ],
             const SizedBox(width: 12),
             // Favorite Heart Icon
             GestureDetector(
@@ -1058,7 +1040,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                   ],
                 ),
               );
-            }).toList(),
+            }),
           ],
         ],
       ),
@@ -1115,6 +1097,80 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         ),
         _buildWordCard(searchItem, primaryColor),
       ],
+    );
+  }
+
+  final List<NumberGroup> _numberGroups = const [
+    NumberGroup(title: "1 - 10 (One - Ten)", meaningKh: "មួយ ទៅ ដប់", startIndex: 0, endIndex: 10),
+    NumberGroup(title: "11 - 20 (Eleven - Twenty)", meaningKh: "ដប់មួយ ទៅ ម្ភៃ", startIndex: 10, endIndex: 20),
+    NumberGroup(title: "21 - 30 (Twenty-one - Thirty)", meaningKh: "ម្ភៃមួយ ទៅ សាមសិប", startIndex: 20, endIndex: 30),
+    NumberGroup(title: "31 - 40 (Thirty-one - Forty)", meaningKh: "សាមសិបមួយ ទៅ សែសិប", startIndex: 30, endIndex: 40),
+    NumberGroup(title: "41 - 50 (Forty-one - Fifty)", meaningKh: "សែសិបមួយ ទៅ ហាសិប", startIndex: 40, endIndex: 50),
+    NumberGroup(title: "51 - 60 (Fifty-one - Sixty)", meaningKh: "ហាសិបមួយ ទៅ ហុកសិប", startIndex: 50, endIndex: 60),
+    NumberGroup(title: "61 - 70 (Sixty-one - Seventy)", meaningKh: "ហុកសិបមួយ ទៅ ចិតសិប", startIndex: 60, endIndex: 70),
+    NumberGroup(title: "71 - 80 (Seventy-one - Eighty)", meaningKh: "ចិតសិបមួយ ទៅ ប៉ែតសិប", startIndex: 70, endIndex: 80),
+    NumberGroup(title: "81 - 90 (Eighty-one - Ninety)", meaningKh: "ប៉ែតសិបមួយ ទៅ កៅសិប", startIndex: 80, endIndex: 90),
+    NumberGroup(title: "91 - 100 (Ninety-one - One Hundred)", meaningKh: "កៅសិបមួយ ទៅ មួយរយ", startIndex: 90, endIndex: 100),
+    NumberGroup(title: "Hundreds (200 - 900)", meaningKh: "ពីររយ ទៅ ប្រាំបួនរយ", startIndex: 100, endIndex: 109),
+    NumberGroup(title: "Thousands & Millions (1,000 - 1 Billion)", meaningKh: "ពាន់ ម៉ឺន សែន លាន ប៊ីលាន", startIndex: 109, endIndex: 122),
+    NumberGroup(title: "Ordinals: 1st - 10th", meaningKh: "លំដាប់ទី ១ ទៅ ទី ១០", startIndex: 122, endIndex: 132),
+    NumberGroup(title: "Ordinals: 11th - 20th", meaningKh: "លំដាប់ទី ១១ ទៅ ទី ២០", startIndex: 132, endIndex: 142),
+    NumberGroup(title: "Ordinals: 30th - Millionth", meaningKh: "លំដាប់ទី ៣០ ទៅ ទី ១ លាន", startIndex: 142, endIndex: 152),
+  ];
+
+  Widget _buildNumberGroupCard(NumberGroup group, Color primaryColor) {
+    return Theme(
+      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+      child: Material(
+        color: Colors.transparent,
+        child: ExpansionTile(
+          tilePadding: EdgeInsets.zero,
+          childrenPadding: const EdgeInsets.only(bottom: 12),
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                group.title,
+                style: GoogleFonts.outfit(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF0F172A),
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                group.meaningKh,
+                style: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: primaryColor,
+                ),
+              ),
+            ],
+          ),
+          trailing: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: const BoxDecoration(
+              color: Color(0xFFEEF0FF),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.keyboard_arrow_down,
+              color: primaryColor,
+              size: 20,
+            ),
+          ),
+          children: [
+            const SizedBox(height: 8),
+            ..._numbersData
+                .sublist(
+                  group.startIndex.clamp(0, _numbersData.length),
+                  group.endIndex.clamp(0, _numbersData.length),
+                )
+                .map((item) => _buildWordCard(item, primaryColor)),
+          ],
+        ),
+      ),
     );
   }
 }

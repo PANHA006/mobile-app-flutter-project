@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
@@ -200,7 +201,91 @@ app.get('/api/vocabulary', async (req, res) => {
   res.json(enrichedWords);
 });
 
+// POST /api/chat
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { message, history } = req.body;
+    if (!message) {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+
+    // Map history to Gemini format: { role: "user" | "model", parts: [{ text: "..." }] }
+    const contents = [];
+    if (Array.isArray(history)) {
+      history.forEach(msg => {
+        if (msg.role && msg.text) {
+          contents.push({
+            role: msg.role === 'ai' ? 'model' : 'user',
+            parts: [{ text: msg.text }]
+          });
+        }
+      });
+    }
+
+    // Add current user message if it's not already in history
+    contents.push({
+      role: 'user',
+      parts: [{ text: message }]
+    });
+
+    const systemInstruction = {
+      parts: [{
+        text: `You are an AI English Tutor. Help the user learn English (vocabulary, grammar, pronunciation, correction, translation, quizzes, sentence practice, and general conversation).
+
+Handling Unrelated Questions:
+- If the user asks about topics completely unrelated to learning English (such as coding/programming, math, general knowledge, science, etc.), politely explain that your main purpose is to act as their English tutor and specify what topics you can help them with.
+- You must list the specific tasks you can help the user with:
+  1. Vocabulary: Explain word meanings and provide Khmer translations.
+  2. Grammar: Correct grammar mistakes and explain the rules clearly.
+  3. Pronunciation: Guide the user on how to pronounce words.
+  4. Sentence Practice: Provide sample sentences and practice writing.
+  5. Quizzes: Generate multiple-choice questions to test their knowledge.
+  6. Conversational Practice: Practice conversational English.
+
+Formatting style:
+- Use clear markdown, bolding (**bold**), bullet points, and emojis.
+- Keep responses relatively brief and highly readable.
+- If the user asks for vocabulary or meaning/explanation of a word, always provide a clear definition, sample sentences, AND its Khmer translation formatted like:
+  Khmer: [translation here]
+- If correcting grammar, display the correct sentence and briefly explain why:
+  Correct sentence: "[corrected sentence]"
+  Explanation: [brief explanation]
+- If creating a quiz, format it with clear multiple-choice options (A, B, C, D) and explain the correct answer after the user replies.
+- If the user starts a conversation (e.g. "Let's practice English"), engage in a natural, friendly chat, asking questions to keep the conversation going.`
+      }]
+    };
+
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        contents,
+        systemInstruction
+      })
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      console.error('Gemini API Error:', errText);
+      return res.status(response.status).json({ error: 'Failed to generate response from Gemini API', details: errText });
+    }
+
+    const data = await response.json();
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.';
+    
+    res.json({ reply });
+  } catch (err) {
+    console.error('Chat endpoint error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Vocabulary Real-API Server is running on http://localhost:${PORT}`);
 });
+
 

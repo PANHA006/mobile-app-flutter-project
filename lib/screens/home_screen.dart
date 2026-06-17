@@ -585,7 +585,7 @@ class _HomeScreenState extends State<HomeScreen>
                                               color: Colors.white, size: 12),
                                           const SizedBox(width: 6),
                                           Text(
-                                            'real-time translate',
+                                            'Translate',
                                             style: GoogleFonts.inter(
                                               color: Colors.white,
                                               fontSize: 11,
@@ -827,9 +827,9 @@ class _HomeScreenState extends State<HomeScreen>
                             border: Border.all(color: const Color(0xFFE2E8F0)),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.02),
-                                blurRadius: 12,
-                                offset: const Offset(0, 6),
+                                color: Colors.black.withOpacity(0.06),
+                                blurRadius: 16,
+                                offset: const Offset(0, 8),
                               ),
                             ],
                           ),

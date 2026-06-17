@@ -1,6 +1,8 @@
-import 'dart:math';
+import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 class Message {
   final int id;
@@ -23,25 +25,6 @@ const List<String> SUGGESTED = [
   'What\'s the difference between \'affect\' and \'effect\'?',
   'Explain the present perfect tense',
 ];
-
-const Map<String, String> aiResponses = {
-  'default': 'Great question! I\'m here to help you improve your English. Ask me about vocabulary, grammar, pronunciation, or sentence structure.',
-  'resilient': '**Resilient** means able to recover quickly from difficulties or tough situations. Think of it like a rubber band — it stretches but bounces back!\n\n📌 Example: "Despite failing twice, she remained resilient and kept trying."\n\n💡 Related words: *tenacious*, *adaptable*, *tough*',
-  'grammar': 'Here\'s the correction:\n\n❌ *She don\'t like coffee*\n✅ **She doesn\'t like coffee**\n\n**Why?** With third-person singular (he/she/it), we use **doesn\'t** (does + not) instead of **don\'t**.',
-  'business': 'Here are 5 essential business English phrases:\n\n1. **"Let\'s circle back on this"** — revisit later\n2. **"Moving forward"** — from now on\n3. **"Touch base"** — make brief contact\n4. **"On the same page"** — mutual understanding\n5. **"The ball is in your court"** — it\'s your decision now',
-  'affect': 'Great vocabulary question!\n\n**Affect** (verb) = to influence something\n→ *The rain affected our plans.*\n\n**Effect** (noun) = the result of something\n→ *The effect of rain was a cancelled picnic.*\n\n💡 **Memory trick:** **A**ffect = **A**ction (verb), **E**ffect = **E**nd result (noun)',
-  'perfect': 'The **Present Perfect** connects the past to now!\n\n**Formula:** have/has + past participle\n\n**Uses:**\n1. Experience: *I have visited London.*\n2. Recent past: *She has just finished.*\n3. With \'since/for\': *I have lived here for 3 years.*\n\n💡 **Contrast with Simple Past:** Simple Past = finished action, Present Perfect = action still relevant now.',
-};
-
-String getAIResponse(String input) {
-  final lower = input.toLowerCase();
-  if (lower.contains('resilient')) return aiResponses['resilient']!;
-  if (lower.contains('grammar') || lower.contains('don\'t') || lower.contains('dont')) return aiResponses['grammar']!;
-  if (lower.contains('business')) return aiResponses['business']!;
-  if (lower.contains('affect') || lower.contains('effect')) return aiResponses['affect']!;
-  if (lower.contains('perfect') || lower.contains('tense')) return aiResponses['perfect']!;
-  return aiResponses['default']!;
-}
 
 String formatTime() {
   final now = DateTime.now();
@@ -90,14 +73,25 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  void _sendMessage(String text) {
-    if (text.trim().isEmpty) return;
+  Future<void> _sendMessage(String text) async {
+    final trimmedText = text.trim();
+    if (trimmedText.isEmpty) return;
+
+    // Capture history before adding current message (exclude the initial greeting)
+    final historyList = _messages
+        .where((m) => m.id != 0)
+        .map((m) => {
+              'role': m.role,
+              'text': m.text,
+            })
+        .toList();
+
     setState(() {
       _showSuggestions = false;
       _messages.add(Message(
         id: DateTime.now().millisecondsSinceEpoch,
         role: 'user',
-        text: text.trim(),
+        text: trimmedText,
         time: formatTime(),
       ));
       _isTyping = true;
@@ -105,20 +99,62 @@ class _ChatScreenState extends State<ChatScreen> {
     _inputController.clear();
     _scrollToBottom();
 
-    // Mock response delay
-    Future.delayed(Duration(milliseconds: 1200 + Random().nextInt(600)), () {
+    try {
+      // Determine the correct host for the local backend
+      String baseUrl = 'http://localhost:3000';
+      if (!kIsWeb) {
+        if (defaultTargetPlatform == TargetPlatform.android) {
+          baseUrl = 'http://10.0.2.2:3000';
+        }
+      }
+
+      final response = await http.post(
+        Uri.parse('$baseUrl/api/chat'),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({
+          'message': trimmedText,
+          'history': historyList,
+        }),
+      );
+
+      if (!mounted) return;
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        final reply = data['reply'] ?? 'No response from tutor.';
+        setState(() {
+          _messages.add(Message(
+            id: DateTime.now().millisecondsSinceEpoch,
+            role: 'ai',
+            text: reply,
+            time: formatTime(),
+          ));
+          _isTyping = false;
+        });
+      } else {
+        setState(() {
+          _messages.add(Message(
+            id: DateTime.now().millisecondsSinceEpoch,
+            role: 'ai',
+            text: 'Sorry, I couldn\'t connect to the server. Please try again.',
+            time: formatTime(),
+          ));
+          _isTyping = false;
+        });
+      }
+    } catch (e) {
       if (!mounted) return;
       setState(() {
         _messages.add(Message(
           id: DateTime.now().millisecondsSinceEpoch,
           role: 'ai',
-          text: getAIResponse(text),
+          text: 'Connection error. Make sure your local server is running.',
           time: formatTime(),
         ));
         _isTyping = false;
       });
-      _scrollToBottom();
-    });
+    }
+    _scrollToBottom();
   }
 
   void _resetChat() {
@@ -432,22 +468,37 @@ class _ChatScreenState extends State<ChatScreen> {
 
   // Helper widget to render simple markdown like bold texts
   Widget _buildFormattedAIText(String text) {
-    // Simple custom parser for **bold** text and newlines
-    final parts = text.split(RegExp(r'(\*\*[^*]+\*\*)'));
     final textSpans = <TextSpan>[];
-
-    for (var p in parts) {
-      if (p.startsWith('**') && p.endsWith('**')) {
+    final regex = RegExp(r'\*\*([^*]+)\*\*');
+    
+    int lastIndex = 0;
+    for (final Match match in regex.allMatches(text)) {
+      // Add text before the match
+      if (match.start > lastIndex) {
         textSpans.add(TextSpan(
-          text: p.substring(2, p.length - 2),
-          style: GoogleFonts.inter(fontWeight: FontWeight.bold, color: const Color(0xFF0F0E2A)),
-        ));
-      } else {
-        textSpans.add(TextSpan(
-          text: p,
+          text: text.substring(lastIndex, match.start),
           style: GoogleFonts.inter(color: const Color(0xFF0F0E2A)),
         ));
       }
+      
+      // Add the bold matched text
+      textSpans.add(TextSpan(
+        text: match.group(1),
+        style: GoogleFonts.inter(
+          fontWeight: FontWeight.bold,
+          color: const Color(0xFF0F0E2A),
+        ),
+      ));
+      
+      lastIndex = match.end;
+    }
+    
+    // Add remaining text
+    if (lastIndex < text.length) {
+      textSpans.add(TextSpan(
+        text: text.substring(lastIndex),
+        style: GoogleFonts.inter(color: const Color(0xFF0F0E2A)),
+      ));
     }
 
     return RichText(
