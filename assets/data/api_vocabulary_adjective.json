@@ -1,0 +1,2732 @@
+[
+    {
+        "word_en": "beautiful",
+        "phonetic": "/ˈbjutəfəl/",
+        "meaning_kh": "ស្អាត",
+        "example": "She is a beautiful girl."
+    },
+    {
+        "word_en": "happy",
+        "phonetic": "/ˈhæpi/",
+        "meaning_kh": "សប្បាយរីករាយ",
+        "example": "They are happy with their test results."
+    },
+    {
+        "word_en": "sad",
+        "phonetic": "/sæd/",
+        "meaning_kh": "កើតទុក្ខ",
+        "example": "He felt sad after losing his pen."
+    },
+    {
+        "word_en": "good",
+        "phonetic": "/gʊd/",
+        "meaning_kh": "ល្អ",
+        "example": "Eating fruit is good for your health."
+    },
+    {
+        "word_en": "bad",
+        "phonetic": "/bæd/",
+        "meaning_kh": "មិនល្អ/អាក្រក់",
+        "example": "Smoking is bad for your lungs."
+    },
+    {
+        "word_en": "big",
+        "phonetic": "/bɪg/",
+        "meaning_kh": "ធំ",
+        "example": "The elephant is very big."
+    },
+    {
+        "word_en": "small",
+        "phonetic": "/smɔːl/",
+        "meaning_kh": "តូច",
+        "example": "I have a small bag."
+    },
+    {
+        "word_en": "tall",
+        "phonetic": "/tɔːl/",
+        "meaning_kh": "ខ្ពស់",
+        "example": "He is taller than his brother."
+    },
+    {
+        "word_en": "short",
+        "phonetic": "/ʃɔːrt/",
+        "meaning_kh": "ខ្លី/ទាប",
+        "example": "The fence is too short."
+    },
+    {
+        "word_en": "new",
+        "phonetic": "/nuː/",
+        "meaning_kh": "ថ្មី",
+        "example": "She bought a new phone."
+    },
+    {
+        "word_en": "old",
+        "phonetic": "/oʊld/",
+        "meaning_kh": "ចាស់",
+        "example": "My grandfather is old."
+    },
+    {
+        "word_en": "hot",
+        "phonetic": "/hɑːt/",
+        "meaning_kh": "ក្តៅ",
+        "example": "It is hot today."
+    },
+    {
+        "word_en": "cold",
+        "phonetic": "/koʊld/",
+        "meaning_kh": "ត្រជាក់",
+        "example": "I like cold drinks in summer."
+    },
+    {
+        "word_en": "fast",
+        "phonetic": "/fæst/",
+        "meaning_kh": "លឿន",
+        "example": "He is a fast runner."
+    },
+    {
+        "word_en": "slow",
+        "phonetic": "/sloʊ/",
+        "meaning_kh": "យឺត",
+        "example": "The turtle is very slow."
+    },
+    {
+        "word_en": "easy",
+        "phonetic": "/ˈiːzi/",
+        "meaning_kh": "ងាយស្រួល",
+        "example": "This math problem is easy."
+    },
+    {
+        "word_en": "difficult",
+        "phonetic": "/ˈdɪfɪkəlt/",
+        "meaning_kh": "លំបាក",
+        "example": "Learning a new language can be difficult."
+    },
+    {
+        "word_en": "clean",
+        "phonetic": "/kliːn/",
+        "meaning_kh": "ស្អាត/ស្អាតស្អំ",
+        "example": "Please keep your room clean."
+    },
+    {
+        "word_en": "dirty",
+        "phonetic": "/ˈdɜːrti/",
+        "meaning_kh": "កខ្វក់",
+        "example": "Don't touch the dirty floor."
+    },
+    {
+        "word_en": "rich",
+        "phonetic": "/rɪtʃ/",
+        "meaning_kh": "អ្នកមាន/មានទ្រព្យ",
+        "example": "He is a rich businessman."
+    },
+    {
+        "word_en": "poor",
+        "phonetic": "/pʊər/",
+        "meaning_kh": "ក្រ/ខ្វះខាត",
+        "example": "They help poor children."
+    },
+    {
+        "word_en": "strong",
+        "phonetic": "/strɔːŋ/",
+        "meaning_kh": "រឹងមាំ/ខ្លាំង",
+        "example": "He has strong arms."
+    },
+    {
+        "word_en": "weak",
+        "phonetic": "/wiːk/",
+        "meaning_kh": "ខ្សោយ",
+        "example": "Don't drink that, it's too weak."
+    },
+    {
+        "word_en": "kind",
+        "phonetic": "/kaɪnd/",
+        "meaning_kh": "ចិត្តល្អ/ស្លូតបូត",
+        "example": "She is very kind to animals."
+    },
+    {
+        "word_en": "cruel",
+        "phonetic": "/ˈkruːəl/",
+        "meaning_kh": "ឃោរឃៅ",
+        "example": "Bullying is a cruel act."
+    },
+    {
+        "word_en": "important",
+        "phonetic": "/ɪmˈpɔːrtənt/",
+        "meaning_kh": "សំខាន់",
+        "example": "Education is important for success."
+    },
+    {
+        "word_en": "interesting",
+        "phonetic": "/ˈɪntrəstɪŋ/",
+        "meaning_kh": "គួរឲ្យចាប់អារម្មណ៍",
+        "example": "It was an interesting movie."
+    },
+    {
+        "word_en": "boring",
+        "phonetic": "/ˈbɔːrɪŋ/",
+        "meaning_kh": "គួរឲ្យធុញទ្រាន់",
+        "example": "The lesson was so boring."
+    },
+    {
+        "word_en": "pretty",
+        "phonetic": "/ˈprɪti/",
+        "meaning_kh": "ស្អាត (សម្រាប់នារី/ក្មេងស្រី)",
+        "example": "What a pretty dress!"
+    },
+    {
+        "word_en": "ugly",
+        "phonetic": "/ˈʌɡli/",
+        "meaning_kh": "អាក្រក់/មិនស្អាត",
+        "example": "I don't like that ugly picture."
+    },
+    {
+        "word_en": "heavy",
+        "phonetic": "/ˈhɛvi/",
+        "meaning_kh": "ធ្ងន់",
+        "example": "This box is too heavy to lift."
+    },
+    {
+        "word_en": "light",
+        "phonetic": "/laɪt/",
+        "meaning_kh": "ស្រាល/ពន្លឺ",
+        "example": "The bag is light and easy to carry."
+    },
+    {
+        "word_en": "dark",
+        "phonetic": "/dɑːrk/",
+        "meaning_kh": "ងងឹត",
+        "example": "Don't walk in the dark street."
+    },
+    {
+        "word_en": "bright",
+        "phonetic": "/braɪt/",
+        "meaning_kh": "ភ្លឺ/ឆ្លាតវៃ",
+        "example": "The sun is bright today."
+    },
+    {
+        "word_en": "full",
+        "phonetic": "/fʊl/",
+        "meaning_kh": "ពេញ",
+        "example": "The glass is full of water."
+    },
+    {
+        "word_en": "empty",
+        "phonetic": "/ˈɛmpti/",
+        "meaning_kh": "ទទេ",
+        "example": "The glass is empty."
+    },
+    {
+        "word_en": "early",
+        "phonetic": "/ˈɜːrli/",
+        "meaning_kh": "ឆាប់/ព្រឹកព្រលឹម",
+        "example": "We caught the early train."
+    },
+    {
+        "word_en": "late",
+        "phonetic": "/leɪt/",
+        "meaning_kh": "យឺត/យឺតយ៉ាវ",
+        "example": "Don't be late for the meeting."
+    },
+    {
+        "word_en": "hard",
+        "phonetic": "/hɑːrd/",
+        "meaning_kh": "រឹង/លំបាក",
+        "example": "The floor is hard."
+    },
+    {
+        "word_en": "soft",
+        "phonetic": "/sɑːft/",
+        "meaning_kh": "ទន់",
+        "example": "This pillow is very soft."
+    },
+    {
+        "word_en": "sweet",
+        "phonetic": "/swiːt/",
+        "meaning_kh": "ផ្អែម",
+        "example": "I like sweet tea."
+    },
+    {
+        "word_en": "sour",
+        "phonetic": "/ˈsaʊər/",
+        "meaning_kh": "ជូរ",
+        "example": "Lemons are sour."
+    },
+    {
+        "word_en": "bitter",
+        "phonetic": "/ˈbɪtər/",
+        "meaning_kh": "ល្វីង",
+        "example": "Black coffee tastes bitter."
+    },
+    {
+        "word_en": "salty",
+        "phonetic": "/ˈsɔːlti/",
+        "meaning_kh": "ប្រៃ",
+        "example": "Don't add too much salt, it's already salty."
+    },
+    {
+        "word_en": "spicy",
+        "phonetic": "/ˈspaɪsi/",
+        "meaning_kh": "ហឹរ",
+        "example": "I love spicy food."
+    },
+    {
+        "word_en": "warm",
+        "phonetic": "/wɔːrm/",
+        "meaning_kh": "កក់ក្តៅ",
+        "example": "The weather is warm today."
+    },
+    {
+        "word_en": "cool",
+        "phonetic": "/kuːl/",
+        "meaning_kh": "ត្រជាក់ស្រួល",
+        "example": "I need a cool drink."
+    },
+    {
+        "word_en": "healthy",
+        "phonetic": "/ˈhɛlθi/",
+        "meaning_kh": "មានសុខភាពល្អ",
+        "example": "Eating vegetables keeps you healthy."
+    },
+    {
+        "word_en": "sick",
+        "phonetic": "/sɪk/",
+        "meaning_kh": "ឈឺ",
+        "example": "He is sick today."
+    },
+    {
+        "word_en": "angry",
+        "phonetic": "/ˈæŋɡri/",
+        "meaning_kh": "ខឹង",
+        "example": "She looks angry, what happened?"
+    },
+    {
+        "word_en": "afraid",
+        "phonetic": "/əˈfreɪd/",
+        "meaning_kh": "ខ្លាច",
+        "example": "The boy is afraid of dogs."
+    },
+    {
+        "word_en": "brave",
+        "phonetic": "/breɪv/",
+        "meaning_kh": "ក្លាហាន",
+        "example": "She is a brave firefighter."
+    },
+    {
+        "word_en": "shy",
+        "phonetic": "/ʃaɪ/",
+        "meaning_kh": "ខ្មាស/អៀន",
+        "example": "Don't be shy, speak up."
+    },
+    {
+        "word_en": "friendly",
+        "phonetic": "/ˈfrɛndli/",
+        "meaning_kh": "រួសរាយរាក់ទាក់",
+        "example": "He is a friendly person."
+    },
+    {
+        "word_en": "rude",
+        "phonetic": "/ruːd/",
+        "meaning_kh": "មិនគួរសម",
+        "example": "It is rude to shout in the library."
+    },
+    {
+        "word_en": "smart",
+        "phonetic": "/smɑːrt/",
+        "meaning_kh": "ឆ្លាតវៃ",
+        "example": "She is a smart student."
+    },
+    {
+        "word_en": "stupid",
+        "phonetic": "/ˈstuːpɪd/",
+        "meaning_kh": "ល្ងង់/ឆ្កួត",
+        "example": "Don't say stupid things."
+    },
+    {
+        "word_en": "diligent",
+        "phonetic": "/ˈdɪlɪdʒənt/",
+        "meaning_kh": "ព្យាយាម/ឧស្សាហ៍",
+        "example": "She is a diligent worker."
+    },
+    {
+        "word_en": "lazy",
+        "phonetic": "/ˈleɪzi/",
+        "meaning_kh": "ខ្ជិល",
+        "example": "Don't be lazy, finish your homework."
+    },
+    {
+        "word_en": "honest",
+        "phonetic": "/ˈɑːnɪst/",
+        "meaning_kh": "ស្មោះត្រង់",
+        "example": "He is an honest man."
+    },
+    {
+        "word_en": "loyal",
+        "phonetic": "/ˈlɔɪəl/",
+        "meaning_kh": "ស្មោះស្ម័គ្រ",
+        "example": "They are loyal friends."
+    },
+    {
+        "word_en": "hungry",
+        "phonetic": "/ˈhʌŋɡri/",
+        "meaning_kh": "ឃ្លាន",
+        "example": "I am hungry; let's get some food."
+    },
+    {
+        "word_en": "thirsty",
+        "phonetic": "/ˈθɜːrsti/",
+        "meaning_kh": "ស្រេកទឹក",
+        "example": "She is thirsty after the long run."
+    },
+    {
+        "word_en": "tired",
+        "phonetic": "/ˈtaɪərd/",
+        "meaning_kh": "អស់កម្លាំង/ហត់",
+        "example": "He was tired after working all day."
+    },
+    {
+        "word_en": "sleepy",
+        "phonetic": "/ˈsliːpi/",
+        "meaning_kh": "ងងុយគេង",
+        "example": "The baby is sleepy."
+    },
+    {
+        "word_en": "busy",
+        "phonetic": "/ˈbɪzi/",
+        "meaning_kh": "រវល់",
+        "example": "My father is very busy today."
+    },
+    {
+        "word_en": "free",
+        "phonetic": "/friː/",
+        "meaning_kh": "ទំនេរ/ឥតគិតថ្លៃ",
+        "example": "Are you free this weekend?"
+    },
+    {
+        "word_en": "cheap",
+        "phonetic": "/tʃiːp/",
+        "meaning_kh": "ថោក",
+        "example": "This shirt is very cheap."
+    },
+    {
+        "word_en": "expensive",
+        "phonetic": "/ɪkˈpɛnsɪv/",
+        "meaning_kh": "ថ្លៃ",
+        "example": "Diamonds are expensive."
+    },
+    {
+        "word_en": "safe",
+        "phonetic": "/seɪf/",
+        "meaning_kh": "សុវត្ថិភាព",
+        "example": "It is safe to cross the street here."
+    },
+    {
+        "word_en": "dangerous",
+        "phonetic": "/ˈdeɪndʒərəs/",
+        "meaning_kh": "គ្រោះថ្នាក់",
+        "example": "Playing with fire is dangerous."
+    },
+    {
+        "word_en": "lucky",
+        "phonetic": "/ˈlʌki/",
+        "meaning_kh": "មានសំណាង",
+        "example": "He is a lucky winner."
+    },
+    {
+        "word_en": "famous",
+        "phonetic": "/ˈfeɪməs/",
+        "meaning_kh": "ល្បីល្បាញ",
+        "example": "He is a famous singer."
+    },
+    {
+        "word_en": "quiet",
+        "phonetic": "/ˈkwaɪət/",
+        "meaning_kh": "ស្ងាត់/ស្ងប់ស្ងាត់",
+        "example": "Please be quiet in the library."
+    },
+    {
+        "word_en": "noisy",
+        "phonetic": "/ˈnɔɪzi/",
+        "meaning_kh": "ឮខ្លាំង/អ៊ូអរ",
+        "example": "The classroom is very noisy."
+    },
+    {
+        "word_en": "polite",
+        "phonetic": "/pəˈlaɪt/",
+        "meaning_kh": "គួរសម/សុភាព",
+        "example": "He is a polite boy."
+    },
+    {
+        "word_en": "proud",
+        "phonetic": "/praʊd/",
+        "meaning_kh": "មោទនភាព",
+        "example": "She is proud of her son."
+    },
+    {
+        "word_en": "careful",
+        "phonetic": "/ˈkɛrfəl/",
+        "meaning_kh": "ប្រុងប្រយ័ត្ន",
+        "example": "Be careful when you drive."
+    },
+    {
+        "word_en": "careless",
+        "phonetic": "/ˈkɛrləs/",
+        "meaning_kh": "ខ្ជីខ្ជា/មិនប្រុងប្រយ័ត្ន",
+        "example": "A careless mistake cost him the game."
+    },
+    {
+        "word_en": "perfect",
+        "phonetic": "/ˈpɜːrfɪkt/",
+        "meaning_kh": "ល្អឥតខ្ចោះ",
+        "example": "She got a perfect score on the exam."
+    },
+    {
+        "word_en": "simple",
+        "phonetic": "/ˈsɪmpəl/",
+        "meaning_kh": "សាមញ្ញ/ងាយ",
+        "example": "The recipe is very simple."
+    },
+    {
+        "word_en": "active",
+        "phonetic": "/ˈæktɪv/",
+        "meaning_kh": "សកម្ម",
+        "example": "He is an active child."
+    },
+    {
+        "word_en": "calm",
+        "phonetic": "/kɑːm/",
+        "meaning_kh": "ស្ងប់ស្ងាត់/ស្ងប់ចិត្ត",
+        "example": "The sea is calm today."
+    },
+    {
+        "word_en": "clever",
+        "phonetic": "/ˈklɛvər/",
+        "meaning_kh": "ឆ្លាត/វាងវៃ",
+        "example": "She is a clever girl."
+    },
+    {
+        "word_en": "crazy",
+        "phonetic": "/ˈkreɪzi/",
+        "meaning_kh": "ឆ្កួត/ប្លែក",
+        "example": "It was a crazy idea."
+    },
+    {
+        "word_en": "excited",
+        "phonetic": "/ɪkˈsaɪtɪd/",
+        "meaning_kh": "រំភើប",
+        "example": "The children are excited about the trip."
+    },
+    {
+        "word_en": "gentle",
+        "phonetic": "/ˈdʒɛntəl/",
+        "meaning_kh": "ស្លូតបូត/ទន់ភ្លន់",
+        "example": "He is a gentle person."
+    },
+    {
+        "word_en": "handsome",
+        "phonetic": "/ˈhændsəm/",
+        "meaning_kh": "សង្ហា",
+        "example": "He is a handsome actor."
+    },
+    {
+        "word_en": "lonely",
+        "phonetic": "/ˈloʊnli/",
+        "meaning_kh": "ឯកោ",
+        "example": "She felt lonely in the big city."
+    },
+    {
+        "word_en": "nervous",
+        "phonetic": "/ˈnɜːrvəs/",
+        "meaning_kh": "ភ័យ/ភ័យព្រួយ",
+        "example": "I feel nervous before exams."
+    },
+    {
+        "word_en": "patient",
+        "phonetic": "/ˈpeɪʃənt/",
+        "meaning_kh": "អត់ធ្មត់",
+        "example": "Teachers need to be patient."
+    },
+    {
+        "word_en": "silly",
+        "phonetic": "/ˈsɪli/",
+        "meaning_kh": "ល្ងីល្ងើ/កំប្លែង",
+        "example": "Don't make silly jokes."
+    },
+    {
+        "word_en": "strange",
+        "phonetic": "/streɪndʒ/",
+        "meaning_kh": "ចម្លែក",
+        "example": "I heard a strange noise."
+    },
+    {
+        "word_en": "useful",
+        "phonetic": "/ˈjuːsfəl/",
+        "meaning_kh": "មានប្រយោជន៍",
+        "example": "This dictionary is very useful."
+    },
+    {
+        "word_en": "valuable",
+        "phonetic": "/ˈvæljuəbəl/",
+        "meaning_kh": "មានតម្លៃ",
+        "example": "Time is valuable."
+    },
+    {
+        "word_en": "wide",
+        "phonetic": "/waɪd/",
+        "meaning_kh": "ទូលាយ/ធំ",
+        "example": "The river is very wide here."
+    },
+    {
+        "word_en": "narrow",
+        "phonetic": "/ˈnæroʊ/",
+        "meaning_kh": "ចង្អៀត/តូច",
+        "example": "The street is too narrow for cars."
+    },
+    {
+        "word_en": "dry",
+        "phonetic": "/draɪ/",
+        "meaning_kh": "ស្ងួត",
+        "example": "This climate is warm and dry."
+    },
+    {
+        "word_en": "wet",
+        "phonetic": "/wɛt/",
+        "meaning_kh": "សើម",
+        "example": "Watch out, the grass is wet."
+    },
+    {
+        "word_en": "wise",
+        "phonetic": "/waɪz/",
+        "meaning_kh": "ឆ្លាតវៃ/មានប្រាជ្ញា",
+        "example": "He gave me some wise advice."
+    },
+    {
+        "word_en": "able",
+        "phonetic": "/ˈeɪbəl/",
+        "meaning_kh": "អាច/មានសមត្ថភាព",
+        "example": "He is able to swim."
+    },
+    {
+        "word_en": "absent",
+        "phonetic": "/ˈæbsənt/",
+        "meaning_kh": "អវត្តមាន",
+        "example": "She was absent yesterday."
+    },
+    {
+        "word_en": "additional",
+        "phonetic": "/əˈdɪʃənəl/",
+        "meaning_kh": "បន្ថែម",
+        "example": "We need additional information."
+    },
+    {
+        "word_en": "alive",
+        "phonetic": "/əˈlaɪv/",
+        "meaning_kh": "នៅរស់",
+        "example": "The fish is still alive."
+    },
+    {
+        "word_en": "alone",
+        "phonetic": "/əˈloʊn/",
+        "meaning_kh": "ម្នាក់ឯង",
+        "example": "I am not alone."
+    },
+    {
+        "word_en": "anxious",
+        "phonetic": "/ˈæŋʃəs/",
+        "meaning_kh": "ភ័យព្រួយ",
+        "example": "She is anxious about the result."
+    },
+    {
+        "word_en": "asleep",
+        "phonetic": "/əsˈlip/",
+        "meaning_kh": "កំពុងគេងលក់",
+        "example": "The baby is asleep."
+    },
+    {
+        "word_en": "available",
+        "phonetic": "/əˈveɪləbəl/",
+        "meaning_kh": "មាន/ទំនេរ",
+        "example": "Is this seat available?"
+    },
+    {
+        "word_en": "awesome",
+        "phonetic": "/ˈɔsəm/",
+        "meaning_kh": "អស្ចារ្យ",
+        "example": "The movie was awesome."
+    },
+    {
+        "word_en": "basic",
+        "phonetic": "/ˈbeɪsɪk/",
+        "meaning_kh": "មូលដ្ឋាន/គ្រឹះ",
+        "example": "This is a basic rule."
+    },
+    {
+        "word_en": "bored",
+        "phonetic": "/bɔrd/",
+        "meaning_kh": "ធុញទ្រាន់",
+        "example": "I feel bored."
+    },
+    {
+        "word_en": "brief",
+        "phonetic": "/brif/",
+        "meaning_kh": "ខ្លី/សង្ខេប",
+        "example": "He gave a brief speech."
+    },
+    {
+        "word_en": "broad",
+        "phonetic": "/brɔd/",
+        "meaning_kh": "ទូលាយ/ធំទូលាយ",
+        "example": "He has broad shoulders."
+    },
+    {
+        "word_en": "certain",
+        "phonetic": "/ˈsərtən/",
+        "meaning_kh": "ប្រាកដប្រជា",
+        "example": "Are you certain about this?"
+    },
+    {
+        "word_en": "charming",
+        "phonetic": "/ˈʧɑrmɪŋ/",
+        "meaning_kh": "គួរឲ្យស្រឡាញ់/មានមន្តស្នេហ៍",
+        "example": "She has a charming smile."
+    },
+    {
+        "word_en": "cheerful",
+        "phonetic": "/ˈʧɪrfəl/",
+        "meaning_kh": "រីករាយ/ស្រស់ស្រាយ",
+        "example": "He is always cheerful."
+    },
+    {
+        "word_en": "clear",
+        "phonetic": "/klɪr/",
+        "meaning_kh": "ច្បាស់លាស់",
+        "example": "The sky is clear today."
+    },
+    {
+        "word_en": "comfortable",
+        "phonetic": "/ˈkəmfərtəbəl/",
+        "meaning_kh": "ស្រួល/មានផាសុកភាព",
+        "example": "This chair is very comfortable."
+    },
+    {
+        "word_en": "common",
+        "phonetic": "/ˈkɑmən/",
+        "meaning_kh": "ទូទៅ/សាមញ្ញ",
+        "example": "It is a common mistake."
+    },
+    {
+        "word_en": "complete",
+        "phonetic": "/kəmˈplit/",
+        "meaning_kh": "ពេញលេញ",
+        "example": "The work is now complete."
+    },
+    {
+        "word_en": "concerned",
+        "phonetic": "/kənˈsərnd/",
+        "meaning_kh": "បារម្ភ",
+        "example": "We are concerned about him."
+    },
+    {
+        "word_en": "confident",
+        "phonetic": "/ˈkɑnfədənt/",
+        "meaning_kh": "មានទំនុកចិត្ត",
+        "example": "She is confident in her ability."
+    },
+    {
+        "word_en": "conscious",
+        "phonetic": "/ˈkɑnʃəs/",
+        "meaning_kh": "ដឹងខ្លួន",
+        "example": "He is conscious now."
+    },
+    {
+        "word_en": "content",
+        "phonetic": "/ˈkɑntɛnt/",
+        "meaning_kh": "ពេញចិត្ត",
+        "example": "They are content with their lives."
+    },
+    {
+        "word_en": "convenient",
+        "phonetic": "/kənˈvinjənt/",
+        "meaning_kh": "ងាយស្រួល/សមស្រប",
+        "example": "Online shopping is very convenient."
+    },
+    {
+        "word_en": "correct",
+        "phonetic": "/kərˈɛkt/",
+        "meaning_kh": "ត្រឹមត្រូវ",
+        "example": "That is the correct answer."
+    },
+    {
+        "word_en": "curious",
+        "phonetic": "/ˈkjʊriəs/",
+        "meaning_kh": "ចង់ដឹងចង់ឃើញ",
+        "example": "Kids are naturally curious."
+    },
+    {
+        "word_en": "cute",
+        "phonetic": "/kjut/",
+        "meaning_kh": "គួរឲ្យស្រឡាញ់",
+        "example": "Look at that cute puppy."
+    },
+    {
+        "word_en": "daily",
+        "phonetic": "/ˈdeɪli/",
+        "meaning_kh": "ប្រចាំថ្ងៃ",
+        "example": "Exercise is part of my daily routine."
+    },
+    {
+        "word_en": "deaf",
+        "phonetic": "/dɛf/",
+        "meaning_kh": "ថ្លង់",
+        "example": "He is deaf and uses sign language."
+    },
+    {
+        "word_en": "dear",
+        "phonetic": "/dɪr/",
+        "meaning_kh": "ជាទីស្រឡាញ់",
+        "example": "He is a dear friend."
+    },
+    {
+        "word_en": "deep",
+        "phonetic": "/dip/",
+        "meaning_kh": "ជ្រៅ",
+        "example": "The lake is very deep."
+    },
+    {
+        "word_en": "delicious",
+        "phonetic": "/dɪˈlɪʃəs/",
+        "meaning_kh": "ឆ្ងាញ់",
+        "example": "This cake is delicious."
+    },
+    {
+        "word_en": "delightful",
+        "phonetic": "/dɪˈlaɪtfəl/",
+        "meaning_kh": "គួរឲ្យរីករាយ",
+        "example": "It was a delightful evening."
+    },
+    {
+        "word_en": "different",
+        "phonetic": "/ˈdɪfərənt/",
+        "meaning_kh": "ខុសគ្នា",
+        "example": "They have different opinions."
+    },
+    {
+        "word_en": "double",
+        "phonetic": "/ˈdəbəl/",
+        "meaning_kh": "ឌុប/ពីរដង",
+        "example": "I ordered a double espresso."
+    },
+    {
+        "word_en": "eager",
+        "phonetic": "/ˈigər/",
+        "meaning_kh": "ខ្លាំងក្លា/អន្ទះសារ",
+        "example": "She is eager to learn."
+    },
+    {
+        "word_en": "efficient",
+        "phonetic": "/ɪˈfɪʃənt/",
+        "meaning_kh": "មានប្រសិទ្ធភាព",
+        "example": "He is an efficient worker."
+    },
+    {
+        "word_en": "elderly",
+        "phonetic": "/ˈɛldərli/",
+        "meaning_kh": "ចាស់ជរា",
+        "example": "We should respect elderly people."
+    },
+    {
+        "word_en": "embarrassed",
+        "phonetic": "/ɪmˈbɛrəst/",
+        "meaning_kh": "អៀនខ្មាស",
+        "example": "He felt embarrassed by the mistake."
+    },
+    {
+        "word_en": "excellent",
+        "phonetic": "/ˈɛksələnt/",
+        "meaning_kh": "ល្អបំផុត",
+        "example": "Your performance was excellent."
+    },
+    {
+        "word_en": "fair",
+        "phonetic": "/fɛr/",
+        "meaning_kh": "យុត្តិធម៌",
+        "example": "The decision was fair."
+    },
+    {
+        "word_en": "false",
+        "phonetic": "/fɔls/",
+        "meaning_kh": "ខុស/មិនពិត",
+        "example": "That statement is false."
+    },
+    {
+        "word_en": "familiar",
+        "phonetic": "/fəˈmɪljər/",
+        "meaning_kh": "ស្គាល់/ស៊ាំ",
+        "example": "His face looks familiar."
+    },
+    {
+        "word_en": "fancy",
+        "phonetic": "/ˈfænsi/",
+        "meaning_kh": "ឆើតឆាយ/ប្រណីត",
+        "example": "They went to a fancy restaurant."
+    },
+    {
+        "word_en": "fantastic",
+        "phonetic": "/fænˈtæstɪk/",
+        "meaning_kh": "អស្ចារ្យ",
+        "example": "You did a fantastic job."
+    },
+    {
+        "word_en": "fat",
+        "phonetic": "/fæt/",
+        "meaning_kh": "ធាត់",
+        "example": "The cat is fat."
+    },
+    {
+        "word_en": "fine",
+        "phonetic": "/faɪn/",
+        "meaning_kh": "ល្អ/សុខសប្បាយ",
+        "example": "Everything is fine."
+    },
+    {
+        "word_en": "flat",
+        "phonetic": "/flæt/",
+        "meaning_kh": "សំប៉ែត/រាបស្មើ",
+        "example": "The ground is flat here."
+    },
+    {
+        "word_en": "foolish",
+        "phonetic": "/ˈfulɪʃ/",
+        "meaning_kh": "ល្ងីល្ងើ",
+        "example": "It was a foolish decision."
+    },
+    {
+        "word_en": "formal",
+        "phonetic": "/ˈfɔrməl/",
+        "meaning_kh": "ផ្លូវការ",
+        "example": "Please wear formal clothes."
+    },
+    {
+        "word_en": "fresh",
+        "phonetic": "/frɛʃ/",
+        "meaning_kh": "ស្រស់",
+        "example": "I bought some fresh fruit."
+    },
+    {
+        "word_en": "funny",
+        "phonetic": "/ˈfəni/",
+        "meaning_kh": "កំប្លែង",
+        "example": "He told a funny story."
+    },
+    {
+        "word_en": "general",
+        "phonetic": "/ˈʤɛnərəl/",
+        "meaning_kh": "ទូទៅ",
+        "example": "This is a general idea."
+    },
+    {
+        "word_en": "generous",
+        "phonetic": "/ˈʤɛnərəs/",
+        "meaning_kh": "ទូលាយ/ចិត្តទូលាយ",
+        "example": "He is a generous man."
+    },
+    {
+        "word_en": "glad",
+        "phonetic": "/glæd/",
+        "meaning_kh": "រីករាយ",
+        "example": "I am glad to see you."
+    },
+    {
+        "word_en": "glorious",
+        "phonetic": "/ˈglɔriəs/",
+        "meaning_kh": "រុងរឿង/ត្រចះត្រចង់",
+        "example": "It was a glorious day."
+    },
+    {
+        "word_en": "grateful",
+        "phonetic": "/ˈgreɪtfəl/",
+        "meaning_kh": "ដឹងគុណ",
+        "example": "I am grateful for your help."
+    },
+    {
+        "word_en": "guilty",
+        "phonetic": "/ˈgɪlti/",
+        "meaning_kh": "មានទោស",
+        "example": "He felt guilty about lying."
+    },
+    {
+        "word_en": "huge",
+        "phonetic": "/juʤ/",
+        "meaning_kh": "ធំធេង",
+        "example": "A huge crowd gathered."
+    },
+    {
+        "word_en": "humble",
+        "phonetic": "/ˈhəmbəl/",
+        "meaning_kh": "ដាក់ខ្លួន",
+        "example": "He is a humble leader."
+    },
+    {
+        "word_en": "ill",
+        "phonetic": "/ɪl/",
+        "meaning_kh": "ឈឺ",
+        "example": "My mother is ill."
+    },
+    {
+        "word_en": "impossible",
+        "phonetic": "/ˌɪmˈpɑsəbəl/",
+        "meaning_kh": "មិនអាចទៅរួច",
+        "example": "Nothing is impossible."
+    },
+    {
+        "word_en": "innocent",
+        "phonetic": "/ˈɪnəsənt/",
+        "meaning_kh": "ឥតទោស/បរិសុទ្ធ",
+        "example": "The boy is innocent."
+    },
+    {
+        "word_en": "intelligent",
+        "phonetic": "/ˌɪnˈtɛləʤənt/",
+        "meaning_kh": "ឆ្លាតវៃ",
+        "example": "Dolphins are intelligent animals."
+    },
+    {
+        "word_en": "jealous",
+        "phonetic": "/ˈʤɛləs/",
+        "meaning_kh": "ច្រណែន",
+        "example": "Don't be jealous of others."
+    },
+    {
+        "word_en": "loose",
+        "phonetic": "/lus/",
+        "meaning_kh": "ធូរ/មិនតឹង",
+        "example": "This shirt is too loose."
+    },
+    {
+        "word_en": "loud",
+        "phonetic": "/laʊd/",
+        "meaning_kh": "ឮខ្លាំង",
+        "example": "I heard a loud noise."
+    },
+    {
+        "word_en": "lovely",
+        "phonetic": "/ˈləvli/",
+        "meaning_kh": "គួរឲ្យស្រឡាញ់",
+        "example": "What a lovely flower."
+    },
+    {
+        "word_en": "mad",
+        "phonetic": "/mæd/",
+        "meaning_kh": "ឆ្កួត/ខឹង",
+        "example": "Are you mad at me?"
+    },
+    {
+        "word_en": "main",
+        "phonetic": "/meɪn/",
+        "meaning_kh": "ចម្បង",
+        "example": "This is the main reason."
+    },
+    {
+        "word_en": "major",
+        "phonetic": "/ˈmeɪʤər/",
+        "meaning_kh": "ធំ/សំខាន់",
+        "example": "It was a major success."
+    },
+    {
+        "word_en": "mean",
+        "phonetic": "/min/",
+        "meaning_kh": "កំណាញ់/ចិត្តអាក្រក់",
+        "example": "Don't be mean to your sister."
+    },
+    {
+        "word_en": "mild",
+        "phonetic": "/maɪld/",
+        "meaning_kh": "ស្រាល/ល្មម",
+        "example": "The weather is mild today."
+    },
+    {
+        "word_en": "modern",
+        "phonetic": "/ˈmɑdərn/",
+        "meaning_kh": "ទាន់សម័យ",
+        "example": "She lives in a modern house."
+    },
+    {
+        "word_en": "mysterious",
+        "phonetic": "/mɪˈstɪriəs/",
+        "meaning_kh": "អាថ៌កំបាំង",
+        "example": "He is a mysterious man."
+    },
+    {
+        "word_en": "natural",
+        "phonetic": "/ˈnæʧərəl/",
+        "meaning_kh": "ធម្មជាតិ",
+        "example": "It is a natural process."
+    },
+    {
+        "word_en": "necessary",
+        "phonetic": "/ˈnɛsəˌsɛri/",
+        "meaning_kh": "ចាំបាច់",
+        "example": "Water is necessary for life."
+    },
+    {
+        "word_en": "neat",
+        "phonetic": "/nit/",
+        "meaning_kh": "មានរបៀប",
+        "example": "Please keep your desk neat."
+    },
+    {
+        "word_en": "normal",
+        "phonetic": "/ˈnɔrməl/",
+        "meaning_kh": "ធម្មតា",
+        "example": "Everything is back to normal."
+    },
+    {
+        "word_en": "odd",
+        "phonetic": "/ɑd/",
+        "meaning_kh": "ប្លែក/ចម្លែក",
+        "example": "That is an odd question."
+    },
+    {
+        "word_en": "ordinary",
+        "phonetic": "/ˈɔrdəˌnɛri/",
+        "meaning_kh": "ធម្មតា",
+        "example": "He is an ordinary boy."
+    },
+    {
+        "word_en": "original",
+        "phonetic": "/ərˈɪʤənəl/",
+        "meaning_kh": "ដើម/ដំបូង",
+        "example": "This is the original version."
+    },
+    {
+        "word_en": "painful",
+        "phonetic": "/ˈpeɪnfəl/",
+        "meaning_kh": "ឈឺចាប់",
+        "example": "The injury was painful."
+    },
+    {
+        "word_en": "pleasant",
+        "phonetic": "/ˈplɛzənt/",
+        "meaning_kh": "គួរឲ្យរីករាយ",
+        "example": "We had a pleasant chat."
+    },
+    {
+        "word_en": "popular",
+        "phonetic": "/ˈpɑpjələr/",
+        "meaning_kh": "ពេញនិយម",
+        "example": "She is a popular singer."
+    },
+    {
+        "word_en": "positive",
+        "phonetic": "/ˈpɑzətɪv/",
+        "meaning_kh": "វិជ្ជមាន",
+        "example": "Try to have a positive attitude."
+    },
+    {
+        "word_en": "precious",
+        "phonetic": "/ˈprɛʃəs/",
+        "meaning_kh": "មានតម្លៃ",
+        "example": "Gold is a precious metal."
+    },
+    {
+        "word_en": "private",
+        "phonetic": "/ˈpraɪvət/",
+        "meaning_kh": "ឯកជន",
+        "example": "This is a private meeting."
+    },
+    {
+        "word_en": "pure",
+        "phonetic": "/pjʊr/",
+        "meaning_kh": "សុទ្ធ/បរិសុទ្ធ",
+        "example": "This bottle contains pure water."
+    },
+    {
+        "word_en": "quick",
+        "phonetic": "/kwɪk/",
+        "meaning_kh": "លឿន/រហ័ស",
+        "example": "He gave a quick reply."
+    },
+    {
+        "word_en": "rare",
+        "phonetic": "/rɛr/",
+        "meaning_kh": "កម្រ",
+        "example": "It is a rare bird."
+    },
+    {
+        "word_en": "real",
+        "phonetic": "/ril/",
+        "meaning_kh": "ពិតប្រាកដ",
+        "example": "Is this real gold?"
+    },
+    {
+        "word_en": "recent",
+        "phonetic": "/ˈrisənt/",
+        "meaning_kh": "ថ្មីៗ",
+        "example": "I read a recent article."
+    },
+    {
+        "word_en": "regular",
+        "phonetic": "/ˈrɛgjələr/",
+        "meaning_kh": "ទៀងទាត់",
+        "example": "He has regular exercise."
+    },
+    {
+        "word_en": "responsible",
+        "phonetic": "/riˈspɑnsəbəl/",
+        "meaning_kh": "មានការទទួលខុសត្រូវ",
+        "example": "You are responsible for this."
+    },
+    {
+        "word_en": "rough",
+        "phonetic": "/rəf/",
+        "meaning_kh": "គ្រើម/មិនរលោង",
+        "example": "The stone has a rough surface."
+    },
+    {
+        "word_en": "round",
+        "phonetic": "/raʊnd/",
+        "meaning_kh": "មូល",
+        "example": "The table is round."
+    },
+    {
+        "word_en": "serious",
+        "phonetic": "/ˈsɪriəs/",
+        "meaning_kh": "ធ្ងន់ធ្ងរ",
+        "example": "This is a serious problem."
+    },
+    {
+        "word_en": "sharp",
+        "phonetic": "/ʃɑrp/",
+        "meaning_kh": "ស្រួច/មុត",
+        "example": "Be careful, the knife is sharp."
+    },
+    {
+        "word_en": "abundant",
+        "phonetic": "/əˈbʌndənt/",
+        "meaning_kh": "សំបូរហូរហៀរ",
+        "example": "The region has abundant natural resources."
+    },
+    {
+        "word_en": "accurate",
+        "phonetic": "/ˈækjərət/",
+        "meaning_kh": "ត្រឹមត្រូវ/ជាក់លាក់",
+        "example": "Please provide an accurate description."
+    },
+    {
+        "word_en": "adaptable",
+        "phonetic": "/əˈdæptəbəl/",
+        "meaning_kh": "ងាយបត់បែន",
+        "example": "She is an adaptable worker."
+    },
+    {
+        "word_en": "adorable",
+        "phonetic": "/əˈdɔːrəbəl/",
+        "meaning_kh": "គួរឲ្យស្រឡាញ់ណាស់",
+        "example": "What an adorable baby!"
+    },
+    {
+        "word_en": "adventurous",
+        "phonetic": "/ədˈvɛntʃərəs/",
+        "meaning_kh": "ចូលចិត្តផ្សងព្រេង",
+        "example": "He has an adventurous spirit."
+    },
+    {
+        "word_en": "affectionate",
+        "phonetic": "/əˈfɛkʃənət/",
+        "meaning_kh": "ពោរពេញដោយក្តីស្រឡាញ់",
+        "example": "Dogs are very affectionate animals."
+    },
+    {
+        "word_en": "aggressive",
+        "phonetic": "/əˈɡrɛsɪv/",
+        "meaning_kh": "កាចសាហាវ/វាយប្រហារ",
+        "example": "The dog showed aggressive behavior."
+    },
+    {
+        "word_en": "alert",
+        "phonetic": "/əˈlɜːrt/",
+        "meaning_kh": "ស្វាហាប់/ប្រុងប្រយ័ត្ន",
+        "example": "The guard remained alert all night."
+    },
+    {
+        "word_en": "ambitious",
+        "phonetic": "/æmˈbɪʃəs/",
+        "meaning_kh": "ដែលមានមហិច្ឆតា",
+        "example": "She is an ambitious young lawyer."
+    },
+    {
+        "word_en": "amusing",
+        "phonetic": "/əˈmjuːzɪŋ/",
+        "meaning_kh": "គួរឲ្យកំប្លែង",
+        "example": "He told an amusing story."
+    },
+    {
+        "word_en": "ancient",
+        "phonetic": "/ˈeɪnʃənt/",
+        "meaning_kh": "បុរាណ",
+        "example": "We visited an ancient temple."
+    },
+    {
+        "word_en": "artistic",
+        "phonetic": "/ɑːrˈtɪstɪk/",
+        "meaning_kh": "មានសិល្បៈ",
+        "example": "She comes from an artistic family."
+    },
+    {
+        "word_en": "athletic",
+        "phonetic": "/æθˈlɛtɪk/",
+        "meaning_kh": "ស្វាហាប់/មាំមួន",
+        "example": "He is very athletic and plays soccer."
+    },
+    {
+        "word_en": "attractive",
+        "phonetic": "/əˈtræktɪv/",
+        "meaning_kh": "ទាក់ទាញ",
+        "example": "The city has many attractive parks."
+    },
+    {
+        "word_en": "authentic",
+        "phonetic": "/ɔːˈθɛntɪk/",
+        "meaning_kh": "ពិតប្រាកដ/ហ្ស៊ីន",
+        "example": "This is an authentic Italian restaurant."
+    },
+    {
+        "word_en": "average",
+        "phonetic": "/ˈævərɪdʒ/",
+        "meaning_kh": "មធ្យម",
+        "example": "He is of average height."
+    },
+    {
+        "word_en": "awkward",
+        "phonetic": "/ˈɔːkwərd/",
+        "meaning_kh": "ឆ្គាំឆ្គង/ទើសទាល់",
+        "example": "There was an awkward silence in the room."
+    },
+    {
+        "word_en": "barren",
+        "phonetic": "/ˈbærən/",
+        "meaning_kh": "រហោស្ថាន/គ្មានជីវជាតិ",
+        "example": "The land is barren and dry."
+    },
+    {
+        "word_en": "beneficial",
+        "phonetic": "/ˌbɛnɪˈfɪʃəl/",
+        "meaning_kh": "មានប្រយោជន៍",
+        "example": "Regular exercise is beneficial for health."
+    },
+    {
+        "word_en": "bizarre",
+        "phonetic": "/bɪˈzɑːr/",
+        "meaning_kh": "ចម្លែកខុសធម្មតា",
+        "example": "He has a bizarre sense of humor."
+    },
+    {
+        "word_en": "bland",
+        "phonetic": "/blænd/",
+        "meaning_kh": "សាប/គ្មានរសជាតិ",
+        "example": "The soup tastes a bit bland."
+    },
+    {
+        "word_en": "blissful",
+        "phonetic": "/ˈblɪsfəl/",
+        "meaning_kh": "ពោរពេញដោយសុភមង្គល",
+        "example": "We spent a blissful week at the beach."
+    },
+    {
+        "word_en": "boastful",
+        "phonetic": "/ˈboʊstfəl/",
+        "meaning_kh": "ចូលចិត្តអួត",
+        "example": "Nobody likes a boastful person."
+    },
+    {
+        "word_en": "bold",
+        "phonetic": "/boʊld/",
+        "meaning_kh": "ក្លាហាន/ដិត",
+        "example": "She made a bold decision."
+    },
+    {
+        "word_en": "bountiful",
+        "phonetic": "/ˈbaʊntɪfəl/",
+        "meaning_kh": "សំបូរហូរហៀរ",
+        "example": "They harvested a bountiful crop."
+    },
+    {
+        "word_en": "brilliant",
+        "phonetic": "/ˈbrɪljənt/",
+        "meaning_kh": "ឆ្លាតវៃអស្ចារ្យ/ភ្លឺចិញ្ចាច",
+        "example": "He is a brilliant scientist."
+    },
+    {
+        "word_en": "brisk",
+        "phonetic": "/brɪsk/",
+        "meaning_kh": "លឿន/រហ័សរហួន",
+        "example": "We went for a brisk walk."
+    },
+    {
+        "word_en": "bulky",
+        "phonetic": "/ˈbʌlki/",
+        "meaning_kh": "ធំហើយធ្ងន់",
+        "example": "It is difficult to carry bulky packages."
+    },
+    {
+        "word_en": "candid",
+        "phonetic": "/ˈkændɪd/",
+        "meaning_kh": "ត្រង់ទៅត្រង់មក",
+        "example": "I appreciate your candid opinion."
+    },
+    {
+        "word_en": "capable",
+        "phonetic": "/ˈkeɪpəbəl/",
+        "meaning_kh": "មានសមត្ថភាព",
+        "example": "She is a very capable manager."
+    },
+    {
+        "word_en": "cautious",
+        "phonetic": "/ˈcɔːʃəs/",
+        "meaning_kh": "ប្រុងប្រយ័ត្ន",
+        "example": "He is cautious about spending money."
+    },
+    {
+        "word_en": "celebrated",
+        "phonetic": "/ˈsɛləˌbreɪtəd/",
+        "meaning_kh": "ល្បីល្បាញ",
+        "example": "She is a celebrated author."
+    },
+    {
+        "word_en": "chilly",
+        "phonetic": "/ˈtʃɪli/",
+        "meaning_kh": "ត្រជាក់ស្រេប",
+        "example": "It is a chilly morning."
+    },
+    {
+        "word_en": "clumsy",
+        "phonetic": "/ˈklʌmzi/",
+        "meaning_kh": "ធ្គាំធ្គង/ធ្លាក់ដៃធ្លាក់ជើង",
+        "example": "I am very clumsy and drop things."
+    },
+    {
+        "word_en": "coherent",
+        "phonetic": "/koʊˈhɪrənt/",
+        "meaning_kh": "ស៊ីសង្វាក់គ្នា",
+        "example": "He gave a coherent explanation."
+    },
+    {
+        "word_en": "colorful",
+        "phonetic": "/ˈkʌlərfl/",
+        "meaning_kh": "មានពណ៌ឆើតឆាយ",
+        "example": "She wore a colorful dress."
+    },
+    {
+        "word_en": "colossal",
+        "phonetic": "/kəˈlɑːsəl/",
+        "meaning_kh": "ធំសម្បើម",
+        "example": "The project was a colossal waste of time."
+    },
+    {
+        "word_en": "compassionate",
+        "phonetic": "/kəmˈpæʃənət/",
+        "meaning_kh": "មានចិត្តមេត្តាករុណា",
+        "example": "She is a compassionate nurse."
+    },
+    {
+        "word_en": "competent",
+        "phonetic": "/ˈkɑːmpɪtənt/",
+        "meaning_kh": "មានសមត្ថភាពគ្រប់គ្រាន់",
+        "example": "He is a competent English teacher."
+    },
+    {
+        "word_en": "complex",
+        "phonetic": "/kəmˈplɛks/",
+        "meaning_kh": "ស្មុគស្មាញ",
+        "example": "The problem is very complex."
+    },
+    {
+        "word_en": "composed",
+        "phonetic": "/kəmˈpoʊzd/",
+        "meaning_kh": "ស្ងប់ស្ងៀម/នឹងនរ",
+        "example": "She remained composed under pressure."
+    },
+    {
+        "word_en": "concise",
+        "phonetic": "/kənˈsaɪs/",
+        "meaning_kh": "ខ្លីខ្លឹម/សង្ខេប",
+        "example": "Write a concise summary of the book."
+    },
+    {
+        "word_en": "concrete",
+        "phonetic": "/ˈkɑːnkriːt/",
+        "meaning_kh": "ជាក់ស្តែង/រឹងមាំ",
+        "example": "Do you have concrete evidence?"
+    },
+    {
+        "word_en": "confused",
+        "phonetic": "/kənˈfjuːzd/",
+        "meaning_kh": "ច្រឡបូកបល់/វង្វេង",
+        "example": "I am confused about the schedule."
+    },
+    {
+        "word_en": "conscientious",
+        "phonetic": "/ˌkɑːnʃiˈɛnʃəs/",
+        "meaning_kh": "ផ្ចិតផ្ចង់/ម៉ត់ចត់",
+        "example": "He is a conscientious student."
+    },
+    {
+        "word_en": "considerate",
+        "phonetic": "/kənˈsɪdərət/",
+        "meaning_kh": "ចេះគិតគូរពីអ្នកដទៃ",
+        "example": "It was considerate of you to call."
+    },
+    {
+        "word_en": "consistent",
+        "phonetic": "/kənˈsɪstənt/",
+        "meaning_kh": "ស្របគ្នា/ទៀងទាត់",
+        "example": "Her performance is consistent."
+    },
+    {
+        "word_en": "conspicuous",
+        "phonetic": "/kənˈspɪkjuəs/",
+        "meaning_kh": "ងាយមើលឃើញ/លេចធ្លោ",
+        "example": "The red sign was conspicuous."
+    },
+    {
+        "word_en": "continuous",
+        "phonetic": "/kənˈtɪnjuəs/",
+        "meaning_kh": "ជាប់មិនដាច់",
+        "example": "There was a continuous rain."
+    },
+    {
+        "word_en": "cordial",
+        "phonetic": "/ˈkɔːrdʒəl/",
+        "meaning_kh": "កក់ក្តៅនិងរួសរាយ",
+        "example": "They gave us a cordial welcome."
+    },
+    {
+        "word_en": "corrupt",
+        "phonetic": "/kəˈrʌpt/",
+        "meaning_kh": "ពុករលួយ",
+        "example": "They fight against corrupt officials."
+    },
+    {
+        "word_en": "courageous",
+        "phonetic": "/kəˈreɪdʒəs/",
+        "meaning_kh": "ក្លាហាន",
+        "example": "The soldier made a courageous choice."
+    },
+    {
+        "word_en": "courteous",
+        "phonetic": "/ˈkɜːrtiəs/",
+        "meaning_kh": "សុភាពរាបសារ",
+        "example": "The staff was very courteous."
+    },
+    {
+        "word_en": "cozy",
+        "phonetic": "/ˈkoʊzi/",
+        "meaning_kh": "កក់ក្តៅនិងមានផាសុកភាព",
+        "example": "They live in a cozy cottage."
+    },
+    {
+        "word_en": "creative",
+        "phonetic": "/kriˈeɪtɪv/",
+        "meaning_kh": "មានគំនិតច្នៃប្រឌិត",
+        "example": "Children have creative minds."
+    },
+    {
+        "word_en": "credible",
+        "phonetic": "/ˈkrɛdəbəl/",
+        "meaning_kh": "គួរឲ្យជឿជាក់បាន",
+        "example": "He is a credible witness."
+    },
+    {
+        "word_en": "critical",
+        "phonetic": "/ˈkrɪtɪkəl/",
+        "meaning_kh": "សំខាន់/រិះគន់",
+        "example": "The patient is in critical condition."
+    },
+    {
+        "word_en": "crowded",
+        "phonetic": "/ˈkraʊdəd/",
+        "meaning_kh": "កុះករ/ណែនតាន់",
+        "example": "The market is very crowded."
+    },
+    {
+        "word_en": "crucial",
+        "phonetic": "/ˈkruːʃəl/",
+        "meaning_kh": "សំខាន់បំផុត",
+        "example": "Water is crucial for survival."
+    },
+    {
+        "word_en": "crude",
+        "phonetic": "/kruːd/",
+        "meaning_kh": "គ្រើម/មិនទាន់កែច្នៃ",
+        "example": "They export crude oil."
+    },
+    {
+        "word_en": "curly",
+        "phonetic": "/ˈkɜːrli/",
+        "meaning_kh": "រួញ",
+        "example": "She has curly hair."
+    },
+    {
+        "word_en": "cynical",
+        "phonetic": "/ˈsɪnɪkəl/",
+        "meaning_kh": "អវិជ្ជមាន/សង្ស័យ",
+        "example": "He has a cynical view of life."
+    },
+    {
+        "word_en": "dainty",
+        "phonetic": "/ˈdeɪnti/",
+        "meaning_kh": "ស្រស់ស្អាតតូចច្រឡឹង",
+        "example": "She wore a dainty gold necklace."
+    },
+    {
+        "word_en": "damp",
+        "phonetic": "/dæmp/",
+        "meaning_kh": "សើមជោក/សើមអុប",
+        "example": "The clothes are still damp."
+    },
+    {
+        "word_en": "daring",
+        "phonetic": "/ˈdɛrɪŋ/",
+        "meaning_kh": "ហ៊ានប្រថុយ/ក្លាហាន",
+        "example": "It was a daring rescue."
+    },
+    {
+        "word_en": "dazzling",
+        "phonetic": "/ˈdæzlɪŋ/",
+        "meaning_kh": "ភ្លឺចិញ្ចាចចែងចាំង",
+        "example": "She had a dazzling smile."
+    },
+    {
+        "word_en": "deadly",
+        "phonetic": "/ˈdɛdli/",
+        "meaning_kh": "អាចសម្លាប់មនុស្សបាន",
+        "example": "This is a deadly poison."
+    },
+    {
+        "word_en": "deafening",
+        "phonetic": "/ˈdɛfənɪŋ/",
+        "meaning_kh": "ឮខ្លាំងថ្លង់ត្រចៀក",
+        "example": "The music was deafening."
+    },
+    {
+        "word_en": "decent",
+        "phonetic": "/ˈdiːsənt/",
+        "meaning_kh": "សមរម្យ/ត្រឹមត្រូវ",
+        "example": "He earns a decent salary."
+    },
+    {
+        "word_en": "decisive",
+        "phonetic": "/dɪˈsaɪsɪv/",
+        "meaning_kh": "ដាច់ខាត/ម៉ឺងម៉ាត់",
+        "example": "We need decisive action."
+    },
+    {
+        "word_en": "defiant",
+        "phonetic": "/dɪˈfaɪənt/",
+        "meaning_kh": "ទទឹងទិស/មិនស្តាប់បង្គាប់",
+        "example": "The boy remained defiant."
+    },
+    {
+        "word_en": "deliberate",
+        "phonetic": "/dɪˈlɪbərət/",
+        "meaning_kh": "ដោយចេតនា",
+        "example": "It was a deliberate mistake."
+    },
+    {
+        "word_en": "delicate",
+        "phonetic": "/ˈdɛlɪkət/",
+        "meaning_kh": "ស្រទន់/ងាយខូចខាត",
+        "example": "Handle the delicate flowers with care."
+    },
+    {
+        "word_en": "delightful",
+        "phonetic": "/dɪˈlaɪtfəl/",
+        "meaning_kh": "គួរឲ្យរីករាយ",
+        "example": "We had a delightful dinner together."
+    },
+    {
+        "word_en": "demanding",
+        "phonetic": "/dɪˈmændɪŋ/",
+        "meaning_kh": "ទាមទារខ្លាំង/តឹងរ៉ឹង",
+        "example": "He has a demanding boss."
+    },
+    {
+        "word_en": "dense",
+        "phonetic": "/dɛns/",
+        "meaning_kh": "ក្រាស់/ញឹក",
+        "example": "They got lost in the dense forest."
+    },
+    {
+        "word_en": "depressed",
+        "phonetic": "/dɪˈprɛst/",
+        "meaning_kh": "ធ្លាក់ទឹកចិត្ត",
+        "example": "She felt depressed after losing the match."
+    },
+    {
+        "word_en": "desirable",
+        "phonetic": "/dɪˈzaɪrəbəl/",
+        "meaning_kh": "គួរឲ្យចង់បាន",
+        "example": "This is a desirable neighborhood."
+    },
+    {
+        "word_en": "desperate",
+        "phonetic": "/ˈdɛspərət/",
+        "meaning_kh": "អស់សង្ឃឹម/ប្រថុយប្រថាន",
+        "example": "They made a desperate attempt to escape."
+    },
+    {
+        "word_en": "devoted",
+        "phonetic": "/dɪˈvoʊtəd/",
+        "meaning_kh": "ស្មោះស្ម័គ្រ/លះបង់",
+        "example": "He is a devoted father."
+    },
+    {
+        "word_en": "different",
+        "phonetic": "/ˈdɪfərənt/",
+        "meaning_kh": "ខុសគ្នា",
+        "example": "Let's try a different approach."
+    },
+    {
+        "word_en": "dim",
+        "phonetic": "/dɪm/",
+        "meaning_kh": "ស្រអាប់",
+        "example": "The light in the hallway was dim."
+    },
+    {
+        "word_en": "diplomatic",
+        "phonetic": "/ˌdɪpləˈmætɪk/",
+        "meaning_kh": "បែបការទូត",
+        "example": "She gave a diplomatic response."
+    },
+    {
+        "word_en": "direct",
+        "phonetic": "/dɪˈrɛkt/",
+        "meaning_kh": "ផ្ទាល់",
+        "example": "There is no direct flight to the city."
+    },
+    {
+        "word_en": "disastrous",
+        "phonetic": "/dɪˈzæstrəs/",
+        "meaning_kh": "វិនាសសកម្ម",
+        "example": "The flood had disastrous effects."
+    },
+    {
+        "word_en": "distant",
+        "phonetic": "/ˈdɪstənt/",
+        "meaning_kh": "ឆ្ងាយ",
+        "example": "I heard the sound of distant thunder."
+    },
+    {
+        "word_en": "distinct",
+        "phonetic": "/dɪˈstɪŋkt/",
+        "meaning_kh": "ច្បាស់លាស់/ខុសគ្នាស្រឡះ",
+        "example": "There is a distinct smell of smoke."
+    },
+    {
+        "word_en": "distinguished",
+        "phonetic": "/dɪˈstɪŋɡwɪʃt/",
+        "meaning_kh": "ឆ្នើម/លេចធ្លោ",
+        "example": "He is a distinguished guest."
+    },
+    {
+        "word_en": "diverse",
+        "phonetic": "/daɪˈvɜːrs/",
+        "meaning_kh": "ចម្រុះ",
+        "example": "The city has a diverse population."
+    },
+    {
+        "word_en": "divine",
+        "phonetic": "/dɪˈvaɪn/",
+        "meaning_kh": "ដ៏ទេវភាព/ដ៏អស្ចារ្យ",
+        "example": "The food tasted divine."
+    },
+    {
+        "word_en": "dizzy",
+        "phonetic": "/ˈdɪzi/",
+        "meaning_kh": "វិលមុខ",
+        "example": "I felt dizzy after spinning around."
+    },
+    {
+        "word_en": "domestic",
+        "phonetic": "/dəˈmɛstɪk/",
+        "meaning_kh": "ក្នុងស្រុក/ក្នុងផ្ទះ",
+        "example": "They have many domestic animals."
+    },
+    {
+        "word_en": "dominant",
+        "phonetic": "/ˈdɑːmɪnənt/",
+        "meaning_kh": "មានឥទ្ធិពល/លេចធ្លោ",
+        "example": "Red is the dominant color in this painting."
+    },
+    {
+        "word_en": "double",
+        "phonetic": "/ˈdʌbəl/",
+        "meaning_kh": "ពីរដង/ឌុប",
+        "example": "I ordered a double espresso."
+    },
+    {
+        "word_en": "doubtful",
+        "phonetic": "/ˈdaʊtfəl/",
+        "meaning_kh": "សង្ស័យ",
+        "example": "It is doubtful that they will arrive on time."
+    },
+    {
+        "word_en": "drab",
+        "phonetic": "/dræb/",
+        "meaning_kh": "ស្រអាប់/គ្មានពណ៌ឆើតឆាយ",
+        "example": "She wore a drab grey coat."
+    },
+    {
+        "word_en": "dramatic",
+        "phonetic": "/drəˈmætɪk/",
+        "meaning_kh": "គួរឲ្យភ្ញាក់ផ្អើល",
+        "example": "There has been a dramatic increase in sales."
+    },
+    {
+        "word_en": "dreadful",
+        "phonetic": "/ˈdrɛdfəl/",
+        "meaning_kh": "អាក្រក់ណាស់",
+        "example": "The weather was dreadful yesterday."
+    },
+    {
+        "word_en": "dubious",
+        "phonetic": "/ˈduːbiəs/",
+        "meaning_kh": "គួរឲ្យសង្ស័យ",
+        "example": "He made a dubious claim."
+    },
+    {
+        "word_en": "dull",
+        "phonetic": "/dʌl/",
+        "meaning_kh": "ធុញទ្រាន់/អាប់អួរ",
+        "example": "The lecture was dull and long."
+    },
+    {
+        "word_en": "dusky",
+        "phonetic": "/ˈdʌski/",
+        "meaning_kh": "ស្រអាប់/ងងឹត",
+        "example": "It was a dusky evening."
+    },
+    {
+        "word_en": "dynamic",
+        "phonetic": "/daɪˈnæmɪk/",
+        "meaning_kh": "ស្វាហាប់/ប្រែប្រួលលឿន",
+        "example": "She is a dynamic speaker."
+    },
+    {
+        "word_en": "eager",
+        "phonetic": "/ˈiːɡər/",
+        "meaning_kh": "ខ្លាំងក្លា/អន្ទះសារ",
+        "example": "She is eager to start her new job."
+    },
+    {
+        "word_en": "earnest",
+        "phonetic": "/ˈɜːrnɪst/",
+        "meaning_kh": "ស្មោះត្រង់និងម៉ត់ចត់",
+        "example": "He made an earnest plea for help."
+    },
+    {
+        "word_en": "earthly",
+        "phonetic": "/ˈɜːrθli/",
+        "meaning_kh": "នៃផែនដី",
+        "example": "We have no earthly reason to doubt him."
+    },
+    {
+        "word_en": "easygoing",
+        "phonetic": "/ˌiːziˈɡoʊɪŋ/",
+        "meaning_kh": "ធូរៗ/មិនសូវខ្វល់",
+        "example": "My roommate is very easygoing."
+    },
+    {
+        "word_en": "eccentric",
+        "phonetic": "/ɪkˈsɛntrɪk/",
+        "meaning_kh": "ប្លែកខុសគេ",
+        "example": "He is an eccentric billionaire."
+    },
+    {
+        "word_en": "economical",
+        "phonetic": "/ˌeɪkəˈnɑːmɪkəl/",
+        "meaning_kh": "សន្សំសំចៃ",
+        "example": "This small car is very economical."
+    },
+    {
+        "word_en": "eerie",
+        "phonetic": "/ˈɪri/",
+        "meaning_kh": "គួរឲ្យព្រឺក្បាល",
+        "example": "There was an eerie silence in the house."
+    },
+    {
+        "word_en": "effective",
+        "phonetic": "/ɪˈfɛktɪv/",
+        "meaning_kh": "មានប្រសិទ្ធភាព",
+        "example": "This is an effective treatment for colds."
+    },
+    {
+        "word_en": "efficient",
+        "phonetic": "/ɪˈfɪʃənt/",
+        "meaning_kh": "មានសមត្ថភាពខ្ពស់/រហ័ស",
+        "example": "She is an efficient secretary."
+    },
+    {
+        "word_en": "elaborate",
+        "phonetic": "/ɪˈlæbərət/",
+        "meaning_kh": "ផ្ចិតផ្ចង់/ស្មុគស្មាញ",
+        "example": "They made elaborate plans for the party."
+    },
+    {
+        "word_en": "elastic",
+        "phonetic": "/ɪˈlæstɪk/",
+        "meaning_kh": "យឺត/បត់បែន",
+        "example": "The band is made of elastic material."
+    },
+    {
+        "word_en": "elated",
+        "phonetic": "/ɪˈleɪtəd/",
+        "meaning_kh": "រំភើបចិត្តជាខ្លាំង",
+        "example": "He was elated by the news of his promotion."
+    },
+    {
+        "word_en": "elderly",
+        "phonetic": "/ˈɛldərli/",
+        "meaning_kh": "ចាស់ជរា",
+        "example": "We should assist elderly passengers."
+    },
+    {
+        "word_en": "elegant",
+        "phonetic": "/ˈɛləɡənt/",
+        "meaning_kh": "ឆើតឆាយប្រណីត",
+        "example": "She wore an elegant dress."
+    },
+    {
+        "word_en": "elementary",
+        "phonetic": "/ˌɛlɪˈmɛntəri/",
+        "meaning_kh": "បឋម",
+        "example": "This is an elementary mistake."
+    },
+    {
+        "word_en": "eligible",
+        "phonetic": "/ˈɛlɪdʒəbəl/",
+        "meaning_kh": "គ្រប់លក្ខខណ្ឌ",
+        "example": "Who is eligible to vote?"
+    },
+    {
+        "word_en": "eloquent",
+        "phonetic": "/ˈɛləkwənt/",
+        "meaning_kh": "មានវោហារសាស្ត្រ",
+        "example": "He gave an eloquent speech."
+    },
+    {
+        "word_en": "elusive",
+        "phonetic": "/ɪˈluːsɪv/",
+        "meaning_kh": "ពិបាកចាប់បាន/ពិបាករក",
+        "example": "Success remained elusive for the team."
+    },
+    {
+        "word_en": "embarrassed",
+        "phonetic": "/ɪmˈbærəst/",
+        "meaning_kh": "អៀនខ្មាស/ទើសទាល់",
+        "example": "He felt embarrassed when he fell down."
+    },
+    {
+        "word_en": "eminent",
+        "phonetic": "/ˈɛmɪnənt/",
+        "meaning_kh": "ល្បីល្បាញ/ខ្ពង់ខ្ពស់",
+        "example": "She is an eminent scholar."
+    },
+    {
+        "word_en": "emotional",
+        "phonetic": "/ɪˈmoʊʃənl/",
+        "meaning_kh": "ឆាប់ប៉ះទង្គិចអារម្មណ៍",
+        "example": "It was an emotional farewell."
+    },
+    {
+        "word_en": "endless",
+        "phonetic": "/ˈɛndləs/",
+        "meaning_kh": "គ្មានទីបញ្ចប់",
+        "example": "They faced endless problems."
+    },
+    {
+        "word_en": "energetic",
+        "phonetic": "/ˌɛnərˈdʒɛtɪk/",
+        "meaning_kh": "ពេញដោយថាមពល",
+        "example": "He is an energetic dog."
+    },
+    {
+        "word_en": "enormous",
+        "phonetic": "/ɪˈnɔːrməs/",
+        "meaning_kh": "ធំសម្បើម",
+        "example": "They spent an enormous amount of money."
+    },
+    {
+        "word_en": "enthusiastic",
+        "phonetic": "/ɪnˌθuːziˈæstɪk/",
+        "meaning_kh": "ដែលមានការរំភើបចិត្ត",
+        "example": "She was enthusiastic about the project."
+    },
+    {
+        "word_en": "envious",
+        "phonetic": "/ˈɛnviəs/",
+        "meaning_kh": "ច្រណែន",
+        "example": "She was envious of her friend's success."
+    },
+    {
+        "word_en": "equal",
+        "phonetic": "/ˈiːkwəl/",
+        "meaning_kh": "ស្មើគ្នា",
+        "example": "We demand equal rights."
+    },
+    {
+        "word_en": "essential",
+        "phonetic": "/ɪˈsɛnʃəl/",
+        "meaning_kh": "សំខាន់មិនអាចខ្វះបាន",
+        "example": "Good food is essential for health."
+    },
+    {
+        "word_en": "eternal",
+        "phonetic": "/ɪˈtɜːrnl/",
+        "meaning_kh": "អស់កល្បជានិច្ច",
+        "example": "They promised eternal love."
+    },
+    {
+        "word_en": "ethical",
+        "phonetic": "/ˈeθɪkəl/",
+        "meaning_kh": "ដែលមានសីលធម៌",
+        "example": "Doctors must follow ethical standards."
+    },
+    {
+        "word_en": "exaggerated",
+        "phonetic": "/ɪɡˈzædʒəˌreɪtəd/",
+        "meaning_kh": "បំប៉ោងហួសពិត",
+        "example": "The newspaper report was exaggerated."
+    },
+    {
+        "word_en": "excellent",
+        "phonetic": "/ˈeɪksələnt/",
+        "meaning_kh": "ល្អឥតខ្ចោះ",
+        "example": "He did an excellent job."
+    },
+    {
+        "word_en": "excessive",
+        "phonetic": "/ɪkˈsɛsɪv/",
+        "meaning_kh": "ច្រើនហួសប្រមាណ",
+        "example": "Avoid excessive drinking of soda."
+    },
+    {
+        "word_en": "exclusive",
+        "phonetic": "/ɪkˈskluːsɪv/",
+        "meaning_kh": "ផ្តាច់មុខ/លំដាប់ខ្ពស់",
+        "example": "This is an exclusive club for members only."
+    },
+    {
+        "word_en": "exotic",
+        "phonetic": "/ɪɡˈzɑːtɪk/",
+        "meaning_kh": "ចម្លែកភ្នែក/នាំចូលពីក្រៅ",
+        "example": "They sell exotic fruits at the shop."
+    },
+    {
+        "word_en": "experienced",
+        "phonetic": "/ɪkˈspɪriənst/",
+        "meaning_kh": "មានបទពិសោធន៍",
+        "example": "He is an experienced driver."
+    },
+    {
+        "word_en": "exquisite",
+        "phonetic": "/ɪkˈskwɪzɪt/",
+        "meaning_kh": "ប្រណីតល្អឥតខ្ចោះ",
+        "example": "She wore an exquisite necklace."
+    },
+    {
+        "word_en": "extensive",
+        "phonetic": "/ɪkˈstɛnsɪv/",
+        "meaning_kh": "ទូលំទូលាយ",
+        "example": "The fire caused extensive damage."
+    },
+    {
+        "word_en": "extravagant",
+        "phonetic": "/ɪkˈstrævəɡənt/",
+        "meaning_kh": "ខ្ជះខ្ជាយ",
+        "example": "He has extravagant spending habits."
+    },
+    {
+        "word_en": "extreme",
+        "phonetic": "/ɪkˈstriːm/",
+        "meaning_kh": "ខ្លាំងបំផុត",
+        "example": "They face extreme weather conditions."
+    },
+    {
+        "word_en": "fabulous",
+        "phonetic": "/ˈfæbjələs/",
+        "meaning_kh": "អស្ចារ្យណាស់",
+        "example": "We had a fabulous holiday."
+    },
+    {
+        "word_en": "faded",
+        "phonetic": "/ˈfeɪdəd/",
+        "meaning_kh": "ស្រអាប់/ស្លេកស្លាំង",
+        "example": "She wore faded jeans."
+    },
+    {
+        "word_en": "faint",
+        "phonetic": "/feɪnt/",
+        "meaning_kh": "ខ្សោយ/មិនច្បាស់",
+        "example": "I heard a faint sound."
+    },
+    {
+        "word_en": "fair",
+        "phonetic": "/fɛr/",
+        "meaning_kh": "យុត្តិធម៌/ស្បែកស",
+        "example": "The teacher is always fair."
+    },
+    {
+        "word_en": "faithful",
+        "phonetic": "/ˈfeɪθfəl/",
+        "meaning_kh": "ស្មោះត្រង់",
+        "example": "He has been a faithful friend."
+    },
+    {
+        "word_en": "false",
+        "phonetic": "/fɔːls/",
+        "meaning_kh": "មិនពិត/ក្លែងក្លាយ",
+        "example": "He gave a false name."
+    },
+    {
+        "word_en": "familiar",
+        "phonetic": "/fəˈmɪliər/",
+        "meaning_kh": "ស៊ាំ/ស្គាល់ច្បាស់",
+        "example": "His voice sounds familiar."
+    },
+    {
+        "word_en": "fanatical",
+        "phonetic": "/fəˈnætɪkəl/",
+        "meaning_kh": "ងប់ងុល",
+        "example": "He is a fanatical football fan."
+    },
+    {
+        "word_en": "fancy",
+        "phonetic": "/ˈfænsi/",
+        "meaning_kh": "ឆើតឆាយ",
+        "example": "They went to a fancy restaurant."
+    },
+    {
+        "word_en": "fantastic",
+        "phonetic": "/fænˈtæstɪk/",
+        "meaning_kh": "អស្ចារ្យ",
+        "example": "The show was fantastic."
+    },
+    {
+        "word_en": "fatal",
+        "phonetic": "/ˈfeɪtl/",
+        "meaning_kh": "ដល់ជីវិត",
+        "example": "It was a fatal accident."
+    },
+    {
+        "word_en": "faulty",
+        "phonetic": "/ˈfɔːlti/",
+        "meaning_kh": "មានបញ្ហា/ខូច",
+        "example": "Return the faulty goods to the shop."
+    },
+    {
+        "word_en": "favorable",
+        "phonetic": "/ˈfeɪvərəbəl/",
+        "meaning_kh": "អំណោយផល",
+        "example": "The review of the movie was favorable."
+    },
+    {
+        "word_en": "fearful",
+        "phonetic": "/ˈfɪrfəl/",
+        "meaning_kh": "ភ័យខ្លាច",
+        "example": "She felt fearful in the dark alley."
+    },
+    {
+        "word_en": "fearless",
+        "phonetic": "/ˈfɪrləs/",
+        "meaning_kh": "គ្មានការភ័យខ្លាច",
+        "example": "He is a fearless explorer."
+    },
+    {
+        "word_en": "feeble",
+        "phonetic": "/ˈfiːbəl/",
+        "meaning_kh": "ទន់ខ្សោយ",
+        "example": "The old man made a feeble attempt to sit up."
+    },
+    {
+        "word_en": "ferocious",
+        "phonetic": "/fəˈroʊʃəs/",
+        "meaning_kh": "កាចសាហាវ",
+        "example": "A ferocious tiger guarded the cave."
+    },
+    {
+        "word_en": "fertile",
+        "phonetic": "/ˈfɜːrtl/",
+        "meaning_kh": "មានជីជាតិ",
+        "example": "The soil is very fertile here."
+    },
+    {
+        "word_en": "festive",
+        "phonetic": "/ˈfɛstɪv/",
+        "meaning_kh": "ពោរពេញដោយបរិយាកាសបុណ្យ",
+        "example": "The streets had a festive atmosphere."
+    },
+    {
+        "word_en": "fierce",
+        "phonetic": "/fɪrs/",
+        "meaning_kh": "កាចសាហាវ/ខ្លាំងក្លា",
+        "example": "They faced fierce competition."
+    },
+    {
+        "word_en": "filthy",
+        "phonetic": "/ˈfɪlθi/",
+        "meaning_kh": "កខ្វក់ណាស់",
+        "example": "Wash your hands; they are filthy."
+    },
+    {
+        "word_en": "financial",
+        "phonetic": "/faɪˈnænʃəl/",
+        "meaning_kh": "ផ្នែកហិរញ្ញវត្ថុ",
+        "example": "They offer financial support."
+    },
+    {
+        "word_en": "fit",
+        "phonetic": "/fɪt/",
+        "meaning_kh": "មាំមួន/សមស្រប",
+        "example": "He runs daily to stay fit."
+    },
+    {
+        "word_en": "flamboyant",
+        "phonetic": "/flæmˈbɔɪənt/",
+        "meaning_kh": "ឆើតឆាយទាក់ទាញ",
+        "example": "He has a flamboyant style of dressing."
+    },
+    {
+        "word_en": "flat",
+        "phonetic": "/flæt/",
+        "meaning_kh": "សំប៉ែត/រាបស្មើ",
+        "example": "The road across the desert is flat."
+    },
+    {
+        "word_en": "flavorful",
+        "phonetic": "/ˈfleɪvərfl/",
+        "meaning_kh": "មានរសជាតិឈ្ងុយឆ្ងាញ់",
+        "example": "This soup is very flavorful."
+    },
+    {
+        "word_en": "flawless",
+        "phonetic": "/ˈflɔːləs/",
+        "meaning_kh": "គ្មានខ្ចោះ",
+        "example": "She gave a flawless performance."
+    },
+    {
+        "word_en": "fleeting",
+        "phonetic": "/ˈfliːtɪŋ/",
+        "meaning_kh": "មួយភ្លែត/មិនយូរ",
+        "example": "We had a fleeting glimpse of the dolphin."
+    },
+    {
+        "word_en": "flexible",
+        "phonetic": "/ˈflɛksəbəl/",
+        "meaning_kh": "អាចបត់បែនបាន",
+        "example": "My work schedule is quite flexible."
+    },
+    {
+        "word_en": "flimsy",
+        "phonetic": "/ˈflɪmzi/",
+        "meaning_kh": "ងាយបាក់បែក/ស្តើង",
+        "example": "The box was made of flimsy cardboard."
+    },
+    {
+        "word_en": "fluffy",
+        "phonetic": "/ˈflʌfi/",
+        "meaning_kh": "ទន់ល្មើយ/ហុយៗ",
+        "example": "The kitten has fluffy white fur."
+    },
+    {
+        "word_en": "fluid",
+        "phonetic": "/ˈfluːɪd/",
+        "meaning_kh": "ជារាវ/រលូន",
+        "example": "The dancer moved with fluid motions."
+    },
+    {
+        "word_en": "fond",
+        "phonetic": "/fɑːnd/",
+        "meaning_kh": "ចូលចិត្ត/ស្រឡាញ់",
+        "example": "I have fond memories of my childhood."
+    },
+    {
+        "word_en": "foolish",
+        "phonetic": "/ˈfuːlɪʃ/",
+        "meaning_kh": "ល្ងីល្ងើ",
+        "example": "Don't make foolish decisions."
+    },
+    {
+        "word_en": "forgiving",
+        "phonetic": "/fərˈgɪvɪŋ/",
+        "meaning_kh": "ចេះអត់ឱន",
+        "example": "She has a kind and forgiving nature."
+    },
+    {
+        "word_en": "formal",
+        "phonetic": "/ˈfɔːrml/",
+        "meaning_kh": "ផ្លូវការ",
+        "example": "We need to wear formal attire to the dinner."
+    },
+    {
+        "word_en": "formidable",
+        "phonetic": "/ˈfɔːrmɪdəbəl/",
+        "meaning_kh": "គួរឲ្យស្ញប់ស្ញែង/ខ្លាំងពូកែ",
+        "example": "They are formidable opponents."
+    },
+    {
+        "word_en": "fortunate",
+        "phonetic": "/ˈfɔːrtʃənət/",
+        "meaning_kh": "មានសំណាង",
+        "example": "We are fortunate to have good friends."
+    },
+    {
+        "word_en": "fragile",
+        "phonetic": "/ˈfrædʒəl/",
+        "meaning_kh": "ងាយបែកបាក់",
+        "example": "This glass vase is very fragile."
+    },
+    {
+        "word_en": "frank",
+        "phonetic": "/fræŋk/",
+        "meaning_kh": "ត្រង់ទៅត្រង់មក",
+        "example": "He gave a frank reply."
+    },
+    {
+        "word_en": "frantic",
+        "phonetic": "/ˈfræntɪk/",
+        "meaning_kh": "ភ័យស្លន់ស្លោ",
+        "example": "She made a frantic search for her keys."
+    },
+    {
+        "word_en": "fresh",
+        "phonetic": "/frɛʃ/",
+        "meaning_kh": "ស្រស់",
+        "example": "I bought some fresh vegetables."
+    },
+    {
+        "word_en": "frightened",
+        "phonetic": "/ˈfraɪtnd/",
+        "meaning_kh": "ភ័យខ្លាច",
+        "example": "The child looked frightened."
+    },
+    {
+        "word_en": "frightening",
+        "phonetic": "/ˈfraɪtnɪŋ/",
+        "meaning_kh": "គួរឲ្យខ្លាច",
+        "example": "It was a frightening experience."
+    },
+    {
+        "word_en": "frugal",
+        "phonetic": "/ˈfruːgəl/",
+        "meaning_kh": "សន្សំសំចៃ",
+        "example": "He lives a very frugal life."
+    },
+    {
+        "word_en": "frustrated",
+        "phonetic": "/ˈfrʌstretəd/",
+        "meaning_kh": "អាក់អន់ចិត្ត/ធុញថប់",
+        "example": "He felt frustrated with the slow progress."
+    },
+    {
+        "word_en": "funny",
+        "phonetic": "/ˈfʌni/",
+        "meaning_kh": "កំប្លែង",
+        "example": "He told a funny joke."
+    },
+    {
+        "word_en": "furious",
+        "phonetic": "/ˈfjʊriəs/",
+        "meaning_kh": "ខឹងសម្បារយ៉ាងខ្លាំង",
+        "example": "She was furious about the delay."
+    },
+    {
+        "word_en": "futile",
+        "phonetic": "/ˈfjuːtl/",
+        "meaning_kh": "អសារបង់",
+        "example": "It was a futile attempt to start the engine."
+    },
+    {
+        "word_en": "fuzzy",
+        "phonetic": "/ˈfʌzi/",
+        "meaning_kh": "មិនច្បាស់/ទន់រោម",
+        "example": "The image on the screen was fuzzy."
+    },
+    {
+        "word_en": "gaudy",
+        "phonetic": "/ˈgɔːdi/",
+        "meaning_kh": "ឆើតឆាយពេក/អាក្រក់មើល",
+        "example": "She wore gaudy jewelry."
+    },
+    {
+        "word_en": "generous",
+        "phonetic": "/ˈdʒɛnərəs/",
+        "meaning_kh": "ចិត្តទូលាយ",
+        "example": "He is a very generous donor."
+    },
+    {
+        "word_en": "genial",
+        "phonetic": "/ˈdʒiːniəl/",
+        "meaning_kh": "រួសរាយកក់ក្តៅ",
+        "example": "Our host was genial and welcoming."
+    },
+    {
+        "word_en": "genuine",
+        "phonetic": "/ˈdʒɛnjuɪn/",
+        "meaning_kh": "ពិតប្រាកដ",
+        "example": "This is a genuine leather bag."
+    },
+    {
+        "word_en": "giant",
+        "phonetic": "/ˈdʒaɪənt/",
+        "meaning_kh": "ធំសម្បើម",
+        "example": "The project was a giant step forward."
+    },
+    {
+        "word_en": "giddy",
+        "phonetic": "/ˈgɪdi/",
+        "meaning_kh": "វិលវល់/សប្បាយជ្រុល",
+        "example": "She felt giddy with excitement."
+    },
+    {
+        "word_en": "gifted",
+        "phonetic": "/ˈgɪftəd/",
+        "meaning_kh": "មានទេពកោសល្យ/ប៉ិនប្រសប់",
+        "example": "She is a gifted piano player."
+    },
+    {
+        "word_en": "gigantic",
+        "phonetic": "/dʒaɪˈgæntɪk/",
+        "meaning_kh": "ធំសម្បើម",
+        "example": "A gigantic wave hit the shore."
+    },
+    {
+        "word_en": "glorious",
+        "phonetic": "/ˈglɔːriəs/",
+        "meaning_kh": "ដ៏រុងរឿង",
+        "example": "We had a glorious day in the mountains."
+    },
+    {
+        "word_en": "gloomy",
+        "phonetic": "/ˈgluːmi/",
+        "meaning_kh": "អាប់អួរ/ស្រពោន",
+        "example": "The weather is gloomy today."
+    },
+    {
+        "word_en": "gorgeous",
+        "phonetic": "/ˈgɔːrdʒəs/",
+        "meaning_kh": "ស្រស់ស្អាតខ្លាំង",
+        "example": "What a gorgeous view!"
+    },
+    {
+        "word_en": "graceful",
+        "phonetic": "/ˈgreɪsfl/",
+        "meaning_kh": "រលូនសមសួន",
+        "example": "She is a graceful dancer."
+    },
+    {
+        "word_en": "gracious",
+        "phonetic": "/ˈgreɪʃəs/",
+        "meaning_kh": "ចិត្តល្អ/មានមេត្តា",
+        "example": "She is a gracious host."
+    },
+    {
+        "word_en": "grand",
+        "phonetic": "/grænd/",
+        "meaning_kh": "ធំដុំ/អស្ចារ្យ",
+        "example": "They live in a grand house."
+    },
+    {
+        "word_en": "grateful",
+        "phonetic": "/ˈgreɪtfl/",
+        "meaning_kh": "ដឹងគុណ",
+        "example": "I am grateful for your kind help."
+    },
+    {
+        "word_en": "grave",
+        "phonetic": "/greɪv/",
+        "meaning_kh": "ធ្ងន់ធ្ងរ",
+        "example": "He made a grave mistake."
+    },
+    {
+        "word_en": "greedy",
+        "phonetic": "/ˈgriːdi/",
+        "meaning_kh": "លោភលន់",
+        "example": "Don't be greedy with the food."
+    },
+    {
+        "word_en": "gregarious",
+        "phonetic": "/grɪˈgɛriəs/",
+        "meaning_kh": "ចូលចិត្តសង្គម/រួសរាយ",
+        "example": "He is a gregarious person."
+    },
+    {
+        "word_en": "grim",
+        "phonetic": "/grɪm/",
+        "meaning_kh": "ស្រពោន/អាក្រក់",
+        "example": "The news was grim."
+    },
+    {
+        "word_en": "gross",
+        "phonetic": "/groʊs/",
+        "meaning_kh": "គួរឲ្យខ្ពើម/សរុប",
+        "example": "That was a gross comment."
+    },
+    {
+        "word_en": "grumpy",
+        "phonetic": "/ˈgrunpi/",
+        "meaning_kh": "មួរម៉ៅ",
+        "example": "He is always grumpy in the morning."
+    },
+    {
+        "word_en": "guilty",
+        "phonetic": "/ˈgɪlti/",
+        "meaning_kh": "មានទោស",
+        "example": "The jury found him guilty."
+    },
+    {
+        "word_en": "gullible",
+        "phonetic": "/ˈgʌləbəl/",
+        "meaning_kh": "ងាយចាញ់បោក",
+        "example": "She is gullible and believes anything."
+    },
+    {
+        "word_en": "handy",
+        "phonetic": "/ˈhændi/",
+        "meaning_kh": "ងាយស្រួលប្រើ/នៅជិតដៃ",
+        "example": "This tool is very handy."
+    },
+    {
+        "word_en": "harsh",
+        "phonetic": "/hɑːrʃ/",
+        "meaning_kh": "គំរោះគំរើយ/ធ្ងន់ធ្ងរ",
+        "example": "He faced harsh criticism."
+    },
+    {
+        "word_en": "hasty",
+        "phonetic": "/ˈheɪsti/",
+        "meaning_kh": "ប្រញាប់ប្រញាល់",
+        "example": "Don't make hasty decisions."
+    },
+    {
+        "word_en": "hateful",
+        "phonetic": "/ˈheɪtfl/",
+        "meaning_kh": "គួរឲ្យស្អប់",
+        "example": "She made a hateful remark."
+    },
+    {
+        "word_en": "haughty",
+        "phonetic": "/ˈhɔːti/",
+        "meaning_kh": "វាយឫកខ្ពស់/ក្រអឺតក្រទម",
+        "example": "She has a haughty attitude."
+    },
+    {
+        "word_en": "hearty",
+        "phonetic": "/ˈhɑːrti/",
+        "meaning_kh": "កក់ក្តៅ/ច្រើនហូរហៀរ",
+        "example": "They gave us a hearty meal."
+    },
+    {
+        "word_en": "hectic",
+        "phonetic": "/ˈhɛktɪk/",
+        "meaning_kh": "រវល់វល់វក់",
+        "example": "Life is very hectic in the city."
+    },
+    {
+        "word_en": "helpful",
+        "phonetic": "/ˈhɛlpfl/",
+        "meaning_kh": "ជំនួយ/មានប្រយោជន៍",
+        "example": "The staff was very helpful."
+    },
+    {
+        "word_en": "helpless",
+        "phonetic": "/ˈhɛlpləs/",
+        "meaning_kh": "គ្មានទីពឹង",
+        "example": "The baby birds looked helpless."
+    },
+    {
+        "word_en": "heroic",
+        "phonetic": "/həˈroʊɪk/",
+        "meaning_kh": "ក្លាហានដូចវីរបុរស",
+        "example": "He made a heroic effort to save them."
+    },
+    {
+        "word_en": "hideous",
+        "phonetic": "/ˈhɪdiəs/",
+        "meaning_kh": "អាក្រក់មើលខ្លាំង",
+        "example": "She wore a hideous green dress."
+    },
+    {
+        "word_en": "hilarious",
+        "phonetic": "/hɪˈlɛriəs/",
+        "meaning_kh": "កំប្លែងខ្លាំង",
+        "example": "It was a hilarious movie."
+    },
+    {
+        "word_en": "historic",
+        "phonetic": "/hɪˈstɔːrɪk/",
+        "meaning_kh": "មានតម្លៃប្រវត្តិសាស្ត្រ",
+        "example": "We visited a historic building."
+    },
+    {
+        "word_en": "hoarse",
+        "phonetic": "/hɔːrs/",
+        "meaning_kh": "ស្អកស្ឡក",
+        "example": "My voice is hoarse from singing."
+    },
+    {
+        "word_en": "hollow",
+        "phonetic": "/ˈhɑːloʊ/",
+        "meaning_kh": "ប្រហោង",
+        "example": "The old tree is hollow."
+    },
+    {
+        "word_en": "hopeful",
+        "phonetic": "/ˈhoʊpfl/",
+        "meaning_kh": "មានសង្ឃឹម",
+        "example": "We are hopeful about the future."
+    },
+    {
+        "word_en": "hopeless",
+        "phonetic": "/ˈhoʊpləs/",
+        "meaning_kh": "គ្មានសង្ឃឹម",
+        "example": "It seemed like a hopeless situation."
+    },
+    {
+        "word_en": "hospitable",
+        "phonetic": "/hɑːˈspɪtəbəl/",
+        "meaning_kh": "ទទួលភ្ញៀវបានល្អ",
+        "example": "The locals were very hospitable."
+    },
+    {
+        "word_en": "hostile",
+        "phonetic": "/ˈhɑːstl/",
+        "meaning_kh": "ដែលជាសត្រូវ",
+        "example": "They entered a hostile territory."
+    },
+    {
+        "word_en": "huge",
+        "phonetic": "/hjuːdʒ/",
+        "meaning_kh": "ធំសម្បើម",
+        "example": "A huge ship docked at the port."
+    },
+    {
+        "word_en": "humble",
+        "phonetic": "/ˈhʌmbəl/",
+        "meaning_kh": "ដាក់ខ្លួន",
+        "example": "He is a humble teacher."
+    },
+    {
+        "word_en": "humid",
+        "phonetic": "/ˈhjuːmɪd/",
+        "meaning_kh": "សើមអុប/សើមជោក",
+        "example": "The weather is hot and humid."
+    },
+    {
+        "word_en": "humorous",
+        "phonetic": "/ˈhjuːmərəs/",
+        "meaning_kh": "កំប្លែង/ស្ងួត",
+        "example": "He wrote a humorous story."
+    },
+    {
+        "word_en": "hysterical",
+        "phonetic": "/hɪˈstɛrɪkəl/",
+        "meaning_kh": "ភិតភ័យឬសើចខ្លាំងហួសចិត្ត",
+        "example": "She was hysterical with laughter."
+    },
+    {
+        "word_en": "ideal",
+        "phonetic": "/aɪˈdiːəl/",
+        "meaning_kh": "ល្អឥតខ្ចោះ/គំរូ",
+        "example": "This is an ideal place for a picnic."
+    },
+    {
+        "word_en": "identical",
+        "phonetic": "/aɪˈdɛntɪkəl/",
+        "meaning_kh": "ដូចគ្នាបេះបិទ",
+        "example": "They are identical twins."
+    },
+    {
+        "word_en": "idle",
+        "phonetic": "/ˈaɪdl/",
+        "meaning_kh": "ទំនេរគ្មានការងារធ្វើ",
+        "example": "The machinery has been idle for months."
+    },
+    {
+        "word_en": "ignorant",
+        "phonetic": "/ˈɪgnerənt/",
+        "meaning_kh": "គ្មានចំណេះដឹង/ល្ងង់ខ្លៅ",
+        "example": "He is ignorant of the new rules."
+    },
+    {
+        "word_en": "ill",
+        "phonetic": "/ɪl/",
+        "meaning_kh": "ឈឺ",
+        "example": "He is ill and cannot come to work."
+    },
+    {
+        "word_en": "illegal",
+        "phonetic": "/ɪˈliːgəl/",
+        "meaning_kh": "ខុសច្បាប់",
+        "example": "It is illegal to park here."
+    },
+    {
+        "word_en": "illegible",
+        "phonetic": "/ɪˈlɛdʒəbəl/",
+        "meaning_kh": "អានមិនដាច់",
+        "example": "His handwriting is illegible."
+    },
+    {
+        "word_en": "illiterate",
+        "phonetic": "/ɪˈlɪtərət/",
+        "meaning_kh": "មិនចេះអក្សរ",
+        "example": "Many children in the village were illiterate."
+    },
+    {
+        "word_en": "illustrious",
+        "phonetic": "/ɪˈlʌstriəs/",
+        "meaning_kh": "ឧត្តុង្គឧត្តម/ឆ្នើមល្បីល្បាញ",
+        "example": "He has an illustrious career."
+    },
+    {
+        "word_en": "imaginative",
+        "phonetic": "/ɪˈmædʒɪnətɪv/",
+        "meaning_kh": "មានការស្រមើស្រមៃខ្ពស់",
+        "example": "She is an imaginative writer."
+    },
+    {
+        "word_en": "imitation",
+        "phonetic": "/ˌɪmɪˈteɪʃn/",
+        "meaning_kh": "ក្លែងក្លាយ/ចម្លងតាម",
+        "example": "She wore imitation pearls."
+    },
+    {
+        "word_en": "immense",
+        "phonetic": "/ɪˈmɛns/",
+        "meaning_kh": "ធំធេង",
+        "example": "The project was an immense success."
+    },
+    {
+        "word_en": "imminent",
+        "phonetic": "/ˈɪmɪnənt/",
+        "meaning_kh": "ជិតមកដល់",
+        "example": "Dark clouds signal imminent rain."
+    },
+    {
+        "word_en": "impartial",
+        "phonetic": "/ɪmˈpɑːrʃəl/",
+        "meaning_kh": "មិនលំអៀង/យុត្តិធម៌",
+        "example": "A judge must be impartial."
+    },
+    {
+        "word_en": "impatient",
+        "phonetic": "/ɪmˈpeɪʃənt/",
+        "meaning_kh": "អន្ទះសារ/គ្មានការអត់ធ្មត់",
+        "example": "The driver grew impatient in traffic."
+    },
+    {
+        "word_en": "impeccable",
+        "phonetic": "/ɪmˈpɛkəbəl/",
+        "meaning_kh": "គ្មានទាស់/ឥតខ្ចោះ",
+        "example": "She has impeccable taste in fashion."
+    }
+]

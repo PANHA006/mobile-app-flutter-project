@@ -1,0 +1,6002 @@
+[
+  {
+    "word_en": "teacher",
+    "phonetic": "/ˈtiʧər/",
+    "meaning_kh": "គ្រូបង្រៀន",
+    "example": "The teacher explains the lesson clearly."
+  },
+  {
+    "word_en": "student",
+    "phonetic": "/ˈstudənt/",
+    "meaning_kh": "សិស្ស",
+    "example": "The student is doing homework."
+  },
+  {
+    "word_en": "doctor",
+    "phonetic": "/ˈdɔktər/",
+    "meaning_kh": "គ្រូពេទ្យ",
+    "example": "The doctor works at the hospital."
+  },
+  {
+    "word_en": "hospital",
+    "phonetic": "/ˈhɑˌspɪtəl/",
+    "meaning_kh": "មន្ទីរពេទ្យ",
+    "example": "We went to the hospital to see a doctor."
+  },
+  {
+    "word_en": "school",
+    "phonetic": "/skul/",
+    "meaning_kh": "សាលារៀន",
+    "example": "Children go to school to learn."
+  },
+  {
+    "word_en": "library",
+    "phonetic": "/ˈlaɪbrɛˌri/",
+    "meaning_kh": "បណ្ណាល័យ",
+    "example": "I like reading books in the library."
+  },
+  {
+    "word_en": "market",
+    "phonetic": "/ˈmɑrkɪt/",
+    "meaning_kh": "ផ្សារ",
+    "example": "She buys fresh fruit at the market."
+  },
+  {
+    "word_en": "house",
+    "phonetic": "/haʊs/",
+    "meaning_kh": "ផ្ទះ",
+    "example": "They live in a beautiful house."
+  },
+  {
+    "word_en": "room",
+    "phonetic": "/rum/",
+    "meaning_kh": "បន្ទប់",
+    "example": "My room is clean and tidy."
+  },
+  {
+    "word_en": "office",
+    "phonetic": "/ˈɔfəs/",
+    "meaning_kh": "ការិយាល័យ",
+    "example": "His office is on the third floor."
+  },
+  {
+    "word_en": "computer",
+    "phonetic": "/kəmˈpjutər/",
+    "meaning_kh": "កុំព្យូទ័រ",
+    "example": "I use a computer to write code."
+  },
+  {
+    "word_en": "phone",
+    "phonetic": "/foʊn/",
+    "meaning_kh": "ទូរស័ព្ទ",
+    "example": "She is talking on the phone."
+  },
+  {
+    "word_en": "book",
+    "phonetic": "/bʊk/",
+    "meaning_kh": "សៀវភៅ",
+    "example": "He is reading an interesting book."
+  },
+  {
+    "word_en": "pen",
+    "phonetic": "/pɛn/",
+    "meaning_kh": "ប៊ិច",
+    "example": "Can I borrow your pen?"
+  },
+  {
+    "word_en": "pencil",
+    "phonetic": "/ˈpɛnsəl/",
+    "meaning_kh": "ខ្មៅដៃ",
+    "example": "Use a pencil to draw a picture."
+  },
+  {
+    "word_en": "table",
+    "phonetic": "/ˈteɪbəl/",
+    "meaning_kh": "តុ",
+    "example": "Put the keys on the table."
+  },
+  {
+    "word_en": "chair",
+    "phonetic": "/ʧɛr/",
+    "meaning_kh": "កៅអី",
+    "example": "Please sit on this comfortable chair."
+  },
+  {
+    "word_en": "window",
+    "phonetic": "/ˈwɪndoʊ/",
+    "meaning_kh": "បង្អួច",
+    "example": "Please open the window for some fresh air."
+  },
+  {
+    "word_en": "door",
+    "phonetic": "/dɔr/",
+    "meaning_kh": "ទ្វារ",
+    "example": "Close the door when you leave."
+  },
+  {
+    "word_en": "water",
+    "phonetic": "/ˈwɔtər/",
+    "meaning_kh": "ទឹក",
+    "example": "We should drink plenty of water every day."
+  },
+  {
+    "word_en": "bread",
+    "phonetic": "/brɛd/",
+    "meaning_kh": "នំបុ័ង",
+    "example": "I eat bread with butter for breakfast."
+  },
+  {
+    "word_en": "rice",
+    "phonetic": "/raɪs/",
+    "meaning_kh": "បាយ",
+    "example": "Rice is the main food in Cambodia."
+  },
+  {
+    "word_en": "apple",
+    "phonetic": "/ˈæpəl/",
+    "meaning_kh": "ផ្លែប៉ោម",
+    "example": "An apple a day keeps the doctor away."
+  },
+  {
+    "word_en": "milk",
+    "phonetic": "/mɪlk/",
+    "meaning_kh": "ទឹកដោះគោ",
+    "example": "He drinks a glass of warm milk before bed."
+  },
+  {
+    "word_en": "coffee",
+    "phonetic": "/ˈkɔfi/",
+    "meaning_kh": "កាហ្វេ",
+    "example": "She drinks hot coffee every morning."
+  },
+  {
+    "word_en": "tea",
+    "phonetic": "/ti/",
+    "meaning_kh": "តែ",
+    "example": "Would you like a cup of green tea?"
+  },
+  {
+    "word_en": "fruit",
+    "phonetic": "/frut/",
+    "meaning_kh": "ផ្លែឈើ",
+    "example": "Eating fruit is very healthy."
+  },
+  {
+    "word_en": "food",
+    "phonetic": "/fud/",
+    "meaning_kh": "អាហារ",
+    "example": "The food at this restaurant is delicious."
+  },
+  {
+    "word_en": "animal",
+    "phonetic": "/ˈænəməl/",
+    "meaning_kh": "សត្វ",
+    "example": "The elephant is a very large land animal."
+  },
+  {
+    "word_en": "dog",
+    "phonetic": "/dɔg/",
+    "meaning_kh": "ឆ្កែ",
+    "example": "The dog barked at the stranger."
+  },
+  {
+    "word_en": "cat",
+    "phonetic": "/kæt/",
+    "meaning_kh": "ឆ្មា",
+    "example": "The cat is sleeping under the table."
+  },
+  {
+    "word_en": "bird",
+    "phonetic": "/bərd/",
+    "meaning_kh": "សត្វស្លាប",
+    "example": "A colorful bird is singing in the tree."
+  },
+  {
+    "word_en": "fish",
+    "phonetic": "/fɪʃ/",
+    "meaning_kh": "ត្រី",
+    "example": "Fish swim in the river."
+  },
+  {
+    "word_en": "horse",
+    "phonetic": "/hɔrs/",
+    "meaning_kh": "សេះ",
+    "example": "He rode a beautiful brown horse."
+  },
+  {
+    "word_en": "cow",
+    "phonetic": "/kaʊ/",
+    "meaning_kh": "មេគោ",
+    "example": "The cow eats grass in the field."
+  },
+  {
+    "word_en": "chicken",
+    "phonetic": "/ˈʧɪkən/",
+    "meaning_kh": "មាន់",
+    "example": "The chicken laid an egg this morning."
+  },
+  {
+    "word_en": "sun",
+    "phonetic": "/sən/",
+    "meaning_kh": "ព្រះអាទិត្យ",
+    "example": "The sun rises in the east."
+  },
+  {
+    "word_en": "moon",
+    "phonetic": "/mun/",
+    "meaning_kh": "ព្រះចន្ទ",
+    "example": "The moon shines brightly at night."
+  },
+  {
+    "word_en": "star",
+    "phonetic": "/stɑr/",
+    "meaning_kh": "ផ្កាយ",
+    "example": "I can see many stars in the sky."
+  },
+  {
+    "word_en": "sky",
+    "phonetic": "/skaɪ/",
+    "meaning_kh": "មេឃ",
+    "example": "The sky is blue and clear today."
+  },
+  {
+    "word_en": "tree",
+    "phonetic": "/tri/",
+    "meaning_kh": "ដើមឈើ",
+    "example": "We sat under the shade of a big tree."
+  },
+  {
+    "word_en": "flower",
+    "phonetic": "/flaʊər/",
+    "meaning_kh": "ផ្កា",
+    "example": "She planted beautiful flowers in the garden."
+  },
+  {
+    "word_en": "river",
+    "phonetic": "/ˈrɪvər/",
+    "meaning_kh": "ទន្លេ",
+    "example": "We went swimming in the cool river."
+  },
+  {
+    "word_en": "rain",
+    "phonetic": "/reɪn/",
+    "meaning_kh": "ភ្លៀង",
+    "example": "Take an umbrella because of the rain."
+  },
+  {
+    "word_en": "friend",
+    "phonetic": "/frɛnd/",
+    "meaning_kh": "មិត្តភក្តិ",
+    "example": "She is my best friend at school."
+  },
+  {
+    "word_en": "family",
+    "phonetic": "/ˈfæməli/",
+    "meaning_kh": "គ្រួសារ",
+    "example": "I love spending time with my family."
+  },
+  {
+    "word_en": "child",
+    "phonetic": "/ʧaɪld/",
+    "meaning_kh": "កូន/ក្មេង",
+    "example": "The child is playing with a toy car."
+  },
+  {
+    "word_en": "person",
+    "phonetic": "/ˈpərsən/",
+    "meaning_kh": "មនុស្ស",
+    "example": "He is a very kind person."
+  },
+  {
+    "word_en": "car",
+    "phonetic": "/kɑr/",
+    "meaning_kh": "ឡាន",
+    "example": "My father bought a new blue car."
+  },
+  {
+    "word_en": "bicycle",
+    "phonetic": "/ˈbaɪsɪkəl/",
+    "meaning_kh": "កង់",
+    "example": "He rides his bicycle to school."
+  },
+  {
+    "word_en": "money",
+    "phonetic": "/ˈməni/",
+    "meaning_kh": "លុយ",
+    "example": "He spent all his money on books."
+  },
+  {
+    "word_en": "time",
+    "phonetic": "/taɪm/",
+    "meaning_kh": "ពេលវេលា",
+    "example": "What time does the class start?"
+  },
+  {
+    "word_en": "city",
+    "phonetic": "/ˈsɪti/",
+    "meaning_kh": "ទីក្រុង",
+    "example": "Phnom Penh is the capital city of Cambodia."
+  },
+  {
+    "word_en": "country",
+    "phonetic": "/ˈkəntri/",
+    "meaning_kh": "ប្រទេស",
+    "example": "Cambodia is a beautiful country."
+  },
+  {
+    "word_en": "bag",
+    "phonetic": "/bæg/",
+    "meaning_kh": "កាបូប",
+    "example": "Put your books inside your bag."
+  },
+  {
+    "word_en": "clothes",
+    "phonetic": "/kloʊðz/",
+    "meaning_kh": "សម្លៀកបំពាក់",
+    "example": "She wears clean clothes to work."
+  },
+  {
+    "word_en": "shoes",
+    "phonetic": "/ʃuz/",
+    "meaning_kh": "ស្បែកជើង",
+    "example": "He put on his new shoes."
+  },
+  {
+    "word_en": "clock",
+    "phonetic": "/klɑk/",
+    "meaning_kh": "នាឡិកា",
+    "example": "The clock on the wall shows 10 o'clock."
+  },
+  {
+    "word_en": "music",
+    "phonetic": "/mˈjuzɪk/",
+    "meaning_kh": "តន្ត្រី",
+    "example": "I like listening to relaxing music."
+  },
+  {
+    "word_en": "picture",
+    "phonetic": "/ˈpɪkʧər/",
+    "meaning_kh": "រូបភាព",
+    "example": "She hung a beautiful picture on the wall."
+  },
+  {
+    "word_en": "boy",
+    "phonetic": "/bɔɪ/",
+    "meaning_kh": "ក្មេងប្រុស",
+    "example": "That boy is very tall."
+  },
+  {
+    "word_en": "girl",
+    "phonetic": "/gərl/",
+    "meaning_kh": "ក្មេងស្រី",
+    "example": "The girl is reading a book."
+  },
+  {
+    "word_en": "morning",
+    "phonetic": "/ˈmɔrnɪŋ/",
+    "meaning_kh": "ពេលព្រឹក",
+    "example": "I wake up early in the morning."
+  },
+  {
+    "word_en": "night",
+    "phonetic": "/naɪt/",
+    "meaning_kh": "ពេលយប់",
+    "example": "The stars shine brightly at night."
+  },
+  {
+    "word_en": "day",
+    "phonetic": "/deɪ/",
+    "meaning_kh": "ថ្ងៃ",
+    "example": "Have a wonderful day!"
+  },
+  {
+    "word_en": "week",
+    "phonetic": "/wik/",
+    "meaning_kh": "សប្តាហ៍",
+    "example": "There are seven days in a week."
+  },
+  {
+    "word_en": "month",
+    "phonetic": "/mənθ/",
+    "meaning_kh": "ខែ",
+    "example": "February is the shortest month of the year."
+  },
+  {
+    "word_en": "year",
+    "phonetic": "/jɪr/",
+    "meaning_kh": "ឆ្នាំ",
+    "example": "We wish you a happy new year."
+  },
+  {
+    "word_en": "sea",
+    "phonetic": "/si/",
+    "meaning_kh": "សមុទ្រ",
+    "example": "We swam in the warm sea."
+  },
+  {
+    "word_en": "mountain",
+    "phonetic": "/ˈmaʊntən/",
+    "meaning_kh": "ភ្នំ",
+    "example": "Mount Everest is the highest mountain in the world."
+  },
+  {
+    "word_en": "forest",
+    "phonetic": "/ˈfɔrɪst/",
+    "meaning_kh": "ព្រៃឈើ",
+    "example": "Many wild animals live in the forest."
+  },
+  {
+    "word_en": "garden",
+    "phonetic": "/ˈgɑrdən/",
+    "meaning_kh": "សួនច្បារ",
+    "example": "The children are playing in the garden."
+  },
+  {
+    "word_en": "kitchen",
+    "phonetic": "/ˈkɪʧən/",
+    "meaning_kh": "ផ្ទះបាយ",
+    "example": "She is cooking dinner in the kitchen."
+  },
+  {
+    "word_en": "bedroom",
+    "phonetic": "/ˈbɛˌdrum/",
+    "meaning_kh": "បន្ទប់គេង",
+    "example": "My bedroom has a big window."
+  },
+  {
+    "word_en": "bathroom",
+    "phonetic": "/ˈbæθˌrum/",
+    "meaning_kh": "បន្ទប់ទឹក",
+    "example": "Wash your hands in the bathroom."
+  },
+  {
+    "word_en": "key",
+    "phonetic": "/ki/",
+    "meaning_kh": "សោ",
+    "example": "I lost my house keys."
+  },
+  {
+    "word_en": "glass",
+    "phonetic": "/glæs/",
+    "meaning_kh": "កែវ",
+    "example": "He drank a glass of water."
+  },
+  {
+    "word_en": "plate",
+    "phonetic": "/pleɪt/",
+    "meaning_kh": "ចាន",
+    "example": "Put the food on the plate."
+  },
+  {
+    "word_en": "spoon",
+    "phonetic": "/spun/",
+    "meaning_kh": "ស្លាបព្រា",
+    "example": "He eats soup with a spoon."
+  },
+  {
+    "word_en": "fork",
+    "phonetic": "/fɔrk/",
+    "meaning_kh": "សម",
+    "example": "She eats salad with a fork."
+  },
+  {
+    "word_en": "knife",
+    "phonetic": "/naɪf/",
+    "meaning_kh": "កាំបិត",
+    "example": "Be careful with that sharp knife."
+  },
+  {
+    "word_en": "shirt",
+    "phonetic": "/ʃərt/",
+    "meaning_kh": "អាវ",
+    "example": "He is wearing a white shirt."
+  },
+  {
+    "word_en": "pants",
+    "phonetic": "/pænts/",
+    "meaning_kh": "ខោ",
+    "example": "These blue pants fit you well."
+  },
+  {
+    "word_en": "hat",
+    "phonetic": "/hæt/",
+    "meaning_kh": "មួក",
+    "example": "Wear a hat to protect yourself from the sun."
+  },
+  {
+    "word_en": "umbrella",
+    "phonetic": "/ˈəmˌbrɛlə/",
+    "meaning_kh": "ឆ័ត្រ",
+    "example": "Don't forget your umbrella on a rainy day."
+  },
+  {
+    "word_en": "watch",
+    "phonetic": "/wɔʧ/",
+    "meaning_kh": "នាឡិកាដៃ",
+    "example": "He bought a brand new watch."
+  },
+  {
+    "word_en": "paper",
+    "phonetic": "/ˈpeɪpər/",
+    "meaning_kh": "ក្រដាស",
+    "example": "Write your name on this sheet of paper."
+  },
+  {
+    "word_en": "notebook",
+    "phonetic": "/ˈnoʊtˌbʊk/",
+    "meaning_kh": "សៀវភៅសរសេរ",
+    "example": "I write my daily plans in a notebook."
+  },
+  {
+    "word_en": "street",
+    "phonetic": "/strit/",
+    "meaning_kh": "ផ្លូវ",
+    "example": "Be careful when crossing the street."
+  },
+  {
+    "word_en": "road",
+    "phonetic": "/roʊd/",
+    "meaning_kh": "ផ្លូវ",
+    "example": "The road to the village is long."
+  },
+  {
+    "word_en": "bridge",
+    "phonetic": "/brɪʤ/",
+    "meaning_kh": "ស្ពាន",
+    "example": "We drove over the new bridge."
+  },
+  {
+    "word_en": "park",
+    "phonetic": "/pɑrk/",
+    "meaning_kh": "សួនច្បារ",
+    "example": "We went for a walk in the park."
+  },
+  {
+    "word_en": "shop",
+    "phonetic": "/ʃɑp/",
+    "meaning_kh": "ហាង",
+    "example": "She bought some bread at the local shop."
+  },
+  {
+    "word_en": "restaurant",
+    "phonetic": "/ˈrɛˌstrɑnt/",
+    "meaning_kh": "ភោជនីយដ្ឋាន",
+    "example": "We had dinner at a nice restaurant."
+  },
+  {
+    "word_en": "hotel",
+    "phonetic": "/hoʊˈtɛl/",
+    "meaning_kh": "សណ្ឋាគារ",
+    "example": "We stayed at a comfortable hotel."
+  },
+  {
+    "word_en": "bank",
+    "phonetic": "/bæŋk/",
+    "meaning_kh": "ធនាគារ",
+    "example": "I need to withdraw some money from the bank."
+  },
+  {
+    "word_en": "bus",
+    "phonetic": "/bəs/",
+    "meaning_kh": "ឡានក្រុង",
+    "example": "He catches the bus to work every morning."
+  },
+  {
+    "word_en": "train",
+    "phonetic": "/treɪn/",
+    "meaning_kh": "រថភ្លើង",
+    "example": "The train will arrive in ten minutes."
+  },
+  {
+    "word_en": "plane",
+    "phonetic": "/pleɪn/",
+    "meaning_kh": "យន្តហោះ",
+    "example": "The plane flew high above the clouds."
+  },
+  {
+    "word_en": "ocean",
+    "phonetic": "/ˈoʊʃən/",
+    "meaning_kh": "មហាសមុទ្រ",
+    "example": "The ocean is home to many beautiful creatures."
+  },
+  {
+    "word_en": "lake",
+    "phonetic": "/leɪk/",
+    "meaning_kh": "បឹង",
+    "example": "They went fishing on a peaceful lake."
+  },
+  {
+    "word_en": "hill",
+    "phonetic": "/hɪl/",
+    "meaning_kh": "ទួល/កូនភ្នំ",
+    "example": "They ran up the green hill."
+  },
+  {
+    "word_en": "farm",
+    "phonetic": "/fɑrm/",
+    "meaning_kh": "កសិដ្ឋាន",
+    "example": "My grandfather owns a large vegetable farm."
+  },
+  {
+    "word_en": "field",
+    "phonetic": "/fild/",
+    "meaning_kh": "វាលស្រែ/វាលស្មៅ",
+    "example": "The horses are running in the field."
+  },
+  {
+    "word_en": "island",
+    "phonetic": "/ˈaɪlənd/",
+    "meaning_kh": "កោះ",
+    "example": "We spent our holiday on a tropical island."
+  },
+  {
+    "word_en": "world",
+    "phonetic": "/wərld/",
+    "meaning_kh": "ពិភពលោក",
+    "example": "We want to travel around the world."
+  },
+  {
+    "word_en": "earth",
+    "phonetic": "/ərθ/",
+    "meaning_kh": "ផែនដី",
+    "example": "The Earth is the third planet from the Sun."
+  },
+  {
+    "word_en": "village",
+    "phonetic": "/ˈvɪlɪʤ/",
+    "meaning_kh": "ភូមិ",
+    "example": "He grew up in a quiet countryside village."
+  },
+  {
+    "word_en": "town",
+    "phonetic": "/taʊn/",
+    "meaning_kh": "ទីប្រជុំជន",
+    "example": "They moved to a small town near the coast."
+  },
+  {
+    "word_en": "gate",
+    "phonetic": "/geɪt/",
+    "meaning_kh": "ខ្លោងទ្វារ",
+    "example": "Please close the front gate."
+  },
+  {
+    "word_en": "wall",
+    "phonetic": "/wɔl/",
+    "meaning_kh": "ជញ្ជាំង",
+    "example": "They painted the bedroom wall light blue."
+  },
+  {
+    "word_en": "floor",
+    "phonetic": "/flɔr/",
+    "meaning_kh": "កម្រាលឥដ្ឋ",
+    "example": "The kitchen floor is clean and shiny."
+  },
+  {
+    "word_en": "roof",
+    "phonetic": "/rʊf/",
+    "meaning_kh": "ដំបូល",
+    "example": "The roof of the house was damaged in the storm."
+  },
+  {
+    "word_en": "ceiling",
+    "phonetic": "/ˈsilɪŋ/",
+    "meaning_kh": "ពិដាន",
+    "example": "There is a fan hanging from the ceiling."
+  },
+  {
+    "word_en": "mirror",
+    "phonetic": "/ˈmɪrər/",
+    "meaning_kh": "កញ្ចក់ឆ្លុះ",
+    "example": "She looked at herself in the mirror."
+  },
+  {
+    "word_en": "soap",
+    "phonetic": "/soʊp/",
+    "meaning_kh": "សាប៊ូ",
+    "example": "Wash your hands with soap and water."
+  },
+  {
+    "word_en": "towel",
+    "phonetic": "/taʊəl/",
+    "meaning_kh": "កន្សែងពោះគោ",
+    "example": "Dry your hands with a clean towel."
+  },
+  {
+    "word_en": "blanket",
+    "phonetic": "/ˈblæŋkɪt/",
+    "meaning_kh": "ភួយ",
+    "example": "He pulled the warm blanket over his shoulders."
+  },
+  {
+    "word_en": "pillow",
+    "phonetic": "/ˈpɪloʊ/",
+    "meaning_kh": "ខ្នើយ",
+    "example": "She likes sleeping with a soft pillow."
+  },
+  {
+    "word_en": "bed",
+    "phonetic": "/bɛd/",
+    "meaning_kh": "គ្រែ",
+    "example": "He lay down on the bed and fell asleep."
+  },
+  {
+    "word_en": "lamp",
+    "phonetic": "/læmp/",
+    "meaning_kh": "ចង្កៀង/អំពូល",
+    "example": "Turn on the lamp next to the bed."
+  },
+  {
+    "word_en": "box",
+    "phonetic": "/bɑks/",
+    "meaning_kh": "ប្រអប់",
+    "example": "Put the old toys inside the cardboard box."
+  },
+  {
+    "word_en": "bottle",
+    "phonetic": "/ˈbɑtəl/",
+    "meaning_kh": "ដប",
+    "example": "Fill the bottle with fresh drinking water."
+  },
+  {
+    "word_en": "cup",
+    "phonetic": "/kəp/",
+    "meaning_kh": "ពែង",
+    "example": "He enjoyed a hot cup of tea."
+  },
+  {
+    "word_en": "bowl",
+    "phonetic": "/boʊl/",
+    "meaning_kh": "ចានគោម",
+    "example": "She ate a bowl of chicken soup."
+  },
+  {
+    "word_en": "bucket",
+    "phonetic": "/ˈbəkɪt/",
+    "meaning_kh": "ធុង",
+    "example": "He filled the bucket with soapy water."
+  },
+  {
+    "word_en": "broom",
+    "phonetic": "/brum/",
+    "meaning_kh": "អំបោស",
+    "example": "Use the broom to sweep the kitchen floor."
+  },
+  {
+    "word_en": "bin",
+    "phonetic": "/bɪn/",
+    "meaning_kh": "ធុងសំរាម",
+    "example": "Throw the empty wrapper into the bin."
+  },
+  {
+    "word_en": "sock",
+    "phonetic": "/sɑk/",
+    "meaning_kh": "ស្រោមជើង",
+    "example": "I need to buy a new pair of socks."
+  },
+  {
+    "word_en": "jacket",
+    "phonetic": "/ˈʤækɪt/",
+    "meaning_kh": "អាវធំ/អាវរងា",
+    "example": "Wear a warm jacket because it is cold outside."
+  },
+  {
+    "word_en": "skirt",
+    "phonetic": "/skərt/",
+    "meaning_kh": "សំពត់",
+    "example": "She bought a beautiful pleated skirt."
+  },
+  {
+    "word_en": "dress",
+    "phonetic": "/drɛs/",
+    "meaning_kh": "រ៉ូប",
+    "example": "She wore a lovely red dress to the party."
+  },
+  {
+    "word_en": "pocket",
+    "phonetic": "/ˈpɑkət/",
+    "meaning_kh": "ហោប៉ៅ",
+    "example": "He kept his keys in his front pocket."
+  },
+  {
+    "word_en": "wallet",
+    "phonetic": "/ˈwɔlət/",
+    "meaning_kh": "កាបូបលុយ",
+    "example": "He checked his wallet for cash."
+  },
+  {
+    "word_en": "card",
+    "phonetic": "/kɑrd/",
+    "meaning_kh": "កាត/ប័ណ្ណ",
+    "example": "I paid for the groceries with my credit card."
+  },
+  {
+    "word_en": "letter",
+    "phonetic": "/ˈlɛtər/",
+    "meaning_kh": "សំបុត្រ",
+    "example": "She wrote a long letter to her grandmother."
+  },
+  {
+    "word_en": "newspaper",
+    "phonetic": "/ˈnuzˌpeɪpər/",
+    "meaning_kh": "កាសែត",
+    "example": "My father reads the morning newspaper."
+  },
+  {
+    "word_en": "magazine",
+    "phonetic": "/ˈmægəˌzin/",
+    "meaning_kh": "ទស្សនាវដ្តី",
+    "example": "She likes reading fashion magazines."
+  },
+  {
+    "word_en": "game",
+    "phonetic": "/geɪm/",
+    "meaning_kh": "ល្បែង/ហ្គេម",
+    "example": "They played a fun board game together."
+  },
+  {
+    "word_en": "toy",
+    "phonetic": "/tɔɪ/",
+    "meaning_kh": "ប្រដាប់ក្មេងលេង",
+    "example": "The toddler is playing with a colorful toy."
+  },
+  {
+    "word_en": "ball",
+    "phonetic": "/bɔl/",
+    "meaning_kh": "បាល់",
+    "example": "Kick the ball into the goal."
+  },
+  {
+    "word_en": "leaf",
+    "phonetic": "/lif/",
+    "meaning_kh": "ស្លឹកឈើ",
+    "example": "Autumn leaves fell from the trees."
+  },
+  {
+    "word_en": "grass",
+    "phonetic": "/græs/",
+    "meaning_kh": "ស្មៅ",
+    "example": "The grass is green after the rain."
+  },
+  {
+    "word_en": "seed",
+    "phonetic": "/sid/",
+    "meaning_kh": "គ្រាប់ពូជ",
+    "example": "She planted flower seeds in the soil."
+  },
+  {
+    "word_en": "soil",
+    "phonetic": "/sɔɪl/",
+    "meaning_kh": "ដី",
+    "example": "Good soil is important for plant growth."
+  },
+  {
+    "word_en": "stone",
+    "phonetic": "/stoʊn/",
+    "meaning_kh": "ថ្ម",
+    "example": "He threw a small stone into the pond."
+  },
+  {
+    "word_en": "sand",
+    "phonetic": "/sænd/",
+    "meaning_kh": "ខ្សាច់",
+    "example": "The kids built a castle in the sand."
+  },
+  {
+    "word_en": "wind",
+    "phonetic": "/wɪnd/",
+    "meaning_kh": "ខ្យល់",
+    "example": "A cold wind blew from the north."
+  },
+  {
+    "word_en": "cloud",
+    "phonetic": "/klaʊd/",
+    "meaning_kh": "ពពក",
+    "example": "There are dark clouds in the sky."
+  },
+  {
+    "word_en": "sunlight",
+    "phonetic": "/ˈsənˌlaɪt/",
+    "meaning_kh": "ពន្លឺព្រះអាទិត្យ",
+    "example": "Plants need sunlight to grow."
+  },
+  {
+    "word_en": "shadow",
+    "phonetic": "/ˈʃæˌdoʊ/",
+    "meaning_kh": "ស្រមោល",
+    "example": "The tree cast a long shadow on the ground."
+  },
+  {
+    "word_en": "fire",
+    "phonetic": "/faɪər/",
+    "meaning_kh": "ភ្លើង",
+    "example": "They sat around the warm campfire."
+  },
+  {
+    "word_en": "smoke",
+    "phonetic": "/smoʊk/",
+    "meaning_kh": "ផ្សែង",
+    "example": "White smoke rose from the chimney."
+  },
+  {
+    "word_en": "ice",
+    "phonetic": "/aɪs/",
+    "meaning_kh": "ទឹកកក",
+    "example": "Put some ice in my drink, please."
+  },
+  {
+    "word_en": "snow",
+    "phonetic": "/snoʊ/",
+    "meaning_kh": "ព្រិល",
+    "example": "The mountains were covered in deep snow."
+  },
+  {
+    "word_en": "gold",
+    "phonetic": "/goʊld/",
+    "meaning_kh": "មាស",
+    "example": "She wore a beautiful necklace made of pure gold."
+  },
+  {
+    "word_en": "silver",
+    "phonetic": "/ˈsɪlvər/",
+    "meaning_kh": "ប្រាក់",
+    "example": "The shiny silver coin sparkled in the light."
+  },
+  {
+    "word_en": "iron",
+    "phonetic": "/aɪərn/",
+    "meaning_kh": "ដែក",
+    "example": "The old gate is made of strong iron."
+  },
+  {
+    "word_en": "wood",
+    "phonetic": "/wʊd/",
+    "meaning_kh": "ឈើ",
+    "example": "He chopped some wood for the fire."
+  },
+  {
+    "word_en": "rock",
+    "phonetic": "/rɑk/",
+    "meaning_kh": "ថ្ម",
+    "example": "He climbed to the top of the steep rock."
+  },
+  {
+    "word_en": "plastic",
+    "phonetic": "/ˈplæstɪk/",
+    "meaning_kh": "ប្លាស្ទិក",
+    "example": "We should reduce the use of plastic bags."
+  },
+  {
+    "word_en": "leather",
+    "phonetic": "/ˈlɛðər/",
+    "meaning_kh": "ស្បែក",
+    "example": "His new jacket is made of soft leather."
+  },
+  {
+    "word_en": "cotton",
+    "phonetic": "/ˈkɔtən/",
+    "meaning_kh": "កប្បាស",
+    "example": "This t-shirt is made of comfortable cotton."
+  },
+  {
+    "word_en": "wool",
+    "phonetic": "/wʊl/",
+    "meaning_kh": "រោមចៀម",
+    "example": "She knitted a warm sweater from wool."
+  },
+  {
+    "word_en": "heart",
+    "phonetic": "/hɑrt/",
+    "meaning_kh": "បេះដូង",
+    "example": "The human heart beats constantly."
+  },
+  {
+    "word_en": "brain",
+    "phonetic": "/breɪn/",
+    "meaning_kh": "ខួរក្បាល",
+    "example": "The brain controls all body movements."
+  },
+  {
+    "word_en": "eye",
+    "phonetic": "/aɪ/",
+    "meaning_kh": "ភ្នែក",
+    "example": "She has beautiful brown eyes."
+  },
+  {
+    "word_en": "ear",
+    "phonetic": "/ɪr/",
+    "meaning_kh": "ត្រចៀក",
+    "example": "The rabbit has long, soft ears."
+  },
+  {
+    "word_en": "nose",
+    "phonetic": "/noʊz/",
+    "meaning_kh": "ច្រមុះ",
+    "example": "He wiped his nose with a tissue."
+  },
+  {
+    "word_en": "mouth",
+    "phonetic": "/maʊθ/",
+    "meaning_kh": "មាត់",
+    "example": "Open your mouth and say ah."
+  },
+  {
+    "word_en": "tooth",
+    "phonetic": "/tuθ/",
+    "meaning_kh": "ធ្មេញ",
+    "example": "You should brush your teeth twice a day."
+  },
+  {
+    "word_en": "hair",
+    "phonetic": "/hɛr/",
+    "meaning_kh": "សក់",
+    "example": "She brushed her long black hair."
+  },
+  {
+    "word_en": "hand",
+    "phonetic": "/hænd/",
+    "meaning_kh": "ដៃ",
+    "example": "They walked hand in hand down the street."
+  },
+  {
+    "word_en": "finger",
+    "phonetic": "/ˈfɪŋgər/",
+    "meaning_kh": "ម្រាមដៃ",
+    "example": "She wore a gold ring on her finger."
+  },
+  {
+    "word_en": "foot",
+    "phonetic": "/fʊt/",
+    "meaning_kh": "ជើង",
+    "example": "He kicked the ball with his left foot."
+  },
+  {
+    "word_en": "blood",
+    "phonetic": "/bləd/",
+    "meaning_kh": "ឈាម",
+    "example": "Blood circulates throughout our body."
+  },
+  {
+    "word_en": "voice",
+    "phonetic": "/vɔɪs/",
+    "meaning_kh": "សំឡេង",
+    "example": "She has a very sweet singing voice."
+  },
+  {
+    "word_en": "dream",
+    "phonetic": "/drim/",
+    "meaning_kh": "សុបិន",
+    "example": "He had a strange dream last night."
+  },
+  {
+    "word_en": "memory",
+    "phonetic": "/ˈmɛməri/",
+    "meaning_kh": "ការចងចាំ",
+    "example": "I have fond memories of my childhood."
+  },
+  {
+    "word_en": "history",
+    "phonetic": "/ˈhɪstəri/",
+    "meaning_kh": "ប្រវត្តិសាស្ត្រ",
+    "example": "She enjoys learning about ancient history."
+  },
+  {
+    "word_en": "future",
+    "phonetic": "/fˈjuʧər/",
+    "meaning_kh": "អនាគត",
+    "example": "Nobody can predict the exact future."
+  },
+  {
+    "word_en": "nature",
+    "phonetic": "/ˈneɪʧər/",
+    "meaning_kh": "ធម្មជាតិ",
+    "example": "We love spending time close to nature."
+  },
+  {
+    "word_en": "science",
+    "phonetic": "/saɪəns/",
+    "meaning_kh": "វិទ្យាសាស្ត្រ",
+    "example": "He wants to study science at university."
+  },
+  {
+    "word_en": "art",
+    "phonetic": "/ɑrt/",
+    "meaning_kh": "សិល្បៈ",
+    "example": "She visited the local art gallery."
+  },
+  {
+    "word_en": "health",
+    "phonetic": "/hɛlθ/",
+    "meaning_kh": "សុខភាព",
+    "example": "Good nutrition is key to physical health."
+  },
+  {
+    "word_en": "peace",
+    "phonetic": "/pis/",
+    "meaning_kh": "សន្តិភាព",
+    "example": "Everyone wishes for world peace."
+  },
+  {
+    "word_en": "truth",
+    "phonetic": "/truθ/",
+    "meaning_kh": "ការពិត",
+    "example": "It is always best to tell the truth."
+  },
+  {
+    "word_en": "lie",
+    "phonetic": "/laɪ/",
+    "meaning_kh": "ការកុហក",
+    "example": "He was disappointed by her lie."
+  },
+  {
+    "word_en": "mistake",
+    "phonetic": "/mɪˈsteɪk/",
+    "meaning_kh": "កំហុស",
+    "example": "Don't worry, everyone makes mistakes."
+  },
+  {
+    "word_en": "choice",
+    "phonetic": "/ʧɔɪs/",
+    "meaning_kh": "ជម្រើស",
+    "example": "You have a choice between tea and coffee."
+  },
+  {
+    "word_en": "reason",
+    "phonetic": "/ˈrizən/",
+    "meaning_kh": "ហេតុផល",
+    "example": "Give me one good reason to believe you."
+  },
+  {
+    "word_en": "purpose",
+    "phonetic": "/ˈpərpəs/",
+    "meaning_kh": "គោលបំណង",
+    "example": "What is the main purpose of this meeting?"
+  },
+  {
+    "word_en": "idea",
+    "phonetic": "/aɪˈdiə/",
+    "meaning_kh": "គំនិត",
+    "example": "That is a brilliant idea!"
+  },
+  {
+    "word_en": "opinion",
+    "phonetic": "/əˈpɪnjən/",
+    "meaning_kh": "មតិ",
+    "example": "What is your opinion on this matter?"
+  },
+  {
+    "word_en": "answer",
+    "phonetic": "/ˈænsər/",
+    "meaning_kh": "ចម្លើយ",
+    "example": "He didn't know the answer to the question."
+  },
+  {
+    "word_en": "question",
+    "phonetic": "/kˈwɛʃən/",
+    "meaning_kh": "សំណួរ",
+    "example": "Please raise your hand if you have a question."
+  },
+  {
+    "word_en": "problem",
+    "phonetic": "/ˈprɑbləm/",
+    "meaning_kh": "បញ្ហា",
+    "example": "We need to find a solution to this problem."
+  },
+  {
+    "word_en": "solution",
+    "phonetic": "/səˈluʃən/",
+    "meaning_kh": "ដំណោះស្រាយ",
+    "example": "We found a simple solution to the puzzle."
+  },
+  {
+    "word_en": "result",
+    "phonetic": "/rɪˈzəlt/",
+    "meaning_kh": "លទ្ធផល",
+    "example": "We are waiting for the test results."
+  },
+  {
+    "word_en": "government",
+    "phonetic": "/ˈgəvərnmənt/",
+    "meaning_kh": "រដ្ឋាភិបាល",
+    "example": "The government announced a new policy today."
+  },
+  {
+    "word_en": "president",
+    "phonetic": "/ˈprɛzɪdənt/",
+    "meaning_kh": "ប្រធានាធិបតី",
+    "example": "The president gave a speech on television."
+  },
+  {
+    "word_en": "king",
+    "phonetic": "/kɪŋ/",
+    "meaning_kh": "ព្រះមហាក្សត្រ",
+    "example": "The king ruled the country with wisdom."
+  },
+  {
+    "word_en": "queen",
+    "phonetic": "/kwin/",
+    "meaning_kh": "ព្រះមហាក្សត្រី",
+    "example": "The queen attended the royal ceremony."
+  },
+  {
+    "word_en": "leader",
+    "phonetic": "/ˈlidər/",
+    "meaning_kh": "អ្នកដឹកនាំ",
+    "example": "A good leader listens to the team."
+  },
+  {
+    "word_en": "boss",
+    "phonetic": "/bɔs/",
+    "meaning_kh": "មេកើយ/ថៅកែ",
+    "example": "My boss approved my vacation request."
+  },
+  {
+    "word_en": "manager",
+    "phonetic": "/ˈmænɪʤər/",
+    "meaning_kh": "អ្នកចាត់ការ",
+    "example": "The manager organized the weekly schedule."
+  },
+  {
+    "word_en": "worker",
+    "phonetic": "/ˈwərkər/",
+    "meaning_kh": "កម្មករ",
+    "example": "The construction workers are building a new office."
+  },
+  {
+    "word_en": "driver",
+    "phonetic": "/ˈdraɪvər/",
+    "meaning_kh": "អ្នកបើកបរ",
+    "example": "The bus driver greeted the passengers."
+  },
+  {
+    "word_en": "pilot",
+    "phonetic": "/ˈpaɪlət/",
+    "meaning_kh": "អ្នកបើកយន្តហោះ",
+    "example": "The pilot announced that the flight would be smooth."
+  },
+  {
+    "word_en": "police",
+    "phonetic": "/pəˈlis/",
+    "meaning_kh": "ប៉ូលីស",
+    "example": "The police helped direct traffic in the city."
+  },
+  {
+    "word_en": "soldier",
+    "phonetic": "/ˈsoʊlʤər/",
+    "meaning_kh": "ទាហាន",
+    "example": "The soldiers marched in the parade."
+  },
+  {
+    "word_en": "lawyer",
+    "phonetic": "/ˈlɔjər/",
+    "meaning_kh": "មេធាវី",
+    "example": "He hired a lawyer to help him with the case."
+  },
+  {
+    "word_en": "writer",
+    "phonetic": "/ˈraɪtər/",
+    "meaning_kh": "អ្នកនិពន្ធ",
+    "example": "The writer published her first novel last month."
+  },
+  {
+    "word_en": "artist",
+    "phonetic": "/ˈɑrtɪst/",
+    "meaning_kh": "សិល្បករ",
+    "example": "The artist painted a beautiful sunset."
+  },
+  {
+    "word_en": "actor",
+    "phonetic": "/ˈæktər/",
+    "meaning_kh": "តួសម្តែង",
+    "example": "He is a famous actor in Hollywood."
+  },
+  {
+    "word_en": "singer",
+    "phonetic": "/ˈsɪŋər/",
+    "meaning_kh": "អ្នកចម្រៀង",
+    "example": "The singer performed live on stage."
+  },
+  {
+    "word_en": "coach",
+    "phonetic": "/koʊʧ/",
+    "meaning_kh": "គ្រូបង្វឹក",
+    "example": "The coach gave the team some advice before the game."
+  },
+  {
+    "word_en": "player",
+    "phonetic": "/pleɪər/",
+    "meaning_kh": "កីឡាករ",
+    "example": "She is a talented football player."
+  },
+  {
+    "word_en": "customer",
+    "phonetic": "/ˈkəstəmər/",
+    "meaning_kh": "អតិថិជន",
+    "example": "The customer asked about the price of the item."
+  },
+  {
+    "word_en": "guest",
+    "phonetic": "/gɛst/",
+    "meaning_kh": "ភ្ញៀវ",
+    "example": "We welcomed the guests into our home."
+  },
+  {
+    "word_en": "neighbor",
+    "phonetic": "/ˈneɪbər/",
+    "meaning_kh": "អ្នកជិតខាង",
+    "example": "Our neighbor is very friendly and helpful."
+  },
+  {
+    "word_en": "owner",
+    "phonetic": "/ˈoʊnər/",
+    "meaning_kh": "ម្ចាស់",
+    "example": "He is the owner of this coffee shop."
+  },
+  {
+    "word_en": "partner",
+    "phonetic": "/ˈpɑrtnər/",
+    "meaning_kh": "ដៃគូ",
+    "example": "They became business partners last year."
+  },
+  {
+    "word_en": "member",
+    "phonetic": "/ˈmɛmbər/",
+    "meaning_kh": "សមាជិក",
+    "example": "She is an active member of the club."
+  },
+  {
+    "word_en": "team",
+    "phonetic": "/tim/",
+    "meaning_kh": "ក្រុម",
+    "example": "Our team won the championship match."
+  },
+  {
+    "word_en": "group",
+    "phonetic": "/grup/",
+    "meaning_kh": "ក្រុម",
+    "example": "A small group of tourists visited the temple."
+  },
+  {
+    "word_en": "crowd",
+    "phonetic": "/kraʊd/",
+    "meaning_kh": "ហ្វូងមនុស្ស",
+    "example": "A large crowd gathered in the town square."
+  },
+  {
+    "word_en": "meeting",
+    "phonetic": "/ˈmitɪŋ/",
+    "meaning_kh": "ការប្រជុំ",
+    "example": "We have an important meeting at 10 AM."
+  },
+  {
+    "word_en": "party",
+    "phonetic": "/ˈpɑrti/",
+    "meaning_kh": "ពិធីជប់លៀង",
+    "example": "They invited us to their birthday party."
+  },
+  {
+    "word_en": "holiday",
+    "phonetic": "/ˈhɑlɪˌdeɪ/",
+    "meaning_kh": "ថ្ងៃឈប់សម្រាក",
+    "example": "Next Monday is a national holiday."
+  },
+  {
+    "word_en": "festival",
+    "phonetic": "/ˈfɛstɪvəl/",
+    "meaning_kh": "ពិធីបុណ្យ",
+    "example": "We celebrated the water festival last month."
+  },
+  {
+    "word_en": "celebration",
+    "phonetic": "/ˌsɛləˈbreɪʃən/",
+    "meaning_kh": "ការអបអរសាទរ",
+    "example": "The family organized a celebration for his graduation."
+  },
+  {
+    "word_en": "event",
+    "phonetic": "/ɪˈvɛnt/",
+    "meaning_kh": "ព្រឹត្តិការណ៍",
+    "example": "The charity event raised money for the school."
+  },
+  {
+    "word_en": "show",
+    "phonetic": "/ʃoʊ/",
+    "meaning_kh": "ការសម្តែង",
+    "example": "We went to watch a comedy show."
+  },
+  {
+    "word_en": "concert",
+    "phonetic": "/ˈkɑnsərt/",
+    "meaning_kh": "ការប្រគំតន្ត្រី",
+    "example": "The rock concert was loud and exciting."
+  },
+  {
+    "word_en": "movie",
+    "phonetic": "/ˈmuvi/",
+    "meaning_kh": "ខ្សែភាពយន្ត",
+    "example": "We watched a funny movie last night."
+  },
+  {
+    "word_en": "theater",
+    "phonetic": "/ˈθieɪtər/",
+    "meaning_kh": "រោងកុន/រោងមហោស្រព",
+    "example": "They met in front of the movie theater."
+  },
+  {
+    "word_en": "museum",
+    "phonetic": "/mˈjuziəm/",
+    "meaning_kh": "សារមន្ទីរ",
+    "example": "The museum displays ancient artifacts."
+  },
+  {
+    "word_en": "station",
+    "phonetic": "/ˈsteɪʃən/",
+    "meaning_kh": "ស្ថានីយ",
+    "example": "We arrived at the bus station on time."
+  },
+  {
+    "word_en": "airport",
+    "phonetic": "/ˈɛrˌpɔrt/",
+    "meaning_kh": "ព្រលានយន្តហោះ",
+    "example": "The airport was busy with travelers."
+  },
+  {
+    "word_en": "supermarket",
+    "phonetic": "/ˈsupərˌmɑrkɪt/",
+    "meaning_kh": "ផ្សារទំនើប",
+    "example": "I bought groceries at the supermarket."
+  },
+  {
+    "word_en": "university",
+    "phonetic": "/ˌjunəˈvərsəti/",
+    "meaning_kh": "សាកលវិទ្យាល័យ",
+    "example": "She plans to go to university next year."
+  },
+  {
+    "word_en": "college",
+    "phonetic": "/ˈkɑlɪʤ/",
+    "meaning_kh": "មហាវិទ្យាល័យ",
+    "example": "He is studying business at the local college."
+  },
+  {
+    "word_en": "classroom",
+    "phonetic": "/ˈklæsˌrum/",
+    "meaning_kh": "បន្ទប់រៀន",
+    "example": "The students entered the classroom quietly."
+  },
+  {
+    "word_en": "lesson",
+    "phonetic": "/ˈlɛsən/",
+    "meaning_kh": "មេរៀន",
+    "example": "The teacher explained the math lesson."
+  },
+  {
+    "word_en": "subject",
+    "phonetic": "/ˈsəbʤɪkt/",
+    "meaning_kh": "មុខវិជ្ជា",
+    "example": "English is my favorite subject."
+  },
+  {
+    "word_en": "exam",
+    "phonetic": "/ɪgˈzæm/",
+    "meaning_kh": "ការប្រឡង",
+    "example": "He studied hard for the final exam."
+  },
+  {
+    "word_en": "test",
+    "phonetic": "/tɛst/",
+    "meaning_kh": "ការធ្វើតេស្ត",
+    "example": "The teacher gave us a spelling test."
+  },
+  {
+    "word_en": "grade",
+    "phonetic": "/greɪd/",
+    "meaning_kh": "ថ្នាក់/ពិន្ទុ",
+    "example": "She got a good grade on her report."
+  },
+  {
+    "word_en": "homework",
+    "phonetic": "/ˈhoʊmˌwərk/",
+    "meaning_kh": "កិច្ចការផ្ទះ",
+    "example": "She does her homework in the library."
+  },
+  {
+    "word_en": "math",
+    "phonetic": "/mæθ/",
+    "meaning_kh": "គណិតវិទ្យា",
+    "example": "He solved the math problem on the board."
+  },
+  {
+    "word_en": "language",
+    "phonetic": "/ˈlæŋgwɪʤ/",
+    "meaning_kh": "ភាសា",
+    "example": "Learning a new language opens many doors."
+  },
+  {
+    "word_en": "dictionary",
+    "phonetic": "/ˈdɪkʃəˌnɛri/",
+    "meaning_kh": "វចនានុក្រម",
+    "example": "Look up the spelling of the word in a dictionary."
+  },
+  {
+    "word_en": "page",
+    "phonetic": "/peɪʤ/",
+    "meaning_kh": "ទំព័រ",
+    "example": "Please turn to page twenty of the book."
+  },
+  {
+    "word_en": "eraser",
+    "phonetic": "/ɪˈreɪsər/",
+    "meaning_kh": "ជ័រលុប",
+    "example": "I need an eraser to correct my mistake."
+  },
+  {
+    "word_en": "ruler",
+    "phonetic": "/ˈrulər/",
+    "meaning_kh": "បន្ទាត់",
+    "example": "Use a ruler to draw a straight line."
+  },
+  {
+    "word_en": "map",
+    "phonetic": "/mæp/",
+    "meaning_kh": "ផែនទី",
+    "example": "They studied the map to find the route."
+  },
+  {
+    "word_en": "globe",
+    "phonetic": "/gloʊb/",
+    "meaning_kh": "ផែនដីសិប្បនិម្មិត",
+    "example": "The classroom has a large globe on the shelf."
+  },
+  {
+    "word_en": "board",
+    "phonetic": "/bɔrd/",
+    "meaning_kh": "ក្តារខៀន",
+    "example": "The teacher wrote the rules on the board."
+  },
+  {
+    "word_en": "desk",
+    "phonetic": "/dɛsk/",
+    "meaning_kh": "តុសរសេរ",
+    "example": "He sat at his desk and started typing."
+  },
+  {
+    "word_en": "backpack",
+    "phonetic": "/ˈbækˌpæk/",
+    "meaning_kh": "កាបូបស្ពាយ",
+    "example": "She packed her school books into her backpack."
+  },
+  {
+    "word_en": "lunch",
+    "phonetic": "/lənʧ/",
+    "meaning_kh": "អាហារថ្ងៃត្រង់",
+    "example": "We ate lunch together in the canteen."
+  },
+  {
+    "word_en": "dinner",
+    "phonetic": "/ˈdɪnər/",
+    "meaning_kh": "អាហារពេលល្ងាច",
+    "example": "The family gathered around the table for dinner."
+  },
+  {
+    "word_en": "breakfast",
+    "phonetic": "/ˈbrɛkfəst/",
+    "meaning_kh": "អាហារពេលព្រឹក",
+    "example": "Breakfast is the most important meal of the day."
+  },
+  {
+    "word_en": "snack",
+    "phonetic": "/snæk/",
+    "meaning_kh": "អាហារសម្រន់",
+    "example": "She brought some fruit as a healthy snack."
+  },
+  {
+    "word_en": "soup",
+    "phonetic": "/sup/",
+    "meaning_kh": "ស៊ុប/សម្ល",
+    "example": "Warm vegetable soup is perfect for winter."
+  },
+  {
+    "word_en": "salad",
+    "phonetic": "/ˈsæləd/",
+    "meaning_kh": "សាឡាត់",
+    "example": "She prepared a fresh green salad."
+  },
+  {
+    "word_en": "meat",
+    "phonetic": "/mit/",
+    "meaning_kh": "សាច់",
+    "example": "He does not eat meat because he is vegetarian."
+  },
+  {
+    "word_en": "vegetable",
+    "phonetic": "/ˈvɛʤtəbəl/",
+    "meaning_kh": "បន្លែ",
+    "example": "We grow our own organic vegetables."
+  },
+  {
+    "word_en": "onion",
+    "phonetic": "/ˈənjən/",
+    "meaning_kh": "ខ្ទឹមបារាំង",
+    "example": "Chop the onion into small pieces."
+  },
+  {
+    "word_en": "potato",
+    "phonetic": "/pəˈteɪˌtoʊ/",
+    "meaning_kh": "ដំឡូងបារាំង",
+    "example": "Mash the boiled potatoes with butter."
+  },
+  {
+    "word_en": "tomato",
+    "phonetic": "/təˈmɑˌtoʊ/",
+    "meaning_kh": "ប៉េងប៉ោះ",
+    "example": "Red tomatoes are growing in the garden."
+  },
+  {
+    "word_en": "cheese",
+    "phonetic": "/ʧiz/",
+    "meaning_kh": "ឈីស",
+    "example": "He likes to put cheese on his pizza."
+  },
+  {
+    "word_en": "butter",
+    "phonetic": "/ˈbətər/",
+    "meaning_kh": "ប៊ឺ",
+    "example": "Spread some butter on the hot toast."
+  },
+  {
+    "word_en": "sugar",
+    "phonetic": "/ˈʃʊgər/",
+    "meaning_kh": "ស្ករ",
+    "example": "Would you like some sugar in your tea?"
+  },
+  {
+    "word_en": "salt",
+    "phonetic": "/sɔlt/",
+    "meaning_kh": "អំបិល",
+    "example": "Add a pinch of salt to the soup."
+  },
+  {
+    "word_en": "pepper",
+    "phonetic": "/ˈpɛpər/",
+    "meaning_kh": "ម្រេច",
+    "example": "Season the chicken with black pepper."
+  },
+  {
+    "word_en": "oil",
+    "phonetic": "/ɔɪl/",
+    "meaning_kh": "ប្រេង",
+    "example": "Pour some olive oil into the pan."
+  },
+  {
+    "word_en": "juice",
+    "phonetic": "/ʤus/",
+    "meaning_kh": "ទឹកផ្លែឈើ",
+    "example": "I ordered a glass of fresh orange juice."
+  },
+  {
+    "word_en": "beer",
+    "phonetic": "/bɪr/",
+    "meaning_kh": "ស្រាបៀរ",
+    "example": "He drank a cold beer after work."
+  },
+  {
+    "word_en": "wine",
+    "phonetic": "/waɪn/",
+    "meaning_kh": "ស្រាក្រហម",
+    "example": "They celebrated with a bottle of wine."
+  },
+  {
+    "word_en": "stove",
+    "phonetic": "/stoʊv/",
+    "meaning_kh": "ចង្ក្រាន",
+    "example": "Be careful, the stove is still hot."
+  },
+  {
+    "word_en": "oven",
+    "phonetic": "/ˈəvən/",
+    "meaning_kh": "ឡ",
+    "example": "She baked chocolate cookies in the oven."
+  },
+  {
+    "word_en": "fridge",
+    "phonetic": "/frɪʤ/",
+    "meaning_kh": "ទូទឹកកក",
+    "example": "Put the milk back inside the fridge."
+  },
+  {
+    "word_en": "sink",
+    "phonetic": "/sɪŋk/",
+    "meaning_kh": "ធុងលាងចាន",
+    "example": "Wash the dirty dishes in the kitchen sink."
+  },
+  {
+    "word_en": "trash",
+    "phonetic": "/træʃ/",
+    "meaning_kh": "សំរាម",
+    "example": "Please take out the trash before you go."
+  },
+  {
+    "word_en": "shampoo",
+    "phonetic": "/ʃæmˈpu/",
+    "meaning_kh": "សាប៊ូកក់សក់",
+    "example": "This shampoo smells like lavender."
+  },
+  {
+    "word_en": "toothbrush",
+    "phonetic": "/ˈtuθbrəʃ/",
+    "meaning_kh": "ច្រាសដុសធ្មេញ",
+    "example": "You should replace your toothbrush regularly."
+  },
+  {
+    "word_en": "toothpaste",
+    "phonetic": "/ˈtuθˌpeɪst/",
+    "meaning_kh": "ថ្នាំដុសធ្មេញ",
+    "example": "Squeeze some toothpaste onto the brush."
+  },
+  {
+    "word_en": "comb",
+    "phonetic": "/koʊm/",
+    "meaning_kh": "ក្រាស",
+    "example": "He used a comb to style his hair."
+  },
+  {
+    "word_en": "perfume",
+    "phonetic": "/pərfˈjum/",
+    "meaning_kh": "ទឹកអប់",
+    "example": "She sprayed some perfume on her wrist."
+  },
+  {
+    "word_en": "makeup",
+    "phonetic": "/ˈmeɪˌkəp/",
+    "meaning_kh": "គ្រឿងសម្អាង",
+    "example": "She put on a little makeup before the show."
+  },
+  {
+    "word_en": "scissors",
+    "phonetic": "/ˈsɪzərz/",
+    "meaning_kh": "កន្ត្រៃ",
+    "example": "Use the scissors to cut the paper."
+  },
+  {
+    "word_en": "thread",
+    "phonetic": "/θrɛd/",
+    "meaning_kh": "អំបោះ/សរសៃអំបោះ",
+    "example": "She threaded the needle with blue thread."
+  },
+  {
+    "word_en": "needle",
+    "phonetic": "/ˈnidəl/",
+    "meaning_kh": "ម្ជុល",
+    "example": "He used a needle to repair the torn shirt."
+  },
+  {
+    "word_en": "button",
+    "phonetic": "/ˈbətən/",
+    "meaning_kh": "ឡេវអាវ",
+    "example": "A button fell off his winter coat."
+  },
+  {
+    "word_en": "zipper",
+    "phonetic": "/ˈzɪpər/",
+    "meaning_kh": "ខ្សែរ៉ូត",
+    "example": "Pull up the zipper on your jacket."
+  },
+  {
+    "word_en": "raincoat",
+    "phonetic": "/ˈreɪnˌkoʊt/",
+    "meaning_kh": "អាវភ្លៀង",
+    "example": "Wear a raincoat to stay dry."
+  },
+  {
+    "word_en": "glasses",
+    "phonetic": "/ˈglæsɪz/",
+    "meaning_kh": "វ៉ែនតា",
+    "example": "He needs glasses to read small print."
+  },
+  {
+    "word_en": "camera",
+    "phonetic": "/ˈkæmərə/",
+    "meaning_kh": "កាមេរ៉ា",
+    "example": "He took a beautiful photo with his camera."
+  },
+  {
+    "word_en": "television",
+    "phonetic": "/ˈtɛləˌvɪʒən/",
+    "meaning_kh": "ទូរទស្សន៍",
+    "example": "We watched the news on television."
+  },
+  {
+    "word_en": "radio",
+    "phonetic": "/ˈreɪdiˌoʊ/",
+    "meaning_kh": "វិទ្យុ",
+    "example": "He listens to the radio while driving."
+  },
+  {
+    "word_en": "keyboard",
+    "phonetic": "/ˈkiˌbɔrd/",
+    "meaning_kh": "ក្តារចុច",
+    "example": "She typed the letter using the keyboard."
+  },
+  {
+    "word_en": "mouse",
+    "phonetic": "/maʊs/",
+    "meaning_kh": "កណ្តុរ",
+    "example": "Move the computer mouse to click the link."
+  },
+  {
+    "word_en": "screen",
+    "phonetic": "/skrin/",
+    "meaning_kh": "អេក្រង់",
+    "example": "The phone screen is bright and clear."
+  },
+  {
+    "word_en": "headphone",
+    "phonetic": "/ˈhɛdˌfoʊn/",
+    "meaning_kh": "កាសស្តាប់ត្រចៀក",
+    "example": "He put on his headphones to listen to music."
+  },
+  {
+    "word_en": "charger",
+    "phonetic": "/ˈʧɑrʤər/",
+    "meaning_kh": "ឧបករណ៍សាកថ្ម",
+    "example": "Do you have a charger for my phone?"
+  },
+  {
+    "word_en": "battery",
+    "phonetic": "/ˈbætəri/",
+    "meaning_kh": "ថ្ម/អាគុយ",
+    "example": "My phone battery is low."
+  },
+  {
+    "word_en": "cable",
+    "phonetic": "/ˈkeɪbəl/",
+    "meaning_kh": "ខ្សែរកាប/ខ្សែរ",
+    "example": "Connect the cable to the computer."
+  },
+  {
+    "word_en": "fan",
+    "phonetic": "/fæn/",
+    "meaning_kh": "កង្ហារ",
+    "example": "Turn on the fan because it is hot."
+  },
+  {
+    "word_en": "air conditioner",
+    "phonetic": "/ɛr kənˈdɪʃənər/",
+    "meaning_kh": "ម៉ាស៊ីនត្រជាក់",
+    "example": "The air conditioner keeps the room cool."
+  },
+  {
+    "word_en": "heater",
+    "phonetic": "/ˈhitər/",
+    "meaning_kh": "ម៉ាស៊ីនកម្តៅ",
+    "example": "We turned on the heater during the cold winter."
+  },
+  {
+    "word_en": "light",
+    "phonetic": "/laɪt/",
+    "meaning_kh": "ពន្លឺ/អំពូលភ្លើង",
+    "example": "Turn off the light when you sleep."
+  },
+  {
+    "word_en": "plug",
+    "phonetic": "/pləg/",
+    "meaning_kh": "ឌុយ",
+    "example": "Insert the plug into the wall socket."
+  },
+  {
+    "word_en": "purse",
+    "phonetic": "/pərs/",
+    "meaning_kh": "កាបូបយួរដៃ",
+    "example": "She kept her cosmetics inside her purse."
+  },
+  {
+    "word_en": "ring",
+    "phonetic": "/rɪŋ/",
+    "meaning_kh": "ចិញ្ចៀន",
+    "example": "She wore a diamond ring on her finger."
+  },
+  {
+    "word_en": "necklace",
+    "phonetic": "/ˈnɛkləs/",
+    "meaning_kh": "ខ្សែក",
+    "example": "He bought a gold necklace for his wife."
+  },
+  {
+    "word_en": "bracelet",
+    "phonetic": "/ˈbreɪslət/",
+    "meaning_kh": "ខ្សែដៃ",
+    "example": "She wore a silver bracelet on her wrist."
+  },
+  {
+    "word_en": "earring",
+    "phonetic": "/ˈɪrɪŋ/",
+    "meaning_kh": "ក្រវិល",
+    "example": "She lost one of her favorite earrings."
+  },
+  {
+    "word_en": "belt",
+    "phonetic": "/bɛlt/",
+    "meaning_kh": "ខ្សែក្រវាត់",
+    "example": "He tightened his leather belt."
+  },
+  {
+    "word_en": "tie",
+    "phonetic": "/taɪ/",
+    "meaning_kh": "ក្រវាត់ក",
+    "example": "He wore a blue tie to the interview."
+  },
+  {
+    "word_en": "gloves",
+    "phonetic": "/gləvz/",
+    "meaning_kh": "ស្រោមដៃ",
+    "example": "Wear warm gloves to protect your hands."
+  },
+  {
+    "word_en": "scarf",
+    "phonetic": "/skɑrf/",
+    "meaning_kh": "កន្សែងបង់ក",
+    "example": "She wrapped a woolen scarf around her neck."
+  },
+  {
+    "word_en": "boot",
+    "phonetic": "/but/",
+    "meaning_kh": "ស្បែកជើងប៊ូត",
+    "example": "He wore thick leather boots in the snow."
+  },
+  {
+    "word_en": "sandal",
+    "phonetic": "/ˈsændəl/",
+    "meaning_kh": "ស្បែកជើងផ្ទាត់/ស្បែកជើងសណ្តក",
+    "example": "She wears comfortable sandals at home."
+  },
+  {
+    "word_en": "slippers",
+    "phonetic": "/sˈlɪpərz/",
+    "meaning_kh": "ស្បែកជើងផ្ទះ",
+    "example": "Put on your slippers to keep your feet warm."
+  },
+  {
+    "word_en": "conditioner",
+    "phonetic": "/kənˈdɪʃənər/",
+    "meaning_kh": "ទឹកបន្ទន់សក់",
+    "example": "Use hair conditioner after shampooing."
+  },
+  {
+    "word_en": "brush",
+    "phonetic": "/brəʃ/",
+    "meaning_kh": "ច្រាសដុស",
+    "example": "She used a hairbrush to untangle her hair."
+  },
+  {
+    "word_en": "shelf",
+    "phonetic": "/ʃɛlf/",
+    "meaning_kh": "ធ្នើរ",
+    "example": "Put the books back on the shelf."
+  },
+  {
+    "word_en": "drawer",
+    "phonetic": "/drɔr/",
+    "meaning_kh": "ថតតុ/ថតទូ",
+    "example": "The documents are in the top drawer."
+  },
+  {
+    "word_en": "cabinet",
+    "phonetic": "/ˈkæbənət/",
+    "meaning_kh": "ទូ",
+    "example": "Store the cups inside the kitchen cabinet."
+  },
+  {
+    "word_en": "wardrobe",
+    "phonetic": "/ˈwɔrˌdroʊb/",
+    "meaning_kh": "ទូខោអាវ",
+    "example": "She hung her dresses in the wardrobe."
+  },
+  {
+    "word_en": "sofa",
+    "phonetic": "/ˈsoʊfə/",
+    "meaning_kh": "សាឡុង",
+    "example": "We sat on the sofa to watch TV."
+  },
+  {
+    "word_en": "curtain",
+    "phonetic": "/ˈkərtən/",
+    "meaning_kh": "វាំងនន",
+    "example": "Draw the curtains to block the sunlight."
+  },
+  {
+    "word_en": "carpet",
+    "phonetic": "/ˈkɑrpət/",
+    "meaning_kh": "កម្រាលព្រំ",
+    "example": "The living room has a soft red carpet."
+  },
+  {
+    "word_en": "stair",
+    "phonetic": "/stɛr/",
+    "meaning_kh": "កាំជណ្តើរ",
+    "example": "He walked up the stairs to the second floor."
+  },
+  {
+    "word_en": "balcony",
+    "phonetic": "/ˈbælkəni/",
+    "meaning_kh": "យ៉រ/វេរ៉ង់ដា",
+    "example": "She stood on the balcony to get some fresh air."
+  },
+  {
+    "word_en": "basement",
+    "phonetic": "/ˈbeɪsmənt/",
+    "meaning_kh": "បន្ទប់ក្រោមដី",
+    "example": "We store old boxes in the basement."
+  },
+  {
+    "word_en": "chimney",
+    "phonetic": "/ˈʧɪmni/",
+    "meaning_kh": "បំពង់ផ្សែង",
+    "example": "Smoke rose from the brick chimney."
+  },
+  {
+    "word_en": "yard",
+    "phonetic": "/jɑrd/",
+    "meaning_kh": "ទីធ្លា",
+    "example": "The kids are playing in the backyard."
+  },
+  {
+    "word_en": "fence",
+    "phonetic": "/fɛns/",
+    "meaning_kh": "របង",
+    "example": "He painted the wooden fence white."
+  },
+  {
+    "word_en": "garage",
+    "phonetic": "/gərɑʒ/",
+    "meaning_kh": "យានដ្ឋាន",
+    "example": "Park the car inside the garage."
+  },
+  {
+    "word_en": "mailbox",
+    "phonetic": "/ˈmeɪlˌbɑks/",
+    "meaning_kh": "ប្រអប់សំបុត្រ",
+    "example": "There was a letter waiting in the mailbox."
+  },
+  {
+    "word_en": "canteen",
+    "phonetic": "/kænˈtin/",
+    "meaning_kh": "អាហារដ្ឋាន",
+    "example": "Students buy food at the school canteen."
+  },
+  {
+    "word_en": "hallway",
+    "phonetic": "/ˈhɔlˌweɪ/",
+    "meaning_kh": "ច្រករបៀង",
+    "example": "He walked down the long hallway."
+  },
+  {
+    "word_en": "gym",
+    "phonetic": "/ʤɪm/",
+    "meaning_kh": "ក្លឹបហាត់ប្រាណ",
+    "example": "He goes to the gym three times a week."
+  },
+  {
+    "word_en": "pool",
+    "phonetic": "/pul/",
+    "meaning_kh": "អាងហែលទឹក",
+    "example": "The hotel has a beautiful swimming pool."
+  },
+  {
+    "word_en": "stadium",
+    "phonetic": "/ˈsteɪdiəm/",
+    "meaning_kh": "កីឡដ្ឋាន",
+    "example": "Thousands of fans gathered at the stadium."
+  },
+  {
+    "word_en": "temple",
+    "phonetic": "/ˈtɛmpəl/",
+    "meaning_kh": "ប្រាសាទ/វត្ត",
+    "example": "We visited an ancient temple in Siem Reap."
+  },
+  {
+    "word_en": "church",
+    "phonetic": "/ʧərʧ/",
+    "meaning_kh": "វិហារគ្រីស្ទសាសនា",
+    "example": "They go to church every Sunday morning."
+  },
+  {
+    "word_en": "mosque",
+    "phonetic": "/mɔsk/",
+    "meaning_kh": "វិហារឥស្លាម",
+    "example": "The mosque has a beautiful dome."
+  },
+  {
+    "word_en": "castle",
+    "phonetic": "/ˈkæsəl/",
+    "meaning_kh": "ប្រាសាទ/រាជវាំងបុរាណ",
+    "example": "The king lived in a huge stone castle."
+  },
+  {
+    "word_en": "palace",
+    "phonetic": "/ˈpæləs/",
+    "meaning_kh": "ព្រះបរមរាជវាំង",
+    "example": "The royal palace is open to tourists."
+  },
+  {
+    "word_en": "fountain",
+    "phonetic": "/ˈfaʊntən/",
+    "meaning_kh": "ទឹកបាញ់",
+    "example": "There is a beautiful fountain in the center of the park."
+  },
+  {
+    "word_en": "statue",
+    "phonetic": "/ˈstæˌʧu/",
+    "meaning_kh": "រូបសំណាក",
+    "example": "A statue of the hero stands in the square."
+  },
+  {
+    "word_en": "monument",
+    "phonetic": "/ˈmɑnjəmənt/",
+    "meaning_kh": "វិមាន/ស្តូប",
+    "example": "The Independence Monument is located in Phnom Penh."
+  },
+  {
+    "word_en": "tower",
+    "phonetic": "/taʊər/",
+    "meaning_kh": "ប៉ម/អគារខ្ពស់",
+    "example": "We climbed to the top of the tower to see the view."
+  },
+  {
+    "word_en": "tunnel",
+    "phonetic": "/ˈtənəl/",
+    "meaning_kh": "ផ្លូវក្រោមដី/ល្អាង",
+    "example": "The train went through a dark tunnel."
+  },
+  {
+    "word_en": "railway",
+    "phonetic": "/ˈreɪlˌweɪ/",
+    "meaning_kh": "ផ្លូវរថភ្លើង",
+    "example": "The railway connects the two cities."
+  },
+  {
+    "word_en": "highway",
+    "phonetic": "/ˈhaɪˌweɪ/",
+    "meaning_kh": "ផ្លូវជាតិ/ផ្លូវល្បឿនលឿន",
+    "example": "Cars are driving fast on the highway."
+  },
+  {
+    "word_en": "sidewalk",
+    "phonetic": "/ˈsaɪdˌwɔk/",
+    "meaning_kh": "ចិញ្ចើមផ្លូវ",
+    "example": "Pedestrians should walk on the sidewalk."
+  },
+  {
+    "word_en": "path",
+    "phonetic": "/pæθ/",
+    "meaning_kh": "ផ្លូវដើរ/គន្លងផ្លូវ",
+    "example": "Follow the gravel path through the woods."
+  },
+  {
+    "word_en": "dust",
+    "phonetic": "/dəst/",
+    "meaning_kh": "ធូលី",
+    "example": "A thick layer of dust covered the old table."
+  },
+  {
+    "word_en": "dirt",
+    "phonetic": "/dərt/",
+    "meaning_kh": "ដីកខ្វក់",
+    "example": "Wash the dirt off your hands."
+  },
+  {
+    "word_en": "mud",
+    "phonetic": "/məd/",
+    "meaning_kh": "ភក់",
+    "example": "My boots were covered in wet mud."
+  },
+  {
+    "word_en": "brick",
+    "phonetic": "/brɪk/",
+    "meaning_kh": "ឥដ្ឋ",
+    "example": "The house is built of red brick."
+  },
+  {
+    "word_en": "cement",
+    "phonetic": "/sɪˈmɛnt/",
+    "meaning_kh": "ស៊ីម៉ង់ត៍",
+    "example": "They mixed cement to build the wall."
+  },
+  {
+    "word_en": "metal",
+    "phonetic": "/ˈmɛtəl/",
+    "meaning_kh": "លោហៈ",
+    "example": "The key is made of solid metal."
+  },
+  {
+    "word_en": "copper",
+    "phonetic": "/ˈkɑpər/",
+    "meaning_kh": "ទង់ដែង",
+    "example": "The pipes are made of copper."
+  },
+  {
+    "word_en": "brass",
+    "phonetic": "/bræs/",
+    "meaning_kh": "លង្ហិន",
+    "example": "The door handle is made of shiny brass."
+  },
+  {
+    "word_en": "steel",
+    "phonetic": "/stil/",
+    "meaning_kh": "ដែកថែប",
+    "example": "Modern skyscrapers are built with steel frames."
+  },
+  {
+    "word_en": "rubber",
+    "phonetic": "/ˈrəbər/",
+    "meaning_kh": "កៅស៊ូ",
+    "example": "The boots are made of waterproof rubber."
+  },
+  {
+    "word_en": "silk",
+    "phonetic": "/sɪlk/",
+    "meaning_kh": "សូត្រ",
+    "example": "She wore a soft silk dress."
+  },
+  {
+    "word_en": "linen",
+    "phonetic": "/ˈlɪnən/",
+    "meaning_kh": "ក្រណាត់ទេសឯក",
+    "example": "The table was covered with a white linen cloth."
+  },
+  {
+    "word_en": "glue",
+    "phonetic": "/glu/",
+    "meaning_kh": "កាវ",
+    "example": "Use glue to stick the paper together."
+  },
+  {
+    "word_en": "tape",
+    "phonetic": "/teɪp/",
+    "meaning_kh": "ស្កុត",
+    "example": "I wrapped the parcel with sticky tape."
+  },
+  {
+    "word_en": "string",
+    "phonetic": "/strɪŋ/",
+    "meaning_kh": "ខ្សែញួរ/ខ្សែតូច",
+    "example": "Tie the package with a piece of string."
+  },
+  {
+    "word_en": "rope",
+    "phonetic": "/roʊp/",
+    "meaning_kh": "ខ្សែពួរ",
+    "example": "He pulled the boat to the shore with a thick rope."
+  },
+  {
+    "word_en": "chain",
+    "phonetic": "/ʧeɪn/",
+    "meaning_kh": "ខ្សែច្រវាក់",
+    "example": "The bicycle was locked with a heavy chain."
+  },
+  {
+    "word_en": "hook",
+    "phonetic": "/hʊk/",
+    "meaning_kh": "ទំពក់",
+    "example": "Hang your coat on the hook behind the door."
+  },
+  {
+    "word_en": "nail",
+    "phonetic": "/neɪl/",
+    "meaning_kh": "ដែកគោល/ក្រចក",
+    "example": "He used a hammer to drive the nail into the wood."
+  },
+  {
+    "word_en": "screw",
+    "phonetic": "/skru/",
+    "meaning_kh": "ខ្ចៅ",
+    "example": "Tighten the screw with a screwdriver."
+  },
+  {
+    "word_en": "hammer",
+    "phonetic": "/ˈhæmər/",
+    "meaning_kh": "ញញួរ",
+    "example": "He hit the nail with a heavy hammer."
+  },
+  {
+    "word_en": "tool",
+    "phonetic": "/tul/",
+    "meaning_kh": "ឧបករណ៍",
+    "example": "Keep your gardening tools in the shed."
+  },
+  {
+    "word_en": "machine",
+    "phonetic": "/məˈʃin/",
+    "meaning_kh": "ម៉ាស៊ីន",
+    "example": "This machine prints hundreds of pages per minute."
+  },
+  {
+    "word_en": "engine",
+    "phonetic": "/ˈɪnʤən/",
+    "meaning_kh": "ម៉ាស៊ីន",
+    "example": "The car engine started with a loud roar."
+  },
+  {
+    "word_en": "wheel",
+    "phonetic": "/wil/",
+    "meaning_kh": "កង់/ចក្រ",
+    "example": "The wagon has four wooden wheels."
+  },
+  {
+    "word_en": "tire",
+    "phonetic": "/taɪər/",
+    "meaning_kh": "សំបកកង់",
+    "example": "I need to change the flat tire on my bicycle."
+  },
+  {
+    "word_en": "truck",
+    "phonetic": "/trək/",
+    "meaning_kh": "ឡានដឹកទំនិញ",
+    "example": "The truck delivered the furniture to our house."
+  },
+  {
+    "word_en": "van",
+    "phonetic": "/væn/",
+    "meaning_kh": "ឡានដឹកអ្នកដំណើរ",
+    "example": "They rented a van to transport the gear."
+  },
+  {
+    "word_en": "motorcycle",
+    "phonetic": "/ˈmoʊtərˌsaɪkəl/",
+    "meaning_kh": "ម៉ូតូ",
+    "example": "He rides a motorcycle to work."
+  },
+  {
+    "word_en": "boat",
+    "phonetic": "/boʊt/",
+    "meaning_kh": "ទូក",
+    "example": "We rented a small boat to go fishing."
+  },
+  {
+    "word_en": "ship",
+    "phonetic": "/ʃɪp/",
+    "meaning_kh": "នាវា/កប៉ាល់",
+    "example": "The cargo ship sailed across the ocean."
+  },
+  {
+    "word_en": "subway",
+    "phonetic": "/ˈsəbˌweɪ/",
+    "meaning_kh": "រថភ្លើងក្រោមដី",
+    "example": "He takes the subway to avoid heavy traffic."
+  },
+  {
+    "word_en": "helicopter",
+    "phonetic": "/ˈhɛlɪˌkɑptər/",
+    "meaning_kh": "ឧទ្ធម្ភាគចក្រ",
+    "example": "The helicopter landed on the hospital roof."
+  },
+  {
+    "word_en": "traffic",
+    "phonetic": "/ˈtræfɪk/",
+    "meaning_kh": "ចរាចរណ៍",
+    "example": "There was heavy traffic on the main road."
+  },
+  {
+    "word_en": "accident",
+    "phonetic": "/ˈæksədənt/",
+    "meaning_kh": "គ្រោះថ្នាក់",
+    "example": "Drive carefully to avoid a traffic accident."
+  },
+  {
+    "word_en": "ticket",
+    "phonetic": "/ˈtɪkɪt/",
+    "meaning_kh": "សំបុត្រ",
+    "example": "I bought a train ticket to Phnom Penh."
+  },
+  {
+    "word_en": "passport",
+    "phonetic": "/ˈpæˌspɔrt/",
+    "meaning_kh": "លិខិតឆ្លងដែន",
+    "example": "Don't forget to bring your passport to the airport."
+  },
+  {
+    "word_en": "suitcase",
+    "phonetic": "/ˈsutˌkeɪs/",
+    "meaning_kh": "វ៉ាលី",
+    "example": "She packed her clothes into a large suitcase."
+  },
+  {
+    "word_en": "cushion",
+    "phonetic": "/ˈkʊʃən/",
+    "meaning_kh": "ខ្នើយកើយ/ខ្នើយផ្អែក",
+    "example": "The sofa has several comfortable cushions."
+  },
+  {
+    "word_en": "sheet",
+    "phonetic": "/ʃit/",
+    "meaning_kh": "កម្រាលពូក/សន្លឹក",
+    "example": "She changed the bed sheets this morning."
+  },
+  {
+    "word_en": "lock",
+    "phonetic": "/lɑk/",
+    "meaning_kh": "សោរ/មេសោ",
+    "example": "Make sure the lock on the door is secure."
+  },
+  {
+    "word_en": "lawn",
+    "phonetic": "/lɔn/",
+    "meaning_kh": "វាលស្មៅ",
+    "example": "He mows the lawn every Saturday."
+  },
+  {
+    "word_en": "greenhouse",
+    "phonetic": "/ˈgrinˌhaʊs/",
+    "meaning_kh": "ផ្ទះកញ្ចក់ដាំរុក្ខជាតិ",
+    "example": "The gardener grows flowers in the greenhouse."
+  },
+  {
+    "word_en": "shed",
+    "phonetic": "/ʃɛd/",
+    "meaning_kh": "រោង/តូប",
+    "example": "He keeps his tools in the garden shed."
+  },
+  {
+    "word_en": "attic",
+    "phonetic": "/ˈætɪk/",
+    "meaning_kh": "បន្ទប់ដំបូល",
+    "example": "We found old letters stored in the attic."
+  },
+  {
+    "word_en": "staircase",
+    "phonetic": "/ˈstɛrˌkeɪs/",
+    "meaning_kh": "ជណ្តើរ",
+    "example": "The grand staircase is made of marble."
+  },
+  {
+    "word_en": "elevator",
+    "phonetic": "/ˈɛləˌveɪtər/",
+    "meaning_kh": "ជណ្តើរយន្ត",
+    "example": "Take the elevator to the fifth floor."
+  },
+  {
+    "word_en": "escalator",
+    "phonetic": "/ˈɛskəˌleɪtər/",
+    "meaning_kh": "ជណ្តើរយន្តប្រអប់",
+    "example": "She stood on the escalator at the mall."
+  },
+  {
+    "word_en": "corridor",
+    "phonetic": "/ˈkɔrɪdər/",
+    "meaning_kh": "ច្រករបៀង",
+    "example": "The classroom doors open into a long corridor."
+  },
+  {
+    "word_en": "lobby",
+    "phonetic": "/ˈlɑbi/",
+    "meaning_kh": "បន្ទប់រង់ចាំ/ឡប់ប៊ី",
+    "example": "Meet me in the hotel lobby at noon."
+  },
+  {
+    "word_en": "reception",
+    "phonetic": "/rɪˈsɛpʃən/",
+    "meaning_kh": "កន្លែងទទួលភ្ញៀវ",
+    "example": "Please check in at the reception desk."
+  },
+  {
+    "word_en": "wastebasket",
+    "phonetic": "/ˈweɪstˌbæskət/",
+    "meaning_kh": "កន្ត្រកសម្រាម",
+    "example": "Throw the papers into the wastebasket."
+  },
+  {
+    "word_en": "calendar",
+    "phonetic": "/ˈkæləndər/",
+    "meaning_kh": "ប្រតិទិន",
+    "example": "He marked the date on his wall calendar."
+  },
+  {
+    "word_en": "diary",
+    "phonetic": "/ˈdaɪəri/",
+    "meaning_kh": "សៀវភៅកំណត់ហេតុ",
+    "example": "She writes down her thoughts in a diary."
+  },
+  {
+    "word_en": "folder",
+    "phonetic": "/ˈfoʊldər/",
+    "meaning_kh": "ថតឯកសារ",
+    "example": "Keep all the receipts in a plastic folder."
+  },
+  {
+    "word_en": "envelope",
+    "phonetic": "/ˈɛnvəˌloʊp/",
+    "meaning_kh": "ស្រោមសំបុត្រ",
+    "example": "Put the letter inside the white envelope."
+  },
+  {
+    "word_en": "stamp",
+    "phonetic": "/stæmp/",
+    "meaning_kh": "តែម/ត្រា",
+    "example": "He put a stamp on the envelope before mailing it."
+  },
+  {
+    "word_en": "package",
+    "phonetic": "/ˈpækɪʤ/",
+    "meaning_kh": "កញ្ចប់ឥវ៉ាន់",
+    "example": "The mailman delivered a large package."
+  },
+  {
+    "word_en": "delivery",
+    "phonetic": "/dɪˈlɪvəri/",
+    "meaning_kh": "ការដឹកជញ្ជូន",
+    "example": "We are waiting for the food delivery."
+  },
+  {
+    "word_en": "mail",
+    "phonetic": "/meɪl/",
+    "meaning_kh": "សំបុត្រ/ប្រៃសណីយ៍",
+    "example": "Did we receive any mail today?"
+  },
+  {
+    "word_en": "novel",
+    "phonetic": "/ˈnɑvəl/",
+    "meaning_kh": "ប្រលោមលោក",
+    "example": "She is reading a romantic novel."
+  },
+  {
+    "word_en": "author",
+    "phonetic": "/ˈɔθər/",
+    "meaning_kh": "អ្នកនិពន្ធ",
+    "example": "He is the author of several history books."
+  },
+  {
+    "word_en": "story",
+    "phonetic": "/ˈstɔri/",
+    "meaning_kh": "រឿង/រឿងរ៉ាវ",
+    "example": "The grandmother told a funny story to the kids."
+  },
+  {
+    "word_en": "poem",
+    "phonetic": "/poʊəm/",
+    "meaning_kh": "កំណាព្យ",
+    "example": "She wrote a beautiful poem about spring."
+  },
+  {
+    "word_en": "poet",
+    "phonetic": "/poʊət/",
+    "meaning_kh": "កវី",
+    "example": "He is a famous poet from the city."
+  },
+  {
+    "word_en": "painting",
+    "phonetic": "/ˈpeɪnɪŋ/",
+    "meaning_kh": "គំនូរ",
+    "example": "The painting on the wall is very colorful."
+  },
+  {
+    "word_en": "sculpture",
+    "phonetic": "/ˈskəlpʧər/",
+    "meaning_kh": "ចម្លាក់",
+    "example": "We saw a modern sculpture at the museum."
+  },
+  {
+    "word_en": "sketch",
+    "phonetic": "/skɛʧ/",
+    "meaning_kh": "គំនូរព្រាង",
+    "example": "The artist drew a quick sketch of the face."
+  },
+  {
+    "word_en": "exhibition",
+    "phonetic": "/ˌɛksəˈbɪʃən/",
+    "meaning_kh": "ការពិព័រណ៍",
+    "example": "We went to a photography exhibition."
+  },
+  {
+    "word_en": "gallery",
+    "phonetic": "/ˈgæləri/",
+    "meaning_kh": "វិចិត្រសាល",
+    "example": "The art gallery is closed on Mondays."
+  },
+  {
+    "word_en": "paint",
+    "phonetic": "/peɪnt/",
+    "meaning_kh": "ថ្នាំលាប/ទឹកថ្នាំ",
+    "example": "The paint on the fence is dry."
+  },
+  {
+    "word_en": "canvas",
+    "phonetic": "/ˈkænvəs/",
+    "meaning_kh": "ផ្ទាំងក្រណាត់គូរគំនូរ",
+    "example": "He painted the landscape on a large canvas."
+  },
+  {
+    "word_en": "frame",
+    "phonetic": "/freɪm/",
+    "meaning_kh": "ស៊ុម",
+    "example": "Put the family photo in a wooden frame."
+  },
+  {
+    "word_en": "photograph",
+    "phonetic": "/ˈfoʊtəˌgræf/",
+    "meaning_kh": "រូបថត",
+    "example": "She took a beautiful photograph of the mountains."
+  },
+  {
+    "word_en": "lens",
+    "phonetic": "/lɛnz/",
+    "meaning_kh": "កែវថត/ឡែន",
+    "example": "He cleaned the camera lens with a soft cloth."
+  },
+  {
+    "word_en": "tripod",
+    "phonetic": "/ˈtraɪˌpɑd/",
+    "meaning_kh": "ជើងទម្របី",
+    "example": "Use a tripod to keep the camera steady."
+  },
+  {
+    "word_en": "video",
+    "phonetic": "/ˈvɪdioʊ/",
+    "meaning_kh": "វីដេអូ",
+    "example": "They recorded a video of the graduation ceremony."
+  },
+  {
+    "word_en": "film",
+    "phonetic": "/fɪlm/",
+    "meaning_kh": "ខ្សែភាពយន្ត/ហ្វីល",
+    "example": "The movie was shot on high-quality film."
+  },
+  {
+    "word_en": "audience",
+    "phonetic": "/ˈɔdiəns/",
+    "meaning_kh": "ទស្សនិកជន",
+    "example": "The audience cheered at the end of the show."
+  },
+  {
+    "word_en": "applause",
+    "phonetic": "/əˈplɔz/",
+    "meaning_kh": "ការទះដៃ",
+    "example": "The speaker was welcomed with loud applause."
+  },
+  {
+    "word_en": "stage",
+    "phonetic": "/steɪʤ/",
+    "meaning_kh": "ឆាក/វេទិកា",
+    "example": "The actors stood on the stage."
+  },
+  {
+    "word_en": "costume",
+    "phonetic": "/ˈkɑstum/",
+    "meaning_kh": "សម្លៀកបំពាក់សម្តែង",
+    "example": "She wore a colorful costume for the play."
+  },
+  {
+    "word_en": "director",
+    "phonetic": "/dɪˈrɛktər/",
+    "meaning_kh": "អ្នកដឹកនាំសម្តែង",
+    "example": "The director explained the scene to the actors."
+  },
+  {
+    "word_en": "producer",
+    "phonetic": "/prəˈdusər/",
+    "meaning_kh": "អ្នកផលិត",
+    "example": "The producer raised funds for the movie."
+  },
+  {
+    "word_en": "script",
+    "phonetic": "/skrɪpt/",
+    "meaning_kh": "ស្គ្រីប/អត្ថបទកុន",
+    "example": "The actors read the script before filming."
+  },
+  {
+    "word_en": "role",
+    "phonetic": "/roʊl/",
+    "meaning_kh": "តួនាទី",
+    "example": "She got the lead role in the new drama."
+  },
+  {
+    "word_en": "scene",
+    "phonetic": "/sin/",
+    "meaning_kh": "ប្លង់/ឈុតឆាក",
+    "example": "That was the most emotional scene in the movie."
+  },
+  {
+    "word_en": "studio",
+    "phonetic": "/ˈstudiˌoʊ/",
+    "meaning_kh": "ស្ទូឌីយោ/បន្ទប់ថត",
+    "example": "The band is recording their new album in the studio."
+  },
+  {
+    "word_en": "album",
+    "phonetic": "/ˈælbəm/",
+    "meaning_kh": "អាល់ប៊ុម",
+    "example": "She loves listening to this classic pop album."
+  },
+  {
+    "word_en": "song",
+    "phonetic": "/sɔŋ/",
+    "meaning_kh": "បទចម្រៀង",
+    "example": "He sang a traditional Khmer song."
+  },
+  {
+    "word_en": "melody",
+    "phonetic": "/ˈmɛlədi/",
+    "meaning_kh": "ទំនុកច្រៀង/រលកសំឡេង",
+    "example": "The soft melody of the flute helped her fall asleep."
+  },
+  {
+    "word_en": "rhythm",
+    "phonetic": "/ˈrɪðəm/",
+    "meaning_kh": "ចង្វាក់",
+    "example": "Clap your hands to the rhythm of the music."
+  },
+  {
+    "word_en": "drum",
+    "phonetic": "/drəm/",
+    "meaning_kh": "ស្គរ",
+    "example": "He plays the drums in a school band."
+  },
+  {
+    "word_en": "guitar",
+    "phonetic": "/gɪˈtɑr/",
+    "meaning_kh": "ហ្គីតា",
+    "example": "She learned to play the acoustic guitar."
+  },
+  {
+    "word_en": "piano",
+    "phonetic": "/piˈænə/",
+    "meaning_kh": "ព្យាណូ",
+    "example": "The piano stood in the corner of the living room."
+  },
+  {
+    "word_en": "violin",
+    "phonetic": "/vaɪəˈlɪn/",
+    "meaning_kh": "វីយូឡុង",
+    "example": "The violin player performed a beautiful solo."
+  },
+  {
+    "word_en": "instrument",
+    "phonetic": "/ˈɪnstrəmənt/",
+    "meaning_kh": "ឧបករណ៍តន្ត្រី/ឧបករណ៍",
+    "example": "The saxophone is a jazz instrument."
+  },
+  {
+    "word_en": "parade",
+    "phonetic": "/pəreɪd/",
+    "meaning_kh": "ក្បួនព្យុហយាត្រា",
+    "example": "Thousands of people watched the festival parade."
+  },
+  {
+    "word_en": "season",
+    "phonetic": "/ˈsizən/",
+    "meaning_kh": "រដូវ",
+    "example": "Cambodia has a rainy season and a dry season."
+  },
+  {
+    "word_en": "weather",
+    "phonetic": "/ˈwɛðər/",
+    "meaning_kh": "អាកាសធាតុ",
+    "example": "The weather is hot and humid today."
+  },
+  {
+    "word_en": "climate",
+    "phonetic": "/ˈklaɪmɪt/",
+    "meaning_kh": "អាកាសធាតុ",
+    "example": "Tropical climate is warm all year round."
+  },
+  {
+    "word_en": "temperature",
+    "phonetic": "/ˈtɛmpərəʧər/",
+    "meaning_kh": "សីតុណ្ហភាព",
+    "example": "The temperature dropped to fifteen degrees."
+  },
+  {
+    "word_en": "thermometer",
+    "phonetic": "/θərˈmɑmətər/",
+    "meaning_kh": "ឧបករណ៍វាស់កម្តៅ",
+    "example": "The thermometer shows that he has a fever."
+  },
+  {
+    "word_en": "degree",
+    "phonetic": "/dɪˈgri/",
+    "meaning_kh": "អង្សារ/សញ្ញាបត្រ",
+    "example": "The water boiled at one hundred degrees."
+  },
+  {
+    "word_en": "heat",
+    "phonetic": "/hit/",
+    "meaning_kh": "កម្តៅ/កំដៅ",
+    "example": "We stayed inside to escape the heat of the sun."
+  },
+  {
+    "word_en": "cold",
+    "phonetic": "/koʊld/",
+    "meaning_kh": "ភាពត្រជាក់",
+    "example": "He shivered from the biting cold."
+  },
+  {
+    "word_en": "warmth",
+    "phonetic": "/wɔrmθ/",
+    "meaning_kh": "ភាពកក់ក្តៅ",
+    "example": "The fireplace provided warmth to the whole room."
+  },
+  {
+    "word_en": "frost",
+    "phonetic": "/frɔst/",
+    "meaning_kh": "ទឹកកកកកលើស្លឹកឈើ",
+    "example": "The grass was covered in white frost."
+  },
+  {
+    "word_en": "storm",
+    "phonetic": "/stɔrm/",
+    "meaning_kh": "ព្យុះ",
+    "example": "The storm blew down several old trees."
+  },
+  {
+    "word_en": "thunder",
+    "phonetic": "/ˈθəndər/",
+    "meaning_kh": "ផ្គរលាន់",
+    "example": "The loud thunder scared the little dog."
+  },
+  {
+    "word_en": "lightning",
+    "phonetic": "/ˈlaɪtnɪŋ/",
+    "meaning_kh": "រន្ទះ/ផ្លេកបន្ទោរ",
+    "example": "Lightning flashed across the dark sky."
+  },
+  {
+    "word_en": "flood",
+    "phonetic": "/fləd/",
+    "meaning_kh": "ទឹកជំនន់",
+    "example": "Heavy rain caused a severe flood in the village."
+  },
+  {
+    "word_en": "earthquake",
+    "phonetic": "/ˈərθkˌweɪk/",
+    "meaning_kh": "ការរញ្ជួយដី",
+    "example": "The earthquake shook the buildings violently."
+  },
+  {
+    "word_en": "volcano",
+    "phonetic": "/vɑlˈkeɪnoʊ/",
+    "meaning_kh": "ភ្នំភ្លើង",
+    "example": "The active volcano erupted yesterday."
+  },
+  {
+    "word_en": "disaster",
+    "phonetic": "/dɪˈzæstər/",
+    "meaning_kh": "គ្រោះមហន្តរាយ",
+    "example": "The flood was a natural disaster for the farmers."
+  },
+  {
+    "word_en": "danger",
+    "phonetic": "/ˈdeɪnʤər/",
+    "meaning_kh": "គ្រោះថ្នាក់",
+    "example": "The sign warned of the danger of falling rocks."
+  },
+  {
+    "word_en": "safety",
+    "phonetic": "/ˈseɪfti/",
+    "meaning_kh": "សុវត្ថិភាព",
+    "example": "Wear a helmet for your own safety."
+  },
+  {
+    "word_en": "rescue",
+    "phonetic": "/ˈrɛskju/",
+    "meaning_kh": "ការសង្គ្រោះ",
+    "example": "The firefighters arrived for the rescue."
+  },
+  {
+    "word_en": "help",
+    "phonetic": "/hɛlp/",
+    "meaning_kh": "ជំនួយ",
+    "example": "She called for help when she got lost."
+  },
+  {
+    "word_en": "support",
+    "phonetic": "/səˈpɔrt/",
+    "meaning_kh": "ការគាំទ្រ/ជំនួយ",
+    "example": "Thank you for your kind support."
+  },
+  {
+    "word_en": "advice",
+    "phonetic": "/ədˈvaɪs/",
+    "meaning_kh": "ដំបូន្មាន",
+    "example": "Ask your parents for advice if you have problems."
+  },
+  {
+    "word_en": "suggestion",
+    "phonetic": "/səˈʤɛsʧən/",
+    "meaning_kh": "ការផ្តល់យោបល់",
+    "example": "She made a useful suggestion for the project."
+  },
+  {
+    "word_en": "decision",
+    "phonetic": "/dɪˈsɪʒən/",
+    "meaning_kh": "ការសម្រេចចិត្ត",
+    "example": "Making a career choice is a big decision."
+  },
+  {
+    "word_en": "plan",
+    "phonetic": "/plæn/",
+    "meaning_kh": "ផែនការ",
+    "example": "We made a plan to travel next weekend."
+  },
+  {
+    "word_en": "schedule",
+    "phonetic": "/ˈskɛʤʊl/",
+    "meaning_kh": "កាលវិភាគ",
+    "example": "I have a busy work schedule this week."
+  },
+  {
+    "word_en": "appointment",
+    "phonetic": "/əˈpɔɪntmənt/",
+    "meaning_kh": "ការណាត់ជួប",
+    "example": "I have a doctor's appointment at three o'clock."
+  },
+  {
+    "word_en": "interview",
+    "phonetic": "/ˈɪntərvˌju/",
+    "meaning_kh": "ការសម្ភាសន៍",
+    "example": "He prepared well for the job interview."
+  },
+  {
+    "word_en": "application",
+    "phonetic": "/ˌæpləˈkeɪʃən/",
+    "meaning_kh": "ពាក្យសុំ/កម្មវិធី",
+    "example": "Please submit your job application online."
+  },
+  {
+    "word_en": "resume",
+    "phonetic": "/ˈrɛzəˌmeɪ/",
+    "meaning_kh": "ប្រវត្តិរូបសង្ខេប",
+    "example": "Send your resume to the hiring manager."
+  },
+  {
+    "word_en": "career",
+    "phonetic": "/kərɪr/",
+    "meaning_kh": "អាជីព",
+    "example": "She wants to build a career in education."
+  },
+  {
+    "word_en": "business",
+    "phonetic": "/ˈbɪznɪs/",
+    "meaning_kh": "អាជីវកម្ម/ជំនួញ",
+    "example": "He started a small retail business."
+  },
+  {
+    "word_en": "company",
+    "phonetic": "/ˈkəmpəˌni/",
+    "meaning_kh": "ក្រុមហ៊ុន",
+    "example": "She works for a software development company."
+  },
+  {
+    "word_en": "factory",
+    "phonetic": "/ˈfæktəri/",
+    "meaning_kh": "រោងចក្រ",
+    "example": "The factory produces thousands of cars every year."
+  },
+  {
+    "word_en": "industry",
+    "phonetic": "/ˈɪndəstri/",
+    "meaning_kh": "ឧស្សាហកម្ម",
+    "example": "The tourism industry is growing rapidly."
+  },
+  {
+    "word_en": "economy",
+    "phonetic": "/ɪˈkɑnəmi/",
+    "meaning_kh": "សេដ្ឋកិច្ច",
+    "example": "The country's economy is showing signs of recovery."
+  },
+  {
+    "word_en": "investment",
+    "phonetic": "/ˌɪnˈvɛstmənt/",
+    "meaning_kh": "ការវិនិយោគ",
+    "example": "Real estate is a popular long-term investment."
+  },
+  {
+    "word_en": "profit",
+    "phonetic": "/ˈprɑfɪt/",
+    "meaning_kh": "ប្រាក់ចំណេញ",
+    "example": "The company made a huge profit this quarter."
+  },
+  {
+    "word_en": "debt",
+    "phonetic": "/dɛt/",
+    "meaning_kh": "បំណុល",
+    "example": "He worked hard to pay off his student debt."
+  },
+  {
+    "word_en": "tax",
+    "phonetic": "/tæks/",
+    "meaning_kh": "ពន្ធ",
+    "example": "Citizens are required to pay income tax."
+  },
+  {
+    "word_en": "price",
+    "phonetic": "/praɪs/",
+    "meaning_kh": "តម្លៃ",
+    "example": "The price of oil went up this month."
+  },
+  {
+    "word_en": "cost",
+    "phonetic": "/kɔst/",
+    "meaning_kh": "ថ្លៃដើម/តម្លៃ",
+    "example": "The cost of living in the city is high."
+  },
+  {
+    "word_en": "value",
+    "phonetic": "/ˈvælju/",
+    "meaning_kh": "តម្លៃ/គុណតម្លៃ",
+    "example": "The value of the house has doubled since last year."
+  },
+  {
+    "word_en": "wealth",
+    "phonetic": "/wɛlθ/",
+    "meaning_kh": "ទ្រព្យសម្បត្តិ/ភាពមានបាន",
+    "example": "Health is more important than wealth."
+  },
+  {
+    "word_en": "poverty",
+    "phonetic": "/ˈpɑvərti/",
+    "meaning_kh": "ភាពក្រីក្រ",
+    "example": "The government is trying to reduce poverty in rural areas."
+  },
+  {
+    "word_en": "charity",
+    "phonetic": "/ˈʧɛrɪti/",
+    "meaning_kh": "សប្បុរសធម៌",
+    "example": "She donated some money to a local charity."
+  },
+  {
+    "word_en": "donation",
+    "phonetic": "/doʊˈneɪʃən/",
+    "meaning_kh": "ការបរិច្ចាគ",
+    "example": "The school received a large donation of books."
+  },
+  {
+    "word_en": "community",
+    "phonetic": "/kəmˈjunɪti/",
+    "meaning_kh": "សហគមន៍",
+    "example": "We live in a friendly and welcoming community."
+  },
+  {
+    "word_en": "society",
+    "phonetic": "/soʊˈsaɪɪti/",
+    "meaning_kh": "សង្គម",
+    "example": "Technology has a big impact on modern society."
+  },
+  {
+    "word_en": "culture",
+    "phonetic": "/ˈkəlʧər/",
+    "meaning_kh": "វប្បធម៌",
+    "example": "We enjoyed learning about the local Khmer culture."
+  },
+  {
+    "word_en": "tradition",
+    "phonetic": "/trəˈdɪʃən/",
+    "meaning_kh": "ប្រពៃណី",
+    "example": "It is a tradition to wear new clothes for the New Year."
+  },
+  {
+    "word_en": "custom",
+    "phonetic": "/ˈkəstəm/",
+    "meaning_kh": "ទំនៀមទម្លាប់",
+    "example": "Every country has its own unique customs."
+  },
+  {
+    "word_en": "habit",
+    "phonetic": "/ˈhæbət/",
+    "meaning_kh": "ទម្លាប់",
+    "example": "Drinking water in the morning is a healthy habit."
+  },
+  {
+    "word_en": "behavior",
+    "phonetic": "/bɪˈheɪvjər/",
+    "meaning_kh": "អាកប្បកិរិយា",
+    "example": "The teacher praised the student's good behavior."
+  },
+  {
+    "word_en": "attitude",
+    "phonetic": "/ˈætəˌtud/",
+    "meaning_kh": "ឥរិយាបថ",
+    "example": "He has a positive attitude towards his work."
+  },
+  {
+    "word_en": "character",
+    "phonetic": "/ˈkɛrɪktər/",
+    "meaning_kh": "ចរិតលក្ខណៈ",
+    "example": "Honesty is a key trait of a good character."
+  },
+  {
+    "word_en": "reputation",
+    "phonetic": "/ˌrɛpjəˈteɪʃən/",
+    "meaning_kh": "កេរ្តិ៍ឈ្មោះ",
+    "example": "The restaurant has a reputation for excellent food."
+  },
+  {
+    "word_en": "fame",
+    "phonetic": "/feɪm/",
+    "meaning_kh": "កេរ្តិ៍ឈ្មោះល្បីល្បាញ",
+    "example": "He achieved fame after winning the tournament."
+  },
+  {
+    "word_en": "success",
+    "phonetic": "/səkˈsɛs/",
+    "meaning_kh": "ជោគជ័យ",
+    "example": "Hard work is the secret to success."
+  },
+  {
+    "word_en": "failure",
+    "phonetic": "/ˈfeɪljər/",
+    "meaning_kh": "បរាជ័យ",
+    "example": "Learn from your failures and try again."
+  },
+  {
+    "word_en": "victory",
+    "phonetic": "/ˈvɪktəri/",
+    "meaning_kh": "ជ័យជំនះ",
+    "example": "The team celebrated their final victory."
+  },
+  {
+    "word_en": "defeat",
+    "phonetic": "/dɪˈfit/",
+    "meaning_kh": "ការចាញ់",
+    "example": "He accepted the defeat with grace."
+  },
+  {
+    "word_en": "struggle",
+    "phonetic": "/ˈstrəgəl/",
+    "meaning_kh": "ការតស៊ូ/ការប្រឹងប្រែង",
+    "example": "Her life was a struggle, but she never gave up."
+  },
+  {
+    "word_en": "effort",
+    "phonetic": "/ˈɛfərt/",
+    "meaning_kh": "ការខិតខំប្រឹងប្រែង",
+    "example": "She made a great effort to pass the exam."
+  },
+  {
+    "word_en": "attempt",
+    "phonetic": "/əˈtɛmpt/",
+    "meaning_kh": "ការព្យាយាម",
+    "example": "He succeeded on his second attempt."
+  },
+  {
+    "word_en": "trial",
+    "phonetic": "/traɪəl/",
+    "meaning_kh": "ការសាកល្បង/ការកាត់ក្តី",
+    "example": "The new medicine is still undergoing clinical trials."
+  },
+  {
+    "word_en": "error",
+    "phonetic": "/ˈɛrər/",
+    "meaning_kh": "កំហុសឆ្គង",
+    "example": "The computer program has a small system error."
+  },
+  {
+    "word_en": "fault",
+    "phonetic": "/fɔlt/",
+    "meaning_kh": "កំហុស",
+    "example": "It was my fault that we missed the bus."
+  },
+  {
+    "word_en": "blame",
+    "phonetic": "/bleɪm/",
+    "meaning_kh": "ការបន្ទោស",
+    "example": "He accepted the blame for the mistake."
+  },
+  {
+    "word_en": "shame",
+    "phonetic": "/ʃeɪm/",
+    "meaning_kh": "ភាពខ្មាសអៀន",
+    "example": "It is a shame that you cannot join us."
+  },
+  {
+    "word_en": "guilt",
+    "phonetic": "/gɪlt/",
+    "meaning_kh": "អារម្មណ៍ខុស/ពិរុទ្ធភាព",
+    "example": "He felt a sense of guilt for lying to his friend."
+  },
+  {
+    "word_en": "innocence",
+    "phonetic": "/ˈɪnəsəns/",
+    "meaning_kh": "ភាពស្អាតស្អំ",
+    "example": "The lawyer proved the suspect's innocence."
+  },
+  {
+    "word_en": "justice",
+    "phonetic": "/ˈʤəstɪs/",
+    "meaning_kh": "យុត្តិធម៌",
+    "example": "They fought for equal rights and social justice."
+  },
+  {
+    "word_en": "law",
+    "phonetic": "/lɔ/",
+    "meaning_kh": "ច្បាប់",
+    "example": "Everyone must respect the law of the country."
+  },
+  {
+    "word_en": "rule",
+    "phonetic": "/rul/",
+    "meaning_kh": "ច្បាប់/វិន័យ",
+    "example": "Follow the rules of the school."
+  },
+  {
+    "word_en": "regulation",
+    "phonetic": "/ˌrɛgjəˈleɪʃən/",
+    "meaning_kh": "បទប្បញ្ញត្តិ",
+    "example": "Safety regulations must be strictly followed."
+  },
+  {
+    "word_en": "policy",
+    "phonetic": "/ˈpɑləsi/",
+    "meaning_kh": "គោលនយោបាយ",
+    "example": "The company has a strict policy against smoking."
+  },
+  {
+    "word_en": "strategy",
+    "phonetic": "/ˈstrætəʤi/",
+    "meaning_kh": "យុទ្ធសាស្ត្រ",
+    "example": "We need a clear strategy to win the match."
+  },
+  {
+    "word_en": "ability",
+    "phonetic": "/əˈbɪləˌti/",
+    "meaning_kh": "សមត្ថភាព",
+    "example": "She has a remarkable ability to learn languages."
+  },
+  {
+    "word_en": "skill",
+    "phonetic": "/skɪl/",
+    "meaning_kh": "ជំនាញ",
+    "example": "Computer programming is a highly useful skill."
+  },
+  {
+    "word_en": "knowledge",
+    "phonetic": "/ˈnɑlɪʤ/",
+    "meaning_kh": "ចំណេះដឹង",
+    "example": "Books are a great source of knowledge."
+  },
+  {
+    "word_en": "experience",
+    "phonetic": "/ɪkˈspɪriəns/",
+    "meaning_kh": "បទពិសោធន៍",
+    "example": "He has ten years of experience in teaching."
+  },
+  {
+    "word_en": "talent",
+    "phonetic": "/ˈtælənt/",
+    "meaning_kh": "ទេពកោសល្យ",
+    "example": "The young pianist has an extraordinary talent."
+  },
+  {
+    "word_en": "wisdom",
+    "phonetic": "/ˈwɪzdəm/",
+    "meaning_kh": "ប្រាជ្ញា/ភាពវៃឆ្លាត",
+    "example": "He is respected for his age and wisdom."
+  },
+  {
+    "word_en": "intelligence",
+    "phonetic": "/ˌɪnˈtɛləʤəns/",
+    "meaning_kh": "ភាពវៃឆ្លាត",
+    "example": "She has both high intelligence and creativity."
+  },
+  {
+    "word_en": "creativity",
+    "phonetic": "/ˌkrieɪˈtɪvəti/",
+    "meaning_kh": "គំនិតច្នៃប្រឌិត",
+    "example": "The project requires a lot of artistic creativity."
+  },
+  {
+    "word_en": "imagination",
+    "phonetic": "/ˌɪˌmæʤəˈneɪʃən/",
+    "meaning_kh": "ការស្រមើស្រមៃ",
+    "example": "Children have a very active imagination."
+  },
+  {
+    "word_en": "thought",
+    "phonetic": "/θɔt/",
+    "meaning_kh": "គំនិត/ការគិត",
+    "example": "She sat in deep thought for a moment."
+  },
+  {
+    "word_en": "mind",
+    "phonetic": "/maɪnd/",
+    "meaning_kh": "ចិត្ត/គំនិត",
+    "example": "A healthy body supports a healthy mind."
+  },
+  {
+    "word_en": "attention",
+    "phonetic": "/əˈtɛnʃən/",
+    "meaning_kh": "ការយកចិត្តទុកដាក់",
+    "example": "Please pay close attention to the instructions."
+  },
+  {
+    "word_en": "concentration",
+    "phonetic": "/ˌkɑnsənˈtreɪʃən/",
+    "meaning_kh": "ការផ្ដោតអារម្មណ៍",
+    "example": "Noisy environments make concentration difficult."
+  },
+  {
+    "word_en": "focus",
+    "phonetic": "/ˈfoʊkɪs/",
+    "meaning_kh": "ការផ្តោតអារម្មណ៍",
+    "example": "His main focus is on completing the project."
+  },
+  {
+    "word_en": "interest",
+    "phonetic": "/ˈɪntəˌrɛst/",
+    "meaning_kh": "ចំណាប់អារម្មណ៍",
+    "example": "He showed an interest in learning photography."
+  },
+  {
+    "word_en": "hobby",
+    "phonetic": "/ˈhɑbi/",
+    "meaning_kh": "ចំណូលចិត្ត",
+    "example": "Gardening is a relaxing hobby."
+  },
+  {
+    "word_en": "sport",
+    "phonetic": "/spɔrt/",
+    "meaning_kh": "កីឡា",
+    "example": "Football is the most popular sport in the country."
+  },
+  {
+    "word_en": "exercise",
+    "phonetic": "/ˈɛksərˌsaɪz/",
+    "meaning_kh": "ការហាត់ប្រាណ",
+    "example": "Daily exercise is good for your health."
+  },
+  {
+    "word_en": "rest",
+    "phonetic": "/rɛst/",
+    "meaning_kh": "ការសម្រាក",
+    "example": "You look tired, you need some rest."
+  },
+  {
+    "word_en": "sleep",
+    "phonetic": "/slip/",
+    "meaning_kh": "ការគេង",
+    "example": "He gets eight hours of sleep every night."
+  },
+  {
+    "word_en": "nightmare",
+    "phonetic": "/ˈnaɪtˌmɛr/",
+    "meaning_kh": "សុបិនអាក្រក់",
+    "example": "The child woke up crying after a nightmare."
+  },
+  {
+    "word_en": "laughter",
+    "phonetic": "/ˈlæftər/",
+    "meaning_kh": "សំណើច",
+    "example": "The classroom was filled with warm laughter."
+  },
+  {
+    "word_en": "smile",
+    "phonetic": "/smaɪl/",
+    "meaning_kh": "ស្នាមញញឹម",
+    "example": "She greeted us with a friendly smile."
+  },
+  {
+    "word_en": "tear",
+    "phonetic": "/tɪr/",
+    "meaning_kh": "ទឹកភ្នែក",
+    "example": "There were tears in her eyes as she said goodbye."
+  },
+  {
+    "word_en": "cry",
+    "phonetic": "/kraɪ/",
+    "meaning_kh": "ការយំ",
+    "example": "She heard the quiet cry of a baby."
+  },
+  {
+    "word_en": "sigh",
+    "phonetic": "/saɪ/",
+    "meaning_kh": "ការដកដង្ហើមធំ",
+    "example": "He let out a sigh of relief when he passed."
+  },
+  {
+    "word_en": "breath",
+    "phonetic": "/brɛθ/",
+    "meaning_kh": "ដង្ហើម",
+    "example": "Take a deep breath and try to relax."
+  },
+  {
+    "word_en": "cough",
+    "phonetic": "/kɔf/",
+    "meaning_kh": "ការក្អក",
+    "example": "He went to the doctor for his persistent cough."
+  },
+  {
+    "word_en": "sneeze",
+    "phonetic": "/sniz/",
+    "meaning_kh": "ការកណ្តាស់",
+    "example": "A sudden sneeze startled the cat."
+  },
+  {
+    "word_en": "pain",
+    "phonetic": "/peɪn/",
+    "meaning_kh": "ការឈឺចាប់",
+    "example": "The doctor gave him medicine to reduce the pain."
+  },
+  {
+    "word_en": "injury",
+    "phonetic": "/ˈɪnʤəri/",
+    "meaning_kh": "របួស/ការរងរបួស",
+    "example": "He recovered fully from his knee injury."
+  },
+  {
+    "word_en": "illness",
+    "phonetic": "/ˈɪlnəs/",
+    "meaning_kh": "ជំងឺ",
+    "example": "She missed three days of school due to illness."
+  },
+  {
+    "word_en": "disease",
+    "phonetic": "/dɪˈziz/",
+    "meaning_kh": "ជំងឺ",
+    "example": "Washing hands helps prevent the spread of disease."
+  },
+  {
+    "word_en": "virus",
+    "phonetic": "/ˈvaɪrəs/",
+    "meaning_kh": "វីរុស",
+    "example": "Install antivirus software to protect your computer."
+  },
+  {
+    "word_en": "bacteria",
+    "phonetic": "/bækˈtɪriə/",
+    "meaning_kh": "បាក់តេរី",
+    "example": "Some bacteria are beneficial to our health."
+  },
+  {
+    "word_en": "medicine",
+    "phonetic": "/ˈmɛdəsən/",
+    "meaning_kh": "ថ្នាំព្យាបាល",
+    "example": "Take this medicine three times a day."
+  },
+  {
+    "word_en": "pill",
+    "phonetic": "/pɪl/",
+    "meaning_kh": "ថ្នាំគ្រាប់",
+    "example": "He swallowed the pill with a glass of water."
+  },
+  {
+    "word_en": "tablet",
+    "phonetic": "/ˈtæblət/",
+    "meaning_kh": "ថ្នាំគ្រាប់/កុំព្យូទ័របន្ទះ",
+    "example": "The doctor prescribed a box of vitamin tablets."
+  },
+  {
+    "word_en": "capsule",
+    "phonetic": "/ˈkæpsəl/",
+    "meaning_kh": "ថ្នាំគ្រាប់ស្រោប/កន្សោម",
+    "example": "Take one capsule after breakfast."
+  },
+  {
+    "word_en": "liquid",
+    "phonetic": "/ˈlɪkwɪd/",
+    "meaning_kh": "វត្ថុរាវ",
+    "example": "Water is a transparent liquid."
+  },
+  {
+    "word_en": "gas",
+    "phonetic": "/gæs/",
+    "meaning_kh": "ហ្គាស/ឧស្ម័ន",
+    "example": "Oxygen is a gas that we breathe."
+  },
+  {
+    "word_en": "solid",
+    "phonetic": "/ˈsɑləd/",
+    "meaning_kh": "វត្ថុរឹង",
+    "example": "Ice is the solid form of water."
+  },
+  {
+    "word_en": "vapour",
+    "phonetic": "/vapour/",
+    "meaning_kh": "ចំហាយទឹក",
+    "example": "Water vapour rises from the hot tea."
+  },
+  {
+    "word_en": "powder",
+    "phonetic": "/ˈpaʊdər/",
+    "meaning_kh": "ម្សៅ",
+    "example": "Mix the protein powder with milk."
+  },
+  {
+    "word_en": "cream",
+    "phonetic": "/krim/",
+    "meaning_kh": "គ្រីម/ក្រែម",
+    "example": "She applied moisturizing cream to her hands."
+  },
+  {
+    "word_en": "lotion",
+    "phonetic": "/ˈloʊʃən/",
+    "meaning_kh": "ឡូសិន",
+    "example": "Apply lotion to protect your skin from the sun."
+  },
+  {
+    "word_en": "ointment",
+    "phonetic": "/ˈɔɪntmənt/",
+    "meaning_kh": "ថ្នាំលាបរបួស",
+    "example": "Apply the ointment to the cut twice a day."
+  },
+  {
+    "word_en": "bandage",
+    "phonetic": "/ˈbændɪʤ/",
+    "meaning_kh": "បង់រុំរបួស",
+    "example": "He wrapped a bandage around his sprained ankle."
+  },
+  {
+    "word_en": "plaster",
+    "phonetic": "/ˈplæstər/",
+    "meaning_kh": "បង់ស្អិត/បង់បិទរបួស",
+    "example": "Put a plaster on that small scratch."
+  },
+  {
+    "word_en": "clinic",
+    "phonetic": "/ˈklɪnɪk/",
+    "meaning_kh": "គ្លីនិក",
+    "example": "The local clinic is open until 8 PM."
+  },
+  {
+    "word_en": "treatment",
+    "phonetic": "/ˈtritmənt/",
+    "meaning_kh": "ការព្យាបាល",
+    "example": "The patient is responding well to the treatment."
+  },
+  {
+    "word_en": "patient",
+    "phonetic": "/ˈpeɪʃənt/",
+    "meaning_kh": "អ្នកជំងឺ",
+    "example": "The doctor is checking on the patient."
+  },
+  {
+    "word_en": "nurse",
+    "phonetic": "/nərs/",
+    "meaning_kh": "គិលានុបដ្ឋាយិកា",
+    "example": "The nurse gave him a glass of water."
+  },
+  {
+    "word_en": "dentist",
+    "phonetic": "/ˈdɛntɪst/",
+    "meaning_kh": "ទន្តពេទ្យ",
+    "example": "I have to visit the dentist for a checkup."
+  },
+  {
+    "word_en": "surgery",
+    "phonetic": "/ˈsərʤəri/",
+    "meaning_kh": "ការវះកាត់",
+    "example": "He underwent minor surgery on his shoulder."
+  },
+  {
+    "word_en": "operation",
+    "phonetic": "/ˌɑpərˈeɪʃən/",
+    "meaning_kh": "ការវះកាត់/ប្រតិបត្តិការ",
+    "example": "The heart operation was successful."
+  },
+  {
+    "word_en": "prescription",
+    "phonetic": "/prəˈskrɪpʃən/",
+    "meaning_kh": "វេជ្ជបញ្ជា",
+    "example": "The pharmacist filled the doctor's prescription."
+  },
+  {
+    "word_en": "pharmacy",
+    "phonetic": "/ˈfɑrməsi/",
+    "meaning_kh": "ឱសថស្ថាន",
+    "example": "You can buy this medicine at the pharmacy."
+  },
+  {
+    "word_en": "pharmacist",
+    "phonetic": "/ˈfɑrməsɪst/",
+    "meaning_kh": "ឱសថការី",
+    "example": "The pharmacist explained how to take the pills."
+  },
+  {
+    "word_en": "drugstore",
+    "phonetic": "/ˈdrəgˌstɔr/",
+    "meaning_kh": "ហាងលក់ថ្នាំ",
+    "example": "We went to the drugstore to buy some band-aids."
+  },
+  {
+    "word_en": "first aid",
+    "phonetic": "/fərst eɪd/",
+    "meaning_kh": "ការសង្គ្រោះបឋម",
+    "example": "The teacher administered first aid to the student."
+  },
+  {
+    "word_en": "emergency",
+    "phonetic": "/ˈimərʤənsi/",
+    "meaning_kh": "ករណីបន្ទាន់",
+    "example": "In case of emergency, call the police."
+  },
+  {
+    "word_en": "ambulance",
+    "phonetic": "/ˈæmbjələns/",
+    "meaning_kh": "ឡានពេទ្យ/ឡានសង្គ្រោះបន្ទាន់",
+    "example": "The ambulance rushed the patient to the hospital."
+  },
+  {
+    "word_en": "wound",
+    "phonetic": "/wund/",
+    "meaning_kh": "របួស/ដំបៅ",
+    "example": "Clean the wound thoroughly to prevent infection."
+  },
+  {
+    "word_en": "scar",
+    "phonetic": "/skɑr/",
+    "meaning_kh": "ស្លាកស្នាម",
+    "example": "He has a small scar on his forehead."
+  },
+  {
+    "word_en": "fever",
+    "phonetic": "/ˈfivər/",
+    "meaning_kh": "គ្រុនក្តៅ",
+    "example": "Drink plenty of water if you have a fever."
+  },
+  {
+    "word_en": "headache",
+    "phonetic": "/ˈhɛˌdeɪk/",
+    "meaning_kh": "ការឈឺក្បាល",
+    "example": "She took an aspirin for her headache."
+  },
+  {
+    "word_en": "stomachache",
+    "phonetic": "/stomachache/",
+    "meaning_kh": "ការឈឺពោះ",
+    "example": "He got a stomachache after eating spicy food."
+  },
+  {
+    "word_en": "toothache",
+    "phonetic": "/toothache/",
+    "meaning_kh": "ការឈឺធ្មេញ",
+    "example": "I need to see a dentist because of my toothache."
+  },
+  {
+    "word_en": "sore throat",
+    "phonetic": "/sɔr θroʊt/",
+    "meaning_kh": "ឈឺបំពង់ក",
+    "example": "Drinking warm tea helps soothe a sore throat."
+  },
+  {
+    "word_en": "dizziness",
+    "phonetic": "/ˈdɪzinəs/",
+    "meaning_kh": "ការវិលមុខ",
+    "example": "He sat down to prevent dizziness."
+  },
+  {
+    "word_en": "nausea",
+    "phonetic": "/ˈnɔziə/",
+    "meaning_kh": "ការចង់ក្អួត",
+    "example": "The motion of the boat caused nausea."
+  },
+  {
+    "word_en": "fatigue",
+    "phonetic": "/fəˈtig/",
+    "meaning_kh": "ភាពនឿយហត់",
+    "example": "Long working hours can lead to severe fatigue."
+  },
+  {
+    "word_en": "stress",
+    "phonetic": "/strɛs/",
+    "meaning_kh": "ភាពតានតឹង/ស្ត្រេស",
+    "example": "Yoga is a great way to relieve stress."
+  },
+  {
+    "word_en": "anxiety",
+    "phonetic": "/æŋˈzaɪəti/",
+    "meaning_kh": "ការថប់បារម្ភ",
+    "example": "Meditation helped reduce her anxiety."
+  },
+  {
+    "word_en": "depression",
+    "phonetic": "/dɪˈprɛʃən/",
+    "meaning_kh": "ជំងឺបាក់ទឹកចិត្ត",
+    "example": "Regular exercise can help fight depression."
+  },
+  {
+    "word_en": "nutrition",
+    "phonetic": "/nuˈtrɪʃən/",
+    "meaning_kh": "អាហារូបត្ថម្ភ",
+    "example": "Good nutrition is essential for growth."
+  },
+  {
+    "word_en": "diet",
+    "phonetic": "/daɪət/",
+    "meaning_kh": "របបអាហារ",
+    "example": "A balanced diet includes fruits and vegetables."
+  },
+  {
+    "word_en": "vitamin",
+    "phonetic": "/ˈvaɪtəmən/",
+    "meaning_kh": "វីតាមីន",
+    "example": "Oranges are a good source of vitamin C."
+  },
+  {
+    "word_en": "mineral",
+    "phonetic": "/ˈmɪnərəl/",
+    "meaning_kh": "សារធាតុរ៉ែ",
+    "example": "Calcium is a mineral that strengthens bones."
+  },
+  {
+    "word_en": "protein",
+    "phonetic": "/ˈproʊˌtin/",
+    "meaning_kh": "ប្រូតេអ៊ីន",
+    "example": "Eggs and milk are rich in protein."
+  },
+  {
+    "word_en": "fat",
+    "phonetic": "/fæt/",
+    "meaning_kh": "ខ្លាញ់",
+    "example": "Avoid eating too much saturated fat."
+  },
+  {
+    "word_en": "carbohydrate",
+    "phonetic": "/ˌkɑrboʊˈhaɪˌdreɪt/",
+    "meaning_kh": "កាបូអ៊ីដ្រាត",
+    "example": "Rice and bread are high in carbohydrates."
+  },
+  {
+    "word_en": "calorie",
+    "phonetic": "/ˈkælɔˌri/",
+    "meaning_kh": "កាឡូរី",
+    "example": "Walking burns about eighty calories per mile."
+  },
+  {
+    "word_en": "weight",
+    "phonetic": "/weɪt/",
+    "meaning_kh": "ទម្ងន់",
+    "example": "He is trying to lose some weight."
+  },
+  {
+    "word_en": "height",
+    "phonetic": "/haɪt/",
+    "meaning_kh": "កម្ពស់",
+    "example": "Please measure your height and weight."
+  },
+  {
+    "word_en": "size",
+    "phonetic": "/saɪz/",
+    "meaning_kh": "ទំហំ",
+    "example": "What size shoes do you wear?"
+  },
+  {
+    "word_en": "shape",
+    "phonetic": "/ʃeɪp/",
+    "meaning_kh": "រូបរាង",
+    "example": "The table is round in shape."
+  },
+  {
+    "word_en": "pattern",
+    "phonetic": "/ˈpætərn/",
+    "meaning_kh": "លំនាំ/គំរូ",
+    "example": "The dress has a floral pattern."
+  },
+  {
+    "word_en": "colour",
+    "phonetic": "/ˈkələr/",
+    "meaning_kh": "ពណ៌",
+    "example": "Blue is my favorite colour."
+  },
+  {
+    "word_en": "design",
+    "phonetic": "/dɪˈzaɪn/",
+    "meaning_kh": "ការរចនា",
+    "example": "The architectural design of the temple is unique."
+  },
+  {
+    "word_en": "style",
+    "phonetic": "/staɪl/",
+    "meaning_kh": "ស្ទីល",
+    "example": "She has a very elegant fashion style."
+  },
+  {
+    "word_en": "fashion",
+    "phonetic": "/ˈfæʃən/",
+    "meaning_kh": "ម៉ូដ/ហ្វេសសិន",
+    "example": "Paris is the capital of fashion."
+  },
+  {
+    "word_en": "beauty",
+    "phonetic": "/ˈbjuti/",
+    "meaning_kh": "សម្រស់",
+    "example": "She was admired for her intelligence and beauty."
+  },
+  {
+    "word_en": "scenery",
+    "phonetic": "/ˈsinəri/",
+    "meaning_kh": "ទេសភាព",
+    "example": "We stopped to enjoy the mountain scenery."
+  },
+  {
+    "word_en": "view",
+    "phonetic": "/vju/",
+    "meaning_kh": "ទិដ្ឋភាព",
+    "example": "The room has a beautiful view of the lake."
+  },
+  {
+    "word_en": "landscape",
+    "phonetic": "/ˈlænˌskeɪp/",
+    "meaning_kh": "ទេសភាព",
+    "example": "The dry landscape turned green after the rain."
+  },
+  {
+    "word_en": "horizon",
+    "phonetic": "/hərˈaɪzən/",
+    "meaning_kh": "ជើងមេឃ",
+    "example": "The sun disappeared below the horizon."
+  },
+  {
+    "word_en": "sunset",
+    "phonetic": "/ˈsənˌsɛt/",
+    "meaning_kh": "ថ្ងៃលិច",
+    "example": "They watched the beautiful sunset on the beach."
+  },
+  {
+    "word_en": "sunrise",
+    "phonetic": "/ˈsənˌraɪz/",
+    "meaning_kh": "ថ្ងៃរះ",
+    "example": "We woke up early to watch the sunrise."
+  },
+  {
+    "word_en": "dawn",
+    "phonetic": "/dɔn/",
+    "meaning_kh": "ព្រលឹម/អរុណោទ័យ",
+    "example": "The birds started singing at dawn."
+  },
+  {
+    "word_en": "dusk",
+    "phonetic": "/dəsk/",
+    "meaning_kh": "ព្រលប់/សន្ធ្យាកាល",
+    "example": "The streetlights turn on at dusk."
+  },
+  {
+    "word_en": "twilight",
+    "phonetic": "/tˈwaɪˌlaɪt/",
+    "meaning_kh": "ពន្លឺព្រលប់",
+    "example": "They walked along the river in the twilight."
+  },
+  {
+    "word_en": "daylight",
+    "phonetic": "/ˈdeɪˌlaɪt/",
+    "meaning_kh": "ពន្លឺថ្ងៃ",
+    "example": "The room gets plenty of natural daylight."
+  },
+  {
+    "word_en": "darkness",
+    "phonetic": "/ˈdɑrknəs/",
+    "meaning_kh": "ភាពងងឹត",
+    "example": "The electricity went out, plunging the house into darkness."
+  },
+  {
+    "word_en": "shade",
+    "phonetic": "/ʃeɪd/",
+    "meaning_kh": "ម្លប់",
+    "example": "We sat in the shade of a large oak tree."
+  },
+  {
+    "word_en": "sunshine",
+    "phonetic": "/ˈsənˌʃaɪn/",
+    "meaning_kh": "ពន្លឺថ្ងៃ",
+    "example": "The garden was bright with warm sunshine."
+  },
+  {
+    "word_en": "moonlight",
+    "phonetic": "/ˈmunˌlaɪt/",
+    "meaning_kh": "ពន្លឺព្រះចន្ទ",
+    "example": "The lake sparkled in the moonlight."
+  },
+  {
+    "word_en": "starlight",
+    "phonetic": "/ˈstɑˌrlaɪt/",
+    "meaning_kh": "ពន្លឺផ្កាយ",
+    "example": "The path was faintly lit by starlight."
+  },
+  {
+    "word_en": "rainbow",
+    "phonetic": "/ˈreɪnˌboʊ/",
+    "meaning_kh": "ឥន្ទធនូ",
+    "example": "A colorful rainbow appeared in the sky after the rain."
+  },
+  {
+    "word_en": "fog",
+    "phonetic": "/fɔg/",
+    "meaning_kh": "អ័ព្ទ",
+    "example": "Heavy fog made driving dangerous this morning."
+  },
+  {
+    "word_en": "mist",
+    "phonetic": "/mɪst/",
+    "meaning_kh": "អ័ព្ទស្តើង/ចំហាយទឹក",
+    "example": "A fine mist covered the valley."
+  },
+  {
+    "word_en": "dew",
+    "phonetic": "/du/",
+    "meaning_kh": "ទឹកសន្សើម",
+    "example": "The morning dew sparkled on the grass."
+  },
+  {
+    "word_en": "hail",
+    "phonetic": "/heɪl/",
+    "meaning_kh": "ព្រិលធ្លាក់ជាគ្រាប់",
+    "example": "The car roof was damaged by hail."
+  },
+  {
+    "word_en": "breeze",
+    "phonetic": "/briz/",
+    "meaning_kh": "ខ្យល់ជំនោរ",
+    "example": "A cool breeze blew from the ocean."
+  },
+  {
+    "word_en": "gale",
+    "phonetic": "/geɪl/",
+    "meaning_kh": "ខ្យល់ព្យុះខ្លាំង",
+    "example": "The gale blew down several power lines."
+  },
+  {
+    "word_en": "hurricane",
+    "phonetic": "/ˈhərəˌkeɪnz/",
+    "meaning_kh": "ខ្យល់ព្យុះសង្ឃរា",
+    "example": "The hurricane caused widespread damage along the coast."
+  },
+  {
+    "word_en": "tornado",
+    "phonetic": "/tɔrˈneɪˌdoʊ/",
+    "meaning_kh": "ខ្យល់ព្យុះកំបុតត្បូង",
+    "example": "The tornado lifted cars and damaged houses."
+  },
+  {
+    "word_en": "tsunami",
+    "phonetic": "/tsuˈnɑmi/",
+    "meaning_kh": "រលកយក្សស៊ូណាមិ",
+    "example": "The earthquake triggered a massive tsunami."
+  },
+  {
+    "word_en": "drought",
+    "phonetic": "/draʊt/",
+    "meaning_kh": "គ្រោះរាំងស្ងួត",
+    "example": "The long drought ruined the crops."
+  },
+  {
+    "word_en": "famine",
+    "phonetic": "/ˈfæmən/",
+    "meaning_kh": "គ្រោះទុរភិក្ស",
+    "example": "The war led to severe famine in the region."
+  },
+  {
+    "word_en": "epidemic",
+    "phonetic": "/ˌɛpɪˈdɛmɪk/",
+    "meaning_kh": "ជំងឺរាតត្បាត",
+    "example": "The government took measures to control the epidemic."
+  },
+  {
+    "word_en": "pandemic",
+    "phonetic": "/pænˈdɛmɪk/",
+    "meaning_kh": "ជំងឺរាតត្បាតសកល",
+    "example": "The global pandemic affected travel worldwide."
+  },
+  {
+    "word_en": "tragedy",
+    "phonetic": "/ˈtræʤədi/",
+    "meaning_kh": "សោកនាដកម្ម",
+    "example": "The plane crash was a great tragedy."
+  },
+  {
+    "word_en": "catastrophe",
+    "phonetic": "/kəˈtæstrəfi/",
+    "meaning_kh": "គ្រោះមហន្តរាយធំធេង",
+    "example": "The volcanic eruption was a major catastrophe."
+  },
+  {
+    "word_en": "crisis",
+    "phonetic": "/ˈkraɪsəs/",
+    "meaning_kh": "វិបត្តិ",
+    "example": "The country is facing an economic crisis."
+  },
+  {
+    "word_en": "hazard",
+    "phonetic": "/ˈhæzərd/",
+    "meaning_kh": "គ្រោះថ្នាក់/ឧបសគ្គ",
+    "example": "Wet roads are a serious hazard for drivers."
+  },
+  {
+    "word_en": "risk",
+    "phonetic": "/rɪsk/",
+    "meaning_kh": "ហានិភ័យ",
+    "example": "Smoking increases the risk of heart disease."
+  },
+  {
+    "word_en": "threat",
+    "phonetic": "/θrɛt/",
+    "meaning_kh": "ការគំរាមកំហែង",
+    "example": "Climate change is a major threat to nature."
+  },
+  {
+    "word_en": "challenge",
+    "phonetic": "/ˈʧælənʤ/",
+    "meaning_kh": "បញ្ហាប្រឈម",
+    "example": "Completing the marathon was a big challenge."
+  },
+  {
+    "word_en": "obstacle",
+    "phonetic": "/ˈɑbstəkəl/",
+    "meaning_kh": "ឧបសគ្គ",
+    "example": "Fear of failure is a major obstacle to success."
+  },
+  {
+    "word_en": "difficulty",
+    "phonetic": "/ˈdɪfɪˌkəlti/",
+    "meaning_kh": "ការលំបាក",
+    "example": "He overcame many difficulties to achieve his goal."
+  },
+  {
+    "word_en": "hardship",
+    "phonetic": "/ˈhɑrdʃɪp/",
+    "meaning_kh": "ភាពលំបាកវេទនា",
+    "example": "The refugees experienced great hardships."
+  },
+  {
+    "word_en": "trouble",
+    "phonetic": "/ˈtrəbəl/",
+    "meaning_kh": "បញ្ហា/ការលំបាក",
+    "example": "I don't want to cause any trouble."
+  },
+  {
+    "word_en": "conflict",
+    "phonetic": "/ˈkɑnflɪkt/",
+    "meaning_kh": "ជម្លោះ",
+    "example": "The two countries resolved their conflict peacefully."
+  },
+  {
+    "word_en": "argument",
+    "phonetic": "/ˈɑrgjəmənt/",
+    "meaning_kh": "ការប្រកែកគ្នា",
+    "example": "They had an argument about money."
+  },
+  {
+    "word_en": "dispute",
+    "phonetic": "/dɪˈspjut/",
+    "meaning_kh": "វិវាទ/ការតវ៉ា",
+    "example": "The union settled the labor dispute with the management."
+  },
+  {
+    "word_en": "fight",
+    "phonetic": "/faɪt/",
+    "meaning_kh": "ការប្រយុទ្ធ/ការវាយតប់",
+    "example": "The boys got into a fight at school."
+  },
+  {
+    "word_en": "battle",
+    "phonetic": "/ˈbætəl/",
+    "meaning_kh": "សមរភូមិ",
+    "example": "The soldiers won the historic battle."
+  },
+  {
+    "word_en": "war",
+    "phonetic": "/wɔr/",
+    "meaning_kh": "សង្គ្រាម",
+    "example": "The war caused widespread destruction."
+  },
+  {
+    "word_en": "treaty",
+    "phonetic": "/ˈtriti/",
+    "meaning_kh": "សន្ធិសញ្ញា",
+    "example": "The two nations signed a peace treaty."
+  },
+  {
+    "word_en": "alliance",
+    "phonetic": "/əˈlaɪəns/",
+    "meaning_kh": "សម្ព័ន្ធភាព",
+    "example": "The countries formed a strong military alliance."
+  },
+  {
+    "word_en": "union",
+    "phonetic": "/ˈjunjən/",
+    "meaning_kh": "សហជីព/សហភាព",
+    "example": "She belongs to the local teacher's union."
+  },
+  {
+    "word_en": "association",
+    "phonetic": "/əˌsoʊʃiˈeɪʃən/",
+    "meaning_kh": "សមាគម",
+    "example": "He is a member of the medical association."
+  },
+  {
+    "word_en": "organization",
+    "phonetic": "/ˌɔrgənəˈzeɪʃən/",
+    "meaning_kh": "អង្គការ",
+    "example": "She works for a non-profit organization."
+  },
+  {
+    "word_en": "foundation",
+    "phonetic": "/faʊnˈdeɪʃən/",
+    "meaning_kh": "មូលនិធិ",
+    "example": "The charity foundation supports poor children."
+  },
+  {
+    "word_en": "institution",
+    "phonetic": "/ˌɪnstɪˈtuʃən/",
+    "meaning_kh": "ស្ថាប័ន",
+    "example": "The university is a respected educational institution."
+  },
+  {
+    "word_en": "agency",
+    "phonetic": "/ˈeɪʤənsi/",
+    "meaning_kh": "ទីភ្នាក់ងារ",
+    "example": "He contacted a travel agency to book his flight."
+  },
+  {
+    "word_en": "department",
+    "phonetic": "/dɪˈpɑrtmənt/",
+    "meaning_kh": "នាយកដ្ឋាន/ផ្នែក",
+    "example": "She works in the marketing department."
+  },
+  {
+    "word_en": "ministry",
+    "phonetic": "/ˈmɪnɪstri/",
+    "meaning_kh": "ក្រសួង",
+    "example": "He works for the Ministry of Education."
+  },
+  {
+    "word_en": "nation",
+    "phonetic": "/ˈneɪʃən/",
+    "meaning_kh": "ជាតិ/ប្រជាជាតិ",
+    "example": "The president addressed the nation on television."
+  },
+  {
+    "word_en": "citizen",
+    "phonetic": "/ˈsɪtɪzən/",
+    "meaning_kh": "ប្រជាពលរដ្ឋ",
+    "example": "Every citizen has the right to vote."
+  },
+  {
+    "word_en": "population",
+    "phonetic": "/ˌpɑpjəˈleɪʃən/",
+    "meaning_kh": "ប្រជាជន",
+    "example": "The city has a population of two million."
+  },
+  {
+    "word_en": "neighborhood",
+    "phonetic": "/ˈneɪbərˌhʊd/",
+    "meaning_kh": "អ្នកជិតខាង/សង្កាត់",
+    "example": "He lives in a quiet and safe neighborhood."
+  },
+  {
+    "word_en": "suburb",
+    "phonetic": "/ˈsəbərb/",
+    "meaning_kh": "ជាយក្រុង",
+    "example": "They moved from the city to a quiet suburb."
+  },
+  {
+    "word_en": "border",
+    "phonetic": "/ˈbɔrdər/",
+    "meaning_kh": "ព្រំដែន",
+    "example": "We crossed the border between Cambodia and Thailand."
+  },
+  {
+    "word_en": "boundary",
+    "phonetic": "/ˈbaʊndəri/",
+    "meaning_kh": "ព្រំប្រទល់",
+    "example": "The river forms a natural boundary between the two farms."
+  },
+  {
+    "word_en": "territory",
+    "phonetic": "/ˈtɛrɪˌtɔri/",
+    "meaning_kh": "ទឹកដី/ដែនដី",
+    "example": "The birds will defend their nesting territory."
+  },
+  {
+    "word_en": "region",
+    "phonetic": "/ˈriʤən/",
+    "meaning_kh": "តំបន់",
+    "example": "Grapes grow well in this warm region."
+  },
+  {
+    "word_en": "province",
+    "phonetic": "/ˈprɑvɪns/",
+    "meaning_kh": "ខេត្ត",
+    "example": "Siem Reap is a famous province in Cambodia."
+  },
+  {
+    "word_en": "district",
+    "phonetic": "/ˈdɪstrɪkt/",
+    "meaning_kh": "ស្រុក/ខណ្ឌ",
+    "example": "The business district is busy during weekdays."
+  },
+  {
+    "word_en": "zone",
+    "phonetic": "/zoʊn/",
+    "meaning_kh": "តំបន់/ល្វែង",
+    "example": "No parking is allowed in this zone."
+  },
+  {
+    "word_en": "area",
+    "phonetic": "/ˈɛriə/",
+    "meaning_kh": "តំបន់/ផ្ទៃក្រឡា",
+    "example": "The kids are playing in the playground area."
+  },
+  {
+    "word_en": "location",
+    "phonetic": "/loʊˈkeɪʃən/",
+    "meaning_kh": "ទីតាំង",
+    "example": "The hotel is in an excellent location near the beach."
+  },
+  {
+    "word_en": "site",
+    "phonetic": "/saɪt/",
+    "meaning_kh": "កន្លែង/ទីតាំង",
+    "example": "They visited the construction site of the new school."
+  },
+  {
+    "word_en": "spot",
+    "phonetic": "/spɑt/",
+    "meaning_kh": "កន្លែង/ចំណុច",
+    "example": "This is a perfect spot for a picnic."
+  },
+  {
+    "word_en": "space",
+    "phonetic": "/speɪs/",
+    "meaning_kh": "លំហ/ទីធ្លា",
+    "example": "There is enough space for another chair."
+  },
+  {
+    "word_en": "distance",
+    "phonetic": "/ˈdɪstəns/",
+    "meaning_kh": "ចម្ងាយ",
+    "example": "The distance between the two towns is ten miles."
+  },
+  {
+    "word_en": "direction",
+    "phonetic": "/dɪˈrɛkʃɪn/",
+    "meaning_kh": "ទិសដៅ",
+    "example": "Which direction should we go?"
+  },
+  {
+    "word_en": "position",
+    "phonetic": "/pəˈzɪʃən/",
+    "meaning_kh": "ទីតាំង/តំណែង",
+    "example": "He applied for the manager position."
+  },
+  {
+    "word_en": "situation",
+    "phonetic": "/ˌsɪʧuˈeɪʃən/",
+    "meaning_kh": "ស្ថានភាព",
+    "example": "We need to analyze the current situation."
+  },
+  {
+    "word_en": "condition",
+    "phonetic": "/kənˈdɪʃən/",
+    "meaning_kh": "លក្ខខណ្ឌ/ស្ថានភាព",
+    "example": "The used car is in very good condition."
+  },
+  {
+    "word_en": "state",
+    "phonetic": "/steɪt/",
+    "meaning_kh": "រដ្ឋ/ស្ថានភាព",
+    "example": "The old house was in a state of decay."
+  },
+  {
+    "word_en": "status",
+    "phonetic": "/ˈstætəs/",
+    "meaning_kh": "ស្ថានភាព/ឋានៈ",
+    "example": "You can check your application status online."
+  },
+  {
+    "word_en": "rank",
+    "phonetic": "/ræŋk/",
+    "meaning_kh": "ឋានៈ/លំដាប់ថ្នាក់",
+    "example": "He rose to the rank of captain."
+  },
+  {
+    "word_en": "level",
+    "phonetic": "/ˈlɛvəl/",
+    "meaning_kh": "កម្រិត",
+    "example": "Her English is at an intermediate level."
+  },
+  {
+    "word_en": "phase",
+    "phonetic": "/feɪz/",
+    "meaning_kh": "ដំណាក់កាល",
+    "example": "The construction project is in its final phase."
+  },
+  {
+    "word_en": "step",
+    "phonetic": "/stɛp/",
+    "meaning_kh": "ជំហាន/កាំជណ្តើរ",
+    "example": "Take one step at a time."
+  },
+  {
+    "word_en": "action",
+    "phonetic": "/ˈækʃən/",
+    "meaning_kh": "សកម្មភាព",
+    "example": "Actions speak louder than words."
+  },
+  {
+    "word_en": "activity",
+    "phonetic": "/ækˈtɪvɪti/",
+    "meaning_kh": "សកម្មភាព",
+    "example": "Outdoor activities are good for children."
+  },
+  {
+    "word_en": "conduct",
+    "phonetic": "/ˈkɑndəkt/",
+    "meaning_kh": "អាកប្បកិរិយា",
+    "example": "His professional conduct was highly praised."
+  },
+  {
+    "word_en": "movement",
+    "phonetic": "/ˈmuvmənt/",
+    "meaning_kh": "ចលនា",
+    "example": "We noticed a sudden movement in the bushes."
+  },
+  {
+    "word_en": "motion",
+    "phonetic": "/ˈmoʊʃən/",
+    "meaning_kh": "ចលនា",
+    "example": "The motion of the swing made her feel happy."
+  },
+  {
+    "word_en": "gesture",
+    "phonetic": "/ˈʤɛsʧər/",
+    "meaning_kh": "កាយវិការ",
+    "example": "A warm handshake is a friendly gesture."
+  },
+  {
+    "word_en": "signal",
+    "phonetic": "/ˈsɪgnəl/",
+    "meaning_kh": "សញ្ញា",
+    "example": "The traffic light turned green as a signal to go."
+  },
+  {
+    "word_en": "sign",
+    "phonetic": "/saɪn/",
+    "meaning_kh": "ផ្លាកសញ្ញា/សញ្ញា",
+    "example": "Look at the sign on the wall."
+  },
+  {
+    "word_en": "symbol",
+    "phonetic": "/ˈsɪmbəl/",
+    "meaning_kh": "និមិត្តសញ្ញា",
+    "example": "The dove is a symbol of peace."
+  },
+  {
+    "word_en": "mark",
+    "phonetic": "/mɑrk/",
+    "meaning_kh": "ស្នាម/ពិន្ទុ",
+    "example": "There is a dark mark on the carpet."
+  },
+  {
+    "word_en": "feature",
+    "phonetic": "/ˈfiʧər/",
+    "meaning_kh": "លក្ខណៈពិសេស",
+    "example": "The new phone has many advanced features."
+  },
+  {
+    "word_en": "quality",
+    "phonetic": "/kˈwɑləti/",
+    "meaning_kh": "គុណភាព",
+    "example": "We focus on quality rather than quantity."
+  },
+  {
+    "word_en": "quantity",
+    "phonetic": "/kˈwɑntəti/",
+    "meaning_kh": "បរិមាណ",
+    "example": "A large quantity of food was wasted."
+  },
+  {
+    "word_en": "amount",
+    "phonetic": "/əˈmaʊnt/",
+    "meaning_kh": "ចំនួន/បរិមាណ",
+    "example": "He spent a large amount of money on his car."
+  },
+  {
+    "word_en": "measure",
+    "phonetic": "/ˈmɛʒər/",
+    "meaning_kh": "រង្វាស់/វិធានការ",
+    "example": "The government took measures to improve safety."
+  },
+  {
+    "word_en": "measurement",
+    "phonetic": "/ˈmɛʒərmənt/",
+    "meaning_kh": "ការវាស់វែង",
+    "example": "Take accurate measurements before cutting the wood."
+  },
+  {
+    "word_en": "scale",
+    "phonetic": "/skeɪl/",
+    "meaning_kh": "ជញ្ជីង/មាត្រដ្ឋាន",
+    "example": "He weighed himself on the bathroom scale."
+  },
+  {
+    "word_en": "rate",
+    "phonetic": "/reɪt/",
+    "meaning_kh": "អត្រា",
+    "example": "The unemployment rate has decreased."
+  },
+  {
+    "word_en": "ratio",
+    "phonetic": "/ˈreɪʃiˌoʊ/",
+    "meaning_kh": "សមាមាត្រ",
+    "example": "The ratio of students to teachers is ten to one."
+  },
+  {
+    "word_en": "average",
+    "phonetic": "/ˈævərɪʤ/",
+    "meaning_kh": "មធ្យមភាគ",
+    "example": "The average score of the class was eighty percent."
+  },
+  {
+    "word_en": "total",
+    "phonetic": "/ˈtoʊtəl/",
+    "meaning_kh": "សរុប",
+    "example": "The total cost of the trip was one hundred dollars."
+  },
+  {
+    "word_en": "sum",
+    "phonetic": "/səm/",
+    "meaning_kh": "ផលបូក/ចំនួនទឹកប្រាក់",
+    "example": "He paid a large sum of money for the ticket."
+  },
+  {
+    "word_en": "lion",
+    "phonetic": "/laɪən/",
+    "meaning_kh": "តោ",
+    "example": "The lion is known as the king of the jungle."
+  },
+  {
+    "word_en": "tiger",
+    "phonetic": "/ˈtaɪgər/",
+    "meaning_kh": "ខ្លា",
+    "example": "The tiger has orange and black stripes."
+  },
+  {
+    "word_en": "monkey",
+    "phonetic": "/ˈməŋki/",
+    "meaning_kh": "ស្វា",
+    "example": "The monkey climbed up the tall tree."
+  },
+  {
+    "word_en": "elephant",
+    "phonetic": "/ˈɛləfənt/",
+    "meaning_kh": "ដំរី",
+    "example": "We saw a friendly elephant at the zoo."
+  },
+  {
+    "word_en": "rabbit",
+    "phonetic": "/ˈræbɪt/",
+    "meaning_kh": "ទន្សាយ",
+    "example": "The rabbit hopped across the green grass."
+  },
+  {
+    "word_en": "bear",
+    "phonetic": "/bɛr/",
+    "meaning_kh": "ខ្លាឃ្មុំ",
+    "example": "The brown bear caught a fish in the river."
+  },
+  {
+    "word_en": "duck",
+    "phonetic": "/dək/",
+    "meaning_kh": "ទា",
+    "example": "The duck swam peacefully in the pond."
+  },
+  {
+    "word_en": "sheep",
+    "phonetic": "/ʃip/",
+    "meaning_kh": "ចៀម",
+    "example": "The shepherd guided the sheep to the field."
+  },
+  {
+    "word_en": "pig",
+    "phonetic": "/pɪg/",
+    "meaning_kh": "ជ្រូក",
+    "example": "The pig rolled in the cool mud."
+  },
+  {
+    "word_en": "goat",
+    "phonetic": "/goʊt/",
+    "meaning_kh": "ពពែ",
+    "example": "The goat ate leaves from the bush."
+  },
+  {
+    "word_en": "deer",
+    "phonetic": "/dɪr/",
+    "meaning_kh": "ក្តាន់/ប្រើស",
+    "example": "A deer ran swiftly through the forest."
+  },
+  {
+    "word_en": "fox",
+    "phonetic": "/fɑks/",
+    "meaning_kh": "កញ្ជ្រោង",
+    "example": "The clever fox hid behind the rocks."
+  },
+  {
+    "word_en": "wolf",
+    "phonetic": "/wʊlf/",
+    "meaning_kh": "ចចក",
+    "example": "The wolf howled at the full moon."
+  },
+  {
+    "word_en": "snake",
+    "phonetic": "/sneɪk/",
+    "meaning_kh": "ពស់",
+    "example": "We saw a long snake in the tall grass."
+  },
+  {
+    "word_en": "frog",
+    "phonetic": "/frɑg/",
+    "meaning_kh": "កង្កែប",
+    "example": "A frog jumped into the water."
+  },
+  {
+    "word_en": "turtle",
+    "phonetic": "/ˈtərtəl/",
+    "meaning_kh": "អណ្តើក",
+    "example": "The sea turtle crawled slowly on the sand."
+  },
+  {
+    "word_en": "crab",
+    "phonetic": "/kræb/",
+    "meaning_kh": "ក្តាម",
+    "example": "We caught a small crab at the beach."
+  },
+  {
+    "word_en": "spider",
+    "phonetic": "/ˈspaɪdər/",
+    "meaning_kh": "សត្វពីងពាង",
+    "example": "The spider spun a web in the corner."
+  },
+  {
+    "word_en": "bee",
+    "phonetic": "/bi/",
+    "meaning_kh": "ឃ្មុំ",
+    "example": "The bee collected nectar from the flower."
+  },
+  {
+    "word_en": "butterfly",
+    "phonetic": "/ˈbətərˌflaɪ/",
+    "meaning_kh": "មេអំបៅ",
+    "example": "A beautiful butterfly landed on the leaf."
+  },
+  {
+    "word_en": "ant",
+    "phonetic": "/ænt/",
+    "meaning_kh": "ស្រមោច",
+    "example": "An ant carried a crumb of bread."
+  },
+  {
+    "word_en": "mosquito",
+    "phonetic": "/məˈskitoʊ/",
+    "meaning_kh": "មូស",
+    "example": "Use a net to protect yourself from mosquitoes."
+  },
+  {
+    "word_en": "fly",
+    "phonetic": "/flaɪ/",
+    "meaning_kh": "រុយ",
+    "example": "A fly buzzed around the kitchen."
+  },
+  {
+    "word_en": "garlic",
+    "phonetic": "/ˈgɑrlɪk/",
+    "meaning_kh": "ខ្ទឹមស",
+    "example": "She chopped garlic to cook the beef."
+  },
+  {
+    "word_en": "ginger",
+    "phonetic": "/ˈʤɪnʤər/",
+    "meaning_kh": "ខ្ញី",
+    "example": "Ginger tea is good for a sore throat."
+  },
+  {
+    "word_en": "honey",
+    "phonetic": "/ˈhəni/",
+    "meaning_kh": "ទឹកឃ្មុំ",
+    "example": "Sweeten your tea with natural honey."
+  },
+  {
+    "word_en": "flour",
+    "phonetic": "/flaʊər/",
+    "meaning_kh": "ម្សៅមី",
+    "example": "Use wheat flour to bake the bread."
+  },
+  {
+    "word_en": "vinegar",
+    "phonetic": "/ˈvɪnəgər/",
+    "meaning_kh": "ទឹកខ្មេះ",
+    "example": "Add a splash of vinegar to the salad."
+  },
+  {
+    "word_en": "sauce",
+    "phonetic": "/sɔs/",
+    "meaning_kh": "ទឹកជ្រលក់/ទឹកស៊ីអ៊ីវ",
+    "example": "He poured tomato sauce over his pasta."
+  },
+  {
+    "word_en": "sandwich",
+    "phonetic": "/ˈsænwɪʧ/",
+    "meaning_kh": "នំបុ័ងសាំងវិច",
+    "example": "I ate a ham and cheese sandwich for lunch."
+  },
+  {
+    "word_en": "egg",
+    "phonetic": "/ɛg/",
+    "meaning_kh": "ស៊ុត/ពងមាន់",
+    "example": "He fried an egg for breakfast."
+  },
+  {
+    "word_en": "sausage",
+    "phonetic": "/ˈsɔsɪʤ/",
+    "meaning_kh": "សាច់ក្រក",
+    "example": "We grilled sausages on the campfire."
+  },
+  {
+    "word_en": "ham",
+    "phonetic": "/hæm/",
+    "meaning_kh": "សាច់ភ្លៅជ្រូក/ហ្សំប៉ុង",
+    "example": "She added ham to her sandwich."
+  },
+  {
+    "word_en": "beef",
+    "phonetic": "/bif/",
+    "meaning_kh": "សាច់គោ",
+    "example": "We ordered beef steak at the restaurant."
+  },
+  {
+    "word_en": "pork",
+    "phonetic": "/pɔrk/",
+    "meaning_kh": "សាច់ជ្រូក",
+    "example": "Pork is widely consumed in Asia."
+  },
+  {
+    "word_en": "mutton",
+    "phonetic": "/ˈmətən/",
+    "meaning_kh": "សាច់ចៀម",
+    "example": "Mutton curry is a popular Indian dish."
+  },
+  {
+    "word_en": "shrimp",
+    "phonetic": "/ʃrɪmp/",
+    "meaning_kh": "បង្គា",
+    "example": "She prepared grilled shrimp with lemon juice."
+  },
+  {
+    "word_en": "coconut",
+    "phonetic": "/ˈkoʊkəˌnət/",
+    "meaning_kh": "ដូង",
+    "example": "Coconut water is very refreshing."
+  },
+  {
+    "word_en": "banana",
+    "phonetic": "/bəˈnænə/",
+    "meaning_kh": "ចេក",
+    "example": "He eats a banana every morning."
+  },
+  {
+    "word_en": "mango",
+    "phonetic": "/ˈmæŋgoʊ/",
+    "meaning_kh": "ស្វាយ",
+    "example": "Sweet mangoes are in season."
+  },
+  {
+    "word_en": "orange",
+    "phonetic": "/ˈɔrɪnʤ/",
+    "meaning_kh": "ក្រូច",
+    "example": "Oranges contain high amounts of vitamin C."
+  },
+  {
+    "word_en": "lemon",
+    "phonetic": "/ˈlɛmən/",
+    "meaning_kh": "ក្រូចឆ្មារ",
+    "example": "Squeeze a lemon over the grilled fish."
+  },
+  {
+    "word_en": "grape",
+    "phonetic": "/greɪp/",
+    "meaning_kh": "ទំពាំងបាយជូរ",
+    "example": "He bought a bunch of sweet green grapes."
+  },
+  {
+    "word_en": "strawberry",
+    "phonetic": "/ˈstrɔˌbɛri/",
+    "meaning_kh": "ស្ត្រប៊ឺរី",
+    "example": "Strawberries grow well in cool climates."
+  },
+  {
+    "word_en": "watermelon",
+    "phonetic": "/ˈwɔtərˌmɛlən/",
+    "meaning_kh": "ឪឡឹក",
+    "example": "Watermelon is a perfect fruit for hot summer days."
+  },
+  {
+    "word_en": "pineapple",
+    "phonetic": "/ˈpaɪˌnæpəl/",
+    "meaning_kh": "ម្នាស់",
+    "example": "Pineapple has a sweet and sour taste."
+  },
+  {
+    "word_en": "carrot",
+    "phonetic": "/ˈkɛrət/",
+    "meaning_kh": "ការ៉ុត",
+    "example": "Carrots are rich in vitamin A."
+  },
+  {
+    "word_en": "cabbage",
+    "phonetic": "/ˈkæbɪʤ/",
+    "meaning_kh": "ស្ពៃក្តោប",
+    "example": "Cabbage can be eaten raw or cooked."
+  },
+  {
+    "word_en": "cucumber",
+    "phonetic": "/ˈkjukəmbər/",
+    "meaning_kh": "ត្រសក់",
+    "example": "Cucumber is cool and refreshing."
+  },
+  {
+    "word_en": "beans",
+    "phonetic": "/binz/",
+    "meaning_kh": "សណ្តែក",
+    "example": "Beans are an excellent source of protein."
+  },
+  {
+    "word_en": "pea",
+    "phonetic": "/pi/",
+    "meaning_kh": "សណ្តែកបារាំង",
+    "example": "She added green peas to the fried rice."
+  },
+  {
+    "word_en": "corn",
+    "phonetic": "/kɔrn/",
+    "meaning_kh": "ពោត",
+    "example": "They roasted sweet corn over the fire."
+  },
+  {
+    "word_en": "chocolate",
+    "phonetic": "/ˈʧɔklət/",
+    "meaning_kh": "សូកូឡា",
+    "example": "She bought a bar of dark chocolate."
+  },
+  {
+    "word_en": "candy",
+    "phonetic": "/ˈkændi/",
+    "meaning_kh": "ស្ករគ្រាប់",
+    "example": "The child asked for a piece of candy."
+  },
+  {
+    "word_en": "cake",
+    "phonetic": "/keɪk/",
+    "meaning_kh": "នំខេក",
+    "example": "We baked a chocolate cake for her birthday."
+  },
+  {
+    "word_en": "cookie",
+    "phonetic": "/ˈkʊki/",
+    "meaning_kh": "នំគុកគី",
+    "example": "She baked fresh butter cookies."
+  },
+  {
+    "word_en": "pie",
+    "phonetic": "/paɪ/",
+    "meaning_kh": "នំផាយ",
+    "example": "My grandmother makes delicious apple pie."
+  },
+  {
+    "word_en": "biscuit",
+    "phonetic": "/ˈbɪskət/",
+    "meaning_kh": "នំប៊ីស្គីត",
+    "example": "He dipped his biscuit into the hot tea."
+  },
+  {
+    "word_en": "ice cream",
+    "phonetic": "/aɪs krim/",
+    "meaning_kh": "ការ៉េម",
+    "example": "The children love eating vanilla ice cream."
+  },
+  {
+    "word_en": "furniture",
+    "phonetic": "/ˈfərnɪʧər/",
+    "meaning_kh": "គ្រឿងសង្ហារិម",
+    "example": "They bought new furniture for their house."
+  },
+  {
+    "word_en": "closet",
+    "phonetic": "/ˈklɑzət/",
+    "meaning_kh": "ទូខោអាវ",
+    "example": "Hang your shirts inside the closet."
+  },
+  {
+    "word_en": "rug",
+    "phonetic": "/rəg/",
+    "meaning_kh": "កម្រាលព្រំតូច",
+    "example": "He placed a soft rug next to the bed."
+  },
+  {
+    "word_en": "mattress",
+    "phonetic": "/ˈmætrəs/",
+    "meaning_kh": "ពូក",
+    "example": "He bought a comfortable new mattress."
+  },
+  {
+    "word_en": "razor",
+    "phonetic": "/ˈreɪzər/",
+    "meaning_kh": "ឡាមកោរពុកមាត់",
+    "example": "He changed the blade of his razor."
+  },
+  {
+    "word_en": "jewelry",
+    "phonetic": "/ˈʤuəlri/",
+    "meaning_kh": "គ្រឿងអលង្ការ",
+    "example": "She keeps her jewelry in a wooden box."
+  },
+  {
+    "word_en": "handbag",
+    "phonetic": "/ˈhændˌbæg/",
+    "meaning_kh": "កាបូបយួរដៃ",
+    "example": "She carried a black leather handbag."
+  },
+  {
+    "word_en": "engineer",
+    "phonetic": "/ˈɛnʤəˈnɪr/",
+    "meaning_kh": "វិស្វករ",
+    "example": "The engineer designed the new bridge."
+  },
+  {
+    "word_en": "police officer",
+    "phonetic": "/pəˈlis ˈɔfɪsər/",
+    "meaning_kh": "មន្ត្រីប៉ូលីស",
+    "example": "The police officer guided the traffic."
+  },
+  {
+    "word_en": "firefighter",
+    "phonetic": "/ˈfaɪrˌfaɪtər/",
+    "meaning_kh": "អ្នកពន្លត់អគ្គីភ័យ",
+    "example": "The firefighters put out the house fire."
+  },
+  {
+    "word_en": "judge",
+    "phonetic": "/ʤəʤ/",
+    "meaning_kh": "ចៅក្រម",
+    "example": "The judge listened to both sides of the case."
+  },
+  {
+    "word_en": "politician",
+    "phonetic": "/ˌpɑləˈtɪʃən/",
+    "meaning_kh": "អ្នកនយោបាយ",
+    "example": "The politician gave a speech on TV."
+  },
+  {
+    "word_en": "journalist",
+    "phonetic": "/ˈʤərnəlɪst/",
+    "meaning_kh": "អ្នកកាសែត/អ្នកសារព័ត៌មាន",
+    "example": "The journalist interviewed the president."
+  },
+  {
+    "word_en": "musician",
+    "phonetic": "/mjuˈzɪʃən/",
+    "meaning_kh": "តន្ត្រីករ",
+    "example": "The musician played the guitar beautifully."
+  },
+  {
+    "word_en": "chef",
+    "phonetic": "/ʃɛf/",
+    "meaning_kh": "មេចុងភៅ",
+    "example": "The chef prepared a delicious dinner."
+  },
+  {
+    "word_en": "baker",
+    "phonetic": "/ˈbeɪkər/",
+    "meaning_kh": "អ្នកធ្វើនំបុ័ង",
+    "example": "The baker makes fresh bread every morning."
+  },
+  {
+    "word_en": "farmer",
+    "phonetic": "/ˈfɑrmər/",
+    "meaning_kh": "កសិករ",
+    "example": "The farmer planted rice in the field."
+  },
+  {
+    "word_en": "fisherman",
+    "phonetic": "/ˈfɪʃərˌmæn/",
+    "meaning_kh": "អ្នកនេសាទ",
+    "example": "The fisherman caught many fish."
+  },
+  {
+    "word_en": "carpenter",
+    "phonetic": "/ˈkɑrpəntər/",
+    "meaning_kh": "ជាងឈើ",
+    "example": "The carpenter made a wooden table."
+  },
+  {
+    "word_en": "plumber",
+    "phonetic": "/ˈpləmər/",
+    "meaning_kh": "ជាងទុយោទឹក",
+    "example": "Call the plumber to fix the leaking pipe."
+  },
+  {
+    "word_en": "electrician",
+    "phonetic": "/ɪlɛkˈtrɪʃən/",
+    "meaning_kh": "ជាងអគ្គិសនី",
+    "example": "The electrician repaired the wiring."
+  },
+  {
+    "word_en": "mechanic",
+    "phonetic": "/mɪˈkænɪk/",
+    "meaning_kh": "ជាងម៉ាស៊ីន",
+    "example": "The mechanic fixed the car engine."
+  },
+  {
+    "word_en": "builder",
+    "phonetic": "/ˈbɪldər/",
+    "meaning_kh": "ជាងសំណង់",
+    "example": "The builders are constructing an office."
+  },
+  {
+    "word_en": "architect",
+    "phonetic": "/ˈɑrkəˌtɛkt/",
+    "meaning_kh": "ស្ថាបត្យករ",
+    "example": "The architect drew the house plan."
+  },
+  {
+    "word_en": "scientist",
+    "phonetic": "/ˈsaɪəntɪst/",
+    "meaning_kh": "អ្នកវិទ្យាសាស្ត្រ",
+    "example": "The scientist conducted an experiment."
+  },
+  {
+    "word_en": "professor",
+    "phonetic": "/prəˈfɛsər/",
+    "meaning_kh": "សាស្ត្រាចារ្យ",
+    "example": "The professor lectured on history."
+  },
+  {
+    "word_en": "education",
+    "phonetic": "/ˌɛʤəˈkeɪʃən/",
+    "meaning_kh": "ការអប់រំ",
+    "example": "Education is key to a better future."
+  },
+  {
+    "word_en": "belief",
+    "phonetic": "/bɪˈlif/",
+    "meaning_kh": "ជំនឿ",
+    "example": "Respect other people's beliefs."
+  },
+  {
+    "word_en": "religion",
+    "phonetic": "/rɪˈlɪʤən/",
+    "meaning_kh": "សាសនា",
+    "example": "Buddhism is the main religion in Cambodia."
+  },
+  {
+    "word_en": "technology",
+    "phonetic": "/tɛkˈnɑləʤi/",
+    "meaning_kh": "បច្ចេកវិទ្យា",
+    "example": "Technology is changing our lives daily."
+  },
+  {
+    "word_en": "environment",
+    "phonetic": "/ɪnˈvaɪrənmənt/",
+    "meaning_kh": "បរិស្ថាន",
+    "example": "We must protect our environment."
+  },
+  {
+    "word_en": "pollution",
+    "phonetic": "/pəˈluʃən/",
+    "meaning_kh": "ការបំពុល",
+    "example": "Air pollution is a major city issue."
+  },
+  {
+    "word_en": "garbage",
+    "phonetic": "/ˈgɑrbɪʤ/",
+    "meaning_kh": "សំរាម",
+    "example": "Please throw your garbage in the bin."
+  },
+  {
+    "word_en": "goal",
+    "phonetic": "/goʊl/",
+    "meaning_kh": "គោលដៅ",
+    "example": "Set a clear goal for your studies."
+  },
+  {
+    "word_en": "opportunity",
+    "phonetic": "/ˌɑpərˈtunəti/",
+    "meaning_kh": "ឱកាស",
+    "example": "This job is a great opportunity."
+  },
+  {
+    "word_en": "agreement",
+    "phonetic": "/əˈgrimənt/",
+    "meaning_kh": "កិច្ចព្រមព្រៀង",
+    "example": "They signed a trade agreement."
+  },
+  {
+    "word_en": "conversation",
+    "phonetic": "/ˌkɑnvərˈseɪʃən/",
+    "meaning_kh": "ការសន្ទនា",
+    "example": "We had an interesting conversation."
+  },
+  {
+    "word_en": "discussion",
+    "phonetic": "/dɪˈskəʃən/",
+    "meaning_kh": "ការពិភាក្សា",
+    "example": "The team had a group discussion."
+  },
+  {
+    "word_en": "speech",
+    "phonetic": "/spiʧ/",
+    "meaning_kh": "សុន្ទរកថា",
+    "example": "The director gave a welcoming speech."
+  },
+  {
+    "word_en": "communication",
+    "phonetic": "/kəmˌjunəˈkeɪʃən/",
+    "meaning_kh": "ការទំនាក់ទំនង",
+    "example": "Good communication prevents mistakes."
+  },
+  {
+    "word_en": "information",
+    "phonetic": "/ˌɪnˌfɔrˈmeɪʃən/",
+    "meaning_kh": "ព័ត៌មាន",
+    "example": "The website provides helpful information."
+  },
+  {
+    "word_en": "data",
+    "phonetic": "/ˈdætə/",
+    "meaning_kh": "ទិន្នន័យ",
+    "example": "We analyzed the sales data."
+  },
+  {
+    "word_en": "fact",
+    "phonetic": "/fækt/",
+    "meaning_kh": "ការពិត",
+    "example": "Check the facts before believing it."
+  },
+  {
+    "word_en": "honesty",
+    "phonetic": "/ˈɑnəsti/",
+    "meaning_kh": "ភាពស្មោះត្រង់",
+    "example": "Honesty is the best policy."
+  },
+  {
+    "word_en": "respect",
+    "phonetic": "/rɪˈspɛkt/",
+    "meaning_kh": "ការគោរព",
+    "example": "Show respect to your teachers."
+  },
+  {
+    "word_en": "trust",
+    "phonetic": "/trəst/",
+    "meaning_kh": "ជំនឿចិត្ត/ភាពទុកចិត្ត",
+    "example": "Trust is important in friendship."
+  },
+  {
+    "word_en": "friendship",
+    "phonetic": "/ˈfrɛndʃɪp/",
+    "meaning_kh": "មិត្តភាព",
+    "example": "They valued their long friendship."
+  },
+  {
+    "word_en": "love",
+    "phonetic": "/ləv/",
+    "meaning_kh": "សេចក្តីស្រឡាញ់",
+    "example": "A mother's love is unconditional."
+  },
+  {
+    "word_en": "hate",
+    "phonetic": "/heɪt/",
+    "meaning_kh": "ការស្អប់",
+    "example": "Hate is a negative emotion."
+  },
+  {
+    "word_en": "anger",
+    "phonetic": "/ˈæŋgər/",
+    "meaning_kh": "កំហឹង",
+    "example": "He controlled his anger during the debate."
+  },
+  {
+    "word_en": "fear",
+    "phonetic": "/fɪr/",
+    "meaning_kh": "ការភ័យខ្លាច",
+    "example": "She overcame her fear of heights."
+  },
+  {
+    "word_en": "courage",
+    "phonetic": "/kərɪʤ/",
+    "meaning_kh": "ភាពក្លាហាន",
+    "example": "It took courage to speak up."
+  },
+  {
+    "word_en": "hope",
+    "phonetic": "/hoʊp/",
+    "meaning_kh": "សេចក្តីសង្ឃឹម",
+    "example": "There is always hope for a better day."
+  },
+  {
+    "word_en": "happiness",
+    "phonetic": "/ˈhæpinəs/",
+    "meaning_kh": "សេចក្តីសុខ/សុភមង្គល",
+    "example": "Family brings great happiness."
+  },
+  {
+    "word_en": "sadness",
+    "phonetic": "/ˈsædnəs/",
+    "meaning_kh": "សេចក្តីទុក្ខសោក",
+    "example": "She felt sadness when saying goodbye."
+  },
+  {
+    "word_en": "joy",
+    "phonetic": "/ʤɔɪ/",
+    "meaning_kh": "ភាពរីករាយ",
+    "example": "The children's laughter brings joy."
+  },
+  {
+    "word_en": "sorrow",
+    "phonetic": "/ˈsɑroʊ/",
+    "meaning_kh": "សេចក្តីទុក្ខព្រួយ",
+    "example": "They shared their sorrow at the funeral."
+  },
+  {
+    "word_en": "pleasure",
+    "phonetic": "/ˈplɛʒər/",
+    "meaning_kh": "ភាពរីករាយ/សេចក្តីសុខ",
+    "example": "Reading brings me great pleasure."
+  },
+  {
+    "word_en": "satisfaction",
+    "phonetic": "/ˌsætɪsˈfækʃən/",
+    "meaning_kh": "ការពេញចិត្ត",
+    "example": "He felt satisfaction with his grade."
+  },
+  {
+    "word_en": "pride",
+    "phonetic": "/praɪd/",
+    "meaning_kh": "មោទនភាព",
+    "example": "The parents watched their child with pride."
+  },
+  {
+    "word_en": "freedom",
+    "phonetic": "/ˈfridəm/",
+    "meaning_kh": "សេរីភាព",
+    "example": "Freedom of speech is a basic right."
+  },
+  {
+    "word_en": "liberty",
+    "phonetic": "/ˈlɪbərˌti/",
+    "meaning_kh": "សេរីភាព",
+    "example": "They celebrated their national liberty."
+  },
+  {
+    "word_en": "equality",
+    "phonetic": "/ɪkˈwɑləti/",
+    "meaning_kh": "សមភាព",
+    "example": "We strive for gender equality."
+  },
+  {
+    "word_en": "rights",
+    "phonetic": "/raɪts/",
+    "meaning_kh": "សិទ្ធិ",
+    "example": "Know your human rights."
+  },
+  {
+    "word_en": "duty",
+    "phonetic": "/ˈduti/",
+    "meaning_kh": "កាតព្វកិច្ច",
+    "example": "It is our duty to protect children."
+  },
+  {
+    "word_en": "responsibility",
+    "phonetic": "/riˌspɑnsəˈbɪləti/",
+    "meaning_kh": "ការទទួលខុសត្រូវ",
+    "example": "Taking care of pets is a responsibility."
+  },
+  {
+    "word_en": "task",
+    "phonetic": "/tæsk/",
+    "meaning_kh": "ភារកិច្ច/កិច្ចការ",
+    "example": "He completed the task on time."
+  },
+  {
+    "word_en": "job",
+    "phonetic": "/ʤɑb/",
+    "meaning_kh": "ការងារ",
+    "example": "She applied for a new job."
+  },
+  {
+    "word_en": "work",
+    "phonetic": "/wərk/",
+    "meaning_kh": "ការងារ",
+    "example": "He started his work at 8 AM."
+  },
+  {
+    "word_en": "consumer",
+    "phonetic": "/kənˈsumər/",
+    "meaning_kh": "អ្នកប្រើប្រាស់",
+    "example": "Consumer rights are protected by law."
+  },
+  {
+    "word_en": "product",
+    "phonetic": "/ˈprɑdəkt/",
+    "meaning_kh": "ផលិតផល",
+    "example": "The product is made of local materials."
+  },
+  {
+    "word_en": "service",
+    "phonetic": "/ˈsərvɪs/",
+    "meaning_kh": "សេវាកម្ម",
+    "example": "The hotel provides excellent service."
+  },
+  {
+    "word_en": "goods",
+    "phonetic": "/gʊdz/",
+    "meaning_kh": "ទំនិញ",
+    "example": "The truck transported the goods to the shop."
+  },
+  {
+    "word_en": "cargo",
+    "phonetic": "/ˈkɑrˌgoʊ/",
+    "meaning_kh": "ទំនិញដឹកជញ្ជូន",
+    "example": "The ship carried heavy cargo."
+  },
+  {
+    "word_en": "freight",
+    "phonetic": "/freɪt/",
+    "meaning_kh": "ទំនិញដឹកជញ្ជូន",
+    "example": "The train carried freight across the state."
+  },
+  {
+    "word_en": "shipment",
+    "phonetic": "/ˈʃɪpmənt/",
+    "meaning_kh": "ការដឹកជញ្ជូនទំនិញ",
+    "example": "The shipment of goods arrived today."
+  },
+  {
+    "word_en": "transport",
+    "phonetic": "/ˈtrænspɔrt/",
+    "meaning_kh": "ការដឹកជញ្ជូន",
+    "example": "Public transport is very cheap."
+  },
+  {
+    "word_en": "vehicle",
+    "phonetic": "/ˈviɪkəl/",
+    "meaning_kh": "យានយន្ត",
+    "example": "Electric vehicles are eco-friendly."
+  },
+  {
+    "word_en": "airplane",
+    "phonetic": "/ˈɛrˌpleɪn/",
+    "meaning_kh": "យន្តហោះ",
+    "example": "The airplane flew above the clouds."
+  },
+  {
+    "word_en": "taxi",
+    "phonetic": "/ˈtæksi/",
+    "meaning_kh": "តាក់ស៊ី",
+    "example": "We called a taxi to the airport."
+  },
+  {
+    "word_en": "cab",
+    "phonetic": "/kæb/",
+    "meaning_kh": "តាក់ស៊ី",
+    "example": "He caught a cab in the city."
+  },
+  {
+    "word_en": "automobile",
+    "phonetic": "/ˌɔtəmoʊˈbil/",
+    "meaning_kh": "រថយន្ត",
+    "example": "The automobile industry is huge."
+  },
+  {
+    "word_en": "motorbike",
+    "phonetic": "/ˈmoʊtərˌbaɪk/",
+    "meaning_kh": "ម៉ូតូ",
+    "example": "She rides a motorbike to school."
+  },
+  {
+    "word_en": "bike",
+    "phonetic": "/baɪk/",
+    "meaning_kh": "កង់/ម៉ូតូ",
+    "example": "He rode his bike to the park."
+  },
+  {
+    "word_en": "vessel",
+    "phonetic": "/ˈvɛsəl/",
+    "meaning_kh": "សំពៅ/នាវា",
+    "example": "The vessel carried research scientists."
+  },
+  {
+    "word_en": "craft",
+    "phonetic": "/kræft/",
+    "meaning_kh": "យាន/សិល្បៈយាន",
+    "example": "A small water craft was seen near the shore."
+  },
+  {
+    "word_en": "motor",
+    "phonetic": "/ˈmoʊtər/",
+    "meaning_kh": "ម៉ូទ័រ",
+    "example": "The electric motor is very quiet."
+  },
+  {
+    "word_en": "tyre",
+    "phonetic": "/taɪər/",
+    "meaning_kh": "សំបកកង់",
+    "example": "He checked the tyre pressure."
+  },
+  {
+    "word_en": "brakes",
+    "phonetic": "/breɪks/",
+    "meaning_kh": "ហ្វ្រាំង",
+    "example": "Check the brakes of your bicycle."
+  },
+  {
+    "word_en": "clutch",
+    "phonetic": "/kləʧ/",
+    "meaning_kh": "អំប្រ៊ីយ៉ា",
+    "example": "He pressed the clutch to change gears."
+  },
+  {
+    "word_en": "gear",
+    "phonetic": "/gɪr/",
+    "meaning_kh": "លេខ/គ្រឿងបញ្ជូនចលនា",
+    "example": "The car is in first gear."
+  },
+  {
+    "word_en": "steering wheel",
+    "phonetic": "/ˈstɪrɪŋ wil/",
+    "meaning_kh": "ចង្កូតឡាន",
+    "example": "Hold the steering wheel with both hands."
+  },
+  {
+    "word_en": "dashboard",
+    "phonetic": "/ˈdæʃˌbɔrd/",
+    "meaning_kh": "តាប្លូឡាន",
+    "example": "The fuel gauge is on the dashboard."
+  },
+  {
+    "word_en": "windshield",
+    "phonetic": "/ˈwɪndˌʃild/",
+    "meaning_kh": "កញ្ចក់មុខឡាន",
+    "example": "Wipe the dust off the windshield."
+  },
+  {
+    "word_en": "headlight",
+    "phonetic": "/ˈhɛˌdlaɪt/",
+    "meaning_kh": "ចង្កៀងមុខឡាន",
+    "example": "Turn on your headlights at night."
+  },
+  {
+    "word_en": "tail light",
+    "phonetic": "/teɪl laɪt/",
+    "meaning_kh": "ចង្កៀងក្រោយឡាន",
+    "example": "The red tail light was broken."
+  },
+  {
+    "word_en": "bumper",
+    "phonetic": "/ˈbəmpər/",
+    "meaning_kh": "កាងឡាន",
+    "example": "The bumper protected the car in the crash."
+  },
+  {
+    "word_en": "trunk",
+    "phonetic": "/trəŋk/",
+    "meaning_kh": "ឃ្លុបក្រោយឡាន/ដើមឈើធំ",
+    "example": "Put your luggage in the trunk."
+  },
+  {
+    "word_en": "hood",
+    "phonetic": "/hʊd/",
+    "meaning_kh": "គម្របម៉ាស៊ីនឡាន",
+    "example": "Open the hood to check the engine."
+  },
+  {
+    "word_en": "noon",
+    "phonetic": "/nun/",
+    "meaning_kh": "ថ្ងៃត្រង់",
+    "example": "We usually eat lunch at noon."
+  },
+  {
+    "word_en": "afternoon",
+    "phonetic": "/ˌæftərˈnun/",
+    "meaning_kh": "រសៀល",
+    "example": "The temperature is warmest in the afternoon."
+  },
+  {
+    "word_en": "evening",
+    "phonetic": "/ˈivnɪŋ/",
+    "meaning_kh": "ល្ងាច",
+    "example": "They enjoy going for a walk in the evening."
+  },
+  {
+    "word_en": "midnight",
+    "phonetic": "/ˈmɪdˌnaɪt/",
+    "meaning_kh": "កណ្ដាលអធ្រាត្រ",
+    "example": "The party ended at midnight."
+  },
+  {
+    "word_en": "second",
+    "phonetic": "/ˈsɛkənd/",
+    "meaning_kh": "វិនាទី",
+    "example": "There are sixty seconds in a minute."
+  },
+  {
+    "word_en": "minute",
+    "phonetic": "/ˈmɪnət/",
+    "meaning_kh": "នាទី",
+    "example": "Please wait a minute, I will be right back."
+  },
+  {
+    "word_en": "hour",
+    "phonetic": "/aʊər/",
+    "meaning_kh": "ម៉ោង",
+    "example": "The flight takes about one hour."
+  },
+  {
+    "word_en": "spring",
+    "phonetic": "/spərɪŋ/",
+    "meaning_kh": "រដូវផ្ការីក",
+    "example": "Flowers bloom in the spring."
+  },
+  {
+    "word_en": "summer",
+    "phonetic": "/ˈsəmər/",
+    "meaning_kh": "រដូវក្តៅ",
+    "example": "We went to the beach during the summer."
+  },
+  {
+    "word_en": "autumn",
+    "phonetic": "/ˈɔtəm/",
+    "meaning_kh": "រដូវស្លឹកឈើជ្រុះ",
+    "example": "The leaves change color in autumn."
+  },
+  {
+    "word_en": "winter",
+    "phonetic": "/ˈwɪntər/",
+    "meaning_kh": "រដូវរងា",
+    "example": "The ground was covered in snow during the winter."
+  },
+  {
+    "word_en": "humidity",
+    "phonetic": "/hjuˈmɪdəti/",
+    "meaning_kh": "ភាពសើម",
+    "example": "High humidity makes the air feel sticky."
+  },
+  {
+    "word_en": "wildlife",
+    "phonetic": "/ˈwaɪlˌdlaɪf/",
+    "meaning_kh": "សត្វព្រៃ",
+    "example": "The national park protects local wildlife."
+  },
+  {
+    "word_en": "creature",
+    "phonetic": "/ˈkriʧər/",
+    "meaning_kh": "សត្វ/ភាវរស់",
+    "example": "The sea is home to many strange creatures."
+  },
+  {
+    "word_en": "mammal",
+    "phonetic": "/ˈmæməl/",
+    "meaning_kh": "សត្វថនិកសត្វ",
+    "example": "The blue whale is the largest mammal on earth."
+  },
+  {
+    "word_en": "reptile",
+    "phonetic": "/ˈrɛptaɪl/",
+    "meaning_kh": "សត្វលូនវារ",
+    "example": "Snakes and lizards are reptiles."
+  },
+  {
+    "word_en": "amphibian",
+    "phonetic": "/æmˈfɪbiən/",
+    "meaning_kh": "សត្វទ្វេជលិក",
+    "example": "Frogs are well-known amphibians."
+  },
+  {
+    "word_en": "insect",
+    "phonetic": "/ˈɪnˌsɛkt/",
+    "meaning_kh": "សត្វល្អិត",
+    "example": "An ant is a small but strong insect."
+  },
+  {
+    "word_en": "pest",
+    "phonetic": "/pɛst/",
+    "meaning_kh": "សត្វចង្រៃ",
+    "example": "Farmers use sprays to control garden pests."
+  },
+  {
+    "word_en": "pet",
+    "phonetic": "/pɛt/",
+    "meaning_kh": "សត្វចិញ្ចឹម",
+    "example": "A dog makes a wonderful family pet."
+  },
+  {
+    "word_en": "collar",
+    "phonetic": "/ˈkɑlər/",
+    "meaning_kh": "កអាវ/ខ្សែកសត្វ",
+    "example": "The dog wore a red leather collar."
+  },
+  {
+    "word_en": "leash",
+    "phonetic": "/liʃ/",
+    "meaning_kh": "ខ្សែចងសត្វ",
+    "example": "Keep your dog on a leash when walking in public."
+  },
+  {
+    "word_en": "cage",
+    "phonetic": "/keɪʤ/",
+    "meaning_kh": "ទ្រុង",
+    "example": "The parrot was kept in a spacious cage."
+  },
+  {
+    "word_en": "nest",
+    "phonetic": "/nɛst/",
+    "meaning_kh": "សំបុក",
+    "example": "The bird built a cozy nest in the tree branch."
+  },
+  {
+    "word_en": "feather",
+    "phonetic": "/ˈfɛðər/",
+    "meaning_kh": "រោមបក្សី",
+    "example": "The peacock has beautiful green feathers."
+  },
+  {
+    "word_en": "wing",
+    "phonetic": "/wɪŋ/",
+    "meaning_kh": "ស្លាប",
+    "example": "The eagle spread its wings and flew away."
+  },
+  {
+    "word_en": "beak",
+    "phonetic": "/bik/",
+    "meaning_kh": "ចំពុះ",
+    "example": "The woodpecker has a sharp and strong beak."
+  },
+  {
+    "word_en": "tail",
+    "phonetic": "/teɪl/",
+    "meaning_kh": "កន្ទុយ",
+    "example": "The dog wagged its tail in excitement."
+  },
+  {
+    "word_en": "fur",
+    "phonetic": "/fər/",
+    "meaning_kh": "រោមសត្វ",
+    "example": "The cat has very soft white fur."
+  },
+  {
+    "word_en": "claw",
+    "phonetic": "/klɔ/",
+    "meaning_kh": "ក្រញ៉ាំជើង",
+    "example": "The cat scratched the sofa with its claws."
+  },
+  {
+    "word_en": "paw",
+    "phonetic": "/pɔ/",
+    "meaning_kh": "ប្រអប់ជើងសត្វ",
+    "example": "The puppy has muddy paws."
+  },
+  {
+    "word_en": "hoof",
+    "phonetic": "/huf/",
+    "meaning_kh": "ក្រចកជើងសត្វ",
+    "example": "The horse has hard iron shoes on its hoofs."
+  },
+  {
+    "word_en": "horn",
+    "phonetic": "/hɔrn/",
+    "meaning_kh": "ស្នែង",
+    "example": "The bull pointed its sharp horns at the gate."
+  },
+  {
+    "word_en": "tusks",
+    "phonetic": "/təsks/",
+    "meaning_kh": "ភ្លុក",
+    "example": "Elephants are hunted for their valuable ivory tusks."
+  },
+  {
+    "word_en": "shell",
+    "phonetic": "/ʃɛl/",
+    "meaning_kh": "សំបក",
+    "example": "The turtle withdrew its head inside its shell."
+  },
+  {
+    "word_en": "fin",
+    "phonetic": "/fɪn/",
+    "meaning_kh": "ព្រុយត្រី",
+    "example": "The shark has a large dorsal fin."
+  },
+  {
+    "word_en": "gill",
+    "phonetic": "/gɪl/",
+    "meaning_kh": "ស្រកីត្រី",
+    "example": "Fish use their gills to breathe underwater."
+  },
+  {
+    "word_en": "beast",
+    "phonetic": "/bist/",
+    "meaning_kh": "សត្វសាហាវ",
+    "example": "The hunter tracked the wild beast through the forest."
+  },
+  {
+    "word_en": "predator",
+    "phonetic": "/ˈprɛdətər/",
+    "meaning_kh": "សត្វស៊ីសាច់ជាអាហារ",
+    "example": "Lions are apex predators."
+  },
+  {
+    "word_en": "prey",
+    "phonetic": "/preɪ/",
+    "meaning_kh": "សត្វជាចំណី",
+    "example": "The eagle spotted its prey from high in the sky."
+  },
+  {
+    "word_en": "herd",
+    "phonetic": "/hərd/",
+    "meaning_kh": "ហ្វូងសត្វ",
+    "example": "A herd of cows grazed peacefully in the meadow."
+  },
+  {
+    "word_en": "flock",
+    "phonetic": "/flɑk/",
+    "meaning_kh": "ហ្វូងបក្សី/ហ្វូងចៀម",
+    "example": "A flock of birds flew south for the winter."
+  },
+  {
+    "word_en": "pack",
+    "phonetic": "/pæk/",
+    "meaning_kh": "ហ្វូងសត្វព្រៃ",
+    "example": "A pack of wolves hunted together in the snow."
+  },
+  {
+    "word_en": "swarm",
+    "phonetic": "/swɔrm/",
+    "meaning_kh": "ហ្វូងសត្វល្អិត",
+    "example": "A swarm of bees built a hive in the chimney."
+  },
+  {
+    "word_en": "colony",
+    "phonetic": "/ˈkɑləni/",
+    "meaning_kh": "អាណានិគម/ហ្វូងស្រមោច",
+    "example": "A colony of ants built a large mound."
+  },
+  {
+    "word_en": "hive",
+    "phonetic": "/haɪv/",
+    "meaning_kh": "សំបុកឃ្មុំ",
+    "example": "The honeybees returned to their hive."
+  },
+  {
+    "word_en": "web",
+    "phonetic": "/wɛb/",
+    "meaning_kh": "បណ្តាញ/សំបុកពីងពាង",
+    "example": "The spider trapped a fly in its web."
+  },
+  {
+    "word_en": "den",
+    "phonetic": "/dɛn/",
+    "meaning_kh": "រូងសត្វ",
+    "example": "The bear slept in its warm den during the winter."
+  },
+  {
+    "word_en": "burrow",
+    "phonetic": "/bəroʊ/",
+    "meaning_kh": "រូងដី",
+    "example": "The rabbit ran down into its burrow."
+  },
+  {
+    "word_en": "habitat",
+    "phonetic": "/ˈhæbəˌtæt/",
+    "meaning_kh": "ជម្រកធម្មជាតិ",
+    "example": "Destruction of forests ruins the habitat of many animals."
+  },
+  {
+    "word_en": "species",
+    "phonetic": "/ˈspiʃiz/",
+    "meaning_kh": "ប្រភេទ/ពូជ",
+    "example": "There are thousands of species of butterflies."
+  },
+  {
+    "word_en": "biodiversity",
+    "phonetic": "/ˌbaɪoʊdaɪˈvərsəti/",
+    "meaning_kh": "ជីវចម្រុះ",
+    "example": "The rainforest has rich biodiversity."
+  },
+  {
+    "word_en": "conservation",
+    "phonetic": "/ˌkɑnsərˈveɪʃən/",
+    "meaning_kh": "ការអភិរក្ស",
+    "example": "Forest conservation helps protect endangered animals."
+  },
+  {
+    "word_en": "extinction",
+    "phonetic": "/ɪkˈstɪŋʃən/",
+    "meaning_kh": "ការផុតពូជ",
+    "example": "Many species face the threat of extinction."
+  },
+  {
+    "word_en": "evolution",
+    "phonetic": "/ˌɛvəˈluʃən/",
+    "meaning_kh": "ការវិវត្ត",
+    "example": "Human evolution occurred over millions of years."
+  },
+  {
+    "word_en": "gene",
+    "phonetic": "/ʤin/",
+    "meaning_kh": "ហ្សែន",
+    "example": "Eye color is determined by genes."
+  },
+  {
+    "word_en": "cell",
+    "phonetic": "/sɛl/",
+    "meaning_kh": "កោសិកា",
+    "example": "All living organisms are made of cells."
+  },
+  {
+    "word_en": "organism",
+    "phonetic": "/ˈɔrgəˌnɪzəm/",
+    "meaning_kh": "ភាវរស់",
+    "example": "Bacteria are single-celled organisms."
+  },
+  {
+    "word_en": "microscope",
+    "phonetic": "/ˈmaɪkrəˌskoʊp/",
+    "meaning_kh": "មីក្រូទស្សន៍",
+    "example": "We looked at the cells through a microscope."
+  },
+  {
+    "word_en": "telescope",
+    "phonetic": "/ˈtɛləˌskoʊp/",
+    "meaning_kh": "តេឡេស្កុប/កែវយឺត",
+    "example": "He looked at the distant stars through a telescope."
+  },
+  {
+    "word_en": "universe",
+    "phonetic": "/ˈjunəˌvərs/",
+    "meaning_kh": "ចក្រវាឡ",
+    "example": "The universe is vast and full of mysteries."
+  },
+  {
+    "word_en": "galaxy",
+    "phonetic": "/ˈgæləksi/",
+    "meaning_kh": "កាឡាក់ស៊ី",
+    "example": "The Milky Way is our home galaxy."
+  },
+  {
+    "word_en": "planet",
+    "phonetic": "/ˈplænət/",
+    "meaning_kh": "ភព",
+    "example": "Mars is known as the red planet."
+  },
+  {
+    "word_en": "satellite",
+    "phonetic": "/ˈsætəˌlaɪt/",
+    "meaning_kh": "ផ្កាយរណប",
+    "example": "The moon is a natural satellite of the earth."
+  },
+  {
+    "word_en": "asteroid",
+    "phonetic": "/ˈæstərˌɔɪd/",
+    "meaning_kh": "អាចម៍ផ្កាយ",
+    "example": "An asteroid belt lies between Mars and Jupiter."
+  },
+  {
+    "word_en": "comet",
+    "phonetic": "/ˈkɑmət/",
+    "meaning_kh": "ផ្កាយដុះកន្ទុយ",
+    "example": "Halley's Comet is visible from Earth every 75 years."
+  },
+  {
+    "word_en": "gravity",
+    "phonetic": "/ˈgrævɪti/",
+    "meaning_kh": "កម្លាំងទំនាញ",
+    "example": "Gravity holds the atmosphere close to the earth."
+  },
+  {
+    "word_en": "orbit",
+    "phonetic": "/ˈɔrbət/",
+    "meaning_kh": "គន្លងតារាវិថី",
+    "example": "The earth completes its orbit around the sun in one year."
+  },
+  {
+    "word_en": "spacecraft",
+    "phonetic": "/ˈspeɪˌskræft/",
+    "meaning_kh": "យានអវកាស",
+    "example": "The spacecraft landed safely on the moon."
+  },
+  {
+    "word_en": "astronaut",
+    "phonetic": "/ˈæstrəˌnɑt/",
+    "meaning_kh": "អវកាសយានិក",
+    "example": "The astronauts conducted scientific research in space."
+  },
+  {
+    "word_en": "astronomy",
+    "phonetic": "/əˈstrɑnəmi/",
+    "meaning_kh": "តារាសាស្ត្រ",
+    "example": "She fell in love with astronomy at a young age."
+  },
+  {
+    "word_en": "astrology",
+    "phonetic": "/əˈstrɑləʤi/",
+    "meaning_kh": "ហោរាសាស្ត្រ",
+    "example": "He checked his daily horoscope in the astrology column."
+  },
+  {
+    "word_en": "physics",
+    "phonetic": "/ˈfɪzɪks/",
+    "meaning_kh": "រូបវិទ្យា",
+    "example": "He studied physics and mathematics at university."
+  },
+  {
+    "word_en": "chemistry",
+    "phonetic": "/ˈkɛmɪstri/",
+    "meaning_kh": "គីមីវិទ្យា",
+    "example": "The students did a chemistry experiment in the lab."
+  },
+  {
+    "word_en": "biology",
+    "phonetic": "/baɪˈɑləʤi/",
+    "meaning_kh": "ជីវវិទ្យា",
+    "example": "Biology is the study of living organisms."
+  },
+  {
+    "word_en": "geology",
+    "phonetic": "/ʤiˈɑləʤi/",
+    "meaning_kh": "ភូគព្ភសាស្ត្រ",
+    "example": "The geologist examined the rock layers."
+  },
+  {
+    "word_en": "geography",
+    "phonetic": "/ʤiˈɑgrəfi/",
+    "meaning_kh": "ភូមិសាស្ត្រ",
+    "example": "We learned about the rivers of Asia in geography class."
+  },
+  {
+    "word_en": "maths",
+    "phonetic": "/maths/",
+    "meaning_kh": "គណិតវិទ្យា",
+    "example": "She solved the difficult maths problem quickly."
+  },
+  {
+    "word_en": "arithmetic",
+    "phonetic": "/ˌɛrɪθˈmɛtɪk/",
+    "meaning_kh": "នព្វន្ត",
+    "example": "Basic arithmetic includes addition and subtraction."
+  },
+  {
+    "word_en": "geometry",
+    "phonetic": "/ʤiˈɑmətri/",
+    "meaning_kh": "ធរណីមាត្រ",
+    "example": "We learned how to calculate angles in geometry."
+  },
+  {
+    "word_en": "algebra",
+    "phonetic": "/ˈælʤəbrə/",
+    "meaning_kh": "ពិជគណិត",
+    "example": "He is studying algebra this semester."
+  },
+  {
+    "word_en": "calculus",
+    "phonetic": "/ˈkælkjələs/",
+    "meaning_kh": "វិភាគសាស្ត្រ",
+    "example": "Calculus is a challenging math subject."
+  },
+  {
+    "word_en": "statistics",
+    "phonetic": "/stəˈtɪstɪks/",
+    "meaning_kh": "ស្ថិតិ",
+    "example": "The report presented the statistics of population growth."
+  },
+  {
+    "word_en": "logic",
+    "phonetic": "/ˈlɑʤɪk/",
+    "meaning_kh": "តក្កវិជ្ជា",
+    "example": "Use logic to solve the brain teaser."
+  },
+  {
+    "word_en": "philosophy",
+    "phonetic": "/fəˈlɑsəfi/",
+    "meaning_kh": "ទស្សនវិជ្ជា",
+    "example": "He enjoys reading books on ancient philosophy."
+  },
+  {
+    "word_en": "literature",
+    "phonetic": "/ˈlɪtərəʧər/",
+    "meaning_kh": "អក្សរសិល្ប៍",
+    "example": "She is a professor of English literature."
+  },
+  {
+    "word_en": "linguistics",
+    "phonetic": "/lɪŋgˈwɪstɪks/",
+    "meaning_kh": "ភាសាវិទ្យា",
+    "example": "Linguistics is the scientific study of language."
+  },
+  {
+    "word_en": "grammar",
+    "phonetic": "/ˈgræmər/",
+    "meaning_kh": "វេយ្យាករណ៍",
+    "example": "Learn the rules of English grammar."
+  },
+  {
+    "word_en": "vocabulary",
+    "phonetic": "/voʊˈkæbjəˌlɛri/",
+    "meaning_kh": "វាក្យសព្ទ",
+    "example": "Reading is a great way to expand your vocabulary."
+  },
+  {
+    "word_en": "spelling",
+    "phonetic": "/ˈspɛlɪŋ/",
+    "meaning_kh": "អក្ខរាវិរុទ្ធ",
+    "example": "Check your spelling before submitting the essay."
+  },
+  {
+    "word_en": "pronunciation",
+    "phonetic": "/prəˌnənsiˈeɪʃən/",
+    "meaning_kh": "ការបញ្ចេញសំឡេង",
+    "example": "Practice your English pronunciation daily."
+  },
+  {
+    "word_en": "accent",
+    "phonetic": "/ˈækˌsɛnt/",
+    "meaning_kh": "សំឡេងតំបន់",
+    "example": "She speaks English with a lovely French accent."
+  },
+  {
+    "word_en": "dialect",
+    "phonetic": "/ˈdaɪəˌlɛkt/",
+    "meaning_kh": "គ្រាមភាសា",
+    "example": "He speaks a local dialect of the southern province."
+  },
+  {
+    "word_en": "translation",
+    "phonetic": "/trænzˈleɪʃən/",
+    "meaning_kh": "ការបកប្រែ",
+    "example": "The translation of the book was very accurate."
+  },
+  {
+    "word_en": "interpreter",
+    "phonetic": "/ˌɪnˈtərprətər/",
+    "meaning_kh": "អ្នកបកប្រែផ្ទាល់មាត់",
+    "example": "The diplomat spoke through a professional interpreter."
+  },
+  {
+    "word_en": "encyclopedia",
+    "phonetic": "/ɪnˌsaɪkləˈpidiə/",
+    "meaning_kh": "សព្វវចនាធិប្បាយ",
+    "example": "I looked up the information in the encyclopedia."
+  },
+  {
+    "word_en": "textbook",
+    "phonetic": "/ˈtɛkstˌbʊk/",
+    "meaning_kh": "សៀវភៅសិក្សា",
+    "example": "Please open your history textbook."
+  },
+  {
+    "word_en": "chapter",
+    "phonetic": "/ˈʧæptər/",
+    "meaning_kh": "ជំពូក",
+    "example": "The first chapter of the book was very exciting."
+  },
+  {
+    "word_en": "paragraph",
+    "phonetic": "/ˈpɛrəˌgræf/",
+    "meaning_kh": "កថាខណ្ឌ",
+    "example": "Please write a short paragraph about your hobby."
+  },
+  {
+    "word_en": "sentence",
+    "phonetic": "/ˈsɛntəns/",
+    "meaning_kh": "ល្បះ/ប្រយោគ",
+    "example": "Construct a complete sentence using the new word."
+  },
+  {
+    "word_en": "phrase",
+    "phonetic": "/freɪz/",
+    "meaning_kh": "ឃ្លា",
+    "example": "He memorized a useful phrase for ordering food."
+  },
+  {
+    "word_en": "clause",
+    "phonetic": "/klɔz/",
+    "meaning_kh": "ល្បះរង/ឃ្លាប្រយោគ",
+    "example": "An independent clause can stand alone as a sentence."
+  },
+  {
+    "word_en": "suffix",
+    "phonetic": "/ˈsəfɪks/",
+    "meaning_kh": "បច្ច័យ",
+    "example": "The suffix '-ful' turns a noun into an adjective."
+  }
+]

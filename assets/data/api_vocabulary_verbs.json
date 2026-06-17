@@ -1,0 +1,7958 @@
+[
+  {
+    "word_en": "be",
+    "phonetic": "/biː/",
+    "meaning_kh": "គឺ/ជា/នៅ",
+    "example": "I want to be a doctor."
+  },
+  {
+    "word_en": "have",
+    "phonetic": "/hæv/",
+    "meaning_kh": "មាន",
+    "example": "They have a beautiful house."
+  },
+  {
+    "word_en": "do",
+    "phonetic": "/duː/",
+    "meaning_kh": "ធ្វើ",
+    "example": "What do you do in your free time?"
+  },
+  {
+    "word_en": "say",
+    "phonetic": "/seɪ/",
+    "meaning_kh": "និយាយ",
+    "example": "Please say that again."
+  },
+  {
+    "word_en": "go",
+    "phonetic": "/ɡoʊ/",
+    "meaning_kh": "ទៅ",
+    "example": "We go to school by bus."
+  },
+  {
+    "word_en": "get",
+    "phonetic": "/ɡɛt/",
+    "meaning_kh": "ទទួល/បាន",
+    "example": "I get up early in the morning."
+  },
+  {
+    "word_en": "make",
+    "phonetic": "/meɪk/",
+    "meaning_kh": "ធ្វើ/បង្កើត",
+    "example": "She makes a delicious cake."
+  },
+  {
+    "word_en": "know",
+    "phonetic": "/noʊ/",
+    "meaning_kh": "ស្គាល់/ដឹង",
+    "example": "I know the answer to the question."
+  },
+  {
+    "word_en": "think",
+    "phonetic": "/θɪŋk/",
+    "meaning_kh": "គិត",
+    "example": "I think it will rain today."
+  },
+  {
+    "word_en": "take",
+    "phonetic": "/teɪk/",
+    "meaning_kh": "យក",
+    "example": "Please take a seat."
+  },
+  {
+    "word_en": "see",
+    "phonetic": "/siː/",
+    "meaning_kh": "ឃើញ/មើលឃើញ",
+    "example": "I see a bird in the tree."
+  },
+  {
+    "word_en": "come",
+    "phonetic": "/kʌm/",
+    "meaning_kh": "មក",
+    "example": "Please come in."
+  },
+  {
+    "word_en": "want",
+    "phonetic": "/wɑːnt/",
+    "meaning_kh": "ចង់បាន",
+    "example": "I want to learn English."
+  },
+  {
+    "word_en": "use",
+    "phonetic": "/juːz/",
+    "meaning_kh": "ប្រើប្រាស់",
+    "example": "We use computers at work."
+  },
+  {
+    "word_en": "find",
+    "phonetic": "/faɪnd/",
+    "meaning_kh": "រកឃើញ",
+    "example": "I cannot find my keys."
+  },
+  {
+    "word_en": "give",
+    "phonetic": "/ɡɪv/",
+    "meaning_kh": "ឲ្យ/ប្រគល់ឲ្យ",
+    "example": "He gave me a book."
+  },
+  {
+    "word_en": "tell",
+    "phonetic": "/tɛl/",
+    "meaning_kh": "ប្រាប់",
+    "example": "Tell me a story."
+  },
+  {
+    "word_en": "work",
+    "phonetic": "/wɜːrk/",
+    "meaning_kh": "ធ្វើការ",
+    "example": "They work in an office."
+  },
+  {
+    "word_en": "call",
+    "phonetic": "/kɔːl/",
+    "meaning_kh": "ហៅ/ទូរស័ព្ទ",
+    "example": "Call me later."
+  },
+  {
+    "word_en": "try",
+    "phonetic": "/traɪ/",
+    "meaning_kh": "ព្យាយាម",
+    "example": "Try your best."
+  },
+  {
+    "word_en": "ask",
+    "phonetic": "/æsk/",
+    "meaning_kh": "សួរ",
+    "example": "Ask a question."
+  },
+  {
+    "word_en": "need",
+    "phonetic": "/niːd/",
+    "meaning_kh": "ត្រូវការ",
+    "example": "I need some help."
+  },
+  {
+    "word_en": "feel",
+    "phonetic": "/fiːl/",
+    "meaning_kh": "មានអារម្មណ៍",
+    "example": "I feel happy today."
+  },
+  {
+    "word_en": "become",
+    "phonetic": "/bɪˈkʌm/",
+    "meaning_kh": "ក្លាយជា",
+    "example": "He wants to become a teacher."
+  },
+  {
+    "word_en": "leave",
+    "phonetic": "/liːv/",
+    "meaning_kh": "ចាកចេញ",
+    "example": "The train leaves at ten."
+  },
+  {
+    "word_en": "put",
+    "phonetic": "/pʊt/",
+    "meaning_kh": "ដាក់",
+    "example": "Put the book on the table."
+  },
+  {
+    "word_en": "mean",
+    "phonetic": "/miːn/",
+    "meaning_kh": "មានន័យថា",
+    "example": "What does this word mean?"
+  },
+  {
+    "word_en": "keep",
+    "phonetic": "/kiːp/",
+    "meaning_kh": "រក្សាទុក",
+    "example": "Keep your room clean."
+  },
+  {
+    "word_en": "let",
+    "phonetic": "/lɛt/",
+    "meaning_kh": "អនុញ្ញាត/ទុកឲ្យ",
+    "example": "Let me help you."
+  },
+  {
+    "word_en": "begin",
+    "phonetic": "/bɪˈɡɪn/",
+    "meaning_kh": "ចាប់ផ្តើម",
+    "example": "The class begins now."
+  },
+  {
+    "word_en": "seem",
+    "phonetic": "/siːm/",
+    "meaning_kh": "ហាក់ដូចជា",
+    "example": "You seem tired."
+  },
+  {
+    "word_en": "help",
+    "phonetic": "/hɛlp/",
+    "meaning_kh": "ជួយ",
+    "example": "Can you help me?"
+  },
+  {
+    "word_en": "talk",
+    "phonetic": "/tɔːk/",
+    "meaning_kh": "និយាយគ្នា",
+    "example": "We talk every day."
+  },
+  {
+    "word_en": "turn",
+    "phonetic": "/tɜːrn/",
+    "meaning_kh": "បត់/វិល",
+    "example": "Turn left at the corner."
+  },
+  {
+    "word_en": "start",
+    "phonetic": "/stɑːrt/",
+    "meaning_kh": "ចាប់ផ្តើម",
+    "example": "Start the car."
+  },
+  {
+    "word_en": "show",
+    "phonetic": "/ʃoʊ/",
+    "meaning_kh": "បង្ហាញ",
+    "example": "Show me your homework."
+  },
+  {
+    "word_en": "hear",
+    "phonetic": "/hɪr/",
+    "meaning_kh": "ឮ/ស្តាប់ឮ",
+    "example": "Did you hear that noise?"
+  },
+  {
+    "word_en": "play",
+    "phonetic": "/pleɪ/",
+    "meaning_kh": "លេង",
+    "example": "The kids play football."
+  },
+  {
+    "word_en": "run",
+    "phonetic": "/rʌn/",
+    "meaning_kh": "រត់",
+    "example": "She runs in the park."
+  },
+  {
+    "word_en": "move",
+    "phonetic": "/muːv/",
+    "meaning_kh": "ផ្លាស់ទី",
+    "example": "Move the table here."
+  },
+  {
+    "word_en": "like",
+    "phonetic": "/laɪk/",
+    "meaning_kh": "ចូលចិត្ត",
+    "example": "I like apples."
+  },
+  {
+    "word_en": "live",
+    "phonetic": "/lɪv/",
+    "meaning_kh": "រស់នៅ",
+    "example": "They live in Phnom Penh."
+  },
+  {
+    "word_en": "believe",
+    "phonetic": "/bɪˈliːv/",
+    "meaning_kh": "ជឿ",
+    "example": "I believe you."
+  },
+  {
+    "word_en": "hold",
+    "phonetic": "/hoʊld/",
+    "meaning_kh": "កាន់/ផ្ទុក",
+    "example": "Hold my hand."
+  },
+  {
+    "word_en": "bring",
+    "phonetic": "/brɪŋ/",
+    "meaning_kh": "យកមក",
+    "example": "Bring me some water."
+  },
+  {
+    "word_en": "write",
+    "phonetic": "/raɪt/",
+    "meaning_kh": "សរសេរ",
+    "example": "Write a letter."
+  },
+  {
+    "word_en": "read",
+    "phonetic": "/riːd/",
+    "meaning_kh": "អាន",
+    "example": "Read a book."
+  },
+  {
+    "word_en": "sit",
+    "phonetic": "/sɪt/",
+    "meaning_kh": "អង្គុយ",
+    "example": "Sit down, please."
+  },
+  {
+    "word_en": "stand",
+    "phonetic": "/stænd/",
+    "meaning_kh": "ឈរ",
+    "example": "Stand up, please."
+  },
+  {
+    "word_en": "lose",
+    "phonetic": "/luːz/",
+    "meaning_kh": "បាត់បង់/ចាញ់",
+    "example": "Don't lose your keys."
+  },
+  {
+    "word_en": "pay",
+    "phonetic": "/peɪ/",
+    "meaning_kh": "បង់ប្រាក់",
+    "example": "Pay the bill."
+  },
+  {
+    "word_en": "meet",
+    "phonetic": "/miːt/",
+    "meaning_kh": "ជួប",
+    "example": "Nice to meet you."
+  },
+  {
+    "word_en": "include",
+    "phonetic": "/ɪnˈkluːd/",
+    "meaning_kh": "រួមបញ្ចូល",
+    "example": "The price includes breakfast."
+  },
+  {
+    "word_en": "continue",
+    "phonetic": "/kənˈtɪnjuː/",
+    "meaning_kh": "បន្ត",
+    "example": "Please continue reading."
+  },
+  {
+    "word_en": "set",
+    "phonetic": "/sɛt/",
+    "meaning_kh": "រៀបចំ/កំណត់",
+    "example": "Set the table."
+  },
+  {
+    "word_en": "learn",
+    "phonetic": "/lɜːrn/",
+    "meaning_kh": "រៀន",
+    "example": "Learn English."
+  },
+  {
+    "word_en": "change",
+    "phonetic": "/ʧeɪnʤ/",
+    "meaning_kh": "ផ្លាស់ប្តូរ",
+    "example": "Change your clothes."
+  },
+  {
+    "word_en": "lead",
+    "phonetic": "/liːd/",
+    "meaning_kh": "ដឹកនាំ",
+    "example": "Lead the way."
+  },
+  {
+    "word_en": "understand",
+    "phonetic": "/ˌʌndərˈstænd/",
+    "meaning_kh": "យល់",
+    "example": "I understand."
+  },
+  {
+    "word_en": "watch",
+    "phonetic": "/wɑːʧ/",
+    "meaning_kh": "មើល/តាមដាន",
+    "example": "Watch television."
+  },
+  {
+    "word_en": "follow",
+    "phonetic": "/ˈfɑːloʊ/",
+    "meaning_kh": "ដើរតាម/អនុវត្តតាម",
+    "example": "Follow the rules."
+  },
+  {
+    "word_en": "stop",
+    "phonetic": "/stɑːp/",
+    "meaning_kh": "បញ្ឈប់/ឈប់",
+    "example": "Stop the bus."
+  },
+  {
+    "word_en": "create",
+    "phonetic": "/kriːˈeɪt/",
+    "meaning_kh": "បង្កើត",
+    "example": "Create a new file."
+  },
+  {
+    "word_en": "speak",
+    "phonetic": "/spiːk/",
+    "meaning_kh": "និយាយ",
+    "example": "Speak slowly."
+  },
+  {
+    "word_en": "allow",
+    "phonetic": "/əˈlaʊ/",
+    "meaning_kh": "អនុញ្ញាត",
+    "example": "Dogs are not allowed here."
+  },
+  {
+    "word_en": "add",
+    "phonetic": "/æd/",
+    "meaning_kh": "បន្ថែម",
+    "example": "Add some sugar."
+  },
+  {
+    "word_en": "spend",
+    "phonetic": "/spɛnd/",
+    "meaning_kh": "ចំណាយ",
+    "example": "Spend money."
+  },
+  {
+    "word_en": "grow",
+    "phonetic": "/ɡroʊ/",
+    "meaning_kh": "លូតលាស់/ដាំ",
+    "example": "Plants grow quickly."
+  },
+  {
+    "word_en": "open",
+    "phonetic": "/ˈoʊpən/",
+    "meaning_kh": "បើក",
+    "example": "Open the door."
+  },
+  {
+    "word_en": "walk",
+    "phonetic": "/wɔːk/",
+    "meaning_kh": "ដើរ",
+    "example": "Walk in the park."
+  },
+  {
+    "word_en": "win",
+    "phonetic": "/wɪn/",
+    "meaning_kh": "ឈ្នះ",
+    "example": "Win the game."
+  },
+  {
+    "word_en": "offer",
+    "phonetic": "/ˈɔːfər/",
+    "meaning_kh": "ផ្តល់ជូន",
+    "example": "Offer a discount."
+  },
+  {
+    "word_en": "remember",
+    "phonetic": "/rɪˈmɛmbər/",
+    "meaning_kh": "ចងចាំ",
+    "example": "Remember to lock the door."
+  },
+  {
+    "word_en": "love",
+    "phonetic": "/lʌv/",
+    "meaning_kh": "ស្រឡាញ់",
+    "example": "I love my family."
+  },
+  {
+    "word_en": "consider",
+    "phonetic": "/kənˈsɪdər/",
+    "meaning_kh": "ពិចារណា",
+    "example": "Consider the options."
+  },
+  {
+    "word_en": "appear",
+    "phonetic": "/əˈpɪr/",
+    "meaning_kh": "លេចឡើង",
+    "example": "Stars appear at night."
+  },
+  {
+    "word_en": "buy",
+    "phonetic": "/baɪ/",
+    "meaning_kh": "ទិញ",
+    "example": "Buy some bread."
+  },
+  {
+    "word_en": "wait",
+    "phonetic": "/weɪt/",
+    "meaning_kh": "រង់ចាំ",
+    "example": "Wait for me."
+  },
+  {
+    "word_en": "serve",
+    "phonetic": "/sɜːrv/",
+    "meaning_kh": "បម្រើ",
+    "example": "Serve the food."
+  },
+  {
+    "word_en": "die",
+    "phonetic": "/daɪ/",
+    "meaning_kh": "ស្លាប់",
+    "example": "The flowers died."
+  },
+  {
+    "word_en": "send",
+    "phonetic": "/sɛnd/",
+    "meaning_kh": "ផ្ញើ",
+    "example": "Send an email."
+  },
+  {
+    "word_en": "expect",
+    "phonetic": "/ɪkˈspɛkt/",
+    "meaning_kh": "រំពឹងទុក",
+    "example": "Expect rain today."
+  },
+  {
+    "word_en": "build",
+    "phonetic": "/bɪld/",
+    "meaning_kh": "សាងសង់",
+    "example": "Build a house."
+  },
+  {
+    "word_en": "stay",
+    "phonetic": "/steɪ/",
+    "meaning_kh": "ស្នាក់នៅ",
+    "example": "Stay at home."
+  },
+  {
+    "word_en": "fall",
+    "phonetic": "/fɔːl/",
+    "meaning_kh": "ធ្លាក់/ដួល",
+    "example": "Leaves fall in autumn."
+  },
+  {
+    "word_en": "cut",
+    "phonetic": "/kʌt/",
+    "meaning_kh": "កាត់",
+    "example": "Cut the paper."
+  },
+  {
+    "word_en": "reach",
+    "phonetic": "/riːʧ/",
+    "meaning_kh": "ឈោងទៅដល់",
+    "example": "Reach the top."
+  },
+  {
+    "word_en": "kill",
+    "phonetic": "/kɪl/",
+    "meaning_kh": "សម្លាប់",
+    "example": "Smoking kills."
+  },
+  {
+    "word_en": "remain",
+    "phonetic": "/rɪˈmeɪn/",
+    "meaning_kh": "នៅសល់/នៅតែជា",
+    "example": "Remain silent."
+  },
+  {
+    "word_en": "suggest",
+    "phonetic": "/səɡˈʤɛst/",
+    "meaning_kh": "ផ្តល់យោបល់",
+    "example": "Suggest a plan."
+  },
+  {
+    "word_en": "raise",
+    "phonetic": "/reɪz/",
+    "meaning_kh": "លើកឡើង/ចិញ្ចឹម",
+    "example": "Raise your hand."
+  },
+  {
+    "word_en": "pass",
+    "phonetic": "/pæs/",
+    "meaning_kh": "ឆ្លងកាត់/ប្រឡងជាប់",
+    "example": "Pass the exam."
+  },
+  {
+    "word_en": "sell",
+    "phonetic": "/sɛl/",
+    "meaning_kh": "លក់",
+    "example": "Sell a car."
+  },
+  {
+    "word_en": "decide",
+    "phonetic": "/dɪˈsaɪd/",
+    "meaning_kh": "សម្រេចចិត្ត",
+    "example": "Decide what to do."
+  },
+  {
+    "word_en": "return",
+    "phonetic": "/rɪˈtɜːrn/",
+    "meaning_kh": "ត្រឡប់មកវិញ",
+    "example": "Return home."
+  },
+  {
+    "word_en": "explain",
+    "phonetic": "/ɪkˈspleɪn/",
+    "meaning_kh": "ពន្យល់",
+    "example": "Explain the lesson."
+  },
+  {
+    "word_en": "hope",
+    "phonetic": "/hoʊp/",
+    "meaning_kh": "សង្ឃឹម",
+    "example": "I hope to see you."
+  },
+  {
+    "word_en": "develop",
+    "phonetic": "/dɪˈvɛləp/",
+    "meaning_kh": "អភិវឌ្ឍ",
+    "example": "Develop a website."
+  },
+  {
+    "word_en": "carry",
+    "phonetic": "/ˈkæri/",
+    "meaning_kh": "កាន់/យួរ/ផ្ទុក",
+    "example": "Carry a bag."
+  },
+  {
+    "word_en": "break",
+    "phonetic": "/breɪk/",
+    "meaning_kh": "បំបែក/បាក់",
+    "example": "Don't break the glass."
+  },
+  {
+    "word_en": "receive",
+    "phonetic": "/rɪˈsiːv/",
+    "meaning_kh": "ទទួល",
+    "example": "I received a letter."
+  },
+  {
+    "word_en": "agree",
+    "phonetic": "/əˈɡriː/",
+    "meaning_kh": "យល់ព្រម",
+    "example": "I agree with you."
+  },
+  {
+    "word_en": "support",
+    "phonetic": "/səˈpɔːrt/",
+    "meaning_kh": "គាំទ្រ",
+    "example": "They support our team."
+  },
+  {
+    "word_en": "hit",
+    "phonetic": "/hɪt/",
+    "meaning_kh": "វាយ/ប៉ះ",
+    "example": "He hit the ball."
+  },
+  {
+    "word_en": "produce",
+    "phonetic": "/prəˈduːs/",
+    "meaning_kh": "ផលិត",
+    "example": "They produce cars."
+  },
+  {
+    "word_en": "eat",
+    "phonetic": "/iːt/",
+    "meaning_kh": "ញ៉ាំ/ហូប/ស៊ី",
+    "example": "We eat lunch together."
+  },
+  {
+    "word_en": "cover",
+    "phonetic": "/ˈkʌvər/",
+    "meaning_kh": "គ្រប/បិទបាំង",
+    "example": "Cover the food."
+  },
+  {
+    "word_en": "catch",
+    "phonetic": "/kætʃ/",
+    "meaning_kh": "ចាប់",
+    "example": "Catch the ball."
+  },
+  {
+    "word_en": "draw",
+    "phonetic": "/drɔː/",
+    "meaning_kh": "គូរ",
+    "example": "Draw a picture."
+  },
+  {
+    "word_en": "choose",
+    "phonetic": "/tʃuːz/",
+    "meaning_kh": "ជ្រើសរើស",
+    "example": "Choose your favorite color."
+  },
+  {
+    "word_en": "cause",
+    "phonetic": "/kɔːz/",
+    "meaning_kh": "បង្ក/ធ្វើឲ្យមាន",
+    "example": "Smoking causes disease."
+  },
+  {
+    "word_en": "point",
+    "phonetic": "/pɔɪnt/",
+    "meaning_kh": "ចង្អុល",
+    "example": "Point at the map."
+  },
+  {
+    "word_en": "place",
+    "phonetic": "/pleɪs/",
+    "meaning_kh": "ដាក់/តម្កល់",
+    "example": "Place the cup here."
+  },
+  {
+    "word_en": "drop",
+    "phonetic": "/drɑːp/",
+    "meaning_kh": "ទម្លាក់/ជ្រុះ",
+    "example": "Don't drop the vase."
+  },
+  {
+    "word_en": "fill",
+    "phonetic": "/fɪl/",
+    "meaning_kh": "បំពេញ",
+    "example": "Fill the glass with water."
+  },
+  {
+    "word_en": "force",
+    "phonetic": "/fɔːrs/",
+    "meaning_kh": "បង្ខំ",
+    "example": "Don't force me to go."
+  },
+  {
+    "word_en": "present",
+    "phonetic": "/prɪˈzɛnt/",
+    "meaning_kh": "ជូន/បង្ហាញ",
+    "example": "Present your ideas."
+  },
+  {
+    "word_en": "share",
+    "phonetic": "/ʃer/",
+    "meaning_kh": "ចែករំលែក",
+    "example": "Share your toys."
+  },
+  {
+    "word_en": "save",
+    "phonetic": "/seɪv/",
+    "meaning_kh": "សន្សំ/សង្គ្រោះ",
+    "example": "Save money for the future."
+  },
+  {
+    "word_en": "protect",
+    "phonetic": "/prəˈtɛkt/",
+    "meaning_kh": "ការពារ",
+    "example": "Protect your skin."
+  },
+  {
+    "word_en": "accept",
+    "phonetic": "/ækˈsɛpt/",
+    "meaning_kh": "ទទួលយក",
+    "example": "Accept the invitation."
+  },
+  {
+    "word_en": "achieve",
+    "phonetic": "/əˈtʃiːv/",
+    "meaning_kh": "សម្រេចបាន",
+    "example": "Achieve your goals."
+  },
+  {
+    "word_en": "act",
+    "phonetic": "/ækt/",
+    "meaning_kh": "សម្តែង/ធ្វើសកម្មភាព",
+    "example": "Act professional."
+  },
+  {
+    "word_en": "admit",
+    "phonetic": "/ədˈmɪt/",
+    "meaning_kh": "សារភាព/ទទួលស្គាល់",
+    "example": "Admit your mistake."
+  },
+  {
+    "word_en": "affect",
+    "phonetic": "/əˈfɛkt/",
+    "meaning_kh": "ជះឥទ្ធិពល",
+    "example": "Smoking affects health."
+  },
+  {
+    "word_en": "afford",
+    "phonetic": "/əˈfɔːrd/",
+    "meaning_kh": "មានលទ្ធភាពបង់",
+    "example": "I can't afford this car."
+  },
+  {
+    "word_en": "aim",
+    "phonetic": "/eɪm/",
+    "meaning_kh": "តម្រង់/ឆ្ពោះទៅ",
+    "example": "Aim for success."
+  },
+  {
+    "word_en": "announce",
+    "phonetic": "/əˈnaʊns/",
+    "meaning_kh": "ប្រកាស",
+    "example": "Announce the winner."
+  },
+  {
+    "word_en": "apply",
+    "phonetic": "/əˈplaɪ/",
+    "meaning_kh": "ដាក់ពាក្យ/អនុវត្ត",
+    "example": "Apply for a job."
+  },
+  {
+    "word_en": "argue",
+    "phonetic": "/ˈɑːrɡjuː/",
+    "meaning_kh": "ជជែកតវ៉ា",
+    "example": "Don't argue with them."
+  },
+  {
+    "word_en": "arrive",
+    "phonetic": "/əˈraɪv/",
+    "meaning_kh": "មកដល់",
+    "example": "Arrive at the airport."
+  },
+  {
+    "word_en": "assume",
+    "phonetic": "/əˈsuːm/",
+    "meaning_kh": "សន្មត",
+    "example": "Assume the worst."
+  },
+  {
+    "word_en": "attack",
+    "phonetic": "/əˈtæk/",
+    "meaning_kh": "វាយប្រហារ",
+    "example": "The dog attacked them."
+  },
+  {
+    "word_en": "attend",
+    "phonetic": "/əˈtɛnd/",
+    "meaning_kh": "ចូលរួម",
+    "example": "Attend a meeting."
+  },
+  {
+    "word_en": "avoid",
+    "phonetic": "/əˈvɔɪd/",
+    "meaning_kh": "ជៀសវាង",
+    "example": "Avoid traffic jams."
+  },
+  {
+    "word_en": "base",
+    "phonetic": "/beɪs/",
+    "meaning_kh": "ផ្អែកលើ",
+    "example": "Base your answer on facts."
+  },
+  {
+    "word_en": "beat",
+    "phonetic": "/biːt/",
+    "meaning_kh": "វាយ/ឈ្នះ",
+    "example": "Beat the opponent."
+  },
+  {
+    "word_en": "behave",
+    "phonetic": "/bɪˈheɪv/",
+    "meaning_kh": "ប្រព្រឹត្ត/ធ្វើខ្លួន",
+    "example": "Behave yourself."
+  },
+  {
+    "word_en": "belong",
+    "phonetic": "/bɪˈlɔːŋ/",
+    "meaning_kh": "ជារបស់",
+    "example": "This belongs to me."
+  },
+  {
+    "word_en": "bite",
+    "phonetic": "/baɪt/",
+    "meaning_kh": "ខាំ",
+    "example": "Don't bite your nails."
+  },
+  {
+    "word_en": "blow",
+    "phonetic": "/bloʊ/",
+    "meaning_kh": "ផ្លុំ",
+    "example": "Blow out the candles."
+  },
+  {
+    "word_en": "borrow",
+    "phonetic": "/ˈbɑːroʊ/",
+    "meaning_kh": "ខ្ចី",
+    "example": "Borrow a book."
+  },
+  {
+    "word_en": "bother",
+    "phonetic": "/ˈbɑːðər/",
+    "meaning_kh": "រំខាន",
+    "example": "Don't bother me."
+  },
+  {
+    "word_en": "bounce",
+    "phonetic": "/baʊns/",
+    "meaning_kh": "លោតផ្លោតៗ",
+    "example": "Bounce the ball."
+  },
+  {
+    "word_en": "burn",
+    "phonetic": "/bɜːrn/",
+    "meaning_kh": "ដុត/ឆេះ",
+    "example": "Burn the waste."
+  },
+  {
+    "word_en": "care",
+    "phonetic": "/ker/",
+    "meaning_kh": "បារម្ភ/ថែទាំ",
+    "example": "Care for your parents."
+  },
+  {
+    "word_en": "celebrate",
+    "phonetic": "/ˈsɛlɪbreɪt/",
+    "meaning_kh": "អបអរសាទរ",
+    "example": "Celebrate your birthday."
+  },
+  {
+    "word_en": "check",
+    "phonetic": "/tʃɛk/",
+    "meaning_kh": "ពិនិត្យ",
+    "example": "Check your email."
+  },
+  {
+    "word_en": "clean",
+    "phonetic": "/kliːn/",
+    "meaning_kh": "សម្អាត",
+    "example": "Clean the window."
+  },
+  {
+    "word_en": "climb",
+    "phonetic": "/klaɪm/",
+    "meaning_kh": "ឡើង",
+    "example": "Climb the tree."
+  },
+  {
+    "word_en": "close",
+    "phonetic": "/kloʊz/",
+    "meaning_kh": "បិទ",
+    "example": "Close your eyes."
+  },
+  {
+    "word_en": "collect",
+    "phonetic": "/kəˈlɛkt/",
+    "meaning_kh": "ប្រមូល",
+    "example": "Collect coins."
+  },
+  {
+    "word_en": "complain",
+    "phonetic": "/kəmˈpleɪn/",
+    "meaning_kh": "រអ៊ូរទាំ/ប្ដឹង",
+    "example": "Complain about service."
+  },
+  {
+    "word_en": "complete",
+    "phonetic": "/kəmˈpliːt/",
+    "meaning_kh": "បំពេញឱ្យរួចរាល់",
+    "example": "Complete the project."
+  },
+  {
+    "word_en": "confirm",
+    "phonetic": "/kənˈfɜːrm/",
+    "meaning_kh": "បញ្ជាក់ទទួល",
+    "example": "Confirm your flight."
+  },
+  {
+    "word_en": "connect",
+    "phonetic": "/kəˈnɛkt/",
+    "meaning_kh": "ភ្ជាប់",
+    "example": "Connect to Wi-Fi."
+  },
+  {
+    "word_en": "control",
+    "phonetic": "/kənˈtroʊl/",
+    "meaning_kh": "គ្រប់គ្រង",
+    "example": "Control your anger."
+  },
+  {
+    "word_en": "cook",
+    "phonetic": "/kʊk/",
+    "meaning_kh": "ធ្វើម្ហូប",
+    "example": "Cook dinner."
+  },
+  {
+    "word_en": "copy",
+    "phonetic": "/ˈkɑːpi/",
+    "meaning_kh": "ចម្លង",
+    "example": "Copy the file."
+  },
+  {
+    "word_en": "cry",
+    "phonetic": "/kraɪ/",
+    "meaning_kh": "យំ",
+    "example": "Don't cry."
+  },
+  {
+    "word_en": "dance",
+    "phonetic": "/dæns/",
+    "meaning_kh": "រាំ",
+    "example": "Dance to the music."
+  },
+  {
+    "word_en": "damage",
+    "phonetic": "/ˈdæmɪdʒ/",
+    "meaning_kh": "ធ្វើឲ្យខូចខាត",
+    "example": "Storm damages houses."
+  },
+  {
+    "word_en": "deliver",
+    "phonetic": "/dɪˈlɪvər/",
+    "meaning_kh": "ដឹកជញ្ជូន",
+    "example": "Deliver food."
+  },
+  {
+    "word_en": "demand",
+    "phonetic": "/dɪˈmænd/",
+    "meaning_kh": "ទាមទារ",
+    "example": "Demand an explanation."
+  },
+  {
+    "word_en": "deny",
+    "phonetic": "/dɪˈnaɪ/",
+    "meaning_kh": "បដិសេធ",
+    "example": "Deny the accusation."
+  },
+  {
+    "word_en": "depend",
+    "phonetic": "/dɪˈpɛnd/",
+    "meaning_kh": "ផ្អែកលើ",
+    "example": "Depend on family."
+  },
+  {
+    "word_en": "describe",
+    "phonetic": "/dɪˈskraɪb/",
+    "meaning_kh": "រៀបរាប់",
+    "example": "Describe the suspect."
+  },
+  {
+    "word_en": "design",
+    "phonetic": "/dɪˈzaɪn/",
+    "meaning_kh": "រចនា",
+    "example": "Design a logo."
+  },
+  {
+    "word_en": "destroy",
+    "phonetic": "/dɪˈstrɔɪ/",
+    "meaning_kh": "បំផ្លាញ",
+    "example": "Destroy the evidence."
+  },
+  {
+    "word_en": "detect",
+    "phonetic": "/dɪˈtɛkt/",
+    "meaning_kh": "រកឃើញ",
+    "example": "Detect a lie."
+  },
+  {
+    "word_en": "discover",
+    "phonetic": "/dɪˈskʌvər/",
+    "meaning_kh": "ស្វែងរកឃើញ",
+    "example": "Discover a new land."
+  },
+  {
+    "word_en": "discuss",
+    "phonetic": "/dɪˈskʌs/",
+    "meaning_kh": "ពិភាក្សា",
+    "example": "Discuss the strategy."
+  },
+  {
+    "word_en": "dislike",
+    "phonetic": "/dɪsˈlaɪk/",
+    "meaning_kh": "មិនចូលចិត្ត",
+    "example": "Dislike hot weather."
+  },
+  {
+    "word_en": "divide",
+    "phonetic": "/dɪˈvaɪd/",
+    "meaning_kh": "ចែក",
+    "example": "Divide the cake."
+  },
+  {
+    "word_en": "dream",
+    "phonetic": "/driːm/",
+    "meaning_kh": "យល់សប្តិ/ស្រមៃ",
+    "example": "Dream of flying."
+  },
+  {
+    "word_en": "drink",
+    "phonetic": "/drɪŋk/",
+    "meaning_kh": "ផឹក",
+    "example": "Drink clean water."
+  },
+  {
+    "word_en": "drive",
+    "phonetic": "/draɪv/",
+    "meaning_kh": "បើកបរ",
+    "example": "Drive safely."
+  },
+  {
+    "word_en": "earn",
+    "phonetic": "/ɜːrn/",
+    "meaning_kh": "រកចំណូល",
+    "example": "Earn a salary."
+  },
+  {
+    "word_en": "encourage",
+    "phonetic": "/ɪnˈkɜːrɪdʒ/",
+    "meaning_kh": "លើកទឹកចិត្ត",
+    "example": "Encourage students."
+  },
+  {
+    "word_en": "enjoy",
+    "phonetic": "/ɪnˈdʒɔɪ/",
+    "meaning_kh": "រីករាយនឹង",
+    "example": "Enjoy the party."
+  },
+  {
+    "word_en": "enter",
+    "phonetic": "/ˈɛntər/",
+    "meaning_kh": "ចូល",
+    "example": "Enter the room."
+  },
+  {
+    "word_en": "escape",
+    "phonetic": "/ɪˈskeɪp/",
+    "meaning_kh": "រត់គេច",
+    "example": "Escape from prison."
+  },
+  {
+    "word_en": "establish",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "meaning_kh": "បង្កើតឡើង",
+    "example": "Establish a company."
+  },
+  {
+    "word_en": "examine",
+    "phonetic": "/ɪɡˈzæmɪn/",
+    "meaning_kh": "ពិនិត្យ/សាកសួរ",
+    "example": "Examine the patient."
+  },
+  {
+    "word_en": "exercise",
+    "phonetic": "/ˈɛksərsaɪz/",
+    "meaning_kh": "ហាត់ប្រាណ",
+    "example": "Exercise daily."
+  },
+  {
+    "word_en": "exist",
+    "phonetic": "/ɪɡˈzɪst/",
+    "meaning_kh": "មានអត្ថិភាព",
+    "example": "Dinosaurs no longer exist."
+  },
+  {
+    "word_en": "expand",
+    "phonetic": "/ɪkˈspænd/",
+    "meaning_kh": "ពង្រីក",
+    "example": "Expand the business."
+  },
+  {
+    "word_en": "experience",
+    "phonetic": "/ɪkˈspɪriəns/",
+    "meaning_kh": "ជួបប្រទះ",
+    "example": "Experience difficulties."
+  },
+  {
+    "word_en": "explore",
+    "phonetic": "/ɪkˈsplɔːr/",
+    "meaning_kh": "រុករក",
+    "example": "Explore the forest."
+  },
+  {
+    "word_en": "extend",
+    "phonetic": "/ɪkˈstɛnd/",
+    "meaning_kh": "បន្ថែម/ពន្យារ",
+    "example": "Extend the deadline."
+  },
+  {
+    "word_en": "face",
+    "phonetic": "/feɪs/",
+    "meaning_kh": "ប្រឈមមុខ",
+    "example": "Face the challenge."
+  },
+  {
+    "word_en": "fail",
+    "phonetic": "/feɪl/",
+    "meaning_kh": "ធ្លាក់/បរាជ័យ",
+    "example": "Fail the test."
+  },
+  {
+    "word_en": "fear",
+    "phonetic": "/fɪr/",
+    "meaning_kh": "ខ្លាច",
+    "example": "Fear the dark."
+  },
+  {
+    "word_en": "feed",
+    "phonetic": "/fiːd/",
+    "meaning_kh": "ផ្ដល់ចំណី",
+    "example": "Feed the dog."
+  },
+  {
+    "word_en": "fight",
+    "phonetic": "/faɪt/",
+    "meaning_kh": "ប្រយុទ្ធ/វាយគ្នា",
+    "example": "Fight for freedom."
+  },
+  {
+    "word_en": "fit",
+    "phonetic": "/fɪt/",
+    "meaning_kh": "ត្រូវ/សមស្រប",
+    "example": "These shoes fit well."
+  },
+  {
+    "word_en": "fix",
+    "phonetic": "/fɪks/",
+    "meaning_kh": "ជួសជុល",
+    "example": "Fix the computer."
+  },
+  {
+    "word_en": "fly",
+    "phonetic": "/flaɪ/",
+    "meaning_kh": "ហោះហើរ",
+    "example": "Birds can fly."
+  },
+  {
+    "word_en": "forget",
+    "phonetic": "/fərˈɡɛt/",
+    "meaning_kh": "ភ្លេច",
+    "example": "Don't forget me."
+  },
+  {
+    "word_en": "focus",
+    "phonetic": "/ˈfoʊkəs/",
+    "meaning_kh": "ផ្តោតអារម្មណ៍",
+    "example": "Focus on your studies."
+  },
+  {
+    "word_en": "forgive",
+    "phonetic": "/fərˈɡɪv/",
+    "meaning_kh": "អភ័យទោស",
+    "example": "Please forgive me."
+  },
+  {
+    "word_en": "freeze",
+    "phonetic": "/friːz/",
+    "meaning_kh": "បង្កក/កក",
+    "example": "Water freezes at 0 degrees."
+  },
+  {
+    "word_en": "fry",
+    "phonetic": "/fraɪ/",
+    "meaning_kh": "បំពង/លីង/ចៀន",
+    "example": "Fry the fish."
+  },
+  {
+    "word_en": "gather",
+    "phonetic": "/ˈɡæðər/",
+    "meaning_kh": "ប្រមូលផ្តុំ/ជួបជុំ",
+    "example": "Gather in the hall."
+  },
+  {
+    "word_en": "gaze",
+    "phonetic": "/ɡeɪz/",
+    "meaning_kh": "សម្លឹងមើល",
+    "example": "Gaze at the stars."
+  },
+  {
+    "word_en": "generate",
+    "phonetic": "/ˈdʒɛnəreɪt/",
+    "meaning_kh": "បង្កើត",
+    "example": "Generate new ideas."
+  },
+  {
+    "word_en": "grab",
+    "phonetic": "/ɡræb/",
+    "meaning_kh": "ចាប់យក/ឆក់យក",
+    "example": "Grab a coffee."
+  },
+  {
+    "word_en": "graduate",
+    "phonetic": "/ˈdʒædʒueɪt/",
+    "meaning_kh": "បញ្ចប់ការសិក្សា",
+    "example": "Graduate from college."
+  },
+  {
+    "word_en": "guarantee",
+    "phonetic": "/ˌɡærənˈtiː/",
+    "meaning_kh": "ធានា",
+    "example": "We guarantee the quality."
+  },
+  {
+    "word_en": "guess",
+    "phonetic": "/ɡɛs/",
+    "meaning_kh": "ទាយ",
+    "example": "Guess the answer."
+  },
+  {
+    "word_en": "guide",
+    "phonetic": "/ɡaɪd/",
+    "meaning_kh": "ណែនាំ/នាំផ្លូវ",
+    "example": "Guide the tourists."
+  },
+  {
+    "word_en": "hang",
+    "phonetic": "/hæŋ/",
+    "meaning_kh": "ព្យួរ",
+    "example": "Hang the picture."
+  },
+  {
+    "word_en": "happen",
+    "phonetic": "/ˈhæpən/",
+    "meaning_kh": "កើតឡើង",
+    "example": "What happened?"
+  },
+  {
+    "word_en": "hate",
+    "phonetic": "/heɪt/",
+    "meaning_kh": "ស្អប់",
+    "example": "I hate spiders."
+  },
+  {
+    "word_en": "heal",
+    "phonetic": "/hiːl/",
+    "meaning_kh": "ព្យាបាល/ជាសះស្បើយ",
+    "example": "The wound will heal."
+  },
+  {
+    "word_en": "hide",
+    "phonetic": "/haɪd/",
+    "meaning_kh": "លាក់/ពួន",
+    "example": "Hide the treasure."
+  },
+  {
+    "word_en": "hire",
+    "phonetic": "/ˈhaɪər/",
+    "meaning_kh": "ជួល/ជ្រើសរើសបុគ្គលិក",
+    "example": "Hire a new designer."
+  },
+  {
+    "word_en": "hug",
+    "phonetic": "/hʌɡ/",
+    "meaning_kh": "ឱប",
+    "example": "Hug your friend."
+  },
+  {
+    "word_en": "hunt",
+    "phonetic": "/hʌnt/",
+    "meaning_kh": "បរបាញ់",
+    "example": "Hunt for food."
+  },
+  {
+    "word_en": "hurry",
+    "phonetic": "/ˈhɜːri/",
+    "meaning_kh": "ប្រញាប់",
+    "example": "Hurry up!"
+  },
+  {
+    "word_en": "hurt",
+    "phonetic": "/hɜːrt/",
+    "meaning_kh": "ធ្វើឲ្យឈឺចាប់",
+    "example": "My head hurts."
+  },
+  {
+    "word_en": "identify",
+    "phonetic": "/aɪˈdɛntɪfaɪ/",
+    "meaning_kh": "កំណត់អត្តសញ្ញាណ",
+    "example": "Identify the problem."
+  },
+  {
+    "word_en": "ignore",
+    "phonetic": "/ɪɡˈnɔːr/",
+    "meaning_kh": "មិនអើពើ",
+    "example": "Ignore the noise."
+  },
+  {
+    "word_en": "illustrate",
+    "phonetic": "/ˈɪləstreɪt/",
+    "meaning_kh": "បង្ហាញរូបភាព/ពន្យល់",
+    "example": "Illustrate the concept."
+  },
+  {
+    "word_en": "imagine",
+    "phonetic": "/ɪˈmædʒɪn/",
+    "meaning_kh": "ស្រមៃ",
+    "example": "Imagine a better world."
+  },
+  {
+    "word_en": "import",
+    "phonetic": "/ɪmˈpɔːrt/",
+    "meaning_kh": "នាំចូល",
+    "example": "Import goods."
+  },
+  {
+    "word_en": "impress",
+    "phonetic": "/ɪmˈprɛs/",
+    "meaning_kh": "ធ្វើឲ្យចាប់អារម្មណ៍",
+    "example": "Impress the interviewers."
+  },
+  {
+    "word_en": "improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "meaning_kh": "កែលម្អ",
+    "example": "Improve your English."
+  },
+  {
+    "word_en": "increase",
+    "phonetic": "/ɪnˈkriːs/",
+    "meaning_kh": "កើនឡើង/បង្កើន",
+    "example": "Increase sales."
+  },
+  {
+    "word_en": "indicate",
+    "phonetic": "/ˈɪndɪkeɪt/",
+    "meaning_kh": "បង្ហាញពី",
+    "example": "Signs indicate rain."
+  },
+  {
+    "word_en": "influence",
+    "phonetic": "/ˈɪnfluəns/",
+    "meaning_kh": "ជះឥទ្ធិពល",
+    "example": "Don't influence my decision."
+  },
+  {
+    "word_en": "inform",
+    "phonetic": "/ɪnˈfɔːrm/",
+    "meaning_kh": "ជូនដំណឹង",
+    "example": "Inform the manager."
+  },
+  {
+    "word_en": "inject",
+    "phonetic": "/ɪnˈdʒɛkt/",
+    "meaning_kh": "ចាក់ថ្នាំ",
+    "example": "Inject medicine."
+  },
+  {
+    "word_en": "insist",
+    "phonetic": "/ɪnˈsɪst/",
+    "meaning_kh": "ទទូច",
+    "example": "I insist on paying."
+  },
+  {
+    "word_en": "inspect",
+    "phonetic": "/ɪnˈspɛkt/",
+    "meaning_kh": "ត្រួតពិនិត្យ",
+    "example": "Inspect the building."
+  },
+  {
+    "word_en": "inspire",
+    "phonetic": "/ɪnˈspaɪər/",
+    "meaning_kh": "ផ្តល់ការបំផុសគំនិត",
+    "example": "Inspire others."
+  },
+  {
+    "word_en": "install",
+    "phonetic": "/ɪnˈstɔːl/",
+    "meaning_kh": "ដំឡើង",
+    "example": "Install the software."
+  },
+  {
+    "word_en": "intend",
+    "phonetic": "/ɪnˈtɛnd/",
+    "meaning_kh": "មានបំណង",
+    "example": "I intend to go tomorrow."
+  },
+  {
+    "word_en": "introduce",
+    "phonetic": "/ˌɪntrəˈduːs/",
+    "meaning_kh": "ណែនាំ",
+    "example": "Introduce yourself."
+  },
+  {
+    "word_en": "invent",
+    "phonetic": "/ɪnˈvɛnt/",
+    "meaning_kh": "បង្កើតថ្មី",
+    "example": "Invent a machine."
+  },
+  {
+    "word_en": "invite",
+    "phonetic": "/ɪnˈvaɪt/",
+    "meaning_kh": "អញ្ជើញ",
+    "example": "Invite friends."
+  },
+  {
+    "word_en": "join",
+    "phonetic": "/dʒɔɪn/",
+    "meaning_kh": "ចូលរួម",
+    "example": "Join the club."
+  },
+  {
+    "word_en": "joke",
+    "phonetic": "/dʒoʊk/",
+    "meaning_kh": "និយាយកំប្លែង",
+    "example": "He likes to joke."
+  },
+  {
+    "word_en": "judge",
+    "phonetic": "/dʒʌdʒ/",
+    "meaning_kh": "វាយតម្លៃ/កាត់សេចក្តី",
+    "example": "Don't judge a book by its cover."
+  },
+  {
+    "word_en": "jump",
+    "phonetic": "/dʒʌmp/",
+    "meaning_kh": "លោត",
+    "example": "Jump over the puddle."
+  },
+  {
+    "word_en": "justify",
+    "phonetic": "/ˈdʒʌstɪfaɪ/",
+    "meaning_kh": "សំអាងហេតុផល/បញ្ជាក់ថាត្រឹមត្រូវ",
+    "example": "Justify your answer."
+  },
+  {
+    "word_en": "kick",
+    "phonetic": "/kɪk/",
+    "meaning_kh": "ធាក់/ទាត់",
+    "example": "Kick the ball."
+  },
+  {
+    "word_en": "kiss",
+    "phonetic": "/kɪs/",
+    "meaning_kh": "ថើប",
+    "example": "Kiss your cheeks."
+  },
+  {
+    "word_en": "knock",
+    "phonetic": "/nɑːk/",
+    "meaning_kh": "គោះ",
+    "example": "Knock on the door."
+  },
+  {
+    "word_en": "laugh",
+    "phonetic": "/læf/",
+    "meaning_kh": "សើច",
+    "example": "Laugh out loud."
+  },
+  {
+    "word_en": "launch",
+    "phonetic": "/lɔːntʃ/",
+    "meaning_kh": "បើកដំណើរការ",
+    "example": "Launch the product."
+  },
+  {
+    "word_en": "lay",
+    "phonetic": "/leɪ/",
+    "meaning_kh": "ដាក់ចុះ/ពង(ស៊ុត)",
+    "example": "Lay the baby down."
+  },
+  {
+    "word_en": "leap",
+    "phonetic": "/liːp/",
+    "meaning_kh": "លោតផ្លោះ",
+    "example": "Leap forward."
+  },
+  {
+    "word_en": "lend",
+    "phonetic": "/lɛnd/",
+    "meaning_kh": "ឱ្យខ្ចី",
+    "example": "Lend me some money."
+  },
+  {
+    "word_en": "lie",
+    "phonetic": "/laɪ/",
+    "meaning_kh": "កុហក/គេង",
+    "example": "Don't lie to me."
+  },
+  {
+    "word_en": "lift",
+    "phonetic": "/lɪft/",
+    "meaning_kh": "លើក",
+    "example": "Lift the heavy box."
+  },
+  {
+    "word_en": "light",
+    "phonetic": "/laɪt/",
+    "meaning_kh": "បំភ្លឺ/អុជ",
+    "example": "Light the candle."
+  },
+  {
+    "word_en": "limit",
+    "phonetic": "/ˈlɪmɪt/",
+    "meaning_kh": "កំណត់",
+    "example": "Limit your speed."
+  },
+  {
+    "word_en": "link",
+    "phonetic": "/lɪŋk/",
+    "meaning_kh": "ភ្ជាប់",
+    "example": "Link the accounts."
+  },
+  {
+    "word_en": "listen",
+    "phonetic": "/ˈlɪsən/",
+    "meaning_kh": "ស្តាប់",
+    "example": "Listen to music."
+  },
+  {
+    "word_en": "load",
+    "phonetic": "/loʊd/",
+    "meaning_kh": "ផ្ទុក",
+    "example": "Load the truck."
+  },
+  {
+    "word_en": "lock",
+    "phonetic": "/lɑːk/",
+    "meaning_kh": "ចាក់សោ",
+    "example": "Lock the door."
+  },
+  {
+    "word_en": "look",
+    "phonetic": "/lʊk/",
+    "meaning_kh": "មើល",
+    "example": "Look at me."
+  },
+  {
+    "word_en": "maintain",
+    "phonetic": "/meɪnˈteɪn/",
+    "meaning_kh": "ថែរក្សា/រក្សាទុក",
+    "example": "Maintain a healthy lifestyle."
+  },
+  {
+    "word_en": "manage",
+    "phonetic": "/ˈmænɪdʒ/",
+    "meaning_kh": "គ្រប់គ្រង",
+    "example": "Manage a business."
+  },
+  {
+    "word_en": "marry",
+    "phonetic": "/ˈmæri/",
+    "meaning_kh": "រៀបការ",
+    "example": "They will marry next month."
+  },
+  {
+    "word_en": "match",
+    "phonetic": "/mætʃ/",
+    "meaning_kh": "ផ្គូផ្គង",
+    "example": "Match the words."
+  },
+  {
+    "word_en": "measure",
+    "phonetic": "/ˈmɛʒər/",
+    "meaning_kh": "វាស់វែង",
+    "example": "Measure the length."
+  },
+  {
+    "word_en": "mention",
+    "phonetic": "/ˈmɛnʃən/",
+    "meaning_kh": "រៀបរាប់/លើកឡើង",
+    "example": "Don't mention it."
+  },
+  {
+    "word_en": "mind",
+    "phonetic": "/maɪnd/",
+    "meaning_kh": "យកចិត្តទុកដាក់/ប្រុងប្រយ័ត្ន",
+    "example": "Mind your head."
+  },
+  {
+    "word_en": "miss",
+    "phonetic": "/mɪs/",
+    "meaning_kh": "នឹក/បាត់បង់",
+    "example": "I miss you."
+  },
+  {
+    "word_en": "mix",
+    "phonetic": "/mɪks/",
+    "meaning_kh": "លាយ",
+    "example": "Mix the colors."
+  },
+  {
+    "word_en": "multiply",
+    "phonetic": "/ˈmʌltɪplaɪ/",
+    "meaning_kh": "គុណ",
+    "example": "Multiply two by three."
+  },
+  {
+    "word_en": "name",
+    "phonetic": "/neɪm/",
+    "meaning_kh": "ដាក់ឈ្មោះ",
+    "example": "Name the baby."
+  },
+  {
+    "word_en": "navigate",
+    "phonetic": "/ˈnævɪɡeɪt/",
+    "meaning_kh": "ធ្វើនាវាចរ/ស្វែងរកផ្លូវ",
+    "example": "Navigate the website."
+  },
+  {
+    "word_en": "nod",
+    "phonetic": "/nɑːd/",
+    "meaning_kh": "ងក់ក្បាល",
+    "example": "Nod your head."
+  },
+  {
+    "word_en": "note",
+    "phonetic": "/noʊt/",
+    "meaning_kh": "កត់ត្រា",
+    "example": "Note the changes."
+  },
+  {
+    "word_en": "notice",
+    "phonetic": "/ˈnoʊtɪs/",
+    "meaning_kh": "ចាប់អារម្មណ៍/កត់សម្គាល់",
+    "example": "I noticed a mistake."
+  },
+  {
+    "word_en": "obey",
+    "phonetic": "/oʊˈbeɪ/",
+    "meaning_kh": "ស្តាប់បង្គាប់",
+    "example": "Obey your parents."
+  },
+  {
+    "word_en": "object",
+    "phonetic": "/əbˈdʒɛkt/",
+    "meaning_kh": "ប្រឆាំង",
+    "example": "I object to this proposal."
+  },
+  {
+    "word_en": "observe",
+    "phonetic": "/əbˈzɜːrv/",
+    "meaning_kh": "សង្កេត",
+    "example": "Observe the behavior."
+  },
+  {
+    "word_en": "obtain",
+    "phonetic": "/əbˈteɪn/",
+    "meaning_kh": "ទទួលបាន",
+    "example": "Obtain permission."
+  },
+  {
+    "word_en": "occur",
+    "phonetic": "/əˈkɜːr/",
+    "meaning_kh": "កើតឡើង",
+    "example": "Accidents occur easily."
+  },
+  {
+    "word_en": "operate",
+    "phonetic": "/ˈɑːpəreɪt/",
+    "meaning_kh": "ដំណើរការ/វះកាត់",
+    "example": "Operate the machine."
+  },
+  {
+    "word_en": "organize",
+    "phonetic": "/ˈɔːrɡənaɪz/",
+    "meaning_kh": "រៀបចំ",
+    "example": "Organize a party."
+  },
+  {
+    "word_en": "owe",
+    "phonetic": "/oʊ/",
+    "meaning_kh": "ជំពាក់",
+    "example": "I owe you money."
+  },
+  {
+    "word_en": "own",
+    "phonetic": "/oʊn/",
+    "meaning_kh": "ក្លាយជាម្ចាស់/មានសិទ្ធិលើ",
+    "example": "I own this house."
+  },
+  {
+    "word_en": "pack",
+    "phonetic": "/pæk/",
+    "meaning_kh": "រៀបចំឥវ៉ាន់",
+    "example": "Pack your bags."
+  },
+  {
+    "word_en": "paint",
+    "phonetic": "/peɪnt/",
+    "meaning_kh": "គូរគំនូរ/លាបថ្នាំ",
+    "example": "Paint the wall."
+  },
+  {
+    "word_en": "participate",
+    "phonetic": "/pɑːrˈtɪsɪpeɪt/",
+    "meaning_kh": "ចូលរួម",
+    "example": "Participate in the game."
+  },
+  {
+    "word_en": "perform",
+    "phonetic": "/pərˈfɔːrm/",
+    "meaning_kh": "សម្តែង",
+    "example": "Perform on stage."
+  },
+  {
+    "word_en": "permit",
+    "phonetic": "/pərˈmɪt/",
+    "meaning_kh": "អនុញ្ញាត",
+    "example": "Permit entry."
+  },
+  {
+    "word_en": "persuade",
+    "phonetic": "/pərˈsweɪd/",
+    "meaning_kh": "បញ្ចុះបញ្ចូល",
+    "example": "Persuade them to join."
+  },
+  {
+    "word_en": "plan",
+    "phonetic": "/plæn/",
+    "meaning_kh": "រៀបចំផែនការ",
+    "example": "Plan a trip."
+  },
+  {
+    "word_en": "plant",
+    "phonetic": "/plænt/",
+    "meaning_kh": "ដាំ",
+    "example": "Plant flowers."
+  },
+  {
+    "word_en": "pour",
+    "phonetic": "/pɔːr/",
+    "meaning_kh": "ចាក់(ទឹក/វត្ថុរាវ)",
+    "example": "Pour some water."
+  },
+  {
+    "word_en": "pray",
+    "phonetic": "/preɪ/",
+    "meaning_kh": "បន់ស្រន់/បួងសួង",
+    "example": "Pray for peace."
+  },
+  {
+    "word_en": "prefer",
+    "phonetic": "/prɪˈfɜːr/",
+    "meaning_kh": "ចូលចិត្តជាង",
+    "example": "I prefer tea to coffee."
+  },
+  {
+    "word_en": "prepare",
+    "phonetic": "/prɪˈper/",
+    "meaning_kh": "រៀបចំ",
+    "example": "Prepare for the exam."
+  },
+  {
+    "word_en": "promise",
+    "phonetic": "/ˈprɑːmɪs/",
+    "meaning_kh": "សន្យា",
+    "example": "I promise to help you."
+  },
+  {
+    "word_en": "promote",
+    "phonetic": "/prəˈmoʊt/",
+    "meaning_kh": "លើកកម្ពស់/ដំឡើងតំណែង",
+    "example": "Promote the new project."
+  },
+  {
+    "word_en": "propose",
+    "phonetic": "/prəˈpoʊz/",
+    "meaning_kh": "ស្នើឡើង/ដណ្តឹងដណ្តក់",
+    "example": "Propose a new solution."
+  },
+  {
+    "word_en": "protest",
+    "phonetic": "/prəˈtɛst/",
+    "meaning_kh": "ប្រឆាំង/តវ៉ា",
+    "example": "Protest against the decision."
+  },
+  {
+    "word_en": "prove",
+    "phonetic": "/pruːv/",
+    "meaning_kh": "បញ្ជាក់/បង្ហាញការពិត",
+    "example": "Prove your point."
+  },
+  {
+    "word_en": "provide",
+    "phonetic": "/prəˈvaɪd/",
+    "meaning_kh": "ផ្តល់ជូន",
+    "example": "Provide food and shelter."
+  },
+  {
+    "word_en": "publish",
+    "phonetic": "/ˈpʌblɪʃ/",
+    "meaning_kh": "បោះពុម្ពផ្សាយ",
+    "example": "Publish a book."
+  },
+  {
+    "word_en": "pull",
+    "phonetic": "/pʊl/",
+    "meaning_kh": "ទាញ",
+    "example": "Pull the door open."
+  },
+  {
+    "word_en": "punch",
+    "phonetic": "/pʌntʃ/",
+    "meaning_kh": "ម៉ាត់/ដាល់",
+    "example": "Punch the punching bag."
+  },
+  {
+    "word_en": "punish",
+    "phonetic": "/ˈpʌnɪʃ/",
+    "meaning_kh": "ដាក់ទោស",
+    "example": "Punish the criminal."
+  },
+  {
+    "word_en": "purchase",
+    "phonetic": "/ˈpɜːrtʃəs/",
+    "meaning_kh": "ទិញ",
+    "example": "Purchase tickets online."
+  },
+  {
+    "word_en": "push",
+    "phonetic": "/pʊʃ/",
+    "meaning_kh": "រុញ",
+    "example": "Push the cart."
+  },
+  {
+    "word_en": "qualify",
+    "phonetic": "/ˈkwɑːlɪfaɪ/",
+    "meaning_kh": "គ្រប់លក្ខណៈសម្បត្តិ",
+    "example": "Qualify for the finals."
+  },
+  {
+    "word_en": "question",
+    "phonetic": "/ˈkwɛstʃən/",
+    "meaning_kh": "ចោទសួរ",
+    "example": "Question the witness."
+  },
+  {
+    "word_en": "quit",
+    "phonetic": "/kwɪt/",
+    "meaning_kh": "ឈប់/បោះបង់",
+    "example": "Quit smoking."
+  },
+  {
+    "word_en": "quote",
+    "phonetic": "/kwoʊt/",
+    "meaning_kh": "ស្រង់សម្តី",
+    "example": "Quote a famous writer."
+  },
+  {
+    "word_en": "race",
+    "phonetic": "/reɪs/",
+    "meaning_kh": "ប្រណាំង",
+    "example": "Race against time."
+  },
+  {
+    "word_en": "rain",
+    "phonetic": "/reɪn/",
+    "meaning_kh": "ភ្លៀង",
+    "example": "It started to rain."
+  },
+  {
+    "word_en": "react",
+    "phonetic": "/riˈækt/",
+    "meaning_kh": "ឆ្លើយតប/ប្រតិកម្ម",
+    "example": "React to the news."
+  },
+  {
+    "word_en": "realize",
+    "phonetic": "/ˈriːəlaɪz/",
+    "meaning_kh": "ដឹងខ្លួន/យល់ច្បាស់",
+    "example": "Realize the truth."
+  },
+  {
+    "word_en": "rebuild",
+    "phonetic": "/riːˈbɪld/",
+    "meaning_kh": "កសាងឡើងវិញ",
+    "example": "Rebuild the house."
+  },
+  {
+    "word_en": "recall",
+    "phonetic": "/rɪˈkɔːl/",
+    "meaning_kh": "រំលឹកឡើងវិញ/នឹកឃើញ",
+    "example": "Recall the memories."
+  },
+  {
+    "word_en": "recommend",
+    "phonetic": "/ˌrɛkəˈmɛnd/",
+    "meaning_kh": "ណែនាំ/ផ្ដល់យោបល់",
+    "example": "Recommend a good book."
+  },
+  {
+    "word_en": "record",
+    "phonetic": "/rɪˈkɔːrd/",
+    "meaning_kh": "កត់ត្រា/ថតសម្លេង",
+    "example": "Record the video."
+  },
+  {
+    "word_en": "recover",
+    "phonetic": "/rɪˈkʌvər/",
+    "meaning_kh": "ជាសះស្បើយឡើងវិញ",
+    "example": "Recover from illness."
+  },
+  {
+    "word_en": "reduce",
+    "phonetic": "/rɪˈduːs/",
+    "meaning_kh": "កាត់បន្ថយ",
+    "example": "Reduce stress."
+  },
+  {
+    "word_en": "refer",
+    "phonetic": "/rɪˈfɜːr/",
+    "meaning_kh": "យោងទៅលើ",
+    "example": "Refer to the manual."
+  },
+  {
+    "word_en": "reflect",
+    "phonetic": "/rɪˈflɛkt/",
+    "meaning_kh": "ឆ្លុះបញ្ចាំង",
+    "example": "Reflect on your life."
+  },
+  {
+    "word_en": "refuse",
+    "phonetic": "/rɪˈfjuːz/",
+    "meaning_kh": "បដិសេធ",
+    "example": "Refuse the offer."
+  },
+  {
+    "word_en": "regret",
+    "phonetic": "/rɪˈɡrɛt/",
+    "meaning_kh": "សោកស្តាយ",
+    "example": "I regret my decision."
+  },
+  {
+    "word_en": "reject",
+    "phonetic": "/rɪˈdʒɛkt/",
+    "meaning_kh": "បដិសេធ/ទាត់ចោល",
+    "example": "Reject the application."
+  },
+  {
+    "word_en": "relax",
+    "phonetic": "/rɪˈlæks/",
+    "meaning_kh": "សម្រាកលំហែកាយ",
+    "example": "Relax by the beach."
+  },
+  {
+    "word_en": "release",
+    "phonetic": "/rɪˈliːs/",
+    "meaning_kh": "ដោះលែង/បញ្ចេញ",
+    "example": "Release the prisoner."
+  },
+  {
+    "word_en": "rely",
+    "phonetic": "/rɪˈlaɪ/",
+    "meaning_kh": "ពឹងផ្អែក",
+    "example": "Rely on your friends."
+  },
+  {
+    "word_en": "remind",
+    "phonetic": "/rɪˈmaɪnd/",
+    "meaning_kh": "រំលឹក",
+    "example": "Remind me to call him."
+  },
+  {
+    "word_en": "remove",
+    "phonetic": "/rɪˈmuːv/",
+    "meaning_kh": "ដកចេញ",
+    "example": "Remove the background."
+  },
+  {
+    "word_en": "rent",
+    "phonetic": "/rɛnt/",
+    "meaning_kh": "ជួល",
+    "example": "Rent an apartment."
+  },
+  {
+    "word_en": "repair",
+    "phonetic": "/rɪˈper/",
+    "meaning_kh": "ជួសជុល",
+    "example": "Repair the car."
+  },
+  {
+    "word_en": "repeat",
+    "phonetic": "/rɪˈpiːt/",
+    "meaning_kh": "ធ្វើម្តងទៀត",
+    "example": "Repeat after me."
+  },
+  {
+    "word_en": "replace",
+    "phonetic": "/rɪˈpleɪs/",
+    "meaning_kh": "ជំនួស",
+    "example": "Replace the battery."
+  },
+  {
+    "word_en": "reply",
+    "phonetic": "/rɪˈplaɪ/",
+    "meaning_kh": "ឆ្លើយតប",
+    "example": "Reply to the email."
+  },
+  {
+    "word_en": "report",
+    "phonetic": "/rɪˈpɔːrt/",
+    "meaning_kh": "រាយការណ៍",
+    "example": "Report the incident."
+  },
+  {
+    "word_en": "represent",
+    "phonetic": "/ˌrɛprɪˈzɛnt/",
+    "meaning_kh": "តំណាងឲ្យ",
+    "example": "Represent the country."
+  },
+  {
+    "word_en": "request",
+    "phonetic": "/rɪˈkwɛst/",
+    "meaning_kh": "ស្នើសុំ",
+    "example": "Request assistance."
+  },
+  {
+    "word_en": "require",
+    "phonetic": "/rɪˈkwaɪər/",
+    "meaning_kh": "តម្រូវឱ្យ",
+    "example": "This job requires experience."
+  },
+  {
+    "word_en": "rescue",
+    "phonetic": "/ˈrɛskjuː/",
+    "meaning_kh": "សង្គ្រោះ",
+    "example": "Rescue the cat."
+  },
+  {
+    "word_en": "research",
+    "phonetic": "/rɪˈsɜːrtʃ/",
+    "meaning_kh": "ស្រាវជ្រាវ",
+    "example": "Research new technology."
+  },
+  {
+    "word_en": "respect",
+    "phonetic": "/rɪˈspɛkt/",
+    "meaning_kh": "គោរព",
+    "example": "Respect your teachers."
+  },
+  {
+    "word_en": "respond",
+    "phonetic": "/rɪˈspɑːnd/",
+    "meaning_kh": "ឆ្លើយតប",
+    "example": "Respond to the message."
+  },
+  {
+    "word_en": "rest",
+    "phonetic": "/rɛst/",
+    "meaning_kh": "សម្រាក",
+    "example": "Rest under the tree."
+  },
+  {
+    "word_en": "restore",
+    "phonetic": "/rɪˈstɔːr/",
+    "meaning_kh": "ស្តារឡើងវិញ",
+    "example": "Restore the system."
+  },
+  {
+    "word_en": "restrict",
+    "phonetic": "/rɪˈstrɪkt/",
+    "meaning_kh": "កំណត់/រឹតត្បិត",
+    "example": "Restrict access."
+  },
+  {
+    "word_en": "retire",
+    "phonetic": "/rɪˈtaɪər/",
+    "meaning_kh": "ចូលនិវត្តន៍",
+    "example": "Retire at sixty."
+  },
+  {
+    "word_en": "review",
+    "phonetic": "/rɪˈvjuː/",
+    "meaning_kh": "ពិនិត្យឡើងវិញ",
+    "example": "Review the lesson."
+  },
+  {
+    "word_en": "ride",
+    "phonetic": "/raɪd/",
+    "meaning_kh": "ជិះ",
+    "example": "Ride a bicycle."
+  },
+  {
+    "word_en": "ring",
+    "phonetic": "/rɪŋ/",
+    "meaning_kh": "បន្លឺសំឡេង/រោទ៍",
+    "example": "The phone is ringing."
+  },
+  {
+    "word_en": "rise",
+    "phonetic": "/raɪz/",
+    "meaning_kh": "កើនឡើង/រះ",
+    "example": "The sun rises."
+  },
+  {
+    "word_en": "risk",
+    "phonetic": "/rɪsk/",
+    "meaning_kh": "ប្រថុយប្រថាន",
+    "example": "Risk your life."
+  },
+  {
+    "word_en": "rob",
+    "phonetic": "/rɑːb/",
+    "meaning_kh": "ប្លន់",
+    "example": "Rob a bank."
+  },
+  {
+    "word_en": "roll",
+    "phonetic": "/roʊl/",
+    "meaning_kh": "រមៀល",
+    "example": "Roll the ball."
+  },
+  {
+    "word_en": "row",
+    "phonetic": "/roʊ/",
+    "meaning_kh": "អុំ(ទូក)",
+    "example": "Row the boat."
+  },
+  {
+    "word_en": "rub",
+    "phonetic": "/rʌb/",
+    "meaning_kh": "ដុស/ខាត់",
+    "example": "Rub your hands."
+  },
+  {
+    "word_en": "rule",
+    "phonetic": "/ruːl/",
+    "meaning_kh": "គ្រប់គ្រង/ត្រួតត្រា",
+    "example": "Rule the country."
+  },
+  {
+    "word_en": "rush",
+    "phonetic": "/rʌʃ/",
+    "meaning_kh": "ប្រញាប់ប្រញាល់",
+    "example": "Rush to the hospital."
+  },
+  {
+    "word_en": "satisfy",
+    "phonetic": "/ˈsætɪsfaɪ/",
+    "meaning_kh": "ធ្វើឲ្យពេញចិត្ត",
+    "example": "Satisfy the customers."
+  },
+  {
+    "word_en": "scream",
+    "phonetic": "/skriːm/",
+    "meaning_kh": "ស្រែក",
+    "example": "Scream for help."
+  },
+  {
+    "word_en": "search",
+    "phonetic": "/sɜːrtʃ/",
+    "meaning_kh": "ស្វែងរក",
+    "example": "Search for information."
+  },
+  {
+    "word_en": "secure",
+    "phonetic": "/səˈkjʊr/",
+    "meaning_kh": "ការពារសុវត្ថិភាព",
+    "example": "Secure the building."
+  },
+  {
+    "word_en": "select",
+    "phonetic": "/səˈlɛkt/",
+    "meaning_kh": "ជ្រើសរើស",
+    "example": "Select an option."
+  },
+  {
+    "word_en": "sense",
+    "phonetic": "/sɛns/",
+    "meaning_kh": "ដឹង/មានអារម្មណ៍",
+    "example": "Sense the danger."
+  },
+  {
+    "word_en": "separate",
+    "phonetic": "/ˈsɛpəreɪt/",
+    "meaning_kh": "បំបែកចេញ",
+    "example": "Separate the garbage."
+  },
+  {
+    "word_en": "shake",
+    "phonetic": "/ʃeɪk/",
+    "meaning_kh": "ញ័រ/អង្រួន",
+    "example": "Shake hands."
+  },
+  {
+    "word_en": "shape",
+    "phonetic": "/ʃeɪp/",
+    "meaning_kh": "បង្កើតជារូបរាង",
+    "example": "Shape the clay."
+  },
+  {
+    "word_en": "shave",
+    "phonetic": "/shav/",
+    "meaning_kh": "កោរ",
+    "example": "Shave the beard."
+  },
+  {
+    "word_en": "shine",
+    "phonetic": "/ʃaɪn/",
+    "meaning_kh": "បញ្ចេញពន្លឺ/ចាំង",
+    "example": "The sun shines."
+  },
+  {
+    "word_en": "shock",
+    "phonetic": "/ʃɑːk/",
+    "meaning_kh": "ធ្វើឲ្យភ្ញាក់ផ្អើល/ឆក់",
+    "example": "The news shocked us."
+  },
+  {
+    "word_en": "shoot",
+    "phonetic": "/ʃuːt/",
+    "meaning_kh": "បាញ់",
+    "example": "Shoot the target."
+  },
+  {
+    "word_en": "shout",
+    "phonetic": "/ʃaʊt/",
+    "meaning_kh": "ស្រែក",
+    "example": "Shout at the top of your lungs."
+  },
+  {
+    "word_en": "shrink",
+    "phonetic": "/ʃrɪŋk/",
+    "meaning_kh": "រួញ",
+    "example": "The shirt shrank in the wash."
+  },
+  {
+    "word_en": "shut",
+    "phonetic": "/shut/",
+    "meaning_kh": "បិទ",
+    "example": "Shut the window."
+  },
+  {
+    "word_en": "sigh",
+    "phonetic": "/saɪ/",
+    "meaning_kh": "ដកដង្ហើមធំ",
+    "example": "Sigh with relief."
+  },
+  {
+    "word_en": "sign",
+    "phonetic": "/saɪn/",
+    "meaning_kh": "ចុះហត្ថលេខា",
+    "example": "Sign the contract."
+  },
+  {
+    "word_en": "sing",
+    "phonetic": "/sɪŋ/",
+    "meaning_kh": "ច្រៀង",
+    "example": "Sing a song."
+  },
+  {
+    "word_en": "sink",
+    "phonetic": "/sɪŋk/",
+    "meaning_kh": "លិច",
+    "example": "The boat sank."
+  },
+  {
+    "word_en": "skip",
+    "phonetic": "/skɪp/",
+    "meaning_kh": "រំលង/លោត",
+    "example": "Skip the intro."
+  },
+  {
+    "word_en": "sleep",
+    "phonetic": "/sliːp/",
+    "meaning_kh": "គេង",
+    "example": "Sleep early."
+  },
+  {
+    "word_en": "slide",
+    "phonetic": "/slaɪd/",
+    "meaning_kh": "រំកិល/រអិល",
+    "example": "Slide on the ice."
+  },
+  {
+    "word_en": "slip",
+    "phonetic": "/slɪp/",
+    "meaning_kh": "រអិលដួល",
+    "example": "Slip on a banana peel."
+  },
+  {
+    "word_en": "smell",
+    "phonetic": "/smɛl/",
+    "meaning_kh": "ធុំក្លិន/ហិត",
+    "example": "Smell the flowers."
+  },
+  {
+    "word_en": "smile",
+    "phonetic": "/smaɪl/",
+    "meaning_kh": "ញញឹម",
+    "example": "Smile at the camera."
+  },
+  {
+    "word_en": "smoke",
+    "phonetic": "/smoʊk/",
+    "meaning_kh": "ជក់បារី",
+    "example": "Do not smoke here."
+  },
+  {
+    "word_en": "solve",
+    "phonetic": "/sɑːlv/",
+    "meaning_kh": "ដោះស្រាយ",
+    "example": "Solve a puzzle."
+  },
+  {
+    "word_en": "sort",
+    "phonetic": "/sɔːrt/",
+    "meaning_kh": "តម្រៀប",
+    "example": "Sort the files."
+  },
+  {
+    "word_en": "sound",
+    "phonetic": "/saʊnd/",
+    "meaning_kh": "បន្លឺសំឡេង",
+    "example": "Sound the alarm."
+  },
+  {
+    "word_en": "spell",
+    "phonetic": "/spɛl/",
+    "meaning_kh": "ប្រកបពាក្យ",
+    "example": "Spell your name."
+  },
+  {
+    "word_en": "spill",
+    "phonetic": "/spɪl/",
+    "meaning_kh": "ហៀរ/កំពប់",
+    "example": "Spill the milk."
+  },
+  {
+    "word_en": "spin",
+    "phonetic": "/spin/",
+    "meaning_kh": "វិល/បង្វិល",
+    "example": "Spin the wheel."
+  },
+  {
+    "word_en": "spit",
+    "phonetic": "/spit/",
+    "meaning_kh": "ស្ដោះទឹកមាត់",
+    "example": "Do not spit here."
+  },
+  {
+    "word_en": "split",
+    "phonetic": "/splɪt/",
+    "meaning_kh": "បំបែក",
+    "example": "Split the bill."
+  },
+  {
+    "word_en": "spoil",
+    "phonetic": "/spɔɪl/",
+    "meaning_kh": "ធ្វើឲ្យខូច/ថ្នាក់ថ្នមហួសហេតុ",
+    "example": "Spoil the kids."
+  },
+  {
+    "word_en": "taste",
+    "phonetic": "/teɪst/",
+    "meaning_kh": "ភ្លក្ស/មានរសជាតិ",
+    "example": "Taste the soup."
+  },
+  {
+    "word_en": "teach",
+    "phonetic": "/tiːtʃ/",
+    "meaning_kh": "បង្រៀន",
+    "example": "Teach English."
+  },
+  {
+    "word_en": "tear",
+    "phonetic": "/ter/",
+    "meaning_kh": "ហែក/សម្រក់ទឹកភ្នែក",
+    "example": "Tear the paper."
+  },
+  {
+    "word_en": "test",
+    "phonetic": "/tɛst/",
+    "meaning_kh": "សាកល្បង/ធ្វើតេស្ត",
+    "example": "Test the water."
+  },
+  {
+    "word_en": "thank",
+    "phonetic": "/θæŋk/",
+    "meaning_kh": "អរគុណ",
+    "example": "Thank you."
+  },
+  {
+    "word_en": "throw",
+    "phonetic": "/θroʊ/",
+    "meaning_kh": "បោះ/ចោល",
+    "example": "Throw the ball."
+  },
+  {
+    "word_en": "tie",
+    "phonetic": "/taɪ/",
+    "meaning_kh": "ចង",
+    "example": "Tie your shoelaces."
+  },
+  {
+    "word_en": "tolerate",
+    "phonetic": "/ˈtɑːləreɪt/",
+    "meaning_kh": "អត់ឱន/ទ្រាំទ្រ",
+    "example": "Tolerate the noise."
+  },
+  {
+    "word_en": "touch",
+    "phonetic": "/tʌtʃ/",
+    "meaning_kh": "ប៉ះពាល់",
+    "example": "Do not touch."
+  },
+  {
+    "word_en": "train",
+    "phonetic": "/treɪn/",
+    "meaning_kh": "បណ្តុះបណ្តាល/ហ្វឹកហាត់",
+    "example": "Train the employees."
+  },
+  {
+    "word_en": "transfer",
+    "phonetic": "/trænsˈfɜːr/",
+    "meaning_kh": "ផ្ទេរ",
+    "example": "Transfer money."
+  },
+  {
+    "word_en": "translate",
+    "phonetic": "/trænsˈleɪt/",
+    "meaning_kh": "បកប្រែ",
+    "example": "Translate to Khmer."
+  },
+  {
+    "word_en": "travel",
+    "phonetic": "/ˈtævəl/",
+    "meaning_kh": "ធ្វើដំណើរ",
+    "example": "Travel around the world."
+  },
+  {
+    "word_en": "treat",
+    "phonetic": "/triːt/",
+    "meaning_kh": "ព្យាបាល/ប្រព្រឹត្តចំពោះ",
+    "example": "Treat everyone equally."
+  },
+  {
+    "word_en": "trust",
+    "phonetic": "/trʌst/",
+    "meaning_kh": "ទុកចិត្ត",
+    "example": "Trust me."
+  },
+  {
+    "word_en": "type",
+    "phonetic": "/taɪp/",
+    "meaning_kh": "វាយអក្សរ",
+    "example": "Type a message."
+  },
+  {
+    "word_en": "undergo",
+    "phonetic": "/ˌʌndərˈɡoʊ/",
+    "meaning_kh": "ឆ្លងកាត់/ទទួលរង",
+    "example": "Undergo surgery."
+  },
+  {
+    "word_en": "update",
+    "phonetic": "/ˌʌpˈdeɪt/",
+    "meaning_kh": "ធ្វើបច្ចុប្បន្នភាព",
+    "example": "Update the app."
+  },
+  {
+    "word_en": "urge",
+    "phonetic": "/ɜːrdʒ/",
+    "meaning_kh": "ជម្រុញ/ទទូច",
+    "example": "Urge them to action."
+  },
+  {
+    "word_en": "value",
+    "phonetic": "/ˈvæljuː/",
+    "meaning_kh": "វាយតម្លៃ/ឱ្យតម្លៃ",
+    "example": "Value your time."
+  },
+  {
+    "word_en": "vanish",
+    "phonetic": "/ˈvænɪʃ/",
+    "meaning_kh": "រលាយបាត់/បាត់ស្រមោល",
+    "example": "Vanish into thin air."
+  },
+  {
+    "word_en": "vary",
+    "phonetic": "/ˈvɛri/",
+    "meaning_kh": "ប្រែប្រួល/ខុសគ្នា",
+    "example": "Prices vary."
+  },
+  {
+    "word_en": "verify",
+    "phonetic": "/ˈvɛrɪfaɪ/",
+    "meaning_kh": "ផ្ទៀងផ្ទាត់",
+    "example": "Verify your account."
+  },
+  {
+    "word_en": "visit",
+    "phonetic": "/ˈvɪzɪt/",
+    "meaning_kh": "ទៅលេង/ទស្សនា",
+    "example": "Visit Angkor Wat."
+  },
+  {
+    "word_en": "vote",
+    "phonetic": "/voʊt/",
+    "meaning_kh": "បោះឆ្នោត",
+    "example": "Vote for me."
+  },
+  {
+    "word_en": "wake",
+    "phonetic": "/weɪk/",
+    "meaning_kh": "ភ្ញាក់ពីគេង",
+    "example": "Wake up early."
+  },
+  {
+    "word_en": "warn",
+    "phonetic": "/wɔːrn/",
+    "meaning_kh": "ព្រមាន",
+    "example": "Warn them of danger."
+  },
+  {
+    "word_en": "wash",
+    "phonetic": "/wɑːʃ/",
+    "meaning_kh": "លាង/បោកគក់",
+    "example": "Wash your hands."
+  },
+  {
+    "word_en": "waste",
+    "phonetic": "/weɪst/",
+    "meaning_kh": "ខ្ជះខ្ជាយ",
+    "example": "Don't waste time."
+  },
+  {
+    "word_en": "wave",
+    "phonetic": "/weɪv/",
+    "meaning_kh": "បក់ដៃ/បក់បោក",
+    "example": "Wave goodbye."
+  },
+  {
+    "word_en": "wear",
+    "phonetic": "/wer/",
+    "meaning_kh": "ពាក់/ស្លៀកពាក់",
+    "example": "Wear a coat."
+  },
+  {
+    "word_en": "weigh",
+    "phonetic": "/weɪ/",
+    "meaning_kh": "ថ្លឹង",
+    "example": "Weigh the ingredients."
+  },
+  {
+    "word_en": "welcome",
+    "phonetic": "/ˈwɛlkəm/",
+    "meaning_kh": "ស្វាគមន៍",
+    "example": "Welcome the guests."
+  },
+  {
+    "word_en": "whisper",
+    "phonetic": "/ˈwɪspər/",
+    "meaning_kh": "ខ្សឹប",
+    "example": "Whisper a secret."
+  },
+  {
+    "word_en": "whistle",
+    "phonetic": "/ˈwɪsəl/",
+    "meaning_kh": "ហួច",
+    "example": "Whistle a tune."
+  },
+  {
+    "word_en": "wind",
+    "phonetic": "/waɪnd/",
+    "meaning_kh": "រុំ/បង្វិល",
+    "example": "Wind the watch."
+  },
+  {
+    "word_en": "wish",
+    "phonetic": "/wɪʃ/",
+    "meaning_kh": "ប្រាថ្នា",
+    "example": "Wish you good luck."
+  },
+  {
+    "word_en": "wonder",
+    "phonetic": "/ˈwʌndər/",
+    "meaning_kh": "ឆ្ងល់",
+    "example": "I wonder why."
+  },
+  {
+    "word_en": "worry",
+    "phonetic": "/ˈwɜːri/",
+    "meaning_kh": "បារម្ភ",
+    "example": "Don't worry."
+  },
+  {
+    "word_en": "worship",
+    "phonetic": "/ˈwɜːrʃɪp/",
+    "meaning_kh": "គោរពបូជា",
+    "example": "Worship the ancestors."
+  },
+  {
+    "word_en": "wound",
+    "phonetic": "/wuːnd/",
+    "meaning_kh": "ធ្វើឲ្យរបួស",
+    "example": "Wound the soldier."
+  },
+  {
+    "word_en": "wrap",
+    "phonetic": "/ræp/",
+    "meaning_kh": "ខ្ចប់",
+    "example": "Wrap the gift."
+  },
+  {
+    "word_en": "wreck",
+    "phonetic": "/rɛk/",
+    "meaning_kh": "ធ្វើឲ្យខូចខាត/បុកខ្ទេច",
+    "example": "Wreck the car."
+  },
+  {
+    "word_en": "yawn",
+    "phonetic": "/jɔːn/",
+    "meaning_kh": "ស្ងាប",
+    "example": "Yawn when tired."
+  },
+  {
+    "word_en": "yell",
+    "phonetic": "/jɛl/",
+    "meaning_kh": "ស្រែកខ្លាំងៗ",
+    "example": "Don't yell at me."
+  },
+  {
+    "word_en": "yield",
+    "phonetic": "/jiːld/",
+    "meaning_kh": "ផ្តល់ផល/ចុះចាញ់",
+    "example": "Yield good results."
+  },
+  {
+    "word_en": "zoom",
+    "phonetic": "/zuːm/",
+    "meaning_kh": "ពង្រីក",
+    "example": "Zoom in on the map."
+  },
+  {
+    "word_en": "absorb",
+    "phonetic": "/əbˈzɔːrb/",
+    "meaning_kh": "ស្រូបយក",
+    "example": "Sponge absorbs water."
+  },
+  {
+    "word_en": "accuse",
+    "phonetic": "/əˈkjuːz/",
+    "meaning_kh": "ចោទប្រកាន់",
+    "example": "Accuse someone of theft."
+  },
+  {
+    "word_en": "adjust",
+    "phonetic": "/əˈdʒʌst/",
+    "meaning_kh": "កែតម្រូវ",
+    "example": "Adjust the seat."
+  },
+  {
+    "word_en": "admire",
+    "phonetic": "/ədˈmaɪər/",
+    "meaning_kh": "កោតសរសើរ",
+    "example": "Admire the view."
+  },
+  {
+    "word_en": "adopt",
+    "phonetic": "/əˈdɑːpt/",
+    "meaning_kh": "យកធ្វើជាកូនធម៌/យកមកអនុវត្ត",
+    "example": "Adopt a pet."
+  },
+  {
+    "word_en": "alter",
+    "phonetic": "/ˈɔːltər/",
+    "meaning_kh": "ផ្លាស់ប្តូរ",
+    "example": "Alter the plans."
+  },
+  {
+    "word_en": "appeal",
+    "phonetic": "/əˈpiːl/",
+    "meaning_kh": "អំពាវនាវ/ទាក់ទាញ",
+    "example": "Appeal for help."
+  },
+  {
+    "word_en": "appreciate",
+    "phonetic": "/əˈpriːʃieɪt/",
+    "meaning_kh": "ដឹងគុណ/វាយតម្លៃខ្ពស់",
+    "example": "Appreciate your support."
+  },
+  {
+    "word_en": "approve",
+    "phonetic": "/əˈpruːv/",
+    "meaning_kh": "អនុម័ត/យល់ព្រម",
+    "example": "Approve the budget."
+  },
+  {
+    "word_en": "arise",
+    "phonetic": "/əˈraɪz/",
+    "meaning_kh": "កើតឡើង",
+    "example": "Problems arise."
+  },
+  {
+    "word_en": "arrest",
+    "phonetic": "/əˈrɛst/",
+    "meaning_kh": "ចាប់ខ្លួន",
+    "example": "Arrest the thief."
+  },
+  {
+    "word_en": "assist",
+    "phonetic": "/əˈsɪst/",
+    "meaning_kh": "ជួយជ្រោមជ្រែង",
+    "example": "Assist the project manager."
+  },
+  {
+    "word_en": "associate",
+    "phonetic": "/əˈsoʊʃieɪt/",
+    "meaning_kh": "ផ្សារភ្ជាប់/សមាគម",
+    "example": "Associate with good people."
+  },
+  {
+    "word_en": "assure",
+    "phonetic": "/əˈʃʊr/",
+    "meaning_kh": "ធានាអះអាង",
+    "example": "Assure the safety."
+  },
+  {
+    "word_en": "attach",
+    "phonetic": "/əˈtætʃ/",
+    "meaning_kh": "ភ្ជាប់",
+    "example": "Attach a document."
+  },
+  {
+    "word_en": "attract",
+    "phonetic": "/əˈtrækt/",
+    "meaning_kh": "ទាក់ទាញ",
+    "example": "Attract tourists."
+  },
+  {
+    "word_en": "bake",
+    "phonetic": "/beɪk/",
+    "meaning_kh": "ដុត(នំ)",
+    "example": "Bake a cake."
+  },
+  {
+    "word_en": "ban",
+    "phonetic": "/bæn/",
+    "meaning_kh": "ហាមឃាត់",
+    "example": "Ban smoking."
+  },
+  {
+    "word_en": "bargain",
+    "phonetic": "/ˈbɑːrɡən/",
+    "meaning_kh": "តថ្លៃ",
+    "example": "Bargain at the market."
+  },
+  {
+    "word_en": "beg",
+    "phonetic": "/bɛɡ/",
+    "meaning_kh": "អង្វរ/សុំទាន",
+    "example": "Beg for mercy."
+  },
+  {
+    "word_en": "bend",
+    "phonetic": "/bɛnd/",
+    "meaning_kh": "ពត់/ឱន",
+    "example": "Bend the wire."
+  },
+  {
+    "word_en": "bet",
+    "phonetic": "/bɛt/",
+    "meaning_kh": "ភ្នាល់",
+    "example": "Bet on a horse."
+  },
+  {
+    "word_en": "bias",
+    "phonetic": "/ˈbaɪəs/",
+    "meaning_kh": "លំអៀង",
+    "example": "Bias the results."
+  },
+  {
+    "word_en": "bind",
+    "phonetic": "/baɪnd/",
+    "meaning_kh": "ចង/ភ្ជាប់កាតព្វកិច្ច",
+    "example": "Bind the books."
+  },
+  {
+    "word_en": "bleed",
+    "phonetic": "/bliːd/",
+    "meaning_kh": "ហូរឈាម",
+    "example": "The wound is bleeding."
+  },
+  {
+    "word_en": "blend",
+    "phonetic": "/blɛnd/",
+    "meaning_kh": "លាយចូលគ្នា",
+    "example": "Blend the ingredients."
+  },
+  {
+    "word_en": "bless",
+    "phonetic": "/blɛs/",
+    "meaning_kh": "ប្រសិទ្ធពរ",
+    "example": "God bless you."
+  },
+  {
+    "word_en": "block",
+    "phonetic": "/blɑːk/",
+    "meaning_kh": "រារាំង/បិទផ្លូវ",
+    "example": "Block the exit."
+  },
+  {
+    "word_en": "boast",
+    "phonetic": "/boʊst/",
+    "meaning_kh": "អួតអាង",
+    "example": "Boast about achievements."
+  },
+  {
+    "word_en": "boost",
+    "phonetic": "/buːst/",
+    "meaning_kh": "ជំរុញ/បង្កើន",
+    "example": "Boost morale."
+  },
+  {
+    "word_en": "brief",
+    "phonetic": "/briːf/",
+    "meaning_kh": "សង្ខេបព័ត៌មាន",
+    "example": "Brief the team."
+  },
+  {
+    "word_en": "broadcast",
+    "phonetic": "/ˈbrɔːdkæst/",
+    "meaning_kh": "ផ្សាយដំណឹង/ផ្សាយផ្ទាល់",
+    "example": "Broadcast the news."
+  },
+  {
+    "word_en": "brush",
+    "phonetic": "/brʌʃ/",
+    "meaning_kh": "ដុស/ដុសធ្មេញ",
+    "example": "Brush your teeth."
+  },
+  {
+    "word_en": "burst",
+    "phonetic": "/bɜːrst/",
+    "meaning_kh": "ផ្ទុះ",
+    "example": "The balloon burst."
+  },
+  {
+    "word_en": "bury",
+    "phonetic": "/ˈbɛri/",
+    "meaning_kh": "កប់",
+    "example": "Bury the treasure."
+  },
+  {
+    "word_en": "calculate",
+    "phonetic": "/ˈkælkjəleɪt/",
+    "meaning_kh": "គណនា",
+    "example": "Calculate the cost."
+  },
+  {
+    "word_en": "campaign",
+    "phonetic": "/kæmˈpeɪn/",
+    "meaning_kh": "យុទ្ធនាការ",
+    "example": "Campaign for votes."
+  },
+  {
+    "word_en": "cancel",
+    "phonetic": "/ˈkænsəl/",
+    "meaning_kh": "លុបចោល",
+    "example": "Cancel the flight."
+  },
+  {
+    "word_en": "capture",
+    "phonetic": "/ˈkæptʃər/",
+    "meaning_kh": "ចាប់យក/ថតបាន",
+    "example": "Capture the moment."
+  },
+  {
+    "word_en": "carve",
+    "phonetic": "/kɑːrv/",
+    "meaning_kh": "ចម្លាក់/កាត់(សាច់)",
+    "example": "Carve the wood."
+  },
+  {
+    "word_en": "challenge",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "meaning_kh": "ប្រឈម",
+    "example": "Challenge the champion."
+  },
+  {
+    "word_en": "charm",
+    "phonetic": "/tʃɑːrm/",
+    "meaning_kh": "ទាក់ទាញ/ដាក់ស្នេហ៍",
+    "example": "Charm the audience."
+  },
+  {
+    "word_en": "chase",
+    "phonetic": "/tʃeɪs/",
+    "meaning_kh": "ដេញតាម",
+    "example": "Chase the cat."
+  },
+  {
+    "word_en": "cheat",
+    "phonetic": "/tʃiːt/",
+    "meaning_kh": "បន្លំ/ក្បត់",
+    "example": "Cheat on the exam."
+  },
+  {
+    "word_en": "cheer",
+    "phonetic": "/tʃɪr/",
+    "meaning_kh": "លើកទឹកចិត្ត/ស្រែកហ៊ោ",
+    "example": "Cheer for the team."
+  },
+  {
+    "word_en": "chew",
+    "phonetic": "/tʃuː/",
+    "meaning_kh": "ទំពារ",
+    "example": "Chew your food."
+  },
+  {
+    "word_en": "choke",
+    "phonetic": "/tʃoʊk/",
+    "meaning_kh": "ថប់ដង្ហើម/ស្លាក់",
+    "example": "Choke on water."
+  },
+  {
+    "word_en": "clap",
+    "phonetic": "/klæp/",
+    "meaning_kh": "ទះដៃ",
+    "example": "Clap your hands."
+  },
+  {
+    "word_en": "classify",
+    "phonetic": "/ˈklæsɪfaɪ/",
+    "meaning_kh": "ចំណាត់ថ្នាក់",
+    "example": "Classify the plants."
+  },
+  {
+    "word_en": "cling",
+    "phonetic": "/klɪŋ/",
+    "meaning_kh": "តោង/ស្អិតជាប់",
+    "example": "Cling to hope."
+  },
+  {
+    "word_en": "coach",
+    "phonetic": "/koʊtʃ/",
+    "meaning_kh": "បង្វឹក",
+    "example": "Coach the players."
+  },
+  {
+    "word_en": "collapse",
+    "phonetic": "/kəˈlæps/",
+    "meaning_kh": "បាក់ស្រុត/សន្លប់ដួល",
+    "example": "Collapse the structure."
+  },
+  {
+    "word_en": "comment",
+    "phonetic": "/ˈkɑːmɛnt/",
+    "meaning_kh": "បញ្ចេញមតិ",
+    "example": "Comment on the post."
+  },
+  {
+    "word_en": "commit",
+    "phonetic": "/kəˈmɪt/",
+    "meaning_kh": "ប្ដេជ្ញាចិត្ត/ប្រព្រឹត្ត",
+    "example": "Commit to your goals."
+  },
+  {
+    "word_en": "communicate",
+    "phonetic": "/kəˈmjuːnɪkeɪt/",
+    "meaning_kh": "ប្រាស្រ័យទាក់ទង",
+    "example": "Communicate with others."
+  },
+  {
+    "word_en": "compare",
+    "phonetic": "/kəmˈper/",
+    "meaning_kh": "ប្រៀបធៀប",
+    "example": "Compare the prices."
+  },
+  {
+    "word_en": "compete",
+    "phonetic": "/kəmˈpiːt/",
+    "meaning_kh": "ប្រកួតប្រជែង",
+    "example": "Compete in the tournament."
+  },
+  {
+    "word_en": "compile",
+    "phonetic": "/kəmˈpaɪl/",
+    "meaning_kh": "ចងក្រង",
+    "example": "Compile the data."
+  },
+  {
+    "word_en": "compose",
+    "phonetic": "/kəmˈpoʊz/",
+    "meaning_kh": "តែង/តាក់តែង",
+    "example": "Compose a poem."
+  },
+  {
+    "word_en": "concentrate",
+    "phonetic": "/ˈkɑːnsəntreɪt/",
+    "meaning_kh": "ផ្តោតអារម្មណ៍",
+    "example": "Concentrate on the task."
+  },
+  {
+    "word_en": "concern",
+    "phonetic": "/kənˈsɜːrn/",
+    "meaning_kh": "បារម្ភ/ពាក់ព័ន្ធ",
+    "example": "This concerns your safety."
+  },
+  {
+    "word_en": "conclude",
+    "phonetic": "/kənˈkluːd/",
+    "meaning_kh": "សន្និដ្ឋាន/បញ្ចប់",
+    "example": "Conclude the meeting."
+  },
+  {
+    "word_en": "conduct",
+    "phonetic": "/kənˈdʌkt/",
+    "meaning_kh": "ដឹកនាំ/ប្រព្រឹត្ត",
+    "example": "Conduct research."
+  },
+  {
+    "word_en": "confess",
+    "phonetic": "/kənˈfɛs/",
+    "meaning_kh": "សារភាព",
+    "example": "Confess the truth."
+  },
+  {
+    "word_en": "congratulate",
+    "phonetic": "/kənˈɡrætʃəleɪt/",
+    "meaning_kh": "អបអរសាទរ",
+    "example": "Congratulate the graduate."
+  },
+  {
+    "word_en": "conquer",
+    "phonetic": "/ˈkɑːŋkər/",
+    "meaning_kh": "យកឈ្នះ/ដណ្តើមបាន",
+    "example": "Conquer the mountain."
+  },
+  {
+    "word_en": "conserve",
+    "phonetic": "/kənˈsɜːrv/",
+    "meaning_kh": "អភិតក្ស",
+    "example": "Conserve energy."
+  },
+  {
+    "word_en": "consist",
+    "phonetic": "/kənˈsɪst/",
+    "meaning_kh": "រួមមាន/ផ្សំឡើងពី",
+    "example": "The team consists of five members."
+  },
+  {
+    "word_en": "construct",
+    "phonetic": "/kənˈstrʌkt/",
+    "meaning_kh": "សាងសង់",
+    "example": "Construct a model."
+  },
+  {
+    "word_en": "consume",
+    "phonetic": "/kənˈsuːm/",
+    "meaning_kh": "ប្រើប្រាស់/ទទួលទាន",
+    "example": "Consume less sugar."
+  },
+  {
+    "word_en": "contact",
+    "phonetic": "/ˈkɑːntækt/",
+    "meaning_kh": "ទាក់ទង",
+    "example": "Contact the support team."
+  },
+  {
+    "word_en": "contain",
+    "phonetic": "/kənˈteɪn/",
+    "meaning_kh": "ផ្ទុក",
+    "example": "This bottle contains water."
+  },
+  {
+    "word_en": "contrast",
+    "phonetic": "/kənˈtræst/",
+    "meaning_kh": "ផ្ទុយគ្នា/ប្រៀបធៀបភាពផ្ទុយ",
+    "example": "Contrast the two ideas."
+  },
+  {
+    "word_en": "contribute",
+    "phonetic": "/kənˈtrɪbjuːt/",
+    "meaning_kh": "រួមចំណែក",
+    "example": "Contribute to charity."
+  },
+  {
+    "word_en": "convert",
+    "phonetic": "/kənˈvɜːrt/",
+    "meaning_kh": "បម្លែង",
+    "example": "Convert currency."
+  },
+  {
+    "word_en": "convey",
+    "phonetic": "/convey/",
+    "meaning_kh": "បញ្ជូន/បង្ហាញ(អារម្មណ៍)",
+    "example": "Convey the message."
+  },
+  {
+    "word_en": "convince",
+    "phonetic": "/kənˈvɪns/",
+    "meaning_kh": "បញ្ចុះបញ្ចូល",
+    "example": "Convince the customer."
+  },
+  {
+    "word_en": "cool",
+    "phonetic": "/kuːl/",
+    "meaning_kh": "ធ្វើឲ្យត្រជាក់",
+    "example": "Cool down the food."
+  },
+  {
+    "word_en": "cooperate",
+    "phonetic": "/koʊˈɑːpəreɪt/",
+    "meaning_kh": "សហការ",
+    "example": "Cooperate with police."
+  },
+  {
+    "word_en": "cope",
+    "phonetic": "/koʊp/",
+    "meaning_kh": "ដោះស្រាយ/ទ្រាំទ្រ",
+    "example": "Cope with stress."
+  },
+  {
+    "word_en": "correct",
+    "phonetic": "/kəˈrɛkt/",
+    "meaning_kh": "កែតម្រូវ",
+    "example": "Correct the errors."
+  },
+  {
+    "word_en": "correspond",
+    "phonetic": "/ˌkɔːrəˈspɑːnd/",
+    "meaning_kh": "ឆ្លើយឆ្លង/ស្របគ្នា",
+    "example": "Correspond by mail."
+  },
+  {
+    "word_en": "cost",
+    "phonetic": "/kɔːst/",
+    "meaning_kh": "មានតម្លៃ",
+    "example": "It costs ten dollars."
+  },
+  {
+    "word_en": "cough",
+    "phonetic": "/kɔːf/",
+    "meaning_kh": "ក្អក",
+    "example": "Cough and sneeze."
+  },
+  {
+    "word_en": "count",
+    "phonetic": "/kaʊnt/",
+    "meaning_kh": "រាប់",
+    "example": "Count from one to ten."
+  },
+  {
+    "word_en": "court",
+    "phonetic": "/kɔːrt/",
+    "meaning_kh": "ទាក់ទង/ស្វែងរកសេចក្តីស្រឡាញ់",
+    "example": "Court a disaster."
+  },
+  {
+    "word_en": "crash",
+    "phonetic": "/kræʃ/",
+    "meaning_kh": "បុក/ខូច(ប្រព័ន្ធ)",
+    "example": "The computer crashed."
+  },
+  {
+    "word_en": "crawl",
+    "phonetic": "/krɔːl/",
+    "meaning_kh": "វារ",
+    "example": "The baby crawls."
+  },
+  {
+    "word_en": "credit",
+    "phonetic": "/ˈcrɛdɪt/",
+    "meaning_kh": "ផ្តល់ឥណទាន/ផ្តល់កិត្តិយស",
+    "example": "Credit the author."
+  },
+  {
+    "word_en": "creep",
+    "phonetic": "/kriːp/",
+    "meaning_kh": "លូន/វារតិចៗ",
+    "example": "Spiders creep silently."
+  },
+  {
+    "word_en": "criticize",
+    "phonetic": "/ˈkrɪtɪsaɪz/",
+    "meaning_kh": "រិះគន់",
+    "example": "Criticize the plan."
+  },
+  {
+    "word_en": "crop",
+    "phonetic": "/krɑːp/",
+    "meaning_kh": "កាត់តម្រឹម/ប្រមូលផល",
+    "example": "Crop the photo."
+  },
+  {
+    "word_en": "cross",
+    "phonetic": "/krɔːs/",
+    "meaning_kh": "ឆ្លងកាត់",
+    "example": "Cross the street."
+  },
+  {
+    "word_en": "crush",
+    "phonetic": "/krʌʃ/",
+    "meaning_kh": "កិនកំទេច/បំបែក",
+    "example": "Crush the ice."
+  },
+  {
+    "word_en": "cultivate",
+    "phonetic": "/ˈkʌltɪveɪt/",
+    "meaning_kh": "ដាំដុះ/អប់រំជម្រៅ",
+    "example": "Cultivate healthy habits."
+  },
+  {
+    "word_en": "cure",
+    "phonetic": "/kjʊr/",
+    "meaning_kh": "ព្យាបាលឲ្យជា",
+    "example": "Cure the disease."
+  },
+  {
+    "word_en": "curl",
+    "phonetic": "/kɜːrl/",
+    "meaning_kh": "រួញ/ពត់ពែន",
+    "example": "Curl your hair."
+  },
+  {
+    "word_en": "curve",
+    "phonetic": "/kɜːrv/",
+    "meaning_kh": "ពត់ឲ្យកោង",
+    "example": "Curve the line."
+  },
+  {
+    "word_en": "cycle",
+    "phonetic": "/ˈsaɪkəl/",
+    "meaning_kh": "ជិះកង់/វិលជុំ",
+    "example": "Cycle to work."
+  },
+  {
+    "word_en": "dare",
+    "phonetic": "/der/",
+    "meaning_kh": "ហ៊ាន",
+    "example": "How dare you!"
+  },
+  {
+    "word_en": "date",
+    "phonetic": "/deɪt/",
+    "meaning_kh": "កំណត់កាលបរិច្ឆេទ/ណាត់ជួប",
+    "example": "Date the document."
+  },
+  {
+    "word_en": "deal",
+    "phonetic": "/diːl/",
+    "meaning_kh": "ដោះស្រាយ/រកស៊ី",
+    "example": "Deal with the cards."
+  },
+  {
+    "word_en": "debate",
+    "phonetic": "/dɪˈbeɪt/",
+    "meaning_kh": "ជជែកពិភាក្សា",
+    "example": "Debate the issue."
+  },
+  {
+    "word_en": "decay",
+    "phonetic": "/dɪˈkeɪ/",
+    "meaning_kh": "រលួយ/ពុកផុយ",
+    "example": "Teeth decay."
+  },
+  {
+    "word_en": "deceive",
+    "phonetic": "/dɪˈsiːv/",
+    "meaning_kh": "បោកប្រាស់",
+    "example": "Deceive the public."
+  },
+  {
+    "word_en": "declare",
+    "phonetic": "/dɪˈkler/",
+    "meaning_kh": "ប្រកាស",
+    "example": "Declare war."
+  },
+  {
+    "word_en": "decline",
+    "phonetic": "/dɪˈklaɪn/",
+    "meaning_kh": "បដិសេធ/ធ្លាក់ចុះ",
+    "example": "Decline an invitation."
+  },
+  {
+    "word_en": "decorate",
+    "phonetic": "/ˈdɛkəreɪt/",
+    "meaning_kh": "តុបតែង",
+    "example": "Decorate the room."
+  },
+  {
+    "word_en": "decrease",
+    "phonetic": "/dɪˈkriːs/",
+    "meaning_kh": "កាត់បន្ថយ/ថយចុះ",
+    "example": "Decrease the speed."
+  },
+  {
+    "word_en": "dedicate",
+    "phonetic": "/ˈdɛdɪkeɪt/",
+    "meaning_kh": "ឧទ្ទិស/ប្តេជ្ញា",
+    "example": "Dedicate your life to teaching."
+  },
+  {
+    "word_en": "deem",
+    "phonetic": "/diːm/",
+    "meaning_kh": "យល់ឃើញថា",
+    "example": "Deem it necessary."
+  },
+  {
+    "word_en": "defeat",
+    "phonetic": "/dɪˈfiːt/",
+    "meaning_kh": "វាយឈ្នះ",
+    "example": "Defeat the enemy."
+  },
+  {
+    "word_en": "defend",
+    "phonetic": "/dɪˈfɛnd/",
+    "meaning_kh": "ការពារ",
+    "example": "Defend the city."
+  },
+  {
+    "word_en": "define",
+    "phonetic": "/dɪˈfaɪn/",
+    "meaning_kh": "កំណត់និយមន័យ",
+    "example": "Define the term."
+  },
+  {
+    "word_en": "delay",
+    "phonetic": "/dɪˈleɪ/",
+    "meaning_kh": "ពន្យារពេល",
+    "example": "Delay the meeting."
+  },
+  {
+    "word_en": "delegate",
+    "phonetic": "/ˈdɛlɪɡeɪt/",
+    "meaning_kh": "ប្រគល់ភារកិច្ច",
+    "example": "Delegate tasks."
+  },
+  {
+    "word_en": "delete",
+    "phonetic": "/dɪˈliːt/",
+    "meaning_kh": "លុបចោល",
+    "example": "Delete the file."
+  },
+  {
+    "word_en": "delight",
+    "phonetic": "/dɪˈlaɪt/",
+    "meaning_kh": "ធ្វើឲ្យរីករាយ",
+    "example": "Delight the audience."
+  },
+  {
+    "word_en": "demonstrate",
+    "phonetic": "/ˈdɛmənstreɪt/",
+    "meaning_kh": "បង្ហាញ/ធ្វើបាតុកម្ម",
+    "example": "Demonstrate the software."
+  },
+  {
+    "word_en": "depart",
+    "phonetic": "/dɪˈpɑːrt/",
+    "meaning_kh": "ចាកចេញ",
+    "example": "Depart from the station."
+  },
+  {
+    "word_en": "depict",
+    "phonetic": "/dɪˈpɪkt/",
+    "meaning_kh": "ពិពណ៌នា/គូររូបភាព",
+    "example": "Depict a landscape."
+  },
+  {
+    "word_en": "deposit",
+    "phonetic": "/dɪˈpɑːzɪt/",
+    "meaning_kh": "កក់ប្រាក់/ដាក់ប្រាក់",
+    "example": "Deposit money in the bank."
+  },
+  {
+    "word_en": "depress",
+    "phonetic": "/dɪˈprɛs/",
+    "meaning_kh": "ធ្វើឲ្យបាក់ទឹកចិត្ត",
+    "example": "Sad news depresses me."
+  },
+  {
+    "word_en": "derive",
+    "phonetic": "/dɪˈraɪv/",
+    "meaning_kh": "ទាញយកពី",
+    "example": "Derive benefits from learning."
+  },
+  {
+    "word_en": "deserve",
+    "phonetic": "/dɪˈzɜːrv/",
+    "meaning_kh": "សមនឹងទទួលបាន",
+    "example": "You deserve success."
+  },
+  {
+    "word_en": "desire",
+    "phonetic": "/dɪˈzaɪər/",
+    "meaning_kh": "ប្រាថ្នាចង់បាន",
+    "example": "Desire peace."
+  },
+  {
+    "word_en": "detach",
+    "phonetic": "/dɪˈtætʃ/",
+    "meaning_kh": "ដកចេញ/ផ្តាច់ចេញ",
+    "example": "Detach the coupon."
+  },
+  {
+    "word_en": "detail",
+    "phonetic": "/dɪˈteɪl/",
+    "meaning_kh": "រៀបរាប់លម្អិត",
+    "example": "Detail the requirements."
+  },
+  {
+    "word_en": "determine",
+    "phonetic": "/dɪˈtɜːrmɪn/",
+    "meaning_kh": "កំណត់/ប្តេជ្ញា",
+    "example": "Determine the cause."
+  },
+  {
+    "word_en": "devastate",
+    "phonetic": "/ˈdɛvəsteɪt/",
+    "meaning_kh": "បំផ្លិចបំផ្លាញខ្ទេចខ្ទី",
+    "example": "The hurricane devastated the city."
+  },
+  {
+    "word_en": "deviate",
+    "phonetic": "/ˈdiːvieɪt/",
+    "meaning_kh": "វង្វេងផ្លូវ/លំអៀងចេញពី",
+    "example": "Deviate from the norm."
+  },
+  {
+    "word_en": "devote",
+    "phonetic": "/dɪˈvoʊt/",
+    "meaning_kh": "ឧទ្ទិស/បូជា",
+    "example": "Devote time to reading."
+  },
+  {
+    "word_en": "diagnose",
+    "phonetic": "/ˌdaɪəɡˈnoʊs/",
+    "meaning_kh": "វិភាគរោគវិនិច្ឆ័យ",
+    "example": "Diagnose the illness."
+  },
+  {
+    "word_en": "dictate",
+    "phonetic": "/ˈdɪkteɪt/",
+    "meaning_kh": "បង្គាប់បញ្ជា/អានឲ្យសរសេរតាម",
+    "example": "Dictate a letter."
+  },
+  {
+    "word_en": "differ",
+    "phonetic": "/ˈdɪfər/",
+    "meaning_kh": "ខុសគ្នា",
+    "example": "Opinions differ."
+  },
+  {
+    "word_en": "differentiate",
+    "phonetic": "/ˌdɪfəˈrɛnʃieɪt/",
+    "meaning_kh": "បែងចែកឲ្យឃើញខុសគ្នា",
+    "example": "Differentiate between quality and brand."
+  },
+  {
+    "word_en": "dig",
+    "phonetic": "/dɪɡ/",
+    "meaning_kh": "ជីក",
+    "example": "Dig a hole."
+  },
+  {
+    "word_en": "digest",
+    "phonetic": "/daɪˈdʒɛst/",
+    "meaning_kh": "រំលាយអាហារ/យល់ច្បាស់",
+    "example": "Digest food."
+  },
+  {
+    "word_en": "dim",
+    "phonetic": "/dɪm/",
+    "meaning_kh": "ធ្វើឲ្យងងឹតស្លុង",
+    "example": "Dim the lights."
+  },
+  {
+    "word_en": "diminish",
+    "phonetic": "/dɪˈmɪnɪʃ/",
+    "meaning_kh": "ថយចុះ/កាត់បន្ថយ",
+    "example": "Diminish the power."
+  },
+  {
+    "word_en": "dine",
+    "phonetic": "/daɪn/",
+    "meaning_kh": "ទទួលទានអាហារពេលល្ងាច",
+    "example": "Dine at a restaurant."
+  },
+  {
+    "word_en": "dip",
+    "phonetic": "/dɪp/",
+    "meaning_kh": "ជ្រលក់",
+    "example": "Dip the bread in soup."
+  },
+  {
+    "word_en": "direct",
+    "phonetic": "/dəˈrɛkt/",
+    "meaning_kh": "ណែនាំ/តម្រង់ទិស",
+    "example": "Direct the movie."
+  },
+  {
+    "word_en": "disagree",
+    "phonetic": "/ˌdɪsəˈɡriː/",
+    "meaning_kh": "មិនយល់ស្រប",
+    "example": "I disagree with you."
+  },
+  {
+    "word_en": "disappear",
+    "phonetic": "/ˌdɪsəˈpɪr/",
+    "meaning_kh": "បាត់ខ្លួន",
+    "example": "The sun disappeared."
+  },
+  {
+    "word_en": "disappoint",
+    "phonetic": "/ˌdɪsəˈpɔɪnt/",
+    "meaning_kh": "ធ្វើឲ្យខកចិត្ត",
+    "example": "Don't disappoint me."
+  },
+  {
+    "word_en": "discard",
+    "phonetic": "/dɪˈskɑːrd/",
+    "meaning_kh": "បោះចោល",
+    "example": "Discard old clothes."
+  },
+  {
+    "word_en": "discharge",
+    "phonetic": "/dɪsˈtʃɑːrdʒ/",
+    "meaning_kh": "ដោះលែង/បង្ហូរចេញ",
+    "example": "Discharge from hospital."
+  },
+  {
+    "word_en": "disclose",
+    "phonetic": "/dɪsˈkloʊz/",
+    "meaning_kh": "បង្ហាញឲ្យដឹង/ទម្លាយការណ៍",
+    "example": "Disclose the secret."
+  },
+  {
+    "word_en": "discount",
+    "phonetic": "/ˈdɪskaʊnt/",
+    "meaning_kh": "ចុះថ្លៃ/បញ្ចុះតម្លៃ",
+    "example": "Discount the price."
+  },
+  {
+    "word_en": "discourage",
+    "phonetic": "/dɪsˈkɜːrɪdʒ/",
+    "meaning_kh": "ធ្វើឲ្យបាក់ទឹកចិត្ត",
+    "example": "Failure discouraged him."
+  },
+  {
+    "word_en": "dismiss",
+    "phonetic": "/dɪsˈmɪs/",
+    "meaning_kh": "បញ្ឈប់ការងារ/បដិសេធ",
+    "example": "Dismiss the case."
+  },
+  {
+    "word_en": "display",
+    "phonetic": "/dɪˈspleɪ/",
+    "meaning_kh": "បង្ហាញ",
+    "example": "Display the products."
+  },
+  {
+    "word_en": "distinguish",
+    "phonetic": "/dɪˈstɪŋɡwɪʃ/",
+    "meaning_kh": "បែងចែកឲ្យដាច់ពីគ្នា",
+    "example": "Distinguish right from wrong."
+  },
+  {
+    "word_en": "distribute",
+    "phonetic": "/dɪˈstrɪbjuːt/",
+    "meaning_kh": "ចែកចាយ",
+    "example": "Distribute the leaflets."
+  },
+  {
+    "word_en": "distrust",
+    "phonetic": "/dɪsˈtrʌst/",
+    "meaning_kh": "មិនទុកចិត្ត",
+    "example": "Distrust the strangers."
+  },
+  {
+    "word_en": "disturb",
+    "phonetic": "/dɪˈstɜːrb/",
+    "meaning_kh": "រំខាន",
+    "example": "Do not disturb."
+  },
+  {
+    "word_en": "dive",
+    "phonetic": "/daɪv/",
+    "meaning_kh": "មុជទឹក",
+    "example": "Dive into the pool."
+  },
+  {
+    "word_en": "divorce",
+    "phonetic": "/dɪˈvɔːrs/",
+    "meaning_kh": "លែងលះ",
+    "example": "They decided to divorce."
+  },
+  {
+    "word_en": "dominate",
+    "phonetic": "/ˈdɑːmɪneɪt/",
+    "meaning_kh": "គ្រប់គ្រង/ត្រួតត្រាលើ",
+    "example": "Dominate the game."
+  },
+  {
+    "word_en": "donate",
+    "phonetic": "/ˈdoʊneɪt/",
+    "meaning_kh": "បរិច្ចាគ",
+    "example": "Donate blood."
+  },
+  {
+    "word_en": "double",
+    "phonetic": "/ˈdʌbəl/",
+    "meaning_kh": "ទ្វេដង",
+    "example": "Double the recipe."
+  },
+  {
+    "word_en": "doubt",
+    "phonetic": "/daʊt/",
+    "meaning_kh": "សង្ស័យ",
+    "example": "I doubt it."
+  },
+  {
+    "word_en": "drag",
+    "phonetic": "/dræɡ/",
+    "meaning_kh": "អូស",
+    "example": "Drag the file here."
+  },
+  {
+    "word_en": "drain",
+    "phonetic": "/dreɪn/",
+    "meaning_kh": "បង្ហូរទឹកចេញ",
+    "example": "Drain the pasta."
+  },
+  {
+    "word_en": "dress",
+    "phonetic": "/drɛs/",
+    "meaning_kh": "ស្លៀកពាក់",
+    "example": "Dress up for the party."
+  },
+  {
+    "word_en": "drift",
+    "phonetic": "/drɪft/",
+    "meaning_kh": "អណ្ដែត/រសាត់",
+    "example": "Leaves drift in the wind."
+  },
+  {
+    "word_en": "drill",
+    "phonetic": "/drɪl/",
+    "meaning_kh": "ខួង/ហ្វឹកហាត់",
+    "example": "Drill a hole."
+  },
+  {
+    "word_en": "drown",
+    "phonetic": "/draʊn/",
+    "meaning_kh": "លង់ទឹកស្លាប់",
+    "example": "Drown in the river."
+  },
+  {
+    "word_en": "dry",
+    "phonetic": "/draɪ/",
+    "meaning_kh": "ធ្វើឲ្យស្ងួត",
+    "example": "Dry your hair."
+  },
+  {
+    "word_en": "dump",
+    "phonetic": "/dʌmp/",
+    "meaning_kh": "ចាក់ចោល/បោះបង់",
+    "example": "Dump the trash."
+  },
+  {
+    "word_en": "dust",
+    "phonetic": "/dust/",
+    "meaning_kh": "ជូតធូលី",
+    "example": "Dust the furniture."
+  },
+  {
+    "word_en": "dwell",
+    "phonetic": "/dwɛl/",
+    "meaning_kh": "រស់នៅ",
+    "example": "Dwell in the city."
+  },
+  {
+    "word_en": "ease",
+    "phonetic": "/iːz/",
+    "meaning_kh": "ធ្វើឲ្យធូរស្រាល",
+    "example": "Ease the pain."
+  },
+  {
+    "word_en": "echo",
+    "phonetic": "/ˈɛkoʊ/",
+    "meaning_kh": "ឮសំឡេងជះត្រឡប់មកវិញ",
+    "example": "Voices echo in the cave."
+  },
+  {
+    "word_en": "edit",
+    "phonetic": "/ˈedit/",
+    "meaning_kh": "កែសម្រួល",
+    "example": "Edit the document."
+  },
+  {
+    "word_en": "educate",
+    "phonetic": "/ˈɛdʒukeɪt/",
+    "meaning_kh": "អប់រំ",
+    "example": "Educate the children."
+  },
+  {
+    "word_en": "elect",
+    "phonetic": "/ɪˈlɛkt/",
+    "meaning_kh": "បោះឆ្នោតជ្រើសរើស",
+    "example": "Elect a president."
+  },
+  {
+    "word_en": "eliminate",
+    "phonetic": "/ɪˈlɪmɪneɪt/",
+    "meaning_kh": "លុបបំបាត់",
+    "example": "Eliminate the errors."
+  },
+  {
+    "word_en": "embarrass",
+    "phonetic": "/ɪmˈbærəs/",
+    "meaning_kh": "ធ្វើឲ្យខ្មាសអៀន",
+    "example": "Don't embarrass me."
+  },
+  {
+    "word_en": "emerge",
+    "phonetic": "/ɪˈmɜːrdʒ/",
+    "meaning_kh": "លេចឡើង",
+    "example": "Stars emerge at night."
+  },
+  {
+    "word_en": "emphasize",
+    "phonetic": "/ˈɛmfəsaɪz/",
+    "meaning_kh": "សង្កត់ធ្ងន់",
+    "example": "Emphasize the importance."
+  },
+  {
+    "word_en": "employ",
+    "phonetic": "/ɪmˈplɔɪ/",
+    "meaning_kh": "ជួល/ប្រើប្រាស់",
+    "example": "Employ new staff."
+  },
+  {
+    "word_en": "empty",
+    "phonetic": "/ˈɛmpti/",
+    "meaning_kh": "បហ្ហូរចេញឲ្យអស់",
+    "example": "Empty the trash can."
+  },
+  {
+    "word_en": "enable",
+    "phonetic": "/ɪˈneɪbəl/",
+    "meaning_kh": "បើកដំណើរការ/អនុញ្ញាត",
+    "example": "Enable notifications."
+  },
+  {
+    "word_en": "encounter",
+    "phonetic": "/ɪnˈkaʊntər/",
+    "meaning_kh": "ជួបប្រទះ",
+    "example": "Encounter problems."
+  },
+  {
+    "word_en": "end",
+    "phonetic": "/ɛnd/",
+    "meaning_kh": "បញ្ចប់",
+    "example": "End the relationship."
+  },
+  {
+    "word_en": "endure",
+    "phonetic": "/ɪnˈdʊr/",
+    "meaning_kh": "ទ្រាំទ្រ",
+    "example": "Endure the pain."
+  },
+  {
+    "word_en": "enforce",
+    "phonetic": "/ɪnˈfɔːrs/",
+    "meaning_kh": "អនុវត្តច្បាប់",
+    "example": "Enforce the rules."
+  },
+  {
+    "word_en": "engage",
+    "phonetic": "/ɪnˈɡeɪdʒ/",
+    "meaning_kh": "ចូលរួម/ភ្ជាប់ទំនាក់ទំនង",
+    "example": "Engage in conversation."
+  },
+  {
+    "word_en": "enhance",
+    "phonetic": "/ɪnˈhæns/",
+    "meaning_kh": "បង្កើន/លើកកម្ពស់",
+    "example": "Enhance the quality."
+  },
+  {
+    "word_en": "enlarge",
+    "phonetic": "/ɪnˈlɑːrdʒ/",
+    "meaning_kh": "ពង្រីក",
+    "example": "Enlarge the photo."
+  },
+  {
+    "word_en": "enlighten",
+    "phonetic": "/ɪnˈlaɪtən/",
+    "meaning_kh": "ផ្តល់ពន្លឺចំណេះដឹង",
+    "example": "Enlighten the students."
+  },
+  {
+    "word_en": "enquire",
+    "phonetic": "/ɪnˈkwaɪər/",
+    "meaning_kh": "សាកសួរ",
+    "example": "Enquire about the price."
+  },
+  {
+    "word_en": "enroll",
+    "phonetic": "/ɪnˈroʊl/",
+    "meaning_kh": "ចុះឈ្មោះចូលរៀន",
+    "example": "Enroll in a course."
+  },
+  {
+    "word_en": "ensure",
+    "phonetic": "/ɪnˈʃʊr/",
+    "meaning_kh": "ធានា",
+    "example": "Ensure the success."
+  },
+  {
+    "word_en": "entertain",
+    "phonetic": "/ˌɛntərˈteɪn/",
+    "meaning_kh": "ផ្តល់ការកម្សាន្ត",
+    "example": "Entertain the guests."
+  },
+  {
+    "word_en": "entitle",
+    "phonetic": "/ɪnˈtaɪtəl/",
+    "meaning_kh": "ផ្តល់សិទ្ធិ",
+    "example": "Entitle to a discount."
+  },
+  {
+    "word_en": "envy",
+    "phonetic": "/ˈɛnvi/",
+    "meaning_kh": "ច្រណែន",
+    "example": "Don't envy others."
+  },
+  {
+    "word_en": "equip",
+    "phonetic": "/ɪˈkwɪp/",
+    "meaning_kh": "បំពាក់ឧបករណ៍",
+    "example": "Equip the gym."
+  },
+  {
+    "word_en": "erase",
+    "phonetic": "/ɪˈreɪs/",
+    "meaning_kh": "លុបចេញ",
+    "example": "Erase the whiteboard."
+  },
+  {
+    "word_en": "estimate",
+    "phonetic": "/ˈɛstɪmeɪt/",
+    "meaning_kh": "ប៉ះស្មាន",
+    "example": "Estimate the cost."
+  },
+  {
+    "word_en": "evaluate",
+    "phonetic": "/ɪˈvæljueɪt/",
+    "meaning_kh": "វាយតម្លៃ",
+    "example": "Evaluate the performance."
+  },
+  {
+    "word_en": "evaporate",
+    "phonetic": "/ɪˈvæpəreɪt/",
+    "meaning_kh": "ហួតជាចំហាយ",
+    "example": "Water evaporates."
+  },
+  {
+    "word_en": "exceed",
+    "phonetic": "/ɪkˈsiːd/",
+    "meaning_kh": "លើសពី",
+    "example": "Exceed the limit."
+  },
+  {
+    "word_en": "excel",
+    "phonetic": "/ɪkˈsɛl/",
+    "meaning_kh": "ពូកែ/ឆ្នើម",
+    "example": "Excel in math."
+  },
+  {
+    "word_en": "exchange",
+    "phonetic": "/ɪksˈtʃeɪndʒ/",
+    "meaning_kh": "ផ្លាស់ប្តូរ",
+    "example": "Exchange gifts."
+  },
+  {
+    "word_en": "excite",
+    "phonetic": "/ɪkˈsaɪt/",
+    "meaning_kh": "ធ្វើឲ្យរំភើប",
+    "example": "The news excited them."
+  },
+  {
+    "word_en": "exclaim",
+    "phonetic": "/ɪkˈskleɪm/",
+    "meaning_kh": "ឧទានឡើង",
+    "example": "Exclaim in surprise."
+  },
+  {
+    "word_en": "exclude",
+    "phonetic": "/ɪksˈkluːd/",
+    "meaning_kh": "មិនរាប់បញ្ចូល",
+    "example": "Exclude the tax."
+  },
+  {
+    "word_en": "excuse",
+    "phonetic": "/ɪkˈskjuːz/",
+    "meaning_kh": "ដោះសារ/លើកលែងទោស",
+    "example": "Excuse my behavior."
+  },
+  {
+    "word_en": "execute",
+    "phonetic": "/ˈɛksɪkjuːt/",
+    "meaning_kh": "ប្រហារជីវិត/អនុវត្ត",
+    "example": "Execute the plan."
+  },
+  {
+    "word_en": "exert",
+    "phonetic": "/ɪɡˈzɜːrt/",
+    "meaning_kh": "បញ្ចេញកម្លាំង",
+    "example": "Exert pressure."
+  },
+  {
+    "word_en": "exhaust",
+    "phonetic": "/ɪɡˈzɔːst/",
+    "meaning_kh": "ធ្វើឲ្យអស់កម្លាំង",
+    "example": "Run exhausts me."
+  },
+  {
+    "word_en": "exhibit",
+    "phonetic": "/ɪɡˈzɪbɪt/",
+    "meaning_kh": "ដាក់តាំងពិព័រណ៍",
+    "example": "Exhibit the paintings."
+  },
+  {
+    "word_en": "exit",
+    "phonetic": "/ˈɛɡzɪt/",
+    "meaning_kh": "ចាកចេញ",
+    "example": "Exit the building."
+  },
+  {
+    "word_en": "experiment",
+    "phonetic": "/ɪkˈspɛrɪmənt/",
+    "meaning_kh": "ធ្វើពិសោធន៍",
+    "example": "Experiment with colors."
+  },
+  {
+    "word_en": "explode",
+    "phonetic": "/ɪkˈsploʊd/",
+    "meaning_kh": "ផ្ទុះ",
+    "example": "The bomb exploded."
+  },
+  {
+    "word_en": "exploit",
+    "phonetic": "/ɪkˈsplɔɪ/",
+    "meaning_kh": "កេងប្រវ័ញ្ច/ទាញយកផលប្រយោជន៍",
+    "example": "Exploit the resources."
+  },
+  {
+    "word_en": "export",
+    "phonetic": "/ɪkˈspɔːrt/",
+    "meaning_kh": "នាំចេញ",
+    "example": "Export agricultural products."
+  },
+  {
+    "word_en": "expose",
+    "phonetic": "/ɪkˈspoʊz/",
+    "meaning_kh": "បង្ហាញឲ្យឃើញ/ទម្លាយ",
+    "example": "Expose the truth."
+  },
+  {
+    "word_en": "express",
+    "phonetic": "/ɪkˈsprɛs/",
+    "meaning_kh": "សម្តែងមតិ/បញ្ចេញ",
+    "example": "Express your feelings."
+  },
+  {
+    "word_en": "extract",
+    "phonetic": "/ɪkˈstrækt/",
+    "meaning_kh": "ចម្រាញ់យក/ដកចេញ",
+    "example": "Extract tooth."
+  },
+  {
+    "word_en": "eye",
+    "phonetic": "/aɪ/",
+    "meaning_kh": "សម្លឹងមើល",
+    "example": "Eye the target."
+  },
+  {
+    "word_en": "facilitate",
+    "phonetic": "/fəˈsɪlɪteɪt/",
+    "meaning_kh": "សម្រួលការងារ",
+    "example": "Facilitate the process."
+  },
+  {
+    "word_en": "fade",
+    "phonetic": "/feɪd/",
+    "meaning_kh": "ស្រពោន/ស្រអាប់ទៅ",
+    "example": "Colors fade in the sun."
+  },
+  {
+    "word_en": "faint",
+    "phonetic": "/feɪnt/",
+    "meaning_kh": "សន្លប់/ខ្សោយ",
+    "example": "Faint from hunger."
+  },
+  {
+    "word_en": "familiarize",
+    "phonetic": "/fəˈmɪljəraɪz/",
+    "meaning_kh": "ធ្វើឲ្យស៊ាំ",
+    "example": "Familiarize yourself with the environment."
+  },
+  {
+    "word_en": "fancy",
+    "phonetic": "/ˈfænsi/",
+    "meaning_kh": "ស្រមៃ/ចូលចិត្ត",
+    "example": "Fancy a cup of tea?"
+  },
+  {
+    "word_en": "fascinate",
+    "phonetic": "/ˈfæsɪneɪt/",
+    "meaning_kh": "ទាក់ទាញចិត្តយ៉ាងខ្លាំង",
+    "example": "Nature fascinates me."
+  },
+  {
+    "word_en": "fasten",
+    "phonetic": "/ˈfæsən/",
+    "meaning_kh": "ចងរឹត/ភ្ជាប់",
+    "example": "Fasten your seatbelt."
+  },
+  {
+    "word_en": "favor",
+    "phonetic": "/ˈfeɪvər/",
+    "meaning_kh": "គាំទ្រ/អនុគ្រោះ",
+    "example": "Favor the candidate."
+  },
+  {
+    "word_en": "fetch",
+    "phonetic": "/fɛtʃ/",
+    "meaning_kh": "ទៅយកមក",
+    "example": "Fetch the ball."
+  },
+  {
+    "word_en": "file",
+    "phonetic": "/faɪl/",
+    "meaning_kh": "តម្រៀបឯកសារ",
+    "example": "File the report."
+  },
+  {
+    "word_en": "filter",
+    "phonetic": "/ˈfɪltər/",
+    "meaning_kh": "ចម្រោះ",
+    "example": "Filter the water."
+  },
+  {
+    "word_en": "finance",
+    "phonetic": "/ˈfaɪnæns/",
+    "meaning_kh": "ផ្តល់ហិរញ្ញប្បទាន",
+    "example": "Finance the project."
+  },
+  {
+    "word_en": "fine",
+    "phonetic": "/faɪn/",
+    "meaning_kh": "ផាកពិន័យ",
+    "example": "Fine for speeding."
+  },
+  {
+    "word_en": "finish",
+    "phonetic": "/ˈfɪnɪʃ/",
+    "meaning_kh": "បញ្ចប់",
+    "example": "Finish the homework."
+  },
+  {
+    "word_en": "fire",
+    "phonetic": "/ˈfaɪər/",
+    "meaning_kh": "បាញ់/បញ្ឈប់ពីការងារ",
+    "example": "Fire the employee."
+  },
+  {
+    "word_en": "flash",
+    "phonetic": "/flæʃ/",
+    "meaning_kh": "ជះពន្លឺភ្លឹបភ្លែត",
+    "example": "Flash the lights."
+  },
+  {
+    "word_en": "flatten",
+    "phonetic": "/ˈflætən/",
+    "meaning_kh": "ធ្វើឲ្យស្មើ",
+    "example": "Flatten the dough."
+  },
+  {
+    "word_en": "flee",
+    "phonetic": "/fliː/",
+    "meaning_kh": "រត់គេចខ្លួន",
+    "example": "Flee the country."
+  },
+  {
+    "word_en": "fling",
+    "phonetic": "/flɪŋ/",
+    "meaning_kh": "គ្រវែង",
+    "example": "Fling the keys."
+  },
+  {
+    "word_en": "float",
+    "phonetic": "/floʊt/",
+    "meaning_kh": "អណ្ដែត",
+    "example": "Leaves float on water."
+  },
+  {
+    "word_en": "flood",
+    "phonetic": "/flʌd/",
+    "meaning_kh": "ជន់លិច",
+    "example": "Water flooded the street."
+  },
+  {
+    "word_en": "flow",
+    "phonetic": "/flow/",
+    "meaning_kh": "ហូរ",
+    "example": "Rivers flow to the sea."
+  },
+  {
+    "word_en": "fold",
+    "phonetic": "/foʊld/",
+    "meaning_kh": "បត់",
+    "example": "Fold the clothes."
+  },
+  {
+    "word_en": "fondle",
+    "phonetic": "/ˈfɑːndəl/",
+    "meaning_kh": "ស្ទាបអង្អែល",
+    "example": "Fondle the kitten."
+  },
+  {
+    "word_en": "forbid",
+    "phonetic": "/fərˈbɪd/",
+    "meaning_kh": "ហាមប្រាម",
+    "example": "Forbid entry."
+  },
+  {
+    "word_en": "forecast",
+    "phonetic": "/ˈfɔːrkæst/",
+    "meaning_kh": "ព្យាករណ៍",
+    "example": "Forecast the weather."
+  },
+  {
+    "word_en": "foresee",
+    "phonetic": "/fɔːrˈsiː/",
+    "meaning_kh": "មើលឃើញជាមុន",
+    "example": "Foresee the future."
+  },
+  {
+    "word_en": "foretell",
+    "phonetic": "/fɔːrˈtɛl/",
+    "meaning_kh": "និយាយទុកជាមុន/ទស្សន៍ទាយ",
+    "example": "Foretell the destiny."
+  },
+  {
+    "word_en": "form",
+    "phonetic": "/fɔːrm/",
+    "meaning_kh": "បង្កើត/បង្កើតជារូបរាង",
+    "example": "Form a line."
+  },
+  {
+    "word_en": "formulate",
+    "phonetic": "/ˈfɔːrmjuleɪt/",
+    "meaning_kh": "រៀបចំ/បង្កើតរូបមន្ត",
+    "example": "Formulate a policy."
+  },
+  {
+    "word_en": "foster",
+    "phonetic": "/ˈfɔːstər/",
+    "meaning_kh": "ចិញ្ចឹមបីបាច់/លើកទឹកចិត្ត",
+    "example": "Foster creative ideas."
+  },
+  {
+    "word_en": "found",
+    "phonetic": "/faʊnd/",
+    "meaning_kh": "បង្កើតឡើង/ស្វែងរកឃើញ(V2)",
+    "example": "Found a university."
+  },
+  {
+    "word_en": "frame",
+    "phonetic": "/frame/",
+    "meaning_kh": "ដាក់ស៊ុម",
+    "example": "Frame the picture."
+  },
+  {
+    "word_en": "free",
+    "phonetic": "/friː/",
+    "meaning_kh": "ដោះលែង/ធ្វើឲ្យមានសេរីភាព",
+    "example": "Free the birds."
+  },
+  {
+    "word_en": "frequent",
+    "phonetic": "/ˈfriːkwənt/",
+    "meaning_kh": "ឧស្សាហ៍ទៅ",
+    "example": "Frequent the library."
+  },
+  {
+    "word_en": "frighten",
+    "phonetic": "/ˈfraɪtən/",
+    "meaning_kh": "ធ្វើឲ្យភ័យខ្លាច",
+    "example": "Darkness frightens her."
+  },
+  {
+    "word_en": "fulfill",
+    "phonetic": "/fʊlˈfɪl/",
+    "meaning_kh": "បំពេញ(បំណង/តម្រូវការ)",
+    "example": "Fulfill the requirements."
+  },
+  {
+    "word_en": "function",
+    "phonetic": "/ˈfʌŋkʃən/",
+    "meaning_kh": "ដំណើរការ",
+    "example": "The machine functions well."
+  },
+  {
+    "word_en": "fund",
+    "phonetic": "/fund/",
+    "meaning_kh": "ផ្តល់ថវិកា",
+    "example": "Fund the research."
+  },
+  {
+    "word_en": "gain",
+    "phonetic": "/ɡeɪn/",
+    "meaning_kh": "ទទួលបាន/កើនឡើង",
+    "example": "Gain experience."
+  },
+  {
+    "word_en": "gamble",
+    "phonetic": "/ˈɡæmbəl/",
+    "meaning_kh": "លេងល្បែង",
+    "example": "Don't gamble with money."
+  },
+  {
+    "word_en": "gasp",
+    "phonetic": "/ɡæsp/",
+    "meaning_kh": "ហត់ដកដង្ហើមញាប់",
+    "example": "Gasp for air."
+  },
+  {
+    "word_en": "generalize",
+    "phonetic": "/ˈdʒɛnrəlaɪz/",
+    "meaning_kh": "និយាយជាទូទៅ",
+    "example": "Don't generalize everyone."
+  },
+  {
+    "word_en": "gesture",
+    "phonetic": "/ˈdʒɛstʃər/",
+    "meaning_kh": "ធ្វើកាយវិការ",
+    "example": "Gesture to come in."
+  },
+  {
+    "word_en": "glance",
+    "phonetic": "/ɡlæns/",
+    "meaning_kh": "ក្រឡេកមើល",
+    "example": "Glance at the clock."
+  },
+  {
+    "word_en": "glare",
+    "phonetic": "/ɡler/",
+    "meaning_kh": "សម្លឹងមើលដោយខឹង/ចាំងភ្នែក",
+    "example": "Glare at the driver."
+  },
+  {
+    "word_en": "glide",
+    "phonetic": "/ɡlaɪd/",
+    "meaning_kh": "រំកិលខ្លួនយ៉ាងរលូន",
+    "example": "Birds glide through the air."
+  },
+  {
+    "word_en": "glimpse",
+    "phonetic": "/ɡlɪmps/",
+    "meaning_kh": "ក្រឡេកឃើញមួយភ្លែត",
+    "example": "Glimpse the celebrity."
+  },
+  {
+    "word_en": "glow",
+    "phonetic": "/ɡloʊ/",
+    "meaning_kh": "បញ្ចេញពន្លឺភ្លឺផ្លេក",
+    "example": "The coals glowed in the dark."
+  },
+  {
+    "word_en": "glue",
+    "phonetic": "/ɡluː/",
+    "meaning_kh": "បិទកាវ",
+    "example": "Glue the pieces together."
+  },
+  {
+    "word_en": "govern",
+    "phonetic": "/ˈɡʌvərn/",
+    "meaning_kh": "គ្រប់គ្រង",
+    "example": "Govern the country."
+  },
+  {
+    "word_en": "grade",
+    "phonetic": "/ɡreɪd/",
+    "meaning_kh": "ដាក់ពិន្ទុ/ថ្នាក់",
+    "example": "Grade the papers."
+  },
+  {
+    "word_en": "grant",
+    "phonetic": "/ɡrænt/",
+    "meaning_kh": "ផ្តល់ជូន/អនុញ្ញាត",
+    "example": "Grant a wish."
+  },
+  {
+    "word_en": "grasp",
+    "phonetic": "/ɡræsp/",
+    "meaning_kh": "ចាប់យក/យល់ច្បាស់",
+    "example": "Grasp the concept."
+  },
+  {
+    "word_en": "greet",
+    "phonetic": "/ɡriːt/",
+    "meaning_kh": "ស្វាគមន៍",
+    "example": "Greet the guests."
+  },
+  {
+    "word_en": "grieve",
+    "phonetic": "/ɡriːv/",
+    "meaning_kh": "កើតទុក្ខក្រៀមក្រំ",
+    "example": "Grieve the loss."
+  },
+  {
+    "word_en": "grin",
+    "phonetic": "/ɡrɪn/",
+    "meaning_kh": "ញញឹមស្ញេញ",
+    "example": "Grin at the joke."
+  },
+  {
+    "word_en": "grind",
+    "phonetic": "/ɡraɪnd/",
+    "meaning_kh": "កិន",
+    "example": "Grind the coffee beans."
+  },
+  {
+    "word_en": "grip",
+    "phonetic": "/ɡrɪp/",
+    "meaning_kh": "ក្តាប់/ចាប់ជាប់",
+    "example": "Grip the handle."
+  },
+  {
+    "word_en": "groan",
+    "phonetic": "/groʊn/",
+    "meaning_kh": "ថ្ងូរ",
+    "example": "Groan in pain."
+  },
+  {
+    "word_en": "guard",
+    "phonetic": "/ɡɑːrd/",
+    "meaning_kh": "យាម/ការពារ",
+    "example": "Guard the entrance."
+  },
+  {
+    "word_en": "hammer",
+    "phonetic": "/ˈhæmer/",
+    "meaning_kh": "វាយញញួរ",
+    "example": "Hammer the nail."
+  },
+  {
+    "word_en": "hand",
+    "phonetic": "/hænd/",
+    "meaning_kh": "ហុចឲ្យ",
+    "example": "Hand me the pen."
+  },
+  {
+    "word_en": "handle",
+    "phonetic": "/ˈhændəl/",
+    "meaning_kh": "ដោះស្រាយ/កាន់",
+    "example": "Handle the situation."
+  },
+  {
+    "word_en": "harass",
+    "phonetic": "/həˈrəs/",
+    "meaning_kh": "រំខាន/ធ្វើទុក្ខបុកម្នេញ",
+    "example": "Harass the employees."
+  },
+  {
+    "word_en": "harm",
+    "phonetic": "/hɑːrm/",
+    "meaning_kh": "ធ្វើឲ្យខូចខាត/គ្រោះថ្នាក់",
+    "example": "Don't harm the environment."
+  },
+  {
+    "word_en": "harvest",
+    "phonetic": "/ˈhɑːrvɪst/",
+    "meaning_kh": "ប្រមូលផល",
+    "example": "Harvest the rice."
+  },
+  {
+    "word_en": "hasten",
+    "phonetic": "/ˈheɪsən/",
+    "meaning_kh": "ធ្វើឲ្យលឿនឡើង/ប្រញាប់",
+    "example": "Hasten the progress."
+  },
+  {
+    "word_en": "hatch",
+    "phonetic": "/hætʃ/",
+    "meaning_kh": "ញាស់(ពង)",
+    "example": "The chicks hatched."
+  },
+  {
+    "word_en": "haul",
+    "phonetic": "/hɔːl/",
+    "meaning_kh": "អូស/ដឹកឥវ៉ាន់ធ្ងន់ៗ",
+    "example": "Haul the logs."
+  },
+  {
+    "word_en": "haunt",
+    "phonetic": "/hɔːnt/",
+    "meaning_kh": "លង/តាមលងបន្លាច",
+    "example": "Memories haunt me."
+  },
+  {
+    "word_en": "head",
+    "phonetic": "/hɛd/",
+    "meaning_kh": "ឆ្ពោះទៅកាន់/ដឹកនាំ",
+    "example": "Head to the city."
+  },
+  {
+    "word_en": "heat",
+    "phonetic": "/hiːt/",
+    "meaning_kh": "ធ្វើឲ្យក្តៅ",
+    "example": "Heat the food."
+  },
+  {
+    "word_en": "heave",
+    "phonetic": "/hiːv/",
+    "meaning_kh": "លើក/ទាញដោយពិបាក",
+    "example": "Heave a heavy sigh."
+  },
+  {
+    "word_en": "hesitate",
+    "phonetic": "/ˈhɛzɪteɪt/",
+    "meaning_kh": "រារែក/ស្ទាក់ស្ទើរ",
+    "example": "Don't hesitate to ask."
+  },
+  {
+    "word_en": "highlight",
+    "phonetic": "/ˈhaɪlaɪt/",
+    "meaning_kh": "គូសបញ្ជាក់/សង្កត់ធ្ងន់",
+    "example": "Highlight the key points."
+  },
+  {
+    "word_en": "hint",
+    "phonetic": "/hɪnt/",
+    "meaning_kh": "ផ្តល់តម្រុយ",
+    "example": "Hint at the answer."
+  },
+  {
+    "word_en": "hook",
+    "phonetic": "/hʊk/",
+    "meaning_kh": "ថ្កក់/ទំពក់",
+    "example": "Hook the keys."
+  },
+  {
+    "word_en": "hop",
+    "phonetic": "/hɑːp/",
+    "meaning_kh": "លោតញាប់ៗ",
+    "example": "Rabbits hop."
+  },
+  {
+    "word_en": "host",
+    "phonetic": "/hoʊst/",
+    "meaning_kh": "ធ្វើជាម្ចាស់ផ្ទះ/រៀបចំកម្មវិធី",
+    "example": "Host the event."
+  },
+  {
+    "word_en": "house",
+    "phonetic": "/haʊz/",
+    "meaning_kh": "ផ្តល់ជម្រក/ផ្ទុក",
+    "example": "The library houses old books."
+  },
+  {
+    "word_en": "hover",
+    "phonetic": "/ˈhʌvər/",
+    "meaning_kh": "ហោះហើរត្រកង/អណ្ដែតលើ",
+    "example": "Helicopter hovers."
+  },
+  {
+    "word_en": "hum",
+    "phonetic": "/hʌm/",
+    "meaning_kh": "ហួច/ច្រៀងបន្លឺក្នុងបំពង់ក",
+    "example": "Hum a song."
+  },
+  {
+    "word_en": "hush",
+    "phonetic": "/hʌʃ/",
+    "meaning_kh": "ធ្វើឲ្យស្ងាត់",
+    "example": "Hush the baby."
+  },
+  {
+    "word_en": "illuminate",
+    "phonetic": "/ɪˈluːmɪneɪt/",
+    "meaning_kh": "បំភ្លឺ",
+    "example": "Illuminate the room."
+  },
+  {
+    "word_en": "imitate",
+    "phonetic": "/ˈɪmɪteɪt/",
+    "meaning_kh": "ត្រាប់តាម",
+    "example": "Imitate the voice."
+  },
+  {
+    "word_en": "impact",
+    "phonetic": "/ˈɪmpækt/",
+    "meaning_kh": "ជះឥទ្ធិពល",
+    "example": "Decisions impact the future."
+  },
+  {
+    "word_en": "impair",
+    "phonetic": "/ɪmˈper/",
+    "meaning_kh": "ធ្វើឲ្យចុះខ្សោយ/ខូចខាត",
+    "example": "Alcohol impairs driving."
+  },
+  {
+    "word_en": "impart",
+    "phonetic": "/ɪmˈpɑːrt/",
+    "meaning_kh": "ចែករំលែក/ផ្តល់(ចំណេះដឹង)",
+    "example": "Impart knowledge."
+  },
+  {
+    "word_en": "impeach",
+    "phonetic": "/ɪmˈpiːtʃ/",
+    "meaning_kh": "ចោទប្រកាន់ជាផ្លូវការ",
+    "example": "Impeach the president."
+  },
+  {
+    "word_en": "impede",
+    "phonetic": "/ɪmˈpiːd/",
+    "meaning_kh": "រារាំង",
+    "example": "Impede progress."
+  },
+  {
+    "word_en": "impel",
+    "phonetic": "/ɪmˈpɛl/",
+    "meaning_kh": "បង្ខំ/ជំរុញចិត្ត",
+    "example": "Curiosity impelled him."
+  },
+  {
+    "word_en": "implant",
+    "phonetic": "/ɪmˈplænt/",
+    "meaning_kh": "ផ្សាំ/ដាំបង្កប់",
+    "example": "Implant dental bridge."
+  },
+  {
+    "word_en": "implement",
+    "phonetic": "/ˈimplɪmənt/",
+    "meaning_kh": "អនុវត្ត",
+    "example": "Implement the changes."
+  },
+  {
+    "word_en": "imply",
+    "phonetic": "/ɪmˈplaɪ/",
+    "meaning_kh": "ន័យបង្កប់/សរបញ្ជាក់",
+    "example": "Do you imply that I lied?"
+  },
+  {
+    "word_en": "impose",
+    "phonetic": "/ɪmˈpoʊz/",
+    "meaning_kh": "បង្ខំ/ដាក់(ពន្ធ/ច្បាប់)",
+    "example": "Impose a tax."
+  },
+  {
+    "word_en": "imprison",
+    "phonetic": "/ɪmˈprɪzən/",
+    "meaning_kh": "ដាក់គុក",
+    "example": "Imprison the criminal."
+  },
+  {
+    "word_en": "inbox",
+    "phonetic": "/ˈɪnbɑːks/",
+    "meaning_kh": "ផ្ញើសារចូលប្រអប់សំបុត្រ",
+    "example": "Inbox me the details."
+  },
+  {
+    "word_en": "incorporate",
+    "phonetic": "/ɪnˈkɔːrpəreɪt/",
+    "meaning_kh": "បញ្ចូលគ្នា/រួមបញ្ចូល",
+    "example": "Incorporate the feedback."
+  },
+  {
+    "word_en": "incur",
+    "phonetic": "/ɪnˈkɜːr/",
+    "meaning_kh": "បង្កើត/ទទួល(បំណុល/ការចំណាយ)",
+    "example": "Incur expenses."
+  },
+  {
+    "word_en": "induce",
+    "phonetic": "/ɪnˈduːs/",
+    "meaning_kh": "នាំឱ្យកើតមាន/ជំរុញ",
+    "example": "Induce sleep."
+  },
+  {
+    "word_en": "indulge",
+    "phonetic": "/ɪnˈdʌldʒ/",
+    "meaning_kh": "ធ្វើតាមចិត្តចង់/បណ្ដอยខ្លួន",
+    "example": "Indulge in sweets."
+  },
+  {
+    "word_en": "infect",
+    "phonetic": "/ɪnˈfɛkt/",
+    "meaning_kh": "ឆ្លងមេរោគ",
+    "example": "Bacteria infect the wound."
+  },
+  {
+    "word_en": "infer",
+    "phonetic": "/ɪnˈfɜːr/",
+    "meaning_kh": "សន្និដ្ឋានពី",
+    "example": "Infer the meaning from context."
+  },
+  {
+    "word_en": "infiltrate",
+    "phonetic": "/ˈɪnfɪltreɪt/",
+    "meaning_kh": "ជ្រៀតចូល",
+    "example": "Infiltrate the enemy lines."
+  },
+  {
+    "word_en": "inflame",
+    "phonetic": "/ɪnˈfleɪm/",
+    "meaning_kh": "ធ្វើឲ្យរលាក/ធ្វើឲ្យខឹងខ្លាំង",
+    "example": "Inflame the skin."
+  },
+  {
+    "word_en": "inflate",
+    "phonetic": "/ɪnˈfleɪt/",
+    "meaning_kh": "ផ្លុំខ្យល់បញ្ចូល/ឡើងថ្លៃ",
+    "example": "Inflate the balloon."
+  },
+  {
+    "word_en": "inflict",
+    "phonetic": "/ɪnˈflɪkt/",
+    "meaning_kh": "បង្ក(ការឈឺចាប់/ការខូចខាត)",
+    "example": "Inflict pain."
+  },
+  {
+    "word_en": "inherit",
+    "phonetic": "/ɪnˈhɛrɪt/",
+    "meaning_kh": "ទទួលមរតក",
+    "example": "Inherit a fortune."
+  },
+  {
+    "word_en": "inhibit",
+    "phonetic": "/ɪnˈhɪbɪt/",
+    "meaning_kh": "ទប់ស្កាត់/រារាំង",
+    "example": "Inhibit growth."
+  },
+  {
+    "word_en": "initiate",
+    "phonetic": "/ɪˈnɪʃieɪt/",
+    "meaning_kh": "ចាប់ផ្តើម/បង្កើត",
+    "example": "Initiate a project."
+  },
+  {
+    "word_en": "injure",
+    "phonetic": "/ˈɪndʒər/",
+    "meaning_kh": "ធ្វើឲ្យរបួស",
+    "example": "Injure your leg."
+  },
+  {
+    "word_en": "ink",
+    "phonetic": "/ɪŋk/",
+    "meaning_kh": "សរសេរ/ចុះហត្ថលេខា",
+    "example": "Ink the deal."
+  },
+  {
+    "word_en": "innovate",
+    "phonetic": "/ˈɪnəveɪt/",
+    "meaning_kh": "បង្កើតថ្មី",
+    "example": "Innovate products."
+  },
+  {
+    "word_en": "input",
+    "phonetic": "/ˈɪnpʊt/",
+    "meaning_kh": "បញ្ចូលទិន្នន័យ",
+    "example": "Input the data."
+  },
+  {
+    "word_en": "inquire",
+    "phonetic": "/ɪnˈkwaɪər/",
+    "meaning_kh": "សាកសួរ",
+    "example": "Inquire about tickets."
+  },
+  {
+    "word_en": "inscribe",
+    "phonetic": "/ɪnˈskraɪb/",
+    "meaning_kh": "ចារឹកអក្សរ",
+    "example": "Inscribe the ring."
+  },
+  {
+    "word_en": "insert",
+    "phonetic": "/ɪnˈsɜːrt/",
+    "meaning_kh": "បញ្ចូល/ស៊កបញ្ចូល",
+    "example": "Insert the coin."
+  },
+  {
+    "word_en": "insinuate",
+    "phonetic": "/ɪnˈsɪnjueɪt/",
+    "meaning_kh": "និយាយបញ្ឆិតបញ្ឆៀង",
+    "example": "Insinuate something."
+  },
+  {
+    "word_en": "instigate",
+    "phonetic": "/ˈɪnstɪɡeɪt/",
+    "meaning_kh": "ញុះញង់",
+    "example": "Instigate a riot."
+  },
+  {
+    "word_en": "instill",
+    "phonetic": "/ɪnˈstɪl/",
+    "meaning_kh": "បញ្ជ្រាប(គំនិត/គុណធម៌)",
+    "example": "Instill confidence."
+  },
+  {
+    "word_en": "institute",
+    "phonetic": "/ˈɪnstɪtuːt/",
+    "meaning_kh": "បង្កើតឡើង/ចាប់ផ្តើម",
+    "example": "Institute new laws."
+  },
+  {
+    "word_en": "instruct",
+    "phonetic": "/ɪnˈstrʌkt/",
+    "meaning_kh": "ណែនាំ/បង្រៀន",
+    "example": "Instruct the class."
+  },
+  {
+    "word_en": "insult",
+    "phonetic": "/ɪnˈsʌlt/",
+    "meaning_kh": "ប្រមាថ/ជេរប្រមាថ",
+    "example": "Insult others."
+  },
+  {
+    "word_en": "insure",
+    "phonetic": "/ɪnˈʃʊr/",
+    "meaning_kh": "ធានារ៉ាប់រង",
+    "example": "Insure the car."
+  },
+  {
+    "word_en": "integrate",
+    "phonetic": "/ˈɪntɪɡreɪt/",
+    "meaning_kh": "ធ្វើសមាហរណកម្ម/បញ្ចូលគ្នា",
+    "example": "Integrate the system."
+  },
+  {
+    "word_en": "intensify",
+    "phonetic": "/ɪnˈtɛnsɪfaɪ/",
+    "meaning_kh": "ធ្វើឲ្យកាន់តែខ្លាំង",
+    "example": "Intensify the training."
+  },
+  {
+    "word_en": "interact",
+    "phonetic": "/ˌɪntərˈækt/",
+    "meaning_kh": "ប្រាស្រ័យទាក់ទងគ្នា/មានប្រតិកម្មទៅវិញទៅមក",
+    "example": "Interact with kids."
+  },
+  {
+    "word_en": "interest",
+    "phonetic": "/ˈɪntrəst/",
+    "meaning_kh": "ធ្វើឲ្យចាប់អារម្មណ៍",
+    "example": "History interests me."
+  },
+  {
+    "word_en": "interfere",
+    "phonetic": "/ˌɪntərˈfɪr/",
+    "meaning_kh": "ជ្រៀតជ្រែក",
+    "example": "Don't interfere in my affairs."
+  },
+  {
+    "word_en": "interpret",
+    "phonetic": "/ɪnˈtɜːrprɪt/",
+    "meaning_kh": "បកប្រែផ្ទាល់មាត់/បកស្រាយ",
+    "example": "Interpret the dreams."
+  },
+  {
+    "word_en": "interrupt",
+    "phonetic": "/ˌɪntəˈrʌpt/",
+    "meaning_kh": "កាត់ចង្វាក់/រំខាន",
+    "example": "Don't interrupt me while I'm speaking."
+  },
+  {
+    "word_en": "intersect",
+    "phonetic": "/ˌɪntərˈsɛkt/",
+    "meaning_kh": "កាត់ខ្វែងគ្នា",
+    "example": "The roads intersect here."
+  },
+  {
+    "word_en": "interview",
+    "phonetic": "/ˈɪntərʊvjuː/",
+    "meaning_kh": "សម្ភាសន៍",
+    "example": "Interview the candidate."
+  },
+  {
+    "word_en": "intrude",
+    "phonetic": "/ɪnˈtruːd/",
+    "meaning_kh": "ចូលរំលោភបំពាន/ជ្រៀតចូលដោយគ្មានការអនុញ្ញាត",
+    "example": "Don't intrude on their privacy."
+  },
+  {
+    "word_en": "invade",
+    "phonetic": "/ɪnˈveɪd/",
+    "meaning_kh": "ឈ្លានពាន",
+    "example": "Invade the country."
+  },
+  {
+    "word_en": "invest",
+    "phonetic": "/ɪnˈvɛst/",
+    "meaning_kh": "វិនិយោគ",
+    "example": "Invest in stocks."
+  },
+  {
+    "word_en": "investigate",
+    "phonetic": "/ɪnˈvɛstɪɡeɪt/",
+    "meaning_kh": "ស៊ើបអង្កេត",
+    "example": "Investigate the crime."
+  },
+  {
+    "word_en": "invoke",
+    "phonetic": "/ɪnˈvoʊk/",
+    "meaning_kh": "អំពាវនាវ/ហៅប្រើ",
+    "example": "Invoke the API method."
+  },
+  {
+    "word_en": "involve",
+    "phonetic": "/ɪnˈvɑːlv/",
+    "meaning_kh": "ពាក់ព័ន្ធ",
+    "example": "Don't involve me in this."
+  },
+  {
+    "word_en": "iron",
+    "phonetic": "/ˈaɪərn/",
+    "meaning_kh": "អ៊ុតខោអាវ",
+    "example": "Iron the shirt."
+  },
+  {
+    "word_en": "irritate",
+    "phonetic": "/ˈɪrɪteɪt/",
+    "meaning_kh": "ធ្វើឲ្យខឹង/ធ្វើឲ្យរលាក",
+    "example": "Noise irritates me."
+  },
+  {
+    "word_en": "isolate",
+    "phonetic": "/ˈaɪsəleɪt/",
+    "meaning_kh": "ដាក់ឲ្យនៅដាច់ដោយឡែក",
+    "example": "Isolate the patient."
+  },
+  {
+    "word_en": "issue",
+    "phonetic": "/ˈɪʃuː/",
+    "meaning_kh": "ចេញផ្សាយ/ចេញឲ្យ",
+    "example": "Issue a passport."
+  },
+  {
+    "word_en": "itch",
+    "phonetic": "/ɪtʃ/",
+    "meaning_kh": "រមាស់",
+    "example": "My eyes itch."
+  },
+  {
+    "word_en": "jail",
+    "phonetic": "/dʒeɪl/",
+    "meaning_kh": "ដាក់គុក",
+    "example": "Jail the thief."
+  },
+  {
+    "word_en": "jam",
+    "phonetic": "/dʒæm/",
+    "meaning_kh": "ញាត់/ស្ទះ",
+    "example": "Paper jammed in the printer."
+  },
+  {
+    "word_en": "jeer",
+    "phonetic": "/dʒɪr/",
+    "meaning_kh": "ផ្អក/សើចចំអក",
+    "example": "Jeer at the speaker."
+  },
+  {
+    "word_en": "jeopardize",
+    "phonetic": "/ˈdʒɛpərdaɪz/",
+    "meaning_kh": "ធ្វើឲ្យមានគ្រោះថ្នាក់",
+    "example": "Don't jeopardize your health."
+  },
+  {
+    "word_en": "jerk",
+    "phonetic": "/dʒɜːrk/",
+    "meaning_kh": "កន្ត្រាក់",
+    "example": "Jerk the rope."
+  },
+  {
+    "word_en": "jolt",
+    "phonetic": "/dʒoʊlt/",
+    "meaning_kh": "អង្រួន/ធ្វើឲ្យភ្ញាក់ផ្អើល",
+    "example": "The car jolted."
+  },
+  {
+    "word_en": "juggle",
+    "phonetic": "/ˈdʒʌɡəl/",
+    "meaning_kh": "គ្រវែងបាល់លេងជាច្រើនក្នុងពេលតែមួយ",
+    "example": "Juggle three balls."
+  },
+  {
+    "word_en": "jumble",
+    "phonetic": "/ˈdʒʌmbəl/",
+    "meaning_kh": "ច្របូកច្របល់",
+    "example": "Jumble the letters."
+  },
+  {
+    "word_en": "key",
+    "phonetic": "/kiː/",
+    "meaning_kh": "វាយបញ្ចូល/ចាក់សោ",
+    "example": "Key in the password."
+  },
+  {
+    "word_en": "kid",
+    "phonetic": "/kɪd/",
+    "meaning_kh": "និយាយលេង",
+    "example": "I am just kidding."
+  },
+  {
+    "word_en": "kneel",
+    "phonetic": "/niːl/",
+    "meaning_kh": "លុតជង្គង់",
+    "example": "Kneel down."
+  },
+  {
+    "word_en": "knit",
+    "phonetic": "/nɪt/",
+    "meaning_kh": "ចាក់អំបោះ",
+    "example": "Knit a sweater."
+  },
+  {
+    "word_en": "label",
+    "phonetic": "/ˈleɪbəl/",
+    "meaning_kh": "បិទស្លាក",
+    "example": "Label the jars."
+  },
+  {
+    "word_en": "labor",
+    "phonetic": "/ˈleɪbər/",
+    "meaning_kh": "ធ្វើការធ្ងន់",
+    "example": "Labor in the fields."
+  },
+  {
+    "word_en": "lack",
+    "phonetic": "/læk/",
+    "meaning_kh": "ខ្វះខាត",
+    "example": "Lack experience."
+  },
+  {
+    "word_en": "lag",
+    "phonetic": "/læɡ/",
+    "meaning_kh": "យឺតយ៉ាវ/ដើរយឺតជាង",
+    "example": "Internet is lagging."
+  },
+  {
+    "word_en": "lament",
+    "phonetic": "/ləˈmɛnt/",
+    "meaning_kh": "កើតទុក្ខ/សោកស្ដាយ",
+    "example": "Lament the past."
+  },
+  {
+    "word_en": "land",
+    "phonetic": "/lænd/",
+    "meaning_kh": "ចុះចត",
+    "example": "The plane landed safely."
+  },
+  {
+    "word_en": "languish",
+    "phonetic": "/ˈlæŋɡwɪʃ/",
+    "meaning_kh": "ធ្លាក់ខ្លួនចុះទន់ខ្សោយ/រងទុក្ខ",
+    "example": "Languish in prison."
+  },
+  {
+    "word_en": "last",
+    "phonetic": "/læst/",
+    "meaning_kh": "អូសបន្លាយ/ស្ថិតស្ថេរ",
+    "example": "The meeting lasted two hours."
+  },
+  {
+    "word_en": "latch",
+    "phonetic": "/lætʃ/",
+    "meaning_kh": "ចាក់គន្លឹះ",
+    "example": "Latch the gate."
+  },
+  {
+    "word_en": "leak",
+    "phonetic": "/liːk/",
+    "meaning_kh": "លេចធ្លាយ",
+    "example": "The pipe is leaking."
+  },
+  {
+    "word_en": "lean",
+    "phonetic": "/liːn/",
+    "meaning_kh": "ផ្អែក/ផ្អៀង",
+    "example": "Lean against the wall."
+  },
+  {
+    "word_en": "lease",
+    "phonetic": "/liːs/",
+    "meaning_kh": "ជួល(រយៈពេលវែង)",
+    "example": "Lease an office."
+  },
+  {
+    "word_en": "lecture",
+    "phonetic": "/ˈlɛktʃər/",
+    "meaning_kh": "បង្រៀន/ស្ដីបន្ទោស",
+    "example": "Lecture the students."
+  },
+  {
+    "word_en": "lengthen",
+    "phonetic": "/ˈlɛŋθən/",
+    "meaning_kh": "ពន្យារ/ធ្វើឲ្យវែង",
+    "example": "Lengthen the dress."
+  },
+  {
+    "word_en": "level",
+    "phonetic": "/ˈlɛvəl/",
+    "meaning_kh": "ធ្វើឲ្យស្មើ/កម្រិត",
+    "example": "Level the ground."
+  },
+  {
+    "word_en": "leverage",
+    "phonetic": "/ˈlɛvərɪdʒ/",
+    "meaning_kh": "ប្រើប្រាស់ឥទ្ធិពល/ទាញផលប្រយោជន៍",
+    "example": "Leverage your skills."
+  },
+  {
+    "word_en": "levy",
+    "phonetic": "/ˈlɛvi/",
+    "meaning_kh": "ហូតពន្ធ",
+    "example": "Levy a tax."
+  },
+  {
+    "word_en": "license",
+    "phonetic": "/ˈlaɪsəns/",
+    "meaning_kh": "ផ្តល់អាជ្ញាប័ណ្ណ",
+    "example": "License the business."
+  },
+  {
+    "word_en": "lick",
+    "phonetic": "/lɪk/",
+    "meaning_kh": "លិត",
+    "example": "Lick the ice cream."
+  },
+  {
+    "word_en": "liken",
+    "phonetic": "/ˈlaɪkən/",
+    "meaning_kh": "ប្រៀបប្រដូច",
+    "example": "Liken life to a journey."
+  },
+  {
+    "word_en": "limp",
+    "phonetic": "/lɪmp/",
+    "meaning_kh": "ដើរខ្វិន",
+    "example": "Limp due to injury."
+  },
+  {
+    "word_en": "line",
+    "phonetic": "/laɪn/",
+    "meaning_kh": "គូសខ្សែ/តម្រៀបជួរ",
+    "example": "Line the pans with paper."
+  },
+  {
+    "word_en": "liquidate",
+    "phonetic": "/ˈlɪkwɪdeɪt/",
+    "meaning_kh": "ទូទាត់/រំលាយចោល",
+    "example": "Liquidate the company."
+  },
+  {
+    "word_en": "lisp",
+    "phonetic": "/lɪsp/",
+    "meaning_kh": "និយាយត្រដិត",
+    "example": "The child lisps."
+  },
+  {
+    "word_en": "list",
+    "phonetic": "/lɪst/",
+    "meaning_kh": "បញ្ជី/ដាក់ក្នុងបញ្ជី",
+    "example": "List the names."
+  },
+  {
+    "word_en": "loan",
+    "phonetic": "/loʊn/",
+    "meaning_kh": "ខ្ចី/ឱ្យខ្ចី",
+    "example": "Loan money."
+  },
+  {
+    "word_en": "loathe",
+    "phonetic": "/loʊð/",
+    "meaning_kh": "ស្អប់ខ្ពើម",
+    "example": "I loathe injustice."
+  },
+  {
+    "word_en": "locate",
+    "phonetic": "/ˈloʊkeɪt/",
+    "meaning_kh": "កំណត់ទីតាំង",
+    "example": "Locate the city on the map."
+  },
+  {
+    "word_en": "log",
+    "phonetic": "/lɔːɡ/",
+    "meaning_kh": "កត់ត្រា/កាប់ឈើ/ចូលប្រើប្រព័ន្ធ",
+    "example": "Log the details."
+  },
+  {
+    "word_en": "loom",
+    "phonetic": "/luːm/",
+    "meaning_kh": "លេចចេញព្រាលៗ/គំរាមកំហែង",
+    "example": "Dark clouds loom."
+  },
+  {
+    "word_en": "loop",
+    "phonetic": "/luːp/",
+    "meaning_kh": "ធ្វើឲ្យវិលជុំ",
+    "example": "Loop the video."
+  },
+  {
+    "word_en": "loose",
+    "phonetic": "/luːs/",
+    "meaning_kh": "ដោះលែង/ធ្វើឲ្យធូរ",
+    "example": "Loose the knot."
+  },
+  {
+    "word_en": "loosen",
+    "phonetic": "/ˈluːsən/",
+    "meaning_kh": "ធ្វើឲ្យធូរស្រាល",
+    "example": "Loosen your belt."
+  },
+  {
+    "word_en": "lower",
+    "phonetic": "/ˈloʊər/",
+    "meaning_kh": "បន្ថយចុះ",
+    "example": "Lower the price."
+  },
+  {
+    "word_en": "lubricate",
+    "phonetic": "/ˈluːbrɪkeɪt/",
+    "meaning_kh": "ដាក់ប្រេងរំអិល",
+    "example": "Lubricate the engine."
+  },
+  {
+    "word_en": "lump",
+    "phonetic": "/lʌmp/",
+    "meaning_kh": "ដាក់ចូលគ្នាជាដុំ/គរចូលគ្នា",
+    "example": "Lump the expenses together."
+  },
+  {
+    "word_en": "lunch",
+    "phonetic": "/lʌntʃ/",
+    "meaning_kh": "ញ៉ាំអាហារថ្ងៃត្រង់",
+    "example": "We lunched at noon."
+  },
+  {
+    "word_en": "lurch",
+    "phonetic": "/lɜːrtʃ/",
+    "meaning_kh": "ផ្អៀងទៅម្ខាង/យីងយោង",
+    "example": "The ship lurched forward."
+  },
+  {
+    "word_en": "lure",
+    "phonetic": "/lʊr/",
+    "meaning_kh": "ទាក់ទាញ/លួងលោម",
+    "example": "Lure customers with discounts."
+  },
+  {
+    "word_en": "lurk",
+    "phonetic": "/lɜːrk/",
+    "meaning_kh": "ពួនសម្ងំ/លបលួចនៅក្បែរ",
+    "example": "Danger lurks in the dark."
+  },
+  {
+    "word_en": "magnify",
+    "phonetic": "/ˈmæɡnɪfaɪ/",
+    "meaning_kh": "ពង្រីកឱ្យធំ",
+    "example": "Magnify the image."
+  },
+  {
+    "word_en": "mail",
+    "phonetic": "/meɪl/",
+    "meaning_kh": "ផ្ញើសំបុត្រ/ផ្ញើអ៊ីមែល",
+    "example": "Mail the package."
+  },
+  {
+    "word_en": "maim",
+    "phonetic": "/meɪm/",
+    "meaning_kh": "ធ្វើឲ្យពិការ",
+    "example": "The explosion maimed many."
+  },
+  {
+    "word_en": "maltreat",
+    "phonetic": "/ˌmælˈtriːt/",
+    "meaning_kh": "ធ្វើបាប/ធ្វើទារុណកម្ម",
+    "example": "Maltreat animals."
+  },
+  {
+    "word_en": "manifest",
+    "phonetic": "/ˈmænɪfɛst/",
+    "meaning_kh": "បង្ហាញឱ្យឃើញច្បាស់",
+    "example": "Manifest symptoms."
+  },
+  {
+    "word_en": "manipulate",
+    "phonetic": "/məˈnɪpjəleɪt/",
+    "meaning_kh": "បញ្ជា/គ្រប់គ្រងដោយប្រើល្បិច",
+    "example": "Manipulate the data."
+  },
+  {
+    "word_en": "manufacture",
+    "phonetic": "/ˌmænjəˈfæktʃər/",
+    "meaning_kh": "ផលិត",
+    "example": "Manufacture goods."
+  },
+  {
+    "word_en": "map",
+    "phonetic": "/mæp/",
+    "meaning_kh": "គូសផែនទី/រៀបចំផែនការ",
+    "example": "Map the area."
+  },
+  {
+    "word_en": "mar",
+    "phonetic": "/mɑːr/",
+    "meaning_kh": "ធ្វើឲ្យខូច(សម្ផស្ស/គុណភាព)",
+    "example": "Scratches mar the surface."
+  },
+  {
+    "word_en": "march",
+    "phonetic": "/mɑːrtʃ/",
+    "meaning_kh": "ដើរក្បួន/ដើរជាជួរ",
+    "example": "March in the parade."
+  },
+  {
+    "word_en": "mark",
+    "phonetic": "/mɑːrk/",
+    "meaning_kh": "គូសចំណាំ/ដាក់ពិន្ទុ",
+    "example": "Mark the errors."
+  },
+  {
+    "word_en": "market",
+    "phonetic": "/ˈmɑːrkɪt/",
+    "meaning_kh": "ផ្សព្វផ្សាយលក់",
+    "example": "Market the product."
+  },
+  {
+    "word_en": "marvel",
+    "phonetic": "/ˈmɑːrvəl/",
+    "meaning_kh": "កោតស្ញប់ស្ញែង",
+    "example": "Marvel at the technology."
+  },
+  {
+    "word_en": "mash",
+    "phonetic": "/mæʃ/",
+    "meaning_kh": "កិនកំទេច/ញី",
+    "example": "Mash the potatoes."
+  },
+  {
+    "word_en": "mask",
+    "phonetic": "/mask/",
+    "meaning_kh": "បិទបាំង/ពាក់ម៉ាស",
+    "example": "Mask the smell."
+  },
+  {
+    "word_en": "massage",
+    "phonetic": "/massage/",
+    "meaning_kh": "ម៉ាស្សា/ច្របាច់",
+    "example": "Massage the shoulders."
+  },
+  {
+    "word_en": "master",
+    "phonetic": "/ˈmæstər/",
+    "meaning_kh": "ស្ទាត់ជំនាញ",
+    "example": "Master the language."
+  },
+  {
+    "word_en": "mate",
+    "phonetic": "/meɪt/",
+    "meaning_kh": "ផ្សំផ្គុំ/បន្តពូជ",
+    "example": "Birds mate in spring."
+  },
+  {
+    "word_en": "materialize",
+    "phonetic": "/məˈtɪriəlaɪz/",
+    "meaning_kh": "លេចចេញជារូបរាង",
+    "example": "The plans materialized."
+  },
+  {
+    "word_en": "matter",
+    "phonetic": "/ˈmætər/",
+    "meaning_kh": "មានសារៈសំខាន់",
+    "example": "It doesn't matter."
+  },
+  {
+    "word_en": "mature",
+    "phonetic": "/məˈtʃʊr/",
+    "meaning_kh": "ចំរើនវ័យ/ទុំជោរ",
+    "example": "She matured early."
+  },
+  {
+    "word_en": "maximize",
+    "phonetic": "/ˈmæksɪmaɪz/",
+    "meaning_kh": "បង្កើនឱ្យដល់កម្រិតអតិបរមា",
+    "example": "Maximize profit."
+  },
+  {
+    "word_en": "meddle",
+    "phonetic": "/ˈmɛdəl/",
+    "meaning_kh": "ជ្រៀតជ្រែក/ចេះដឹងរឿងគេ",
+    "example": "Don't meddle in my business."
+  },
+  {
+    "word_en": "mediate",
+    "phonetic": "/ˈmiːdieɪt/",
+    "meaning_kh": "សម្របសម្រួល/ធ្វើជាអាជ្ញាកណ្តាល",
+    "example": "Mediate the dispute."
+  },
+  {
+    "word_en": "melt",
+    "phonetic": "/mɛlt/",
+    "meaning_kh": "រលាយ",
+    "example": "Ice melts in the sun."
+  },
+  {
+    "word_en": "memorize",
+    "phonetic": "/ˈmɛməraɪz/",
+    "meaning_kh": "ទន្ទេញចាំមាត់",
+    "example": "Memorize the vocabulary."
+  },
+  {
+    "word_en": "mend",
+    "phonetic": "/mɛnd/",
+    "meaning_kh": "ជួសជុល(សម្លៀកបំពាក់/របស់របរ)",
+    "example": "Mend the socks."
+  },
+  {
+    "word_en": "mentor",
+    "phonetic": "/ˈmɛntɔːr/",
+    "meaning_kh": "ធ្វើជាអ្នកណែនាំ",
+    "example": "Mentor new students."
+  },
+  {
+    "word_en": "merge",
+    "phonetic": "/mɜːrdʒ/",
+    "meaning_kh": "បញ្ចូលគ្នា",
+    "example": "Merge the companies."
+  },
+  {
+    "word_en": "merit",
+    "phonetic": "/ˈmɛrɪt/",
+    "meaning_kh": "គួរនឹងទទួលបាន",
+    "example": "The idea merits consideration."
+  },
+  {
+    "word_en": "mesmerize",
+    "phonetic": "/ˈmɛzməraɪz/",
+    "meaning_kh": "ទាក់ទាញចិត្តយ៉ាងខ្លាំង/ធ្វើឲ្យភាំង",
+    "example": "Mesmerize by the performance."
+  },
+  {
+    "word_en": "mess",
+    "phonetic": "/mɛs/",
+    "meaning_kh": "ធ្វើឲ្យរញ៉េរញ៉ៃ",
+    "example": "Don't mess up."
+  },
+  {
+    "word_en": "migrate",
+    "phonetic": "/ˈmaɪɡreɪt/",
+    "meaning_kh": "ផ្លាស់ទីលំនៅ",
+    "example": "Birds migrate south."
+  },
+  {
+    "word_en": "milk",
+    "phonetic": "/mɪlk/",
+    "meaning_kh": "ច្របាច់យកទឹកដោះ",
+    "example": "Milk the cow."
+  },
+  {
+    "word_en": "mime",
+    "phonetic": "/maɪm/",
+    "meaning_kh": "សម្តែងដោយមិននិយាយ(ល្ខោនគ)",
+    "example": "Mime the action."
+  },
+  {
+    "word_en": "mimic",
+    "phonetic": "/ˈmɪmɪk/",
+    "meaning_kh": "ត្រាប់តាម/ចំអក",
+    "example": "Mimic the teacher."
+  },
+  {
+    "word_en": "minimize",
+    "phonetic": "/ˈmɪnɪmaɪz/",
+    "meaning_kh": "កាត់បន្ថយមកអប្បបរមា",
+    "example": "Minimize risk."
+  },
+  {
+    "word_en": "mingle",
+    "phonetic": "/ˈmɪŋɡəl/",
+    "meaning_kh": "ឡូកឡំ/ចូលសង្គម",
+    "example": "Mingle at the party."
+  },
+  {
+    "word_en": "misbehave",
+    "phonetic": "/ˌmɪsbɪˈheɪv/",
+    "meaning_kh": "ប្រព្រឹត្តមិនសមរម្យ",
+    "example": "Kids misbehaved."
+  },
+  {
+    "word_en": "mislead",
+    "phonetic": "/ˌmɪsˈliːd/",
+    "meaning_kh": "នាំឲ្យយល់ច្រឡំ",
+    "example": "Mislead the voters."
+  },
+  {
+    "word_en": "misspell",
+    "phonetic": "/ˌmɪsˈspɛl/",
+    "meaning_kh": "សរសេរខុសអក្ខរាវិរុទ្ធ",
+    "example": "Don't misspell the words."
+  },
+  {
+    "word_en": "misunderstand",
+    "phonetic": "/ˌmɪsʌndərˈstænd/",
+    "meaning_kh": "យល់ច្រឡំ",
+    "example": "I misunderstood."
+  },
+  {
+    "word_en": "moan",
+    "phonetic": "/moʊn/",
+    "meaning_kh": "ថ្ងូរ",
+    "example": "Moan in pain."
+  },
+  {
+    "word_en": "mock",
+    "phonetic": "/mɑːk/",
+    "meaning_kh": "សើចចំអក",
+    "example": "Don't mock others."
+  },
+  {
+    "word_en": "model",
+    "phonetic": "/ˈmɑːdəl/",
+    "meaning_kh": "ធ្វើជាគំរូ/បង្ហាញម៉ូត",
+    "example": "Model the clothes."
+  },
+  {
+    "word_en": "moderate",
+    "phonetic": "/ˈmɑːdəreɪt/",
+    "meaning_kh": "សម្របសម្រួល/ធ្វើឲ្យល្មម",
+    "example": "Moderate the debate."
+  },
+  {
+    "word_en": "modernize",
+    "phonetic": "/ˈmɑːdərnaɪz/",
+    "meaning_kh": "ធ្វើឲ្យទាន់សម័យ",
+    "example": "Modernize the office."
+  },
+  {
+    "word_en": "modify",
+    "phonetic": "/ˈmɑːdɪfaɪ/",
+    "meaning_kh": "កែប្រែ",
+    "example": "Modify the code."
+  },
+  {
+    "word_en": "moisten",
+    "phonetic": "/ˈmɔɪsən/",
+    "meaning_kh": "ធ្វើឲ្យសើម",
+    "example": "Moisten the cloth."
+  },
+  {
+    "word_en": "mold",
+    "phonetic": "/moʊld/",
+    "meaning_kh": "សូនជារូប/ចាក់ពុម្ព",
+    "example": "Mold the clay."
+  },
+  {
+    "word_en": "monitor",
+    "phonetic": "/ˈmɑːnɪtər/",
+    "meaning_kh": "តាមដាន/ត្រួតពិនិត្យ",
+    "example": "Monitor the progress."
+  },
+  {
+    "word_en": "monopolize",
+    "phonetic": "/məˈnɑːpəlaɪz/",
+    "meaning_kh": "ក្តោបក្តាប់តែម្នាក់ឯង",
+    "example": "Monopolize the market."
+  },
+  {
+    "word_en": "motivate",
+    "phonetic": "/ˈmoʊtɪveɪt/",
+    "meaning_kh": "ផ្តល់ទឹកចិត្ត/លើកទឹកចិត្ត",
+    "example": "Motivate the team."
+  },
+  {
+    "word_en": "mount",
+    "phonetic": "/maʊnt/",
+    "meaning_kh": "ឡើងជិះ/ដំឡើង",
+    "example": "Mount the TV on the wall."
+  },
+  {
+    "word_en": "mourn",
+    "phonetic": "/mɔːrn/",
+    "meaning_kh": "កាន់ទុក្ខ/សោកសៅ",
+    "example": "Mourn the dead."
+  },
+  {
+    "word_en": "mow",
+    "phonetic": "/moʊ/",
+    "meaning_kh": "ច្រូត/កាត់(ស្មៅ)",
+    "example": "Mow the lawn."
+  },
+  {
+    "word_en": "muddle",
+    "phonetic": "/ˈmʌdəl/",
+    "meaning_kh": "ធ្វើឲ្យច្របូកច្របល់",
+    "example": "Muddle the details."
+  },
+  {
+    "word_en": "muffle",
+    "phonetic": "/ˈmʌfəl/",
+    "meaning_kh": "ធ្វើឲ្យសំឡេងខ្សោយទៅ",
+    "example": "Muffle the sound."
+  },
+  {
+    "word_en": "mumble",
+    "phonetic": "/ˈmʌmbəl/",
+    "meaning_kh": "និយាយរអ៊ូរទាំក្នុងមាត់",
+    "example": "Mumble the words."
+  },
+  {
+    "word_en": "munch",
+    "phonetic": "/munch/",
+    "meaning_kh": "ទំពារផបៗ/ក្របៗ",
+    "example": "Munch on apples."
+  },
+  {
+    "word_en": "murder",
+    "phonetic": "/ˈmɜːrdər/",
+    "meaning_kh": "ឃាតកម្ម/សម្លាប់",
+    "example": "Murder the victim."
+  },
+  {
+    "word_en": "murmur",
+    "phonetic": "/ˈmɜːrmər/",
+    "meaning_kh": "និយាយខ្សឹបៗ",
+    "example": "Murmur a prayer."
+  },
+  {
+    "word_en": "muse",
+    "phonetic": "/mjuːz/",
+    "meaning_kh": "គិតពិចារណា/ស្រមៃ",
+    "example": "Muse on the future."
+  },
+  {
+    "word_en": "muster",
+    "phonetic": "/ˈmʌstər/",
+    "meaning_kh": "ប្រមូលផ្តុំ(កម្លាំង/សេចក្តីក្លាហាន)",
+    "example": "Muster courage."
+  },
+  {
+    "word_en": "mutate",
+    "phonetic": "/ˈmjuːteɪt/",
+    "meaning_kh": "បំប្លែងពូជ/ផ្លាស់ប្តូរទម្រង់",
+    "example": "Virus mutated."
+  },
+  {
+    "word_en": "mutter",
+    "phonetic": "/ˈmʌtər/",
+    "meaning_kh": "និយាយរអ៊ូ",
+    "example": "Mutter to yourself."
+  },
+  {
+    "word_en": "mystify",
+    "phonetic": "/ˈmɪstɪfaɪ/",
+    "meaning_kh": "ធ្វើឲ្យងឿងឆ្ងល់ខ្លាំង",
+    "example": "The puzzle mystified them."
+  },
+  {
+    "word_en": "nail",
+    "phonetic": "/neɪl/",
+    "meaning_kh": "វាយដែកគោល",
+    "example": "Nail the board."
+  },
+  {
+    "word_en": "nap",
+    "phonetic": "/næp/",
+    "meaning_kh": "គេងមួយភាំង",
+    "example": "Nap in the afternoon."
+  },
+  {
+    "word_en": "narrate",
+    "phonetic": "/ˈnæreɪt/",
+    "meaning_kh": "រៀបរាប់សាច់រឿង",
+    "example": "Narrate the documentary."
+  },
+  {
+    "word_en": "narrow",
+    "phonetic": "/ˈnæroʊ/",
+    "meaning_kh": "ធ្វើឲ្យចង្អៀត/រួមតូច",
+    "example": "Narrow the options."
+  },
+  {
+    "word_en": "nationalize",
+    "phonetic": "/ˈnæʃnəlaɪz/",
+    "meaning_kh": "ធ្វើជាតូបនីយកម្ម",
+    "example": "Nationalize the industry."
+  },
+  {
+    "word_en": "near",
+    "phonetic": "/nɪr/",
+    "meaning_kh": "ចូលមកជិត",
+    "example": "The train is nearing."
+  },
+  {
+    "word_en": "necessitate",
+    "phonetic": "/nəˈsɛsɪteɪt/",
+    "meaning_kh": "តម្រូវជាដាច់ខាត",
+    "example": "This necessitates action."
+  },
+  {
+    "word_en": "neglect",
+    "phonetic": "/nɪˈɡlɛkt/",
+    "meaning_kh": "មិនអើពើ/ធ្វេសប្រហែស",
+    "example": "Neglect your duties."
+  },
+  {
+    "word_en": "negotiate",
+    "phonetic": "/nɪˈɡoʊʃieɪt/",
+    "meaning_kh": "ចរចា",
+    "example": "Negotiate the price."
+  },
+  {
+    "word_en": "net",
+    "phonetic": "/net/",
+    "meaning_kh": "ចាប់បាន/ទទួលបានផលសុទ្ធ",
+    "example": "Net a fish."
+  },
+  {
+    "word_en": "neutralize",
+    "phonetic": "/ˈnuːtrəlaɪz/",
+    "meaning_kh": "ធ្វើឲ្យបន្សាប",
+    "example": "Neutralize the acid."
+  },
+  {
+    "word_en": "nibble",
+    "phonetic": "/ˈnɪbəl/",
+    "meaning_kh": "ខាំស៊ីកំប៉ិចកំប៉ុក",
+    "example": "Mice nibble cheese."
+  },
+  {
+    "word_en": "nick",
+    "phonetic": "/nɪk/",
+    "meaning_kh": "កោស/ឆ្កូតបន្តិច",
+    "example": "Nick the furniture."
+  },
+  {
+    "word_en": "nip",
+    "phonetic": "/nɪp/",
+    "meaning_kh": "កាត់ផ្តាច់/ខ្ញាំ",
+    "example": "Nip it in the bud."
+  },
+  {
+    "word_en": "nominate",
+    "phonetic": "/ˈnɑːmɪneɪt/",
+    "meaning_kh": "បេក្ខភាព/តែងតាំង",
+    "example": "Nominate a candidate."
+  },
+  {
+    "word_en": "normalize",
+    "phonetic": "/ˈnɔːrməlaɪz/",
+    "meaning_kh": "ធ្វើឲ្យធម្មតាវិញ",
+    "example": "Normalize relations."
+  },
+  {
+    "word_en": "notify",
+    "phonetic": "/ˈnoʊtɪfaɪ/",
+    "meaning_kh": "ជូនដំណឹង",
+    "example": "Notify the police."
+  },
+  {
+    "word_en": "nourish",
+    "phonetic": "/ˈnɜːrɪʃ/",
+    "meaning_kh": "ផ្តល់អាហារូបត្ថម្ភ",
+    "example": "Nourish the child."
+  },
+  {
+    "word_en": "nudge",
+    "phonetic": "/nʌdʒ/",
+    "meaning_kh": "កែងដៃអៀសតិចៗ/ជំរុញថ្នមៗ",
+    "example": "Nudge someone's arm."
+  },
+  {
+    "word_en": "nullify",
+    "phonetic": "/ˈnʌlɪfaɪ/",
+    "meaning_kh": "ធ្វើឲ្យមោឃៈ",
+    "example": "Nullify the contract."
+  },
+  {
+    "word_en": "numb",
+    "phonetic": "/nʌm/",
+    "meaning_kh": "ធ្វើឲ្យស្ពឹក",
+    "example": "Cold numbed my fingers."
+  },
+  {
+    "word_en": "nurse",
+    "phonetic": "/nɜːrs/",
+    "meaning_kh": "ថែទាំអ្នកជំងឺ/បំបៅដោះ",
+    "example": "Nurse the baby."
+  },
+  {
+    "word_en": "nurture",
+    "phonetic": "/ˈnɜːrtʃər/",
+    "meaning_kh": "បីបាច់ថែរក្សា",
+    "example": "Nurture talent."
+  },
+  {
+    "word_en": "obstruct",
+    "phonetic": "/əbˈstrʌkt/",
+    "meaning_kh": "រារាំង/រាំងស្ទះ",
+    "example": "Obstruct the road."
+  },
+  {
+    "word_en": "occlude",
+    "phonetic": "/əˈkluːd/",
+    "meaning_kh": "ស្ទះ/បិទជិត",
+    "example": "Occlude the blood vessel."
+  },
+  {
+    "word_en": "occupy",
+    "phonetic": "/ˈɑːkjəpaɪ/",
+    "meaning_kh": "កាន់កាប់",
+    "example": "Occupy the room."
+  },
+  {
+    "word_en": "offend",
+    "phonetic": "/əˈfɛnd/",
+    "meaning_kh": "ធ្វើឲ្យខឹង/ប្រមាថ",
+    "example": "Don't offend anyone."
+  },
+  {
+    "word_en": "officiate",
+    "phonetic": "/əˈfɪʃieɪt/",
+    "meaning_kh": "ធ្វើជាអធិបតី/ធ្វើអាជ្ញាកណ្តាល",
+    "example": "Officiate the game."
+  },
+  {
+    "word_en": "offset",
+    "phonetic": "/ˈɔːfsɛt/",
+    "meaning_kh": "ទូទាត់/ប៉ះប៉ូវ",
+    "example": "Gain offsets the loss."
+  },
+  {
+    "word_en": "oil",
+    "phonetic": "/ɔɪl/",
+    "meaning_kh": "លាបប្រេង/ដាក់ប្រេង",
+    "example": "Oil the hinges."
+  },
+  {
+    "word_en": "omit",
+    "phonetic": "/oʊˈmɪt/",
+    "meaning_kh": "រំលងចោល/លុបចោល",
+    "example": "Omit the details."
+  },
+  {
+    "word_en": "ooze",
+    "phonetic": "/uːz/",
+    "meaning_kh": "លេចចេញសន្សឹមៗ/ជ្រាប",
+    "example": "Sap oozes from the tree."
+  },
+  {
+    "word_en": "oppose",
+    "phonetic": "/əˈpoʊz/",
+    "meaning_kh": "ប្រឆាំង",
+    "example": "Oppose the plan."
+  },
+  {
+    "word_en": "oppress",
+    "phonetic": "/əˈprɛs/",
+    "meaning_kh": "សង្កត់សង្កិន/ធ្វើបាប",
+    "example": "Oppress the minority."
+  },
+  {
+    "word_en": "opt",
+    "phonetic": "/ɑːpt/",
+    "meaning_kh": "ជ្រើសរើស",
+    "example": "Opt for the cheaper option."
+  },
+  {
+    "word_en": "optimize",
+    "phonetic": "/ˈɑːptɪmaɪz/",
+    "meaning_kh": "ធ្វើឲ្យប្រសើរឡើងបំផុត",
+    "example": "Optimize the database query."
+  },
+  {
+    "word_en": "order",
+    "phonetic": "/ˈɔːrdər/",
+    "meaning_kh": "បញ្ជាទិញ/បង្គាប់បញ្ជា",
+    "example": "Order food."
+  },
+  {
+    "word_en": "originate",
+    "phonetic": "/əˈrɪdʒəneɪt/",
+    "meaning_kh": "មានប្រភពមកពី",
+    "example": "The custom originated in India."
+  },
+  {
+    "word_en": "ornament",
+    "phonetic": "/ˈɔːrnəmənt/",
+    "meaning_kh": "តុបតែងលម្អ",
+    "example": "Ornament the tree."
+  },
+  {
+    "word_en": "oscillate",
+    "phonetic": "/ˈɑːsəleɪt/",
+    "meaning_kh": "យោលទៅយោលមក",
+    "example": "The pendulum oscillates."
+  },
+  {
+    "word_en": "oust",
+    "phonetic": "/aʊst/",
+    "meaning_kh": "បណ្តេញចេញ(ពីតំណែង)",
+    "example": "Oust the dictator."
+  },
+  {
+    "word_en": "outdo",
+    "phonetic": "/aʊtˈduː/",
+    "meaning_kh": "ធ្វើបានល្អជាង",
+    "example": "Try to outdo yourself."
+  },
+  {
+    "word_en": "outline",
+    "phonetic": "/ˈaʊtlaɪn/",
+    "meaning_kh": "គូសវាស/សង្ខេបគ្រោង",
+    "example": "Outline the essay."
+  },
+  {
+    "word_en": "outlive",
+    "phonetic": "/aʊtˈlɪv/",
+    "meaning_kh": "រស់នៅបានយូរជាង",
+    "example": "He outlived his brothers."
+  },
+  {
+    "word_en": "outnumber",
+    "phonetic": "/aʊtˈnʌmbər/",
+    "meaning_kh": "មានចំនួនច្រើនជាង",
+    "example": "They outnumber us."
+  },
+  {
+    "word_en": "output",
+    "phonetic": "/ˈaʊtpʊt/",
+    "meaning_kh": "បញ្ចេញទិន្នន័យ",
+    "example": "Output the results."
+  },
+  {
+    "word_en": "outrun",
+    "phonetic": "/aʊtˈrʌn/",
+    "meaning_kh": "រត់លឿនជាង",
+    "example": "He outran his opponent."
+  },
+  {
+    "word_en": "outsmart",
+    "phonetic": "/aʊtˈsmɑːrt/",
+    "meaning_kh": "ពូកែឆ្លាតជាង",
+    "example": "Outsmart the competitors."
+  },
+  {
+    "word_en": "outweigh",
+    "phonetic": "/aʊtˈweɪ/",
+    "meaning_kh": "មានតម្លៃ/ទម្ងន់លើសជាង",
+    "example": "Benefits outweigh the costs."
+  },
+  {
+    "word_en": "overcome",
+    "phonetic": "/ˌoʊvərˈkʌm/",
+    "meaning_kh": "យកឈ្នះ(ឧបសគ្គ)",
+    "example": "Overcome the fear."
+  },
+  {
+    "word_en": "overdo",
+    "phonetic": "/ˌoʊvərˈduː/",
+    "meaning_kh": "ធ្វើហួសកម្រិត",
+    "example": "Don't overdo the exercise."
+  },
+  {
+    "word_en": "overdose",
+    "phonetic": "/ˈoʊvərdoʊs/",
+    "meaning_kh": "ប្រើថ្នាំលើសកម្រិត",
+    "example": "He overdosed on sleeping pills."
+  },
+  {
+    "word_en": "overeat",
+    "phonetic": "/ˌoʊvərˈiːt/",
+    "meaning_kh": "ញ៉ាំច្រើនហួសហេតុ",
+    "example": "Don't overeat."
+  },
+  {
+    "word_en": "overflow",
+    "phonetic": "/ˌoʊvərˈfloʊ/",
+    "meaning_kh": "ហៀរចេញមកក្រៅ",
+    "example": "The river overflowed."
+  },
+  {
+    "word_en": "overhear",
+    "phonetic": "/ˌoʊvərˈhɪr/",
+    "meaning_kh": "លួចឮ/ឮដោយចៃដន្យ",
+    "example": "Overhear the conversation."
+  },
+  {
+    "word_en": "overlap",
+    "phonetic": "/ˌoʊvərˈlæp/",
+    "meaning_kh": "ជាន់គ្នា",
+    "example": "The meetings overlap."
+  },
+  {
+    "word_en": "overload",
+    "phonetic": "/ˌoʊvərˈloʊd/",
+    "meaning_kh": "ដាក់ផ្ទុកលើសកម្រិត",
+    "example": "Overload the truck."
+  },
+  {
+    "word_en": "overlook",
+    "phonetic": "/ˌoʊvərˈlʊk/",
+    "meaning_kh": "មើលរំលង/មើលទៅឃើញពីលើ",
+    "example": "Overlook the mistake."
+  },
+  {
+    "word_en": "overrule",
+    "phonetic": "/ˌoʊvərˈruːl/",
+    "meaning_kh": "បដិសេធ/ទាត់ចោល",
+    "example": "The judge overruled the objection."
+  },
+  {
+    "word_en": "overrun",
+    "phonetic": "/ˌoʊvərˈrʌn/",
+    "meaning_kh": "ចូលលុកលុយ/ជន់លិច",
+    "example": "Weeds overrun the garden."
+  },
+  {
+    "word_en": "oversee",
+    "phonetic": "/ˌoʊvərˈsiː/",
+    "meaning_kh": "ត្រួតពិនិត្យ/មើលការខុសត្រូវ",
+    "example": "Oversee the construction."
+  },
+  {
+    "word_en": "overshadow",
+    "phonetic": "/ˌoʊvərˈʃædoʊ/",
+    "meaning_kh": "គ្របដណ្តប់លើ/ធ្វើឲ្យបាត់បង់ភាពលេចធ្លោ",
+    "example": "He was overshadowed by his brother."
+  },
+  {
+    "word_en": "overtake",
+    "phonetic": "/ˌoʊvərˈteɪk/",
+    "meaning_kh": "ជែង/ដេញទាន់",
+    "example": "Overtake the car."
+  },
+  {
+    "word_en": "overthrow",
+    "phonetic": "/ˌoʊvərˈθroʊ/",
+    "meaning_kh": "ផ្តួលរំលំ",
+    "example": "Overthrow the government."
+  },
+  {
+    "word_en": "overwhelm",
+    "phonetic": "/ˌoʊvərˈwɛlm/",
+    "meaning_kh": "គ្របដណ្តប់ចិត្តខ្លាំង/លិចលង់",
+    "example": "Overwhelm with emotion."
+  },
+  {
+    "word_en": "pace",
+    "phonetic": "/peɪs/",
+    "meaning_kh": "ដើរចុះឡើង/វាស់ជំហាន",
+    "example": "He paced the room."
+  },
+  {
+    "word_en": "package",
+    "phonetic": "/ˈpækɪdʒ/",
+    "meaning_kh": "វេចខ្ចប់",
+    "example": "Package the goods."
+  },
+  {
+    "word_en": "pad",
+    "phonetic": "/pæd/",
+    "meaning_kh": "ទ្រនាប់/ដើរថ្នមៗ",
+    "example": "Pad the seats."
+  },
+  {
+    "word_en": "paddle",
+    "phonetic": "/ˈpædəl/",
+    "meaning_kh": "អុំក្បូន/ចែវ",
+    "example": "Paddle the canoe."
+  },
+  {
+    "word_en": "pair",
+    "phonetic": "/per/",
+    "meaning_kh": "ផ្គូផ្គង",
+    "example": "Pair the socks."
+  },
+  {
+    "word_en": "pamper",
+    "phonetic": "/ˈpæmpər/",
+    "meaning_kh": "ថ្នាក់ថ្នមហួសហេតុ",
+    "example": "Pamper the dog."
+  },
+  {
+    "word_en": "pan",
+    "phonetic": "/pæn/",
+    "meaning_kh": "ជម្រុះយកមាស/រិះគន់ខ្លាំង",
+    "example": "Pan the film."
+  },
+  {
+    "word_en": "panic",
+    "phonetic": "/ˈpænɪk/",
+    "meaning_kh": "ភ័យស្លន់ស្លោ",
+    "example": "Don't panic."
+  },
+  {
+    "word_en": "pant",
+    "phonetic": "/pænt/",
+    "meaning_kh": "ដកដង្ហើមហត់ញាប់",
+    "example": "Pant from running."
+  },
+  {
+    "word_en": "paper",
+    "phonetic": "/ˈpeɪpər/",
+    "meaning_kh": "បិទក្រដាសជញ្ជាំង",
+    "example": "Paper the wall."
+  },
+  {
+    "word_en": "parade",
+    "phonetic": "/pəˈreɪd/",
+    "meaning_kh": "ដើរក្បួនបង្អួត",
+    "example": "Parade down the street."
+  },
+  {
+    "word_en": "paralyze",
+    "phonetic": "/ˈpærəlaɪz/",
+    "meaning_kh": "ធ្វើឲ្យស្ពឹក/ពិការ",
+    "example": "Paralyze with fear."
+  },
+  {
+    "word_en": "pardon",
+    "phonetic": "/ˈpɑːrdən/",
+    "meaning_kh": "អភ័យទោស/លើកលែងទោស",
+    "example": "Pardon me."
+  },
+  {
+    "word_en": "pare",
+    "phonetic": "/per/",
+    "meaning_kh": "ចិតសំបក",
+    "example": "Pare the apple."
+  },
+  {
+    "word_en": "park",
+    "phonetic": "/pɑːrk/",
+    "meaning_kh": "ចតឡាន",
+    "example": "Park the car."
+  },
+  {
+    "word_en": "parry",
+    "phonetic": "/ˈpæri/",
+    "meaning_kh": "គេច/រង(ការវាយប្រហារ)",
+    "example": "Parry the blow."
+  },
+  {
+    "word_en": "partition",
+    "phonetic": "/pɑːrˈtɪʃən/",
+    "meaning_kh": "ខណ្ឌចែកបន្ទប់",
+    "example": "Partition the office."
+  },
+  {
+    "word_en": "partner",
+    "phonetic": "/ˈpɑːrtnər/",
+    "meaning_kh": "សហការជាដៃគូ",
+    "example": "Partner with a company."
+  },
+  {
+    "word_en": "paste",
+    "phonetic": "/peɪst/",
+    "meaning_kh": "បិទ/ចម្លងដាក់",
+    "example": "Paste the image."
+  },
+  {
+    "word_en": "pat",
+    "phonetic": "/pæt/",
+    "meaning_kh": "ផាត់ថ្នមៗ/អង្អែលក្បាល",
+    "example": "Pat the dog."
+  },
+  {
+    "word_en": "patch",
+    "phonetic": "/pætʃ/",
+    "meaning_kh": "ប៉ះ(សម្លៀកបំពាក់/កូដ)",
+    "example": "Patch the hole."
+  },
+  {
+    "word_en": "patrol",
+    "phonetic": "/pəˈtroʊl/",
+    "meaning_kh": "ល្បាត",
+    "example": "Patrol the border."
+  },
+  {
+    "word_en": "patronize",
+    "phonetic": "/ˈpeɪtrənaɪz/",
+    "meaning_kh": "ធ្វើជាអតិថិជនប្រចាំ/ប្រព្រឹត្តបែបមើលងាយ",
+    "example": "Patronize local shops."
+  },
+  {
+    "word_en": "patter",
+    "phonetic": "/ˈpætər/",
+    "meaning_kh": "ធ្លាក់សូរតក់ៗ",
+    "example": "Rain pattered on the roof."
+  },
+  {
+    "word_en": "pause",
+    "phonetic": "/pɔːz/",
+    "meaning_kh": "ផ្អាក",
+    "example": "Pause the music."
+  },
+  {
+    "word_en": "pave",
+    "phonetic": "/peɪv/",
+    "meaning_kh": "ក្រាល(ផ្លូវ)",
+    "example": "Pave the road."
+  },
+  {
+    "word_en": "paw",
+    "phonetic": "/pɔː/",
+    "meaning_kh": "ក្រញាំ/ខ្ញាំ",
+    "example": "The cat pawed the door."
+  },
+  {
+    "word_en": "peak",
+    "phonetic": "/piːk/",
+    "meaning_kh": "ឡើងដល់ចំណុចកំពូល",
+    "example": "Sales peaked in June."
+  },
+  {
+    "word_en": "peck",
+    "phonetic": "/pɛk/",
+    "meaning_kh": "ចឹក",
+    "example": "Birds peck at seeds."
+  },
+  {
+    "word_en": "pedal",
+    "phonetic": "/ˈpɛdəl/",
+    "meaning_kh": "ធាក់កង់",
+    "example": "Pedal the bicycle."
+  },
+  {
+    "word_en": "peel",
+    "phonetic": "/peɪl/",
+    "meaning_kh": "បកសំបក",
+    "example": "Peel the banana."
+  },
+  {
+    "word_en": "peep",
+    "phonetic": "/piːp/",
+    "meaning_kh": "លបមើល/បន្លឺសំឡេងតូចៗ",
+    "example": "Peep through the keyhole."
+  },
+  {
+    "word_en": "peer",
+    "phonetic": "/pɪr/",
+    "meaning_kh": "សម្លឹងមើលដោយយកចិត្តទុកដាក់",
+    "example": "Peer into the darkness."
+  },
+  {
+    "word_en": "peg",
+    "phonetic": "/pɛɡ/",
+    "meaning_kh": "ដៅភ្ជាប់/កំណត់តម្លៃ",
+    "example": "Peg the exchange rate."
+  },
+  {
+    "word_en": "pelt",
+    "phonetic": "/pelt/",
+    "meaning_kh": "គប់/ធ្លាក់ខ្លាំង(ភ្លៀង)",
+    "example": "Rain pelted down."
+  },
+  {
+    "word_en": "penalize",
+    "phonetic": "/ˈpiːnəlaɪz/",
+    "meaning_kh": "ផាកពិន័យ/ដាក់ពិន័យ",
+    "example": "Penalize the player."
+  },
+  {
+    "word_en": "penetrate",
+    "phonetic": "/ˈpɛnɪtreɪt/",
+    "meaning_kh": "ជ្រាបចូល/ធ្លាយចូល",
+    "example": "Light penetrates the window."
+  },
+  {
+    "word_en": "pension",
+    "phonetic": "/ˈpɛnʃən/",
+    "meaning_kh": "ផ្តល់ប្រាក់សោធននិវត្តន៍",
+    "example": "Pension off old workers."
+  },
+  {
+    "word_en": "people",
+    "phonetic": "/ˈpiːpəl/",
+    "meaning_kh": "បំពេញដោយមនុស្ស/រស់នៅ",
+    "example": "People the region."
+  },
+  {
+    "word_en": "perceive",
+    "phonetic": "/pərˈsiːv/",
+    "meaning_kh": "យល់ដឹង/កត់សម្គាល់ឃើញ",
+    "example": "Perceive the change."
+  },
+  {
+    "word_en": "perch",
+    "phonetic": "/pɜːrtʃ/",
+    "meaning_kh": "ទំ(លើមែកឈើ)",
+    "example": "Birds perch on the wire."
+  },
+  {
+    "word_en": "perfect",
+    "phonetic": "/pərˈfɛkt/",
+    "meaning_kh": "ធ្វើឲ្យល្អឥតខ្ចោះ",
+    "example": "Perfect your skills."
+  },
+  {
+    "word_en": "perfume",
+    "phonetic": "/pərˈfjuːm/",
+    "meaning_kh": "បាញ់ទឹកអប់/ធ្វើឲ្យក្រអូប",
+    "example": "Perfume the air."
+  },
+  {
+    "word_en": "perish",
+    "phonetic": "/ˈpɛrɪʃ/",
+    "meaning_kh": "វិនាស/ស្លាប់",
+    "example": "Many perished in the war."
+  },
+  {
+    "word_en": "perk",
+    "phonetic": "/pɜːrk/",
+    "meaning_kh": "ស្រស់ស្រាយឡើងវិញ",
+    "example": "Perk up after coffee."
+  },
+  {
+    "word_en": "permeate",
+    "phonetic": "/ˈpɜːrmieɪt/",
+    "meaning_kh": "ជ្រាបចូលសព្វ",
+    "example": "Smell permeates the room."
+  },
+  {
+    "word_en": "persecute",
+    "phonetic": "/ˈpɜːrsɪkjuːt/",
+    "meaning_kh": "ធ្វើទុក្ខបុកម្នេញ/ធ្វើបាប",
+    "example": "Persecute the minority."
+  },
+  {
+    "word_en": "persevere",
+    "phonetic": "/ˌpɜːrsəˈvɪr/",
+    "meaning_kh": "ព្យាយាមស៊ូទ្រាំ",
+    "example": "Persevere in your efforts."
+  },
+  {
+    "word_en": "persist",
+    "phonetic": "/pərˈsɪst/",
+    "meaning_kh": "ទទូច/បន្តមាន",
+    "example": "Problems persist."
+  },
+  {
+    "word_en": "personalize",
+    "phonetic": "/ˈpɜːrsənəlaɪz/",
+    "meaning_kh": "ធ្វើឲ្យមានលក្ខណៈផ្ទាល់ខ្លួន",
+    "example": "Personalize the settings."
+  },
+  {
+    "word_en": "phase",
+    "phonetic": "/feɪz/",
+    "meaning_kh": "អនុវត្តជាដំណាក់កាល",
+    "example": "Phase in the new project."
+  },
+  {
+    "word_en": "phone",
+    "phonetic": "/foʊn/",
+    "meaning_kh": "ទូរស័ព្ទទៅ",
+    "example": "Phone your parents."
+  },
+  {
+    "word_en": "photograph",
+    "phonetic": "/ˈfoʊtəɡræf/",
+    "meaning_kh": "ថតរូប",
+    "example": "Photograph the scenery."
+  },
+  {
+    "word_en": "pick",
+    "phonetic": "/pɪk/",
+    "meaning_kh": "ជ្រើសរើស/បេះ",
+    "example": "Pick flowers."
+  },
+  {
+    "word_en": "picture",
+    "phonetic": "/ˈpɪktʃər/",
+    "meaning_kh": "ស្រមៃគិត/ថតរូប",
+    "example": "Picture a tropical island."
+  },
+  {
+    "word_en": "pile",
+    "phonetic": "/paɪl/",
+    "meaning_kh": "គរ/តម្រៀបគរ",
+    "example": "Pile the logs."
+  },
+  {
+    "word_en": "pin",
+    "phonetic": "/pɪn/",
+    "meaning_kh": "ខ្ទាស់/ដៅជាប់",
+    "example": "Pin the note to the board."
+  },
+  {
+    "word_en": "pinch",
+    "phonetic": "/pɪntʃ/",
+    "meaning_kh": "ខ្ញាំ/ក្តិច",
+    "example": "Pinch your cheeks."
+  },
+  {
+    "word_en": "pine",
+    "phonetic": "/paɪn/",
+    "meaning_kh": "ស្រមៃនឹកគិតយ៉ាងខ្លាំង/ស្រពោនចិត្ត",
+    "example": "Pine for home."
+  },
+  {
+    "word_en": "pioneer",
+    "phonetic": "/ˌpaɪəˈnɪr/",
+    "meaning_kh": "ធ្វើជាអ្នកត្រួសត្រាយផ្លូវ",
+    "example": "Pioneer new treatments."
+  },
+  {
+    "word_en": "pipe",
+    "phonetic": "/paɪp/",
+    "meaning_kh": "ដឹកជញ្ជូនតាមទុយោ/ផ្លុំខ្លុយ",
+    "example": "Pipe gas into homes."
+  },
+  {
+    "word_en": "pity",
+    "phonetic": "/ˈpɪti/",
+    "meaning_kh": "អាណិតអាសូរ",
+    "example": "I pity them."
+  },
+  {
+    "word_en": "plague",
+    "phonetic": "/pleɪɡ/",
+    "meaning_kh": "ធ្វើឲ្យរងទុក្ខ/លងបន្លាច",
+    "example": "Injuries plagued his career."
+  },
+  {
+    "word_en": "plead",
+    "phonetic": "/pliːd/",
+    "meaning_kh": "អង្វរករ/ដោះសារ",
+    "example": "Plead for mercy."
+  },
+  {
+    "word_en": "please",
+    "phonetic": "/pliːz/",
+    "meaning_kh": "ធ្វើឲ្យពេញចិត្ត",
+    "example": "Please the customers."
+  },
+  {
+    "word_en": "pledge",
+    "phonetic": "/plɛdʒ/",
+    "meaning_kh": "ស្បថ/សន្យាអះអាង",
+    "example": "Pledge allegiance."
+  },
+  {
+    "word_en": "plot",
+    "phonetic": "/plɑːt/",
+    "meaning_kh": "គូសផែនការ/សមគំនិត",
+    "example": "Plot a conspiracy."
+  },
+  {
+    "word_en": "plow",
+    "phonetic": "/plaʊ/",
+    "meaning_kh": "ភ្ជួរស្រែ",
+    "example": "Plow the fields."
+  },
+  {
+    "word_en": "pluck",
+    "phonetic": "/plʌk/",
+    "meaning_kh": "បេះ/បោច",
+    "example": "Pluck the feathers."
+  },
+  {
+    "word_en": "plug",
+    "phonetic": "/plʌɡ/",
+    "meaning_kh": "ដោតឌុយ/បិទជិត",
+    "example": "Plug in the TV."
+  },
+  {
+    "word_en": "plunge",
+    "phonetic": "/plundʒ/",
+    "meaning_kh": "លោតចុះ/ធ្លាក់ចុះយ៉ាងគំហុក",
+    "example": "Temperatures plunged."
+  },
+  {
+    "word_en": "ply",
+    "phonetic": "/plaɪ/",
+    "meaning_kh": "ធ្វើដំណើរឆ្លងកាត់/លក់ដូរឧស្សាហ៍",
+    "example": "Boats ply the river."
+  },
+  {
+    "word_en": "pocket",
+    "phonetic": "/ˈpɑːkɪt/",
+    "meaning_kh": "ដាក់ចូលហោប៉ៅ/កេងយក",
+    "example": "Pocket the change."
+  },
+  {
+    "word_en": "poise",
+    "phonetic": "/pɔɪz/",
+    "meaning_kh": "រៀបចំខ្លួនជាស្រេច/រក្សាលំនឹង",
+    "example": "Poise on the edge."
+  },
+  {
+    "word_en": "poison",
+    "phonetic": "/ˈpɔɪzən/",
+    "meaning_kh": "ដាក់ថ្នាំពុល",
+    "example": "Poison the food."
+  },
+  {
+    "word_en": "poke",
+    "phonetic": "/poʊk/",
+    "meaning_kh": "ចាក់/លូក",
+    "example": "Poke with a stick."
+  },
+  {
+    "word_en": "polarize",
+    "phonetic": "/ˈpoʊləraɪz/",
+    "meaning_kh": "ធ្វើឲ្យបែកបាក់ជាពីរក្រុមផ្ទុយគ្នា",
+    "example": "Polarize the public opinion."
+  },
+  {
+    "word_en": "police",
+    "phonetic": "/pəˈliːs/",
+    "meaning_kh": "ល្បាត/រក្សាសន្តិសុខ",
+    "example": "Police the streets."
+  },
+  {
+    "word_en": "polish",
+    "phonetic": "/ˈpɑːlɪʃ/",
+    "meaning_kh": "ខាត់/ដុសខាត់",
+    "example": "Polish the shoes."
+  },
+  {
+    "word_en": "pollute",
+    "phonetic": "/pəˈluːt/",
+    "meaning_kh": "ធ្វើឲ្យកខ្វក់/បំពុល",
+    "example": "Pollute the air."
+  },
+  {
+    "word_en": "ponder",
+    "phonetic": "/ˈpɑːndər/",
+    "meaning_kh": "គិតពិចារណា",
+    "example": "Ponder the future."
+  },
+  {
+    "word_en": "pop",
+    "phonetic": "/pɑːp/",
+    "meaning_kh": "ផ្ទុះ/លោតចេញមក",
+    "example": "Pop the balloons."
+  },
+  {
+    "word_en": "populate",
+    "phonetic": "/ˈpɑːpjəleɪt/",
+    "meaning_kh": "រស់នៅ/បំពេញទិន្នន័យ",
+    "example": "Populate the database."
+  },
+  {
+    "word_en": "portray",
+    "phonetic": "/pɔːrˈtreɪ/",
+    "meaning_kh": "ពិពណ៌នា/ដើរតួជា",
+    "example": "Portray the character."
+  },
+  {
+    "word_en": "pose",
+    "phonetic": "/pose/",
+    "meaning_kh": "ធ្វើកាយវិការ/ចោទជា(សំណួរ)",
+    "example": "Pose a threat."
+  },
+  {
+    "word_en": "position",
+    "phonetic": "/pəˈzɪʃən/",
+    "meaning_kh": "កំណត់ទីតាំង/ដាក់កន្លែង",
+    "example": "Position the furniture."
+  },
+  {
+    "word_en": "possess",
+    "phonetic": "/pəˈzɛs/",
+    "meaning_kh": "មាន/គ្របដណ្តប់(ចិត្ត)",
+    "example": "Possess great wealth."
+  },
+  {
+    "word_en": "post",
+    "phonetic": "/poʊst/",
+    "meaning_kh": "បង្ហោះ/បិទផ្សាយ/បញ្ជូន",
+    "example": "Post a letter."
+  },
+  {
+    "word_en": "postpone",
+    "phonetic": "/poʊstˈpoʊn/",
+    "meaning_kh": "ពន្យារពេល",
+    "example": "Postpone the match."
+  },
+  {
+    "word_en": "postulate",
+    "phonetic": "/ˈpɑːstʃəleɪt/",
+    "meaning_kh": "សន្មត",
+    "example": "Postulate a theory."
+  },
+  {
+    "word_en": "pot",
+    "phonetic": "/pɑːt/",
+    "meaning_kh": "ដាក់ក្នុងឆ្នាំង/ដាំក្នុងថូ",
+    "example": "Pot the plants."
+  },
+  {
+    "word_en": "pound",
+    "phonetic": "/paʊnd/",
+    "meaning_kh": "វាយ/បុកកំទេច",
+    "example": "Pound the garlic."
+  },
+  {
+    "word_en": "pout",
+    "phonetic": "/paʊt/",
+    "meaning_kh": "ធ្វើមុខក្រញូវ",
+    "example": "The child pouted."
+  },
+  {
+    "word_en": "powder",
+    "phonetic": "/ˈpaʊdər/",
+    "meaning_kh": "កិនជាម្សៅ/លាបម្សៅ",
+    "example": "Powder the face."
+  },
+  {
+    "word_en": "practice",
+    "phonetic": "/ˈpræktɪs/",
+    "meaning_kh": "អនុវត្ត/ហ្វឹកហាត់",
+    "example": "Practice English."
+  },
+  {
+    "word_en": "praise",
+    "phonetic": "/preɪz/",
+    "meaning_kh": "កោតសរសើរ",
+    "example": "Praise the students."
+  },
+  {
+    "word_en": "preach",
+    "phonetic": "/priːtʃ/",
+    "meaning_kh": "ទេសនា/អប់រំ",
+    "example": "Preach the gospel."
+  },
+  {
+    "word_en": "precede",
+    "phonetic": "/priːˈsiːd/",
+    "meaning_kh": "ទៅមុន/កើតឡើងមុន",
+    "example": "A precedes B."
+  },
+  {
+    "word_en": "precipitate",
+    "phonetic": "/prɪˈsɪpɪteɪt/",
+    "meaning_kh": "ធ្វើឲ្យកើតមានឡើងភ្លាមៗ/បង្កាត់",
+    "example": "Precipitate a crisis."
+  },
+  {
+    "word_en": "preclude",
+    "phonetic": "/prɪˈkluːd/",
+    "meaning_kh": "ការពារមិនឲ្យកើតឡើង/រារាំង",
+    "example": "Preclude any misunderstanding."
+  },
+  {
+    "word_en": "predict",
+    "phonetic": "/prɪˈdɪkt/",
+    "meaning_kh": "ទស្សន៍ទាយ/ទាយទុកជាមុន",
+    "example": "Predict the weather."
+  },
+  {
+    "word_en": "preen",
+    "phonetic": "/preen/",
+    "meaning_kh": "សំអាតរោម/ធ្វើខ្លួន",
+    "example": "Birds preen their feathers."
+  },
+  {
+    "word_en": "prefix",
+    "phonetic": "/ˈpriːfɪks/",
+    "meaning_kh": "ដាក់បុព្វបទ/ភ្ជាប់ពីមុខ",
+    "example": "Prefix the title."
+  },
+  {
+    "word_en": "prejudice",
+    "phonetic": "/ˈprɛdʒədɪs/",
+    "meaning_kh": "ធ្វើឲ្យមានការរើសអើង/លំអៀង",
+    "example": "Prejudice the jury."
+  },
+  {
+    "word_en": "premier",
+    "phonetic": "/prɪˈmɪr/",
+    "meaning_kh": "ដាក់បញ្ចាំងជាលើកដំបូង",
+    "example": "The movie premiered."
+  },
+  {
+    "word_en": "preoccupy",
+    "phonetic": "/priːˈaːkjəpaɪ/",
+    "meaning_kh": "ធ្វើឲ្យបារម្ភ/រវល់គិតតែមួយមុខ",
+    "example": "Thoughts preoccupied him."
+  },
+  {
+    "word_en": "prescribe",
+    "phonetic": "/prɪˈskraɪb/",
+    "meaning_kh": "ចងវេជ្ជបញ្ជា",
+    "example": "Prescribe medicine."
+  },
+  {
+    "word_en": "preserve",
+    "phonetic": "/prɪˈzɜːrv/",
+    "meaning_kh": "ថែរក្សា/អភិរក្ស",
+    "example": "Preserve the environment."
+  },
+  {
+    "word_en": "preside",
+    "phonetic": "/prɪˈzaɪd/",
+    "meaning_kh": "ធ្វើជាប្រធាន",
+    "example": "Preside over the meeting."
+  },
+  {
+    "word_en": "press",
+    "phonetic": "/prɛs/",
+    "meaning_kh": "ចុច/សង្កត់",
+    "example": "Press the button."
+  },
+  {
+    "word_en": "pressure",
+    "phonetic": "/ˈprɛʃər/",
+    "meaning_kh": "បង្ខិតបង្ខំ/ដាក់សម្ពាធ",
+    "example": "Pressure someone to do something."
+  },
+  {
+    "word_en": "presume",
+    "phonetic": "/prɪˈzuːm/",
+    "meaning_kh": "សន្មតទុកជាមុន",
+    "example": "Presumed innocent."
+  },
+  {
+    "word_en": "pretend",
+    "phonetic": "/prɪˈtɛnd/",
+    "meaning_kh": "ធ្វើពុត",
+    "example": "Pretend to sleep."
+  },
+  {
+    "word_en": "prevail",
+    "phonetic": "/prɪˈveɪl/",
+    "meaning_kh": "ឈ្នះ/មានប្រៀបជាង/សាយភាយ",
+    "example": "Justice will prevail."
+  },
+  {
+    "word_en": "prevent",
+    "phonetic": "/prɪˈvɛnt/",
+    "meaning_kh": "ការពារ/ទប់ស្កាត់",
+    "example": "Prevent accidents."
+  },
+  {
+    "word_en": "preview",
+    "phonetic": "/ˈpriːvjuː/",
+    "meaning_kh": "ពិនិត្យមើលជាមុន",
+    "example": "Preview the movie."
+  },
+  {
+    "word_en": "prey",
+    "phonetic": "/preɪ/",
+    "meaning_kh": "បរបាញ់ស៊ីជាអាហារ/ធ្វើបាប",
+    "example": "Spiders prey on insects."
+  },
+  {
+    "word_en": "price",
+    "phonetic": "/praɪs/",
+    "meaning_kh": "កំណត់តម្លៃ",
+    "example": "Price the items."
+  },
+  {
+    "word_en": "prick",
+    "phonetic": "/prɪk/",
+    "meaning_kh": "ចាក់/មុត",
+    "example": "Prick the finger."
+  },
+  {
+    "word_en": "pride",
+    "phonetic": "/praɪd/",
+    "meaning_kh": "មានមោទនភាពចំពោះ",
+    "example": "Pride yourself on success."
+  },
+  {
+    "word_en": "print",
+    "phonetic": "/prɪnt/",
+    "meaning_kh": "បោះពុម្ព",
+    "example": "Print the document."
+  },
+  {
+    "word_en": "prioritize",
+    "phonetic": "/praɪˈɔːrətaɪz/",
+    "meaning_kh": "ផ្តល់អាទិភាព",
+    "example": "Prioritize tasks."
+  },
+  {
+    "word_en": "prize",
+    "phonetic": "/praɪz/",
+    "meaning_kh": "វាយតម្លៃខ្ពស់/ឱ្យតម្លៃ",
+    "example": "Prize the friendship."
+  },
+  {
+    "word_en": "probe",
+    "phonetic": "/proʊb/",
+    "meaning_kh": "ស៊ើបអង្កេត/ស្ទង់មើល",
+    "example": "Probe the mystery."
+  },
+  {
+    "word_en": "proceed",
+    "phonetic": "/proʊˈsiːd/",
+    "meaning_kh": "បន្តដំណើរការ",
+    "example": "Proceed with the plan."
+  },
+  {
+    "word_en": "process",
+    "phonetic": "/ˈprɑːsɛs/",
+    "meaning_kh": "ដំណើរការទិន្នន័យ",
+    "example": "Process the application."
+  },
+  {
+    "word_en": "proclaim",
+    "phonetic": "/prəˈkleɪm/",
+    "meaning_kh": "ប្រកាសជាសាធារណៈ",
+    "example": "Proclaim the truth."
+  },
+  {
+    "word_en": "procure",
+    "phonetic": "/prəˈkjʊr/",
+    "meaning_kh": "ស្វែងរកបានមក",
+    "example": "Procure supplies."
+  },
+  {
+    "word_en": "prod",
+    "phonetic": "/prɑːd/",
+    "meaning_kh": "ចាក់រុក/ជម្រុញ",
+    "example": "Prod him into action."
+  },
+  {
+    "word_en": "profess",
+    "phonetic": "/profess/",
+    "meaning_kh": "ទទួលស្គាល់/អះអាង",
+    "example": "Profess love."
+  },
+  {
+    "word_en": "profit",
+    "phonetic": "/ˈprɑːfɪt/",
+    "meaning_kh": "ទទួលបានផលចំណេញ",
+    "example": "Profit from investments."
+  },
+  {
+    "word_en": "program",
+    "phonetic": "/ˈproʊɡræm/",
+    "meaning_kh": "សរសេរកម្មវិធី",
+    "example": "Program the computer."
+  },
+  {
+    "word_en": "progress",
+    "phonetic": "/prəˈɡrɛs/",
+    "meaning_kh": "រីកចម្រើនទៅមុខ",
+    "example": "Progress slowly."
+  },
+  {
+    "word_en": "prohibit",
+    "phonetic": "/proʊˈhɪbɪt/",
+    "meaning_kh": "ហាមឃាត់",
+    "example": "Prohibit smoking."
+  },
+  {
+    "word_en": "project",
+    "phonetic": "/prəˈdʒɛkt/",
+    "meaning_kh": "បញ្ចាំងពន្លឺ/គម្រោង",
+    "example": "Project the slides."
+  },
+  {
+    "word_en": "proliferate",
+    "phonetic": "/prəˈlɪfəreɪt/",
+    "meaning_kh": "បង្កើនចំនួនយ៉ាងលឿន",
+    "example": "Cells proliferate."
+  },
+  {
+    "word_en": "prolong",
+    "phonetic": "/prəˈlɔːŋ/",
+    "meaning_kh": "បន្លាយពេល",
+    "example": "Prolong the life."
+  },
+  {
+    "word_en": "prompt",
+    "phonetic": "/prɑːmpt/",
+    "meaning_kh": "ជម្រុញ/ណែនាំ",
+    "example": "Prompt the user."
+  },
+  {
+    "word_en": "pronounce",
+    "phonetic": "/prəˈnaʊns/",
+    "meaning_kh": "បញ្ចេញសំឡេង",
+    "example": "Pronounce the word."
+  },
+  {
+    "word_en": "proofread",
+    "phonetic": "/ˈpruːfriːd/",
+    "meaning_kh": "ពិនិត្យអក្ខរាវិរុទ្ធ",
+    "example": "Proofread the text."
+  },
+  {
+    "word_en": "prop",
+    "phonetic": "/prɑːp/",
+    "meaning_kh": "ទ្រ/កល់",
+    "example": "Prop open the door."
+  },
+  {
+    "word_en": "propel",
+    "phonetic": "/prəˈpɛl/",
+    "meaning_kh": "រុញច្រានទៅមុខ",
+    "example": "Wind propels the boat."
+  },
+  {
+    "word_en": "proportion",
+    "phonetic": "/prəˈpɔːrʃən/",
+    "meaning_kh": "ចែកជាចំណែកសមាមាត្រ",
+    "example": "Proportion the food."
+  },
+  {
+    "word_en": "proscribe",
+    "phonetic": "/proʊˈskraɪb/",
+    "meaning_kh": "ហាមប្រាមច្បាប់",
+    "example": "Proscribe the practice."
+  },
+  {
+    "word_en": "prosecute",
+    "phonetic": "/ˈprɑːsɪkjuːt/",
+    "meaning_kh": "ចោទប្រកាន់តាមផ្លូវច្បាប់",
+    "example": "Prosecute the offender."
+  },
+  {
+    "word_en": "prospect",
+    "phonetic": "/ˈprɑːspɛkt/",
+    "meaning_kh": "ស្វែងរក(រ៉ែ/ឱកាស)",
+    "example": "Prospect for gold."
+  },
+  {
+    "word_en": "prosper",
+    "phonetic": "/ˈprɑːspər/",
+    "meaning_kh": "ចំរើនរុងរឿង",
+    "example": "Business is prospering."
+  },
+  {
+    "word_en": "provoke",
+    "phonetic": "/prəˈvoʊk/",
+    "meaning_kh": "បង្កហេតុ/ធ្វើឲ្យខឹង",
+    "example": "Provoke an argument."
+  },
+  {
+    "word_en": "prune",
+    "phonetic": "/pruːn/",
+    "meaning_kh": "កាត់តម្រឹមមែកឈើ",
+    "example": "Prune the bushes."
+  },
+  {
+    "word_en": "pry",
+    "phonetic": "/praɪ/",
+    "meaning_kh": "គាស់/ចង់ដឹងចង់ឃើញរឿងគេ",
+    "example": "Pry open the box."
+  },
+  {
+    "word_en": "pump",
+    "phonetic": "/pʌmp/",
+    "meaning_kh": "បូម",
+    "example": "Pump water from the well."
+  },
+  {
+    "word_en": "puncture",
+    "phonetic": "/ˈpʌŋktʃər/",
+    "meaning_kh": "ចាក់ធ្លាយ/ធ្លាយ(កង់)",
+    "example": "Nail punctured the tire."
+  },
+  {
+    "word_en": "purge",
+    "phonetic": "/pɜːrdʒ/",
+    "meaning_kh": "សម្អាតឲ្យអស់/កម្ចាត់ចោល",
+    "example": "Purge the system."
+  },
+  {
+    "word_en": "purify",
+    "phonetic": "/ˈpjʊrɪfaɪ/",
+    "meaning_kh": "ធ្វើឲ្យស្ងាត់ស្អំ/ចម្រោះ",
+    "example": "Purify the water."
+  },
+  {
+    "word_en": "purse",
+    "phonetic": "/pɜːrs/",
+    "meaning_kh": "ញីបបូរមាត់ចូលគ្នា",
+    "example": "She pursed her lips."
+  },
+  {
+    "word_en": "pursue",
+    "phonetic": "/pərˈsuː/",
+    "meaning_kh": "ដេញតាម/បន្ត(គោលដៅ)",
+    "example": "Pursue your career."
+  },
+  {
+    "word_en": "puzzle",
+    "phonetic": "/ˈpʌzəl/",
+    "meaning_kh": "ធ្វើឲ្យងឿងឆ្ងល់/ផ្គុំរូប",
+    "example": "The mystery puzzled everyone."
+  },
+  {
+    "word_en": "quake",
+    "phonetic": "/kweɪk/",
+    "meaning_kh": "ញ័រ/រញ្ជួយ",
+    "example": "The ground quaked."
+  },
+  {
+    "word_en": "quarrel",
+    "phonetic": "/ˈkwɔːrəl/",
+    "meaning_kh": "ឈ្លោះប្រកែកគ្នា",
+    "example": "Don't quarrel with friends."
+  },
+  {
+    "word_en": "quarry",
+    "phonetic": "/ˈkwɔːri/",
+    "meaning_kh": "ជីករ៉ែ/ថ្ម",
+    "example": "Quarry the stone."
+  },
+  {
+    "word_en": "quarter",
+    "phonetic": "/ˈkwɔːrtər/",
+    "meaning_kh": "ចែកជាបួនផ្នែក/ផ្តល់ជម្រក",
+    "example": "Quarter the apples."
+  },
+  {
+    "word_en": "quell",
+    "phonetic": "/kwɛl/",
+    "meaning_kh": "បង្ក្រាប/ធ្វើឲ្យស្ងប់",
+    "example": "Quell the protest."
+  },
+  {
+    "word_en": "quench",
+    "phonetic": "/kwɛntʃ/",
+    "meaning_kh": "រំលត់(ស្រេកទឹក/ភ្លើង)",
+    "example": "Quench your thirst."
+  },
+  {
+    "word_en": "query",
+    "phonetic": "/ˈkwɪri/",
+    "meaning_kh": "សាកសួរ/សួរព័ត៌មាន",
+    "example": "Query the database."
+  },
+  {
+    "word_en": "queue",
+    "phonetic": "/kjuː/",
+    "meaning_kh": "ឈរតម្រង់ជួរ",
+    "example": "Queue for tickets."
+  },
+  {
+    "word_en": "quibble",
+    "phonetic": "/ˈkwɪbəl/",
+    "meaning_kh": "ប្រកែកគ្នារឿងមិនសំខាន់",
+    "example": "Don't quibble over details."
+  },
+  {
+    "word_en": "quicken",
+    "phonetic": "/ˈkwɪkən/",
+    "meaning_kh": "ធ្វើឲ្យលឿនឡើង",
+    "example": "Quicken your pace."
+  },
+  {
+    "word_en": "quiet",
+    "phonetic": "/ˈkwaɪət/",
+    "meaning_kh": "ធ្វើឲ្យស្ងប់ស្ងាត់",
+    "example": "Quiet the children."
+  },
+  {
+    "word_en": "quiver",
+    "phonetic": "/ˈkwɪvər/",
+    "meaning_kh": "ញ័រទទ្រើត",
+    "example": "Voice quivered with fear."
+  },
+  {
+    "word_en": "quiz",
+    "phonetic": "/kwɪz/",
+    "meaning_kh": "សួរដេញដោល/ធ្វើតេស្ត",
+    "example": "Quiz the students."
+  },
+  {
+    "word_en": "radiate",
+    "phonetic": "/ˈreɪdieɪt/",
+    "meaning_kh": "បញ្ចេញពន្លឺ/រស្មី",
+    "example": "The sun radiates heat."
+  },
+  {
+    "word_en": "rage",
+    "phonetic": "/reɪdʒ/",
+    "meaning_kh": "ខឹងសម្បារខ្លាំង/ផ្ទុះឡើងខ្លាំង",
+    "example": "Storm raged outside."
+  },
+  {
+    "word_en": "raid",
+    "phonetic": "/reɪd/",
+    "meaning_kh": "ឆ្មក់ចូល/ឆ្មក់ប្លន់",
+    "example": "Police raided the house."
+  },
+  {
+    "word_en": "rake",
+    "phonetic": "/reɪk/",
+    "meaning_kh": "កាសស្មៅ/ប្រមូល",
+    "example": "Rake the leaves."
+  },
+  {
+    "word_en": "rally",
+    "phonetic": "/ˈræli/",
+    "meaning_kh": "ប្រមូលផ្តុំកម្លាំង/ស្តារឡើងវិញ",
+    "example": "Rally the supporters."
+  },
+  {
+    "word_en": "ram",
+    "phonetic": "/ræm/",
+    "meaning_kh": "បុង/ជល់យ៉ាងខ្លាំង",
+    "example": "The car rammed into the wall."
+  },
+  {
+    "word_en": "ramble",
+    "phonetic": "/ˈræmbəl/",
+    "meaning_kh": "ដើរលេងដោយគ្មានទិសដៅ/និយាយឡបឡែ",
+    "example": "Ramble in the woods."
+  },
+  {
+    "word_en": "rank",
+    "phonetic": "/ræŋk/",
+    "meaning_kh": "ចំណាត់ថ្នាក់/តម្រៀប",
+    "example": "Rank the options."
+  },
+  {
+    "word_en": "ransack",
+    "phonetic": "/ˈrænsæk/",
+    "meaning_kh": "ឆែកឆេររករបស់របរខ្ទេចខ្ទី",
+    "example": "Thieves ransacked the house."
+  },
+  {
+    "word_en": "rant",
+    "phonetic": "/rænt/",
+    "meaning_kh": "និយាយស្រែកបន្ទោសខ្លាំងៗ",
+    "example": "Rant about the government."
+  },
+  {
+    "word_en": "rap",
+    "phonetic": "/ræp/",
+    "meaning_kh": "គោះតិចៗ/និយាយរ៉េប",
+    "example": "Rap on the window."
+  },
+  {
+    "word_en": "rape",
+    "phonetic": "/rape/",
+    "meaning_kh": "រំលោភសេពសន្ថវៈ",
+    "example": "The criminal was arrested."
+  },
+  {
+    "word_en": "rate",
+    "phonetic": "/reɪt/",
+    "meaning_kh": "វាយតម្លៃ",
+    "example": "Rate the app."
+  },
+  {
+    "word_en": "ratify",
+    "phonetic": "/ˈrætɪfaɪ/",
+    "meaning_kh": "ផ្តល់សច្ចាប័ន",
+    "example": "Ratify the treaty."
+  },
+  {
+    "word_en": "ration",
+    "phonetic": "/ˈræʃən/",
+    "meaning_kh": "ចែកចំណែកកំណត់",
+    "example": "Ration the water."
+  },
+  {
+    "word_en": "rationalize",
+    "phonetic": "/ˈræʃnəlaɪz/",
+    "meaning_kh": "សម្របសម្រួលហេតុផល/ធ្វើឲ្យសមហេតុផល",
+    "example": "Rationalize the decision."
+  },
+  {
+    "word_en": "rattle",
+    "phonetic": "/ˈrætəl/",
+    "meaning_kh": "បន្លឺសំឡេងរលាក់ៗ/ធ្វើឲ្យភ័យ",
+    "example": "The windows rattled."
+  },
+  {
+    "word_en": "ravage",
+    "phonetic": "/ˈrævɪdʒ/",
+    "meaning_kh": "បំផ្លិចបំផ្លាញយ៉ាងដំណំ",
+    "example": "War ravaged the country."
+  },
+  {
+    "word_en": "rave",
+    "phonetic": "/rave/",
+    "meaning_kh": "និយាយកោតសរសើរខ្លាំង/និយាយវង្វេងវង្វាន់",
+    "example": "Rave about the food."
+  },
+  {
+    "word_en": "readjust",
+    "phonetic": "/ˌriːəˈdʒʌst/",
+    "meaning_kh": "កែតម្រូវឡើងវិញ",
+    "example": "Readjust the settings."
+  },
+  {
+    "word_en": "ready",
+    "phonetic": "/ˈrɛdi/",
+    "meaning_kh": "រៀបចំឲ្យរួចរាល់",
+    "example": "Ready the forces."
+  },
+  {
+    "word_en": "reaffirm",
+    "phonetic": "/ˌriːəˈfɜːrm/",
+    "meaning_kh": "បញ្ជាក់ឡើងវិញ",
+    "example": "Reaffirm the commitment."
+  },
+  {
+    "word_en": "realign",
+    "phonetic": "/ˌriːəˈlaɪn/",
+    "meaning_kh": "តម្រង់ជួរឡើងវិញ",
+    "example": "Realign the tires."
+  },
+  {
+    "word_en": "reap",
+    "phonetic": "/riːp/",
+    "meaning_kh": "ច្រូតកាត់/ទទួលបានផល",
+    "example": "Reap the benefits."
+  },
+  {
+    "word_en": "reappear",
+    "phonetic": "/ˌriːəˈpɪr/",
+    "meaning_kh": "លេចឡើងម្តងទៀត",
+    "example": "The sun reappeared."
+  },
+  {
+    "word_en": "rear",
+    "phonetic": "/rɪr/",
+    "meaning_kh": "ចិញ្ចឹមបីបាច់/លើកក្រោយ",
+    "example": "Rear children."
+  },
+  {
+    "word_en": "rearrange",
+    "phonetic": "/ˌriːəˈreɪndʒ/",
+    "meaning_kh": "រៀបចំសារជាថ្មី",
+    "example": "Rearrange the furniture."
+  },
+  {
+    "word_en": "reason",
+    "phonetic": "/ˈriːzən/",
+    "meaning_kh": "វែកញែករកហេតុផល",
+    "example": "Reason with them."
+  },
+  {
+    "word_en": "reassure",
+    "phonetic": "/ˌriːəˈʃʊr/",
+    "meaning_kh": "ធ្វើឲ្យស្ងប់ចិត្តឡើងវិញ/ធានា",
+    "example": "Reassure the public."
+  },
+  {
+    "word_en": "rebel",
+    "phonetic": "/rɪˈbɛl/",
+    "meaning_kh": "បះបោរ",
+    "example": "Rebel against the ruler."
+  },
+  {
+    "word_en": "rebound",
+    "phonetic": "/rɪˈbaʊnd/",
+    "meaning_kh": "លោតត្រឡប់មកវិញ/ងើបឡើងវិញ",
+    "example": "Prices rebounded."
+  },
+  {
+    "word_en": "rebuff",
+    "phonetic": "/rɪˈbʌf/",
+    "meaning_kh": "បដិសេធដាច់អហង្ការ",
+    "example": "Rebuff the offer."
+  },
+  {
+    "word_en": "rebuke",
+    "phonetic": "/rɪˈbjuːk/",
+    "meaning_kh": "ស្ដីបន្ទោសខ្លាំងៗ",
+    "example": "Rebuke the employee."
+  },
+  {
+    "word_en": "recapitulate",
+    "phonetic": "/ˌriːkəˈpɪtʃəleɪt/",
+    "meaning_kh": "សង្ខេបឡើងវិញ",
+    "example": "Recapitulate the points."
+  },
+  {
+    "word_en": "recede",
+    "phonetic": "/rɪˈsiːd/",
+    "meaning_kh": "ស្រកចុះ/ថយក្រោយ",
+    "example": "Floodwaters receded."
+  },
+  {
+    "word_en": "reckon",
+    "phonetic": "/ˈrɛkən/",
+    "meaning_kh": "គិតថា/គណនា",
+    "example": "I reckon it will rain."
+  },
+  {
+    "word_en": "reclaim",
+    "phonetic": "/rɪˈkleɪm/",
+    "meaning_kh": "ទាមទារមកវិញ",
+    "example": "Reclaim the land."
+  },
+  {
+    "word_en": "recline",
+    "phonetic": "/rɪˈklaɪn/",
+    "meaning_kh": "ផ្អែកគេង/ទម្រេតខ្លួន",
+    "example": "Recline on the sofa."
+  },
+  {
+    "word_en": "recognize",
+    "phonetic": "/ˈrɛkəɡnaɪz/",
+    "meaning_kh": "ទទួលស្គាល់/ចំណាំបាន",
+    "example": "Recognize the face."
+  },
+  {
+    "word_en": "recoil",
+    "phonetic": "/rɪˈkɔɪl/",
+    "meaning_kh": "ញោចថយក្រោយ/ខ្លាចរអា",
+    "example": "Recoil in horror."
+  },
+  {
+    "word_en": "recollect",
+    "phonetic": "/ˌrɛkəˈlɛkt/",
+    "meaning_kh": "នឹកឃើញឡើងវិញ",
+    "example": "Recollect the past."
+  },
+  {
+    "word_en": "reconcile",
+    "phonetic": "/ˈrɛkənsaɪl/",
+    "meaning_kh": "ផ្សះផ្សា/ធ្វើឲ្យស្របគ្នា",
+    "example": "Reconcile the accounts."
+  },
+  {
+    "word_en": "reconstruct",
+    "phonetic": "/ˌriːkənˈstrʌkt/",
+    "meaning_kh": "កសាងឡើងវិញសព្វគ្រប់",
+    "example": "Reconstruct the crime scene."
+  },
+  {
+    "word_en": "recount",
+    "phonetic": "/rɪˈkaʊnt/",
+    "meaning_kh": "រៀបរាប់/រាប់ឡើងវិញ",
+    "example": "Recount the story."
+  },
+  {
+    "word_en": "recoup",
+    "phonetic": "/rɪˈkuːp/",
+    "meaning_kh": "ស្រោចស្រង់មកវិញ",
+    "example": "Recoup the losses."
+  },
+  {
+    "word_en": "recreate",
+    "phonetic": "/ˌriːkriˈeɪt/",
+    "meaning_kh": "បង្កើតឡើងវិញ",
+    "example": "Recreate the painting."
+  },
+  {
+    "word_en": "recruit",
+    "phonetic": "/rɪˈkruːt/",
+    "meaning_kh": "ជ្រើសរើសបុគ្គលិក/ទាហានថ្មី",
+    "example": "Recruit new members."
+  },
+  {
+    "word_en": "rectify",
+    "phonetic": "/ˈrɛktɪfaɪ/",
+    "meaning_kh": "កែតម្រូវឲ្យត្រឹមត្រូវ",
+    "example": "Rectify the error."
+  },
+  {
+    "word_en": "recur",
+    "phonetic": "/rɪˈkɜːr/",
+    "meaning_kh": "កើតឡើងម្តងទៀត",
+    "example": "Symptoms recur."
+  },
+  {
+    "word_en": "recycle",
+    "phonetic": "/ˌriːˈsaɪkəl/",
+    "meaning_kh": "កែច្នៃឡើងវិញ",
+    "example": "Recycle plastic."
+  },
+  {
+    "word_en": "redact",
+    "phonetic": "/rɪˈdækt/",
+    "meaning_kh": "លុបសម្រួលអត្ថបទសម្ងាត់",
+    "example": "Redact personal data."
+  },
+  {
+    "word_en": "redefine",
+    "phonetic": "/ˌriːdɪˈfaɪ/",
+    "meaning_kh": "កំណត់និយមន័យឡើងវិញ",
+    "example": "Redefine the strategy."
+  },
+  {
+    "word_en": "redeem",
+    "phonetic": "/rɪˈdiːm/",
+    "meaning_kh": "លោះយកវិញ/សង្រ្គោះ",
+    "example": "Redeem the coupon."
+  },
+  {
+    "word_en": "redesign",
+    "phonetic": "/ˌriːdɪˈzaɪn/",
+    "meaning_kh": "រចនាឡើងវិញ",
+    "example": "Redesign the website."
+  },
+  {
+    "word_en": "redevelop",
+    "phonetic": "/ˌriːdɪˈvɛləp/",
+    "meaning_kh": "អភិវឌ្ឍឡើងវិញ",
+    "example": "Redevelop the area."
+  },
+  {
+    "word_en": "redirect",
+    "phonetic": "/ˌriːdəˈrɛkt/",
+    "meaning_kh": "តម្រង់ទិសដៅឡើងវិញ",
+    "example": "Redirect the traffic."
+  },
+  {
+    "word_en": "redistribute",
+    "phonetic": "/ˌriːdɪˈstrɪbjuːt/",
+    "meaning_kh": "ចែកចាយឡើងវិញ",
+    "example": "Redistribute wealth."
+  },
+  {
+    "word_en": "redouble",
+    "phonetic": "/ˌriːˈdʌbəl/",
+    "meaning_kh": "បង្កើនទ្វេដង",
+    "example": "Redouble your efforts."
+  },
+  {
+    "word_en": "re-examine",
+    "phonetic": "/ˌriːɪɡˈzæmɪn/",
+    "meaning_kh": "ពិនិត្យឡើងវិញជាថ្មី",
+    "example": "Re-examine the evidence."
+  },
+  {
+    "word_en": "reference",
+    "phonetic": "/ˈrɛfərəns/",
+    "meaning_kh": "យោងសំអាង",
+    "example": "Reference the source."
+  },
+  {
+    "word_en": "reform",
+    "phonetic": "/rɪˈfɔːrm/",
+    "meaning_kh": "កែទម្រង់",
+    "example": "Reform the education system."
+  },
+  {
+    "word_en": "refrain",
+    "phonetic": "/rɪˈfreɪn/",
+    "meaning_kh": "ចៀសវាង/អត់ធ្មត់",
+    "example": "Refrain from smoking."
+  },
+  {
+    "word_en": "refresh",
+    "phonetic": "/rɪˈfrɛʃ/",
+    "meaning_kh": "ធ្វើឲ្យស្រស់ស្រាយ/ទាញទិន្នន័យថ្មី",
+    "example": "Refresh the page."
+  },
+  {
+    "word_en": "refrigerate",
+    "phonetic": "/rɪˈfrɪdʒəreɪt/",
+    "meaning_kh": "បង្កក/ក្លាសេ",
+    "example": "Refrigerate the milk."
+  },
+  {
+    "word_en": "regain",
+    "phonetic": "/rɪˈɡeɪn/",
+    "meaning_kh": "ទទួលបានមកវិញ",
+    "example": "Regain control."
+  },
+  {
+    "word_en": "register",
+    "phonetic": "/ˈrɛdʒɪstər/",
+    "meaning_kh": "ចុះឈ្មោះ",
+    "example": "Register for the course."
+  },
+  {
+    "word_en": "regress",
+    "phonetic": "/rɪˈɡrɛs/",
+    "meaning_kh": "ធ្លាក់ចុះថយក្រោយ",
+    "example": "Regress to childhood behavior."
+  },
+  {
+    "word_en": "regulate",
+    "phonetic": "/ˈrɛɡjəleɪt/",
+    "meaning_kh": "រៀបចំច្បាប់ទម្លាប់/គ្រប់គ្រង",
+    "example": "Regulate the traffic."
+  },
+  {
+    "word_en": "rehabilitate",
+    "phonetic": "/ˌriːhəˈbɪlɪteɪt/",
+    "meaning_kh": "ស្តារនីតិសម្បទា/ស្តារឡើងវិញ",
+    "example": "Rehabilitate the patient."
+  },
+  {
+    "word_en": "rehearse",
+    "phonetic": "/rɪˈhɜːrs/",
+    "meaning_kh": "ហាត់សម",
+    "example": "Rehearse the play."
+  },
+  {
+    "word_en": "reign",
+    "phonetic": "/reɪn/",
+    "meaning_kh": "គ្រងរាជ្យ/សោយរាជ្យ",
+    "example": "The king reigned for forty years."
+  },
+  {
+    "word_en": "reimburse",
+    "phonetic": "/ˌriːɪmˈbɜːrs/",
+    "meaning_kh": "បង្វិលសងប្រាក់វិញ",
+    "example": "Reimburse the travel expenses."
+  },
+  {
+    "word_en": "rein",
+    "phonetic": "/reɪn/",
+    "meaning_kh": "បង្ខំទប់/ទាញខ្សែបង្ហៀរ",
+    "example": "Rein in spending."
+  },
+  {
+    "word_en": "reinforce",
+    "phonetic": "/ˌriːɪnˈfɔːrs/",
+    "meaning_kh": "ពង្រឹងបន្ថែម",
+    "example": "Reinforce the bridge."
+  },
+  {
+    "word_en": "reinstate",
+    "phonetic": "/ˌriːɪnˈsteɪt/",
+    "meaning_kh": "ដាក់ឱ្យកាន់តំណែងឡើងវិញ",
+    "example": "Reinstate the employee."
+  },
+  {
+    "word_en": "reiterate",
+    "phonetic": "/riˈɪtəreɪt/",
+    "meaning_kh": "និយាយឡើងវិញជាច្រើនដង",
+    "example": "Reiterate the message."
+  },
+  {
+    "word_en": "rejoice",
+    "phonetic": "/rɪˈdʒɔɪs/",
+    "meaning_kh": "អបអរសាទរ/សប្បាយរីករាយខ្លាំង",
+    "example": "Rejoice at the good news."
+  },
+  {
+    "word_en": "relapse",
+    "phonetic": "/rɪˈlæps/",
+    "meaning_kh": "ធ្លាក់ខ្លួនឈឺឡើងវិញ",
+    "example": "Relapse after recovery."
+  },
+  {
+    "word_en": "relate",
+    "phonetic": "/rɪˈleɪt/",
+    "meaning_kh": "ផ្សារភ្ជាប់/ទាក់ទង",
+    "example": "Relate to the story."
+  },
+  {
+    "word_en": "relay",
+    "phonetic": "/ˈriːleɪ/",
+    "meaning_kh": "បញ្ជូនបន្ត",
+    "example": "Relay the message."
+  },
+  {
+    "word_en": "relent",
+    "phonetic": "/rɪˈlɛnt/",
+    "meaning_kh": "បន្ធូរបន្ថយ/យល់ព្រមតាម",
+    "example": "The rain relented."
+  },
+  {
+    "word_en": "relieve",
+    "phonetic": "/rɪˈliːv/",
+    "meaning_kh": "សម្រាល(ការឈឺចាប់/ទុក្ខ)",
+    "example": "Relieve the pain."
+  },
+  {
+    "word_en": "relinquish",
+    "phonetic": "/rɪˈlɪŋkwɪʃ/",
+    "meaning_kh": "លះបង់/ប្រគល់សិទ្ធិឱ្យ",
+    "example": "Relinquish the control."
+  },
+  {
+    "word_en": "relish",
+    "phonetic": "/ˈrɛlɪʃ/",
+    "meaning_kh": "ចូលចិត្តខ្លាំង/រីករាយនឹង",
+    "example": "Relish the food."
+  },
+  {
+    "word_en": "relocate",
+    "phonetic": "/ˌriːˈloʊkeɪt/",
+    "meaning_kh": "ផ្លាស់ប្តូរទីតាំង",
+    "example": "Relocate the office."
+  },
+  {
+    "word_en": "remand",
+    "phonetic": "/rɪˈmænd/",
+    "meaning_kh": "ឃុំខ្លួនបណ្តោះអាសន្ន",
+    "example": "Remand the suspect in custody."
+  },
+  {
+    "word_en": "remark",
+    "phonetic": "/rɪˈmɑːrk/",
+    "meaning_kh": "ធ្វើអត្ថាធិប្បាយ/កត់សម្គាល់",
+    "example": "Remark on the changes."
+  },
+  {
+    "word_en": "remit",
+    "phonetic": "/rɪˈmɪt/",
+    "meaning_kh": "ផ្ញើប្រាក់/លើកលែងទោស",
+    "example": "Remit payment."
+  },
+  {
+    "word_en": "remodel",
+    "phonetic": "/ˌriːˈmɑːdəl/",
+    "meaning_kh": "កែច្នៃទម្រង់ឡើងវិញ",
+    "example": "Remodel the kitchen."
+  },
+  {
+    "word_en": "remonstrate",
+    "phonetic": "/rɪˈmɑːnstreɪt/",
+    "meaning_kh": "តវ៉ា/ប្រឆាំងតទល់",
+    "example": "Remonstrate against decision."
+  },
+  {
+    "word_en": "remould",
+    "phonetic": "/ˌriːˈmoʊld/",
+    "meaning_kh": "កែប្រែទម្រង់ជាថ្មី",
+    "example": "Remould the system."
+  },
+  {
+    "word_en": "rename",
+    "phonetic": "/ˌriːˈneɪm/",
+    "meaning_kh": "ប្តូរឈ្មោះ",
+    "example": "Rename the file."
+  },
+  {
+    "word_en": "render",
+    "phonetic": "/ˈrɛndər/",
+    "meaning_kh": "ផ្តល់ឲ្យ/ធ្វើឲ្យមានស្ថានភាព",
+    "example": "Render assistance."
+  },
+  {
+    "word_en": "renew",
+    "phonetic": "/rɪˈnuː/",
+    "meaning_kh": "ធ្វើជាថ្មី/បន្តសុពលភាព",
+    "example": "Renew the passport."
+  },
+  {
+    "word_en": "renounce",
+    "phonetic": "/rɪˈnaʊns/",
+    "meaning_kh": "លះបង់ចោលជាសាធារណៈ",
+    "example": "Renounce the rights."
+  },
+  {
+    "word_en": "renovate",
+    "phonetic": "/ˈrɛnəveɪt/",
+    "meaning_kh": "ជួសជុលកែលម្អថ្មី",
+    "example": "Renovate the house."
+  },
+  {
+    "word_en": "reopen",
+    "phonetic": "/ˌriːˈoʊpən/",
+    "meaning_kh": "បើកឡើងវិញ",
+    "example": "Reopen the store."
+  },
+  {
+    "word_en": "reorganize",
+    "phonetic": "/riˈɔːrɡənaɪz/",
+    "meaning_kh": "រៀបចំឡើងវិញសព្វគ្រប់",
+    "example": "Reorganize the department."
+  },
+  {
+    "word_en": "repatriate",
+    "phonetic": "/riːˈpeɪtrieɪt/",
+    "meaning_kh": "បញ្ជូនត្រឡប់ទៅមាតុភូមិវិញ",
+    "example": "Repatriate the refugees."
+  },
+  {
+    "word_en": "repay",
+    "phonetic": "/rɪˈpeɪ/",
+    "meaning_kh": "សងប្រាក់វិញ",
+    "example": "Repay the loan."
+  },
+  {
+    "word_en": "repeal",
+    "phonetic": "/rɪˈpiːl/",
+    "meaning_kh": "លុបចោលច្បាប់",
+    "example": "Repeal the law."
+  },
+  {
+    "word_en": "repel",
+    "phonetic": "/rɪˈpɛl/",
+    "meaning_kh": "រុញច្រានចេញ/ដេញចេញ",
+    "example": "Repel insects."
+  },
+  {
+    "word_en": "repent",
+    "phonetic": "/rɪˈpɛnt/",
+    "meaning_kh": "សោកស្តាយនឹងកំហុស/ភ្ញាក់រលឹក",
+    "example": "Repent your sins."
+  },
+  {
+    "word_en": "replenish",
+    "phonetic": "/rɪˈplɛnɪʃ/",
+    "meaning_kh": "បំពេញបន្ថែមឡើងវិញ",
+    "example": "Replenish the supplies."
+  },
+  {
+    "word_en": "replicate",
+    "phonetic": "/ˈrɛplɪkeɪt/",
+    "meaning_kh": "ធ្វើដូចគ្នាបេះបិទ/ថតចម្លង",
+    "example": "Replicate the experiment."
+  },
+  {
+    "word_en": "repose",
+    "phonetic": "/rɪˈpoʊz/",
+    "meaning_kh": "សម្រាក",
+    "example": "Repose on the bed."
+  },
+  {
+    "word_en": "repress",
+    "phonetic": "/rɪˈprɛs/",
+    "meaning_kh": "បង្ក្រាប/ទប់ចិត្ត",
+    "example": "Repress emotions."
+  },
+  {
+    "word_en": "reprieve",
+    "phonetic": "/rɪˈpriːv/",
+    "meaning_kh": "ពន្យារការដាក់ទោស",
+    "example": "Reprieve the prisoner."
+  },
+  {
+    "word_en": "reprimand",
+    "phonetic": "/ˈrɛprɪmænd/",
+    "meaning_kh": "ស្ដីបន្ទោសខ្លាំងៗជាផ្លូវការ",
+    "example": "Reprimand the officer."
+  },
+  {
+    "word_en": "reprint",
+    "phonetic": "/ˌriːˈprɪnt/",
+    "meaning_kh": "បោះពុម្ពឡើងវិញ",
+    "example": "Reprint the book."
+  },
+  {
+    "word_en": "reproach",
+    "phonetic": "/rɪˈproʊtʃ/",
+    "meaning_kh": "ស្ដីបន្ទោសដោយខកចិត្ត",
+    "example": "Reproach yourself for the failure."
+  },
+  {
+    "word_en": "reproduce",
+    "phonetic": "/ˌriːprəˈduːs/",
+    "meaning_kh": "បន្តពូជ/ផលិតឡើងវិញ",
+    "example": "Cells reproduce."
+  },
+  {
+    "word_en": "reprogram",
+    "phonetic": "/ˌriːˈproʊɡræm/",
+    "meaning_kh": "កំណត់កម្មវិធីសារជាថ្មី",
+    "example": "Reprogram the remote."
+  },
+  {
+    "word_en": "reprove",
+    "phonetic": "/rɪˈpruːv/",
+    "meaning_kh": "ស្ដីបន្ទោស/អប់រំកំហុស",
+    "example": "Reprove the child."
+  },
+  {
+    "word_en": "repudiate",
+    "phonetic": "/rɪˈpjuːdieɪt/",
+    "meaning_kh": "បដិសេធមិនព្រមទទួលស្គាល់",
+    "example": "Repudiate the claim."
+  },
+  {
+    "word_en": "repulse",
+    "phonetic": "/rɪˈpʌls/",
+    "meaning_kh": "រុញច្រានចេញដោយខ្ពើម/ដេញចេញ",
+    "example": "Repulse the attack."
+  },
+  {
+    "word_en": "repute",
+    "phonetic": "/rɪˈpjuːt/",
+    "meaning_kh": "ចាត់ទុកថា/មានឈ្មោះល្បី",
+    "example": "He is reputed to be rich."
+  },
+  {
+    "word_en": "requisition",
+    "phonetic": "/ˌrɛkwɪˈzɪʃən/",
+    "meaning_kh": "ស្នើសុំប្រើប្រាស់ជាផ្លូវការ",
+    "example": "Requisition supplies."
+  },
+  {
+    "word_en": "requite",
+    "phonetic": "/rɪˈkwaɪt/",
+    "meaning_kh": "តបស្នង(សេចក្តីស្រឡាញ់/សេវាកម្ម)",
+    "example": "Requite the favor."
+  },
+  {
+    "word_en": "rescind",
+    "phonetic": "/rɪˈsɪnd/",
+    "meaning_kh": "បដិសេធ/លុបចោល(ច្បាប់/កិច្ចសន្យា)",
+    "example": "Rescind the offer."
+  },
+  {
+    "word_en": "resemble",
+    "phonetic": "/rɪˈzɛmbəl/",
+    "meaning_kh": "ស្រដៀងគ្នា",
+    "example": "He resembles his father."
+  },
+  {
+    "word_en": "resent",
+    "phonetic": "/rɪˈzɛnt/",
+    "meaning_kh": "ខឹងក្រឡប់ក្រឡិន/មិនពេញចិត្ត",
+    "example": "Resent the criticism."
+  },
+  {
+    "word_en": "reserve",
+    "phonetic": "/rɪˈzɜːrv/",
+    "meaning_kh": "កក់ទុក",
+    "example": "Reserve a table."
+  },
+  {
+    "word_en": "reset",
+    "phonetic": "/ˌriːˈsɛt/",
+    "meaning_kh": "កំណត់ឡើងវិញ",
+    "example": "Reset the password."
+  },
+  {
+    "word_en": "reside",
+    "phonetic": "/rɪˈzaɪd/",
+    "meaning_kh": "រស់នៅ/ស្នាក់នៅ",
+    "example": "Reside in Phnom Penh."
+  },
+  {
+    "word_en": "resign",
+    "phonetic": "/rɪˈzaɪn/",
+    "meaning_kh": "លាលែងពីតំណែង",
+    "example": "Resign from the post."
+  },
+  {
+    "word_en": "resist",
+    "phonetic": "/rɪˈzɪst/",
+    "meaning_kh": "ទប់ទល់/ប្រឆាំង",
+    "example": "Resist the temptation."
+  },
+  {
+    "word_en": "resolve",
+    "phonetic": "/rɪˈzɑːlv/",
+    "meaning_kh": "ដោះស្រាយ",
+    "example": "Resolve the conflict."
+  },
+  {
+    "word_en": "resonate",
+    "phonetic": "/ˈrɛzəneɪt/",
+    "meaning_kh": "បន្លឺសំឡេងរំពង/ត្រូវចិត្ត",
+    "example": "The message resonated with me."
+  },
+  {
+    "word_en": "resort",
+    "phonetic": "/rɪˈzɔːrt/",
+    "meaning_kh": "ប្រើប្រាស់ជាជម្រើសចុងក្រោយ",
+    "example": "Resort to violence."
+  },
+  {
+    "word_en": "respire",
+    "phonetic": "/rɪˈspaɪər/",
+    "meaning_kh": "ដកដង្ហើម",
+    "example": "Living things respire."
+  },
+  {
+    "word_en": "restart",
+    "phonetic": "/ˌriːˈstɑːrt/",
+    "meaning_kh": "ចាប់ផ្តើមឡើងវិញ",
+    "example": "Restart the computer."
+  },
+  {
+    "word_en": "restrain",
+    "phonetic": "/rɪˈstreɪn/",
+    "meaning_kh": "ទប់ស្កាត់/បង្ខំចិត្ត",
+    "example": "Restrain your anger."
+  },
+  {
+    "word_en": "result",
+    "phonetic": "/rɪˈzʌlt/",
+    "meaning_kh": "បណ្តាលមកពី",
+    "example": "Accidents result from carelessness."
+  },
+  {
+    "word_en": "resume",
+    "phonetic": "/rɪˈzuːm/",
+    "meaning_kh": "បន្តធ្វើឡើងវិញ",
+    "example": "Resume the game."
+  },
+  {
+    "word_en": "retail",
+    "phonetic": "/ˈriːteɪl/",
+    "meaning_kh": "លក់រាយ",
+    "example": "Retail goods."
+  },
+  {
+    "word_en": "retain",
+    "phonetic": "/rɪˈteɪn/",
+    "meaning_kh": "រក្សាទុក",
+    "example": "Retain the original copy."
+  },
+  {
+    "word_en": "retaliate",
+    "phonetic": "/rɪˈtælieɪt/",
+    "meaning_kh": "សងសឹក",
+    "example": "Retaliate against attackers."
+  },
+  {
+    "word_en": "retard",
+    "phonetic": "/rɪˈtɑːrd/",
+    "meaning_kh": "ធ្វើឲ្យយឺតយ៉ាវ",
+    "example": "Cold retards growth."
+  },
+  {
+    "word_en": "retch",
+    "phonetic": "/rætʃ/",
+    "meaning_kh": "ចង់ក្អួត/ក្អួតចង្អោរ",
+    "example": "Retch at the smell."
+  },
+  {
+    "word_en": "rethink",
+    "phonetic": "/ˌriːˈθɪŋk/",
+    "meaning_kh": "គិតគូរឡើងវិញ",
+    "example": "Rethink the strategy."
+  },
+  {
+    "word_en": "retort",
+    "phonetic": "/rɪˈtɔːrt/",
+    "meaning_kh": "តបទៅវិញភ្លាមៗដោយខឹង",
+    "example": "Retort sharply."
+  },
+  {
+    "word_en": "retrace",
+    "phonetic": "/rɪˈtreɪs/",
+    "meaning_kh": "ដើរថយក្រោយតាមផ្លូវចាស់",
+    "example": "Retrace your steps."
+  },
+  {
+    "word_en": "retract",
+    "phonetic": "/rɪˈtrækt/",
+    "meaning_kh": "ដកសម្តីវិញ/ដកចូល",
+    "example": "Retract the statement."
+  },
+  {
+    "word_en": "retrain",
+    "phonetic": "/ˌriːˈtrɪn/",
+    "meaning_kh": "បណ្តុះបណ្តាលឡើងវិញ",
+    "example": "Retrain the staff."
+  },
+  {
+    "word_en": "retreat",
+    "phonetic": "/rɪˈtriːt/",
+    "meaning_kh": "ដកថយ",
+    "example": "The army retreated."
+  },
+  {
+    "word_en": "retrieve",
+    "phonetic": "/rɪˈtriːv/",
+    "meaning_kh": "ទាញយកមកវិញ",
+    "example": "Retrieve the data."
+  },
+  {
+    "word_en": "retrogress",
+    "phonetic": "/ˌrɛtrəˈɡrɛs/",
+    "meaning_kh": "ធ្លាក់ចុះទៅរកសភាពចាស់ដែលអាក្រក់ជាង",
+    "example": "The situation retrogressed."
+  },
+  {
+    "word_en": "retry",
+    "phonetic": "/ˌriːˈtraɪ/",
+    "meaning_kh": "សាកល្បងម្តងទៀត",
+    "example": "Retry the transaction."
+  },
+  {
+    "word_en": "reunite",
+    "phonetic": "/ˌriːjuˈnaɪt/",
+    "meaning_kh": "ជួបជុំគ្នាឡើងវិញ",
+    "example": "Reunite the family."
+  },
+  {
+    "word_en": "reuse",
+    "phonetic": "/ˌriːˈjuːz/",
+    "meaning_kh": "ប្រើប្រាស់ឡើងវិញ",
+    "example": "Reuse plastic bottles."
+  },
+  {
+    "word_en": "revamp",
+    "phonetic": "/ˌriːˈvæmp/",
+    "meaning_kh": "កែលម្អជាថ្មី",
+    "example": "Revamp the website design."
+  },
+  {
+    "word_en": "reveal",
+    "phonetic": "/rɪˈviːl/",
+    "meaning_kh": "បង្ហាញឲ្យដឹង/ទម្លាយ",
+    "example": "Reveal the secret."
+  },
+  {
+    "word_en": "revel",
+    "phonetic": "/ˈrɛvəl/",
+    "meaning_kh": "សប្បាយរីករាយខ្លាំង",
+    "example": "Revel in the victory."
+  },
+  {
+    "word_en": "revenge",
+    "phonetic": "/rɪˈvɛndʒ/",
+    "meaning_kh": "សងសឹក",
+    "example": "Revenge the death."
+  },
+  {
+    "word_en": "reverberate",
+    "phonetic": "/rɪˈvɜːrbəreɪt/",
+    "meaning_kh": "បន្លឺសំឡេងរំពងខ្លាំង",
+    "example": "Laughter reverberated in the room."
+  },
+  {
+    "word_en": "revere",
+    "phonetic": "/rɪˈvɪr/",
+    "meaning_kh": "គោរពកោតស្ញប់ស្ញែងខ្លាំង",
+    "example": "Revere the master."
+  }
+]

@@ -1,0 +1,488 @@
+[
+  {
+    "word_en": "I",
+    "phonetic": "/aɪ/",
+    "meaning_kh": "ខ្ញុំ",
+    "example": "I am learning English."
+  },
+  {
+    "word_en": "you",
+    "phonetic": "/juː/",
+    "meaning_kh": "អ្នក/លោក/នាង",
+    "example": "You are my best friend."
+  },
+  {
+    "word_en": "he",
+    "phonetic": "/hiː/",
+    "meaning_kh": "គាត់",
+    "example": "He is a doctor."
+  },
+  {
+    "word_en": "she",
+    "phonetic": "/ʃiː/",
+    "meaning_kh": "នាង/គាត់",
+    "example": "She loves reading books."
+  },
+  {
+    "word_en": "it",
+    "phonetic": "/ɪt/",
+    "meaning_kh": "វា",
+    "example": "It is a beautiful day."
+  },
+  {
+    "word_en": "we",
+    "phonetic": "/wiː/",
+    "meaning_kh": "ពួកយើង",
+    "example": "We are going to school."
+  },
+  {
+    "word_en": "they",
+    "phonetic": "/ðeɪ/",
+    "meaning_kh": "ពួកគេ/ពួកវា",
+    "example": "They live in Phnom Penh."
+  },
+  {
+    "word_en": "me",
+    "phonetic": "/miː/",
+    "meaning_kh": "ខ្ញុំ (ជាកម្មបទ)",
+    "example": "Please call me later."
+  },
+  {
+    "word_en": "him",
+    "phonetic": "/hɪm/",
+    "meaning_kh": "គាត់ (ជាកម្មបទ)",
+    "example": "I saw him at the library."
+  },
+  {
+    "word_en": "her",
+    "phonetic": "/hɜːr/",
+    "meaning_kh": "នាង/របស់នាង",
+    "example": "Give this book to her."
+  },
+  {
+    "word_en": "us",
+    "phonetic": "/ʌs/",
+    "meaning_kh": "ពួកយើង (ជាកម្មបទ)",
+    "example": "They invited us to the party."
+  },
+  {
+    "word_en": "them",
+    "phonetic": "/ðɛm/",
+    "meaning_kh": "ពួកគេ (ជាកម្មបទ)",
+    "example": "Tell them the truth."
+  },
+  {
+    "word_en": "my",
+    "phonetic": "/maɪ/",
+    "meaning_kh": "របស់ខ្ញុំ",
+    "example": "This is my computer."
+  },
+  {
+    "word_en": "your",
+    "phonetic": "/jɔːr/",
+    "meaning_kh": "របស់អ្នក",
+    "example": "What is your name?"
+  },
+  {
+    "word_en": "his",
+    "phonetic": "/hɪz/",
+    "meaning_kh": "របស់គាត់",
+    "example": "His car is blue."
+  },
+  {
+    "word_en": "its",
+    "phonetic": "/ɪts/",
+    "meaning_kh": "របស់វា",
+    "example": "The dog wagged its tail."
+  },
+  {
+    "word_en": "our",
+    "phonetic": "/ˈaʊər/",
+    "meaning_kh": "របស់ពួកយើង",
+    "example": "Our school is clean."
+  },
+  {
+    "word_en": "their",
+    "phonetic": "/ðɛr/",
+    "meaning_kh": "របស់ពួកគេ",
+    "example": "Their house is very big."
+  },
+  {
+    "word_en": "mine",
+    "phonetic": "/maɪn/",
+    "meaning_kh": "ជារបស់ខ្ញុំ",
+    "example": "This book is mine."
+  },
+  {
+    "word_en": "yours",
+    "phonetic": "/jɔːrz/",
+    "meaning_kh": "ជារបស់អ្នក",
+    "example": "Is this pen yours?"
+  },
+  {
+    "word_en": "hers",
+    "phonetic": "/hɜːrz/",
+    "meaning_kh": "ជារបស់នាង",
+    "example": "The decision is hers."
+  },
+  {
+    "word_en": "ours",
+    "phonetic": "/ˈaʊərz/",
+    "meaning_kh": "ជារបស់ពួកយើង",
+    "example": "The victory is ours."
+  },
+  {
+    "word_en": "theirs",
+    "phonetic": "/ðɛrz/",
+    "meaning_kh": "ជារបស់ពួកគេ",
+    "example": "The responsibility is theirs."
+  },
+  {
+    "word_en": "myself",
+    "phonetic": "/maɪˈsɛlf/",
+    "meaning_kh": "ខ្លួនខ្ញុំផ្ទាល់",
+    "example": "I painted the room myself."
+  },
+  {
+    "word_en": "yourself",
+    "phonetic": "/jɔːrˈsɛlf/",
+    "meaning_kh": "ខ្លួនអ្នកផ្ទាល់",
+    "example": "You should take care of yourself."
+  },
+  {
+    "word_en": "himself",
+    "phonetic": "/hɪmˈsɛlf/",
+    "meaning_kh": "ខ្លួនគាត់ផ្ទាល់",
+    "example": "He prepared the meal himself."
+  },
+  {
+    "word_en": "herself",
+    "phonetic": "/hɜːrˈsɛlf/",
+    "meaning_kh": "ខ្លួននាងផ្ទាល់",
+    "example": "She solved the problem herself."
+  },
+  {
+    "word_en": "itself",
+    "phonetic": "/ɪtˈsɛlf/",
+    "meaning_kh": "ខ្លួនវាផ្ទាល់",
+    "example": "The cat opened the door itself."
+  },
+  {
+    "word_en": "ourselves",
+    "phonetic": "/aʊərˈsɛlvz/",
+    "meaning_kh": "ខ្លួនពួកយើងផ្ទាល់",
+    "example": "We built the house ourselves."
+  },
+  {
+    "word_en": "yourselves",
+    "phonetic": "/jɔːrˈsɛlvz/",
+    "meaning_kh": "ខ្លួនពួកអ្នកផ្ទាល់",
+    "example": "Please do the homework yourselves."
+  },
+  {
+    "word_en": "themselves",
+    "phonetic": "/ðɛmˈsɛlvz/",
+    "meaning_kh": "ខ្លួនពួកគេផ្ទាល់",
+    "example": "They organized the event themselves."
+  },
+  {
+    "word_en": "this",
+    "phonetic": "/ðɪs/",
+    "meaning_kh": "នេះ",
+    "example": "This is an interesting lesson."
+  },
+  {
+    "word_en": "that",
+    "phonetic": "/ðæt/",
+    "meaning_kh": "នោះ",
+    "example": "That is a great idea."
+  },
+  {
+    "word_en": "these",
+    "phonetic": "/ðiːz/",
+    "meaning_kh": "ទាំងនេះ",
+    "example": "These are my books."
+  },
+  {
+    "word_en": "those",
+    "phonetic": "/ðoʊz/",
+    "meaning_kh": "ទាំងនោះ",
+    "example": "Those are high mountains."
+  },
+  {
+    "word_en": "who",
+    "phonetic": "/huː/",
+    "meaning_kh": "នរណា",
+    "example": "Who is your teacher?"
+  },
+  {
+    "word_en": "whom",
+    "phonetic": "/huːm/",
+    "meaning_kh": "នរណា (ជាកម្មបទ)",
+    "example": "Whom did you speak to?"
+  },
+  {
+    "word_en": "whose",
+    "phonetic": "/huːz/",
+    "meaning_kh": "ជារបស់នរណា",
+    "example": "Whose keys are these?"
+  },
+  {
+    "word_en": "which",
+    "phonetic": "/wɪtʃ/",
+    "meaning_kh": "មួយណា/ដែល",
+    "example": "Which color do you prefer?"
+  },
+  {
+    "word_en": "what",
+    "phonetic": "/wʌt/",
+    "meaning_kh": "អ្វី",
+    "example": "What are you doing?"
+  },
+  {
+    "word_en": "someone",
+    "phonetic": "/ˈsʌmwʌn/",
+    "meaning_kh": "នរណាម្នាក់",
+    "example": "Someone is knocking at the door."
+  },
+  {
+    "word_en": "somebody",
+    "phonetic": "/ˈsʌmbədi/",
+    "meaning_kh": "នរណាម្នាក់",
+    "example": "Is somebody inside the room?"
+  },
+  {
+    "word_en": "everyone",
+    "phonetic": "/ˈɛvriwʌn/",
+    "meaning_kh": "រាល់គ្នា/គ្រប់គ្នា",
+    "example": "Everyone enjoyed the performance."
+  },
+  {
+    "word_en": "everybody",
+    "phonetic": "/ˈɛvribɑdi/",
+    "meaning_kh": "គ្រប់ៗគ្នា",
+    "example": "Everybody wants to be happy."
+  },
+  {
+    "word_en": "anyone",
+    "phonetic": "/ˈɛniwʌn/",
+    "meaning_kh": "នរណាក៏ដោយ",
+    "example": "Has anyone seen my phone?"
+  },
+  {
+    "word_en": "anybody",
+    "phonetic": "/ˈɛnibɑdi/",
+    "meaning_kh": "នរណាក៏ដោយ",
+    "example": "Is anybody home?"
+  },
+  {
+    "word_en": "no one",
+    "phonetic": "/noʊ wʌn/",
+    "meaning_kh": "គ្មាននរណាម្នាក់",
+    "example": "No one came to the meeting."
+  },
+  {
+    "word_en": "nobody",
+    "phonetic": "/ˈnoʊbɑdi/",
+    "meaning_kh": "គ្មាននរណាឡើយ",
+    "example": "Nobody knows the secret."
+  },
+  {
+    "word_en": "something",
+    "phonetic": "/ˈsʌmθɪŋ/",
+    "meaning_kh": "អ្វីមួយ",
+    "example": "I want to eat something delicious."
+  },
+  {
+    "word_en": "everything",
+    "phonetic": "/ˈɛvriθɪŋ/",
+    "meaning_kh": "គ្រប់យ៉ាង",
+    "example": "Everything is ready for the class."
+  },
+  {
+    "word_en": "anything",
+    "phonetic": "/ˈɛniθɪŋ/",
+    "meaning_kh": "អ្វីក៏ដោយ",
+    "example": "Do you have anything to say?"
+  },
+  {
+    "word_en": "nothing",
+    "phonetic": "/ˈnʌθɪŋ/",
+    "meaning_kh": "គ្មានអ្វីទាំងអស់",
+    "example": "There is nothing in the fridge."
+  },
+  {
+    "word_en": "another",
+    "phonetic": "/əˈnʌðər/",
+    "meaning_kh": "មួយទៀត",
+    "example": "Would you like another cup of tea?"
+  },
+  {
+    "word_en": "other",
+    "phonetic": "/ˈʌðər/",
+    "meaning_kh": "ផ្សេងទៀត",
+    "example": "Do you have other questions?"
+  },
+  {
+    "word_en": "others",
+    "phonetic": "/ˈʌðərz/",
+    "meaning_kh": "អ្នកដទៃ/របស់ផ្សេងទៀត",
+    "example": "Be kind to others."
+  },
+  {
+    "word_en": "any",
+    "phonetic": "/ˈɛni/",
+    "meaning_kh": "ខ្លះ/ណាមួយ",
+    "example": "Are any of the guests here?"
+  },
+  {
+    "word_en": "some",
+    "phonetic": "/sʌm/",
+    "meaning_kh": "ខ្លះ",
+    "example": "Some like it hot."
+  },
+  {
+    "word_en": "all",
+    "phonetic": "/ɔːl/",
+    "meaning_kh": "ទាំងអស់",
+    "example": "All are welcome."
+  },
+  {
+    "word_en": "both",
+    "phonetic": "/boʊθ/",
+    "meaning_kh": "ទាំងពីរ",
+    "example": "Both of them are students."
+  },
+  {
+    "word_en": "each",
+    "phonetic": "/iːtʃ/",
+    "meaning_kh": "នីមួយៗ",
+    "example": "Each has its own unique style."
+  },
+  {
+    "word_en": "either",
+    "phonetic": "/ˈiːðər/",
+    "meaning_kh": "មួយណាក៏បាន (ក្នុងចំណោមពីរ)",
+    "example": "Either of the plans will work."
+  },
+  {
+    "word_en": "neither",
+    "phonetic": "/ˈniːðər/",
+    "meaning_kh": "មិនទាំងពីរ",
+    "example": "Neither of us answered."
+  },
+  {
+    "word_en": "few",
+    "phonetic": "/fjuː/",
+    "meaning_kh": "តិចតួច",
+    "example": "Few knew about the secret."
+  },
+  {
+    "word_en": "many",
+    "phonetic": "/ˈmɛni/",
+    "meaning_kh": "ច្រើន",
+    "example": "Many were invited but few came."
+  },
+  {
+    "word_en": "none",
+    "phonetic": "/nʌn/",
+    "meaning_kh": "គ្មានសោះ",
+    "example": "None of the food was left."
+  },
+  {
+    "word_en": "several",
+    "phonetic": "/ˈsɛvrəl/",
+    "meaning_kh": "មួយចំនួន",
+    "example": "Several of the books are missing."
+  },
+  {
+    "word_en": "one",
+    "phonetic": "/wʌn/",
+    "meaning_kh": "នរណាម្នាក់/មួយ",
+    "example": "One should respect one's elders."
+  },
+  {
+    "word_en": "whoever",
+    "phonetic": "/huːˈɛvər/",
+    "meaning_kh": "នរណាក៏ដោយ",
+    "example": "Whoever wants to join can come."
+  },
+  {
+    "word_en": "whichever",
+    "phonetic": "/wɪtʃˈɛvər/",
+    "meaning_kh": "មួយណាក៏ដោយ",
+    "example": "Choose whichever you prefer."
+  },
+  {
+    "word_en": "whatever",
+    "phonetic": "/wʌtˈɛvər/",
+    "meaning_kh": "អ្វីក៏ដោយ",
+    "example": "Do whatever you want."
+  },
+  {
+    "word_en": "each other",
+    "phonetic": "/iːtʃ ˈʌðər/",
+    "meaning_kh": "គ្នាទៅវិញទៅមក",
+    "example": "They love each other."
+  },
+  {
+    "word_en": "one another",
+    "phonetic": "/wʌn əˈnʌðər/",
+    "meaning_kh": "គ្នាទៅវិញទៅមក",
+    "example": "We should help one another."
+  },
+  {
+    "word_en": "whomever",
+    "phonetic": "/huːmˈɛvər/",
+    "meaning_kh": "នរណាក៏ដោយ (ជាកម្មបទ)",
+    "example": "Give the award to whomever you think deserves it."
+  },
+  {
+    "word_en": "whosever",
+    "phonetic": "/huːzˈɛvər/",
+    "meaning_kh": "ជារបស់នរណាក៏ដោយ",
+    "example": "Whosever phone is ringing, please turn it off."
+  },
+  {
+    "word_en": "thou",
+    "phonetic": "/ðaʊ/",
+    "meaning_kh": "អ្នក/ឯង (បុរាណ)",
+    "example": "Thou art my good companion."
+  },
+  {
+    "word_en": "thee",
+    "phonetic": "/ðiː/",
+    "meaning_kh": "អ្នក/ឯង (បុរាណ - ជាកម្មបទ)",
+    "example": "With all my heart I love thee."
+  },
+  {
+    "word_en": "thy",
+    "phonetic": "/ðaɪ/",
+    "meaning_kh": "របស់អ្នក/របស់ឯង (បុរាណ)",
+    "example": "Honor thy parents."
+  },
+  {
+    "word_en": "thine",
+    "phonetic": "/ðaɪn/",
+    "meaning_kh": "ជារបស់អ្នក/ជារបស់ឯង (បុរាណ)",
+    "example": "All that is mine is thine."
+  },
+  {
+    "word_en": "ye",
+    "phonetic": "/jiː/",
+    "meaning_kh": "ពួកអ្នក/ពួកឯង (បុរាណ)",
+    "example": "Ye shall find peace here."
+  },
+  {
+    "word_en": "naught",
+    "phonetic": "/nɔːt/",
+    "meaning_kh": "គ្មានអ្វីសោះ/ទទេ",
+    "example": "All of their hard work came to naught."
+  },
+  {
+    "word_en": "aught",
+    "phonetic": "/ɔːt/",
+    "meaning_kh": "អ្វីៗទាំងអស់/អ្វីមួយ",
+    "example": "For aught I know, they have already left."
+  }
+]

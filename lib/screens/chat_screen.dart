@@ -33,6 +33,10 @@ String formatTime() {
   return '$hour:$minute';
 }
 
+// TODO: Change this to your computer's local IP address (e.g., 'http://172.168.25.137:3000')
+// if testing on a physical phone, or your public hosted backend URL.
+const String BACKEND_URL = 'http://172.168.25.137:3000';
+
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 
@@ -101,12 +105,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
     try {
       // Determine the correct host for the local backend
-      String baseUrl = 'http://localhost:3000';
-      if (!kIsWeb) {
-        if (defaultTargetPlatform == TargetPlatform.android) {
-          baseUrl = 'http://10.0.2.2:3000';
-        }
-      }
+      String baseUrl = BACKEND_URL;
 
       final response = await http.post(
         Uri.parse('$baseUrl/api/chat'),
