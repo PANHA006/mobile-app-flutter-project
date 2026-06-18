@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'screens/splash_screen.dart';
 import 'screens/auth_screen.dart';
 import 'screens/home_screen.dart';
@@ -9,10 +12,18 @@ import 'screens/chat_screen.dart';
 import 'screens/notifications_screen.dart';
 import 'screens/profile_screen.dart';
 
+bool isFirebaseInitialized = false;
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await Hive.openBox('vocabulary_box');
+  try {
+    await Firebase.initializeApp();
+    isFirebaseInitialized = true;
+  } catch (e) {
+    debugPrint('Firebase initialization failed: $e');
+  }
   runApp(const MyApp());
 }
 
@@ -53,7 +64,15 @@ class _MainScreenControllerState extends State<MainScreenController> {
   int _currentTabIndex = 0; // 0: Home, 1: Vocabulary, 2: Chat, 3: Notifications, 4: Profile
   Map<String, String>? _user;
 
-  void _onSplashDone() {
+  void _onSplashDone() async {
+    if (isFirebaseInitialized) {
+      final currentUser = FirebaseAuth.instance.currentUser;
+      if (currentUser != null) {
+        await _loadFirestoreUserAndGo(currentUser.uid);
+        return;
+      }
+    }
+
     setState(() {
       try {
         final box = Hive.box('vocabulary_box');
@@ -70,6 +89,37 @@ class _MainScreenControllerState extends State<MainScreenController> {
     });
   }
 
+  Future<void> _loadFirestoreUserAndGo(String uid) async {
+    try {
+      final doc = await FirebaseFirestore.instance.collection('users').doc(uid).get();
+      if (doc.exists && doc.data() != null) {
+        final data = doc.data()!;
+        setState(() {
+          _user = {
+            'uid': uid,
+            'name': data['name']?.toString() ?? '',
+            'email': data['email']?.toString() ?? '',
+            'level': data['level']?.toString() ?? 'Beginner',
+            'streak': (data['streak'] ?? 0).toString(),
+            'learnedWords': (data['learnedWords'] ?? 0).toString(),
+          };
+          // Cache locally in Hive
+          try {
+            Hive.box('vocabulary_box').put('user_profile', _user);
+          } catch (_) {}
+          _screen = 'app';
+          _currentTabIndex = 0;
+        });
+        return;
+      }
+    } catch (e) {
+      debugPrint('Error loading user from Firestore: $e');
+    }
+    setState(() {
+      _screen = 'auth';
+    });
+  }
+
   void _onAuth(Map<String, String> user) {
     try {
       Hive.box('vocabulary_box').put('user_profile', user);
@@ -81,9 +131,17 @@ class _MainScreenControllerState extends State<MainScreenController> {
     });
   }
 
-  void _onLogout() {
+  void _onLogout() async {
+    if (isFirebaseInitialized) {
+      try {
+        await FirebaseAuth.instance.signOut();
+      } catch (_) {}
+    }
     try {
-      Hive.box('vocabulary_box').delete('user_profile');
+      final box = Hive.box('vocabulary_box');
+      await box.delete('user_profile');
+      await box.delete('favorites_list');
+      await box.delete('favorites_data');
     } catch (_) {}
     setState(() {
       _user = null;
@@ -111,7 +169,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
     final screens = [
       HomeScreen(user: _user!, onNavigate: _navigateToTab),
       VocabularyScreen(user: _user!, onNavigate: _navigateToTab),
-      const ChatScreen(),
+      ChatScreen(user: _user!),
       NotificationsScreen(user: _user!, onNavigate: _navigateToTab),
       ProfileScreen(user: _user!, onLogout: _onLogout),
     ];

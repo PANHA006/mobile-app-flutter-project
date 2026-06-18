@@ -3,6 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../main.dart'; // To access isFirebaseInitialized
 
 class Message {
   final int id;
@@ -37,7 +39,8 @@ String formatTime() {
 const String GEMINI_API_KEY = 'GEMINI_API_KEY';
 
 class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+  final Map<String, String> user;
+  const ChatScreen({super.key, required this.user});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -153,6 +156,18 @@ class _ChatScreenState extends State<ChatScreen> {
           ));
           _isTyping = false;
         });
+
+        final uid = widget.user['uid'];
+        if (isFirebaseInitialized && uid != null) {
+          try {
+            await FirebaseFirestore.instance.collection('chat_history').add({
+              'uid': uid,
+              'question': trimmedText,
+              'answer': reply,
+              'createdAt': FieldValue.serverTimestamp(),
+            });
+          } catch (_) {}
+        }
       } else {
         setState(() {
           _messages.add(Message(

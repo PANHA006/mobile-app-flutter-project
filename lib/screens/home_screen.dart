@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:audioplayers/audioplayers.dart';
 import 'package:hive/hive.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../main.dart'; // To access isFirebaseInitialized
 
 class HomeScreen extends StatefulWidget {
   final Map<String, String> user;
@@ -218,6 +220,7 @@ class _HomeScreenState extends State<HomeScreen>
   Future<void> _toggleFav(String word) async {
     if (word.isEmpty) return;
     final w = word.trim().toLowerCase();
+    final uid = widget.user['uid'];
     
     // Create a WordItem representation using current translation state
     final item = {
@@ -262,6 +265,19 @@ class _HomeScreenState extends State<HomeScreen>
       }
       
       await box.put('favorites_data', json.encode(updatedList));
+
+      if (isFirebaseInitialized && uid != null) {
+        final docRef = FirebaseFirestore.instance.collection('favorites').doc('${uid}_$w');
+        if (_homeFavorites.contains(w)) {
+          await docRef.set({
+            'uid': uid,
+            'wordId': w,
+            'createdAt': FieldValue.serverTimestamp(),
+          });
+        } else {
+          await docRef.delete();
+        }
+      }
     } catch (_) {}
   }
 
@@ -283,14 +299,14 @@ class _HomeScreenState extends State<HomeScreen>
     final stats = [
       {
         'label': 'Words learned',
-        'value': '128',
+        'value': widget.user['learnedWords'] ?? '0',
         'icon': Icons.trending_up,
         'color': const Color(0xFF4F46E5),
         'glow': const Color(0xFFEEF0FF)
       },
       {
         'label': 'Day streak',
-        'value': '12',
+        'value': widget.user['streak'] ?? '0',
         'icon': Icons.emoji_events,
         'color': const Color(0xFFF59E0B),
         'glow': const Color(0xFFFFFBEB)

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../main.dart'; // To access isFirebaseInitialized
 
 class AuthScreen extends StatefulWidget {
   final Function(Map<String, String>) onAuth;
@@ -15,9 +18,10 @@ class _AuthScreenState extends State<AuthScreen> {
   final _passwordController = TextEditingController();
   final _nameController = TextEditingController();
   bool _showPass = false;
+  bool _isLoading = false;
   String _error = '';
 
-  void _handleSubmit() {
+  void _handleSubmit() async {
     final email = _emailController.text.trim();
     final password = _passwordController.text.trim();
     final name = _nameController.text.trim();
@@ -30,13 +34,104 @@ class _AuthScreenState extends State<AuthScreen> {
     }
 
     setState(() {
+      _isLoading = true;
       _error = '';
     });
 
-    widget.onAuth({
-      'name': _mode == 'register' ? name : (email.split('@')[0]),
-      'email': email,
-    });
+    try {
+      if (isFirebaseInitialized) {
+        if (_mode == 'register') {
+          // Register Firebase User
+          final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: email,
+            password: password,
+          );
+          final uid = credential.user!.uid;
+
+          // Create Firestore User Document
+          await FirebaseFirestore.instance.collection('users').doc(uid).set({
+            'uid': uid,
+            'name': name,
+            'email': email,
+            'level': 'Beginner',
+            'streak': 0,
+            'learnedWords': 0,
+            'favoriteWords': [],
+            'createdAt': FieldValue.serverTimestamp(),
+          });
+
+          widget.onAuth({
+            'uid': uid,
+            'name': name,
+            'email': email,
+            'level': 'Beginner',
+            'streak': '0',
+            'learnedWords': '0',
+          });
+        } else {
+          // Login Firebase User
+          final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: email,
+            password: password,
+          );
+          final uid = credential.user!.uid;
+
+          // Fetch Firestore User Profile
+          final doc = await FirebaseFirestore.instance.collection('users').doc(uid).get();
+          if (doc.exists && doc.data() != null) {
+            final data = doc.data()!;
+            widget.onAuth({
+              'uid': uid,
+              'name': data['name']?.toString() ?? '',
+              'email': data['email']?.toString() ?? '',
+              'level': data['level']?.toString() ?? 'Beginner',
+              'streak': (data['streak'] ?? 0).toString(),
+              'learnedWords': (data['learnedWords'] ?? 0).toString(),
+            });
+          } else {
+            // Document doesn't exist, create it as a recovery step
+            await FirebaseFirestore.instance.collection('users').doc(uid).set({
+              'uid': uid,
+              'name': email.split('@')[0],
+              'email': email,
+              'level': 'Beginner',
+              'streak': 0,
+              'learnedWords': 0,
+              'favoriteWords': [],
+              'createdAt': FieldValue.serverTimestamp(),
+            });
+            widget.onAuth({
+              'uid': uid,
+              'name': email.split('@')[0],
+              'email': email,
+              'level': 'Beginner',
+              'streak': '0',
+              'learnedWords': '0',
+            });
+          }
+        }
+      } else {
+        // Fallback to local Hive if Firebase is not initialized
+        widget.onAuth({
+          'name': _mode == 'register' ? name : (email.split('@')[0]),
+          'email': email,
+        });
+      }
+    } on FirebaseAuthException catch (e) {
+      setState(() {
+        _error = e.message ?? 'Authentication failed.';
+      });
+    } catch (e) {
+      setState(() {
+        _error = 'An unexpected error occurred: $e';
+      });
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
   }
 
   @override
@@ -238,7 +333,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: _handleSubmit,
+                      onPressed: _isLoading ? null : _handleSubmit,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: primaryColor,
                         foregroundColor: Colors.white,
@@ -251,6 +346,17 @@ class _AuthScreenState extends State<AuthScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          if (_isLoading) ...[
+                            const SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: CircularProgressIndicator(
+                                color: Colors.white,
+                                strokeWidth: 2,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                          ],
                           Text(
                             _mode == 'login' ? 'Sign In' : 'Create Account',
                             style: GoogleFonts.outfit(
