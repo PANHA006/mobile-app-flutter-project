@@ -55,11 +55,25 @@ class _MainScreenControllerState extends State<MainScreenController> {
 
   void _onSplashDone() {
     setState(() {
+      try {
+        final box = Hive.box('vocabulary_box');
+        final savedUser = box.get('user_profile');
+        if (savedUser != null) {
+          final Map<dynamic, dynamic> rawMap = savedUser as Map;
+          _user = rawMap.map((key, value) => MapEntry(key.toString(), value.toString()));
+          _screen = 'app';
+          _currentTabIndex = 0;
+          return;
+        }
+      } catch (_) {}
       _screen = 'auth';
     });
   }
 
   void _onAuth(Map<String, String> user) {
+    try {
+      Hive.box('vocabulary_box').put('user_profile', user);
+    } catch (_) {}
     setState(() {
       _user = user;
       _screen = 'app';
@@ -68,6 +82,9 @@ class _MainScreenControllerState extends State<MainScreenController> {
   }
 
   void _onLogout() {
+    try {
+      Hive.box('vocabulary_box').delete('user_profile');
+    } catch (_) {}
     setState(() {
       _user = null;
       _screen = 'auth';
@@ -93,9 +110,9 @@ class _MainScreenControllerState extends State<MainScreenController> {
     // Main App with Tabs
     final screens = [
       HomeScreen(user: _user!, onNavigate: _navigateToTab),
-      const VocabularyScreen(),
+      VocabularyScreen(user: _user!, onNavigate: _navigateToTab),
       const ChatScreen(),
-      const NotificationsScreen(),
+      NotificationsScreen(user: _user!, onNavigate: _navigateToTab),
       ProfileScreen(user: _user!, onLogout: _onLogout),
     ];
 

@@ -1,8 +1,9 @@
-require('dotenv').config();
+require('dotenv').config({ override: true });
 const express = require('express');
 const cors = require('cors');
 
 const app = express();
+console.log("Loaded API Key at startup:", process.env.GEMINI_API_KEY);
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
@@ -209,7 +210,7 @@ app.post('/api/chat', async (req, res) => {
       return res.status(400).json({ error: 'Message is required' });
     }
 
-    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+    const GEMINI_API_KEY = (process.env.GEMINI_API_KEY || '').trim();
 
     // Map history to Gemini format: { role: "user" | "model", parts: [{ text: "..." }] }
     const contents = [];

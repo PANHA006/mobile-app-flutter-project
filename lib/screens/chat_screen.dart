@@ -49,7 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
       id: 0,
       role: 'ai',
       text:
-          'Hello! I\'m your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
+          'Hello! I\'m Bera, your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
       time: formatTime(),
     ),
   ];
@@ -187,12 +187,33 @@ class _ChatScreenState extends State<ChatScreen> {
         id: 0,
         role: 'ai',
         text:
-            'Hello! I\'m your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
+            'Hello! I\'m Bera, your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
         time: formatTime(),
       ));
       _showSuggestions = true;
       _isTyping = false;
     });
+  }
+
+  void _clickHelp() {
+    setState(() {
+      _messages.add(Message(
+        id: DateTime.now().millisecondsSinceEpoch,
+        role: 'user',
+        text: '/help',
+        time: formatTime(),
+      ));
+      
+      _messages.add(Message(
+        id: DateTime.now().millisecondsSinceEpoch + 1,
+        role: 'ai',
+        text: 'Hello! I\'m Bera, your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
+        time: formatTime(),
+      ));
+      
+      _showSuggestions = true;
+    });
+    _scrollToBottom();
   }
 
   @override
@@ -230,7 +251,7 @@ class _ChatScreenState extends State<ChatScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'AI English Tutor',
+                  'AI Tutor Bera',
                   style: GoogleFonts.outfit(
                     color: const Color(0xFF0F172A),
                     fontWeight: FontWeight.bold,
@@ -463,7 +484,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
           // Bottom Input box
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border(
@@ -472,36 +493,81 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             child: Row(
               children: [
-                Expanded(
+                // /help Button
+                GestureDetector(
+                  onTap: _clickHelp,
                   child: Container(
+                    height: 40,
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF0F1FA),
+                      color: const Color(0xFFEEF0FF),
                       borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: primaryColor.withOpacity(0.24)),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: TextField(
-                      controller: _inputController,
-                      onSubmitted: _sendMessage,
-                      decoration: const InputDecoration(
-                        hintText: 'Ask me anything in English...',
-                        border: InputBorder.none,
+                    alignment: Alignment.center,
+                    child: Text(
+                      '/help',
+                      style: GoogleFonts.inter(
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 13,
                       ),
-                      style: GoogleFonts.inter(fontSize: 14),
                     ),
                   ),
                 ),
                 const SizedBox(width: 8),
-                GestureDetector(
-                  onTap: () => _sendMessage(_inputController.text),
+                // Input Field Container enclosing both TextField and Send Button
+                Expanded(
                   child: Container(
-                    width: 48,
-                    height: 48,
+                    height: 40,
                     decoration: BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.circular(16),
+                      color: const Color(0xFFF0F1FA),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: primaryColor.withOpacity(0.16),
+                        width: 1.2,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.04),
+                          blurRadius: 6,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
                     ),
-                    child:
-                        const Icon(Icons.send, color: Colors.white, size: 18),
+                    padding: const EdgeInsets.only(left: 14, right: 4),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: _inputController,
+                            onSubmitted: _sendMessage,
+                            decoration: const InputDecoration(
+                              hintText: 'Ask me anything in English...',
+                              border: InputBorder.none,
+                              isDense: true,
+                              contentPadding: EdgeInsets.symmetric(vertical: 8),
+                            ),
+                            style: GoogleFonts.inter(fontSize: 13.5),
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        // Send Button INSIDE the field
+                        GestureDetector(
+                          onTap: () => _sendMessage(_inputController.text),
+                          child: Container(
+                            width: 32,
+                            height: 32,
+                            decoration: BoxDecoration(
+                              color: primaryColor,
+                              shape: BoxShape.circle,
+                            ),
+                            child:
+                                const Icon(Icons.send, color: Colors.white, size: 14),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
