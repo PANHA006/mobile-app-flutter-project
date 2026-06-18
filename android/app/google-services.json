@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897475282164",
+    "project_id": "gen-lang-client-0730467006",
+    "storage_bucket": "gen-lang-client-0730467006.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897475282164:android:03eb646ade2001f4d50aa1",
+        "android_client_info": {
+          "package_name": "com.example.english_ai_study_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEBl9fUKI_DKzJ-S84qKJDoRIZERC2py4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

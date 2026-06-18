@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hive/hive.dart';
+import '../main.dart'; // To access isFirebaseInitialized
 
 class AchievementItem {
   final String label;
@@ -30,6 +33,82 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   bool _darkMode = false;
   bool _notifications = true;
+
+  void _showEditProfileDialog() {
+    final uid = widget.user['uid'];
+    if (uid == null) return;
+    
+    final nameController = TextEditingController(text: widget.user['name']);
+    String selectedLevel = widget.user['level'] ?? 'Beginner';
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            return AlertDialog(
+              title: Text('Edit Profile', style: GoogleFonts.outfit(fontWeight: FontWeight.bold)),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextField(
+                    controller: nameController,
+                    decoration: const InputDecoration(labelText: 'Name'),
+                    style: GoogleFonts.inter(),
+                  ),
+                  const SizedBox(height: 16),
+                  DropdownButtonFormField<String>(
+                    value: selectedLevel,
+                    decoration: const InputDecoration(labelText: 'Level'),
+                    items: const [
+                      DropdownMenuItem(value: 'Beginner', child: Text('Beginner')),
+                      DropdownMenuItem(value: 'Intermediate', child: Text('Intermediate')),
+                      DropdownMenuItem(value: 'Advanced', child: Text('Advanced')),
+                    ],
+                    onChanged: (val) {
+                      if (val != null) {
+                        setDialogState(() {
+                          selectedLevel = val;
+                        });
+                      }
+                    },
+                  ),
+                ],
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text('Cancel', style: GoogleFonts.inter(color: Colors.grey)),
+                ),
+                TextButton(
+                  onPressed: () async {
+                    final newName = nameController.text.trim();
+                    if (newName.isNotEmpty) {
+                      // Update locally in widget.user
+                      widget.user['name'] = newName;
+                      widget.user['level'] = selectedLevel;
+                      
+                      if (isFirebaseInitialized) {
+                        try {
+                          await FirebaseFirestore.instance.collection('users').doc(uid).update({
+                            'name': newName,
+                            'level': selectedLevel,
+                          });
+                        } catch (_) {}
+                      }
+                      setState(() {});
+                      Navigator.of(context).pop();
+                    }
+                  },
+                  child: Text('Save', style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
+                ),
+              ],
+            );
+          }
+        );
+      },
+    );
+  }
 
   final List<AchievementItem> _achievements = const [
     AchievementItem(label: 'First Word', icon: '📖', earned: true),
@@ -119,7 +198,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   const Icon(Icons.emoji_events, color: Colors.white, size: 12),
                   const SizedBox(width: 4),
                   Text(
-                    'Intermediate',
+                    widget.user['level'] ?? 'Beginner',
                     style: GoogleFonts.outfit(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -144,9 +223,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   // Stats grid
                   Row(
                     children: [
-                      _buildStatCard('Words', '128', Icons.book, const Color(0xFF4F46E5)),
-                      _buildStatCard('Favorites', '45', Icons.star, const Color(0xFFF59E0B)),
-                      _buildStatCard('Streak', '12d', Icons.trending_up, const Color(0xFF10B981)),
+                      _buildStatCard('Words', widget.user['learnedWords'] ?? '0', Icons.book, const Color(0xFF4F46E5)),
+                      _buildStatCard(
+                        'Favorites',
+                        (() {
+                          try {
+                            final box = Hive.box('vocabulary_box');
+                            final List<dynamic>? list = box.get('favorites_list');
+                            return (list?.length ?? 0).toString();
+                          } catch (_) {
+                            return '0';
+                          }
+                        })(),
+                        Icons.star,
+                        const Color(0xFFF59E0B),
+                      ),
+                      _buildStatCard('Streak', '${widget.user['streak'] ?? '0'}d', Icons.trending_up, const Color(0xFF10B981)),
                     ],
                   ),
                   const SizedBox(height: 16),
@@ -233,11 +325,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           onChanged: (val) => setState(() => _darkMode = val),
                         ),
                         _buildDivider(),
-                        _buildLinkSetting(
-                          icon: Icons.person_outline,
-                          label: 'Edit Profile',
-                          color: const Color(0xFF10B981),
-                          bg: const Color(0xFFD1FAE5),
+                        GestureDetector(
+                          onTap: _showEditProfileDialog,
+                          child: _buildLinkSetting(
+                            icon: Icons.person_outline,
+                            label: 'Edit Profile',
+                            color: const Color(0xFF10B981),
+                            bg: const Color(0xFFD1FAE5),
+                          ),
                         ),
                         _buildDivider(),
                         _buildLinkSetting(

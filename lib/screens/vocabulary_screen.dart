@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:hive/hive.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../main.dart'; // To access isFirebaseInitialized
 
 class WordItem {
   final String word;
@@ -87,8 +89,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   List<WordItem> _loadedWords = [];
   bool _isLoading = false;
 
-  // Favorites Set (stored in Hive)
+  // Favorites & Learned Set (stored in Hive + Firestore)
   final Set<String> _favorites = {};
+  final Set<String> _learnedWords = {};
   List<WordItem> _favoriteWords = [];
 
   // Tab state
@@ -153,11 +156,19 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           _favoriteWords = decoded.map((e) => WordItem.fromJson(Map<String, dynamic>.from(e), e['level'] ?? '')).toList();
         });
       }
+      final List<dynamic>? learned = box.get('learned_words_list');
+      if (learned != null) {
+        setState(() {
+          _learnedWords.clear();
+          _learnedWords.addAll(learned.cast<String>());
+        });
+      }
     } catch (_) {}
   }
 
   Future<void> _toggleFav(WordItem item) async {
     final w = item.word.trim().toLowerCase();
+    final uid = widget.user['uid'];
     setState(() {
       if (_favorites.contains(w)) {
         _favorites.remove(w);
@@ -180,8 +191,22 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
       await box.put('favorites_list', _favorites.toList());
       final serialized = _favoriteWords.map((e) => e.toJson()).toList();
       await box.put('favorites_data', json.encode(serialized));
+
+      if (isFirebaseInitialized && uid != null) {
+        final docRef = FirebaseFirestore.instance.collection('favorites').doc('${uid}_$w');
+        if (_favorites.contains(w)) {
+          await docRef.set({
+            'uid': uid,
+            'wordId': w,
+            'createdAt': FieldValue.serverTimestamp(),
+          });
+        } else {
+          await docRef.delete();
+        }
+      }
     } catch (_) {}
   }
+
 
   Future<void> _clearAllFavorites() async {
     setState(() {
@@ -197,6 +222,19 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           : await Hive.openBox('vocabulary_box');
       await box.put('favorites_list', <String>[]);
       await box.put('favorites_data', json.encode([]));
+
+      final uid = widget.user['uid'];
+      if (isFirebaseInitialized && uid != null) {
+        final snapshot = await FirebaseFirestore.instance
+            .collection('favorites')
+            .where('uid', isEqualTo: uid)
+            .get();
+        final batch = FirebaseFirestore.instance.batch();
+        for (var doc in snapshot.docs) {
+          batch.delete(doc.reference);
+        }
+        await batch.commit();
+      }
     } catch (_) {}
   }
 
