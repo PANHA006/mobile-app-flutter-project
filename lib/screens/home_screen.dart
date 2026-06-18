@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen>
   // Translator state
   String _sourceLang = 'en';
   String _targetLang = 'km';
-  String _translationResult = ''; 
+  String _translationResult = '';
   String _phonetic = '';
   String _audioUrl = '';
   String _example = '';

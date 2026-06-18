@@ -33,9 +33,8 @@ String formatTime() {
   return '$hour:$minute';
 }
 
-// TODO: Change this to your computer's local IP address (e.g., 'http://172.168.25.137:3000')
-// if testing on a physical phone, or your public hosted backend URL.
-const String BACKEND_URL = 'http://172.168.25.137:3000';
+// TODO: Add your Gemini API key here.
+const String GEMINI_API_KEY = 'GEMINI_API_KEY';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -49,7 +48,8 @@ class _ChatScreenState extends State<ChatScreen> {
     Message(
       id: 0,
       role: 'ai',
-      text: 'Hello! I\'m your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
+      text:
+          'Hello! I\'m your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
       time: formatTime(),
     ),
   ];
@@ -104,11 +104,34 @@ class _ChatScreenState extends State<ChatScreen> {
     _scrollToBottom();
 
     try {
-      // Determine the correct host for the local backend
-      String baseUrl = BACKEND_URL;
+      // Map history to Gemini format: { role: "user" | "model", parts: [{ text: "..." }] }
+      final List<Map<String, dynamic>> contents = [];
+      for (final msg in historyList) {
+        contents.add({
+          'role': msg['role'] == 'ai' ? 'model' : 'user',
+          'parts': [
+            {'text': msg['text']}
+          ]
+        });
+      }
 
+      // Add current user message
+      contents.add({
+        'role': 'user',
+        'parts': [
+          {'text': trimmedText}
+        ]
+      });
+
+      // Determine backend URL (localhost for Web/iOS, 10.0.2.2 for Android Emulator)
+      String backendUrl = 'http://localhost:3000/api/chat';
+      if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
+        backendUrl = 'http://10.0.2.2:3000/api/chat';
+      }
+
+      // Call local backend server
       final response = await http.post(
-        Uri.parse('$baseUrl/api/chat'),
+        Uri.parse(backendUrl),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'message': trimmedText,
@@ -135,7 +158,8 @@ class _ChatScreenState extends State<ChatScreen> {
           _messages.add(Message(
             id: DateTime.now().millisecondsSinceEpoch,
             role: 'ai',
-            text: 'Sorry, I couldn\'t connect to the server. Please try again.',
+            text:
+                'Sorry, I couldn\'t connect to the AI service. Please check your API key.',
             time: formatTime(),
           ));
           _isTyping = false;
@@ -147,7 +171,7 @@ class _ChatScreenState extends State<ChatScreen> {
         _messages.add(Message(
           id: DateTime.now().millisecondsSinceEpoch,
           role: 'ai',
-          text: 'Connection error. Make sure your local server is running.',
+          text: 'Connection error. Please check your internet connection.',
           time: formatTime(),
         ));
         _isTyping = false;
@@ -162,7 +186,8 @@ class _ChatScreenState extends State<ChatScreen> {
       _messages.add(Message(
         id: 0,
         role: 'ai',
-        text: 'Hello! I\'m your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
+        text:
+            'Hello! I\'m your AI English Tutor 🎓 Ask me anything about English — vocabulary, grammar, pronunciation, or practice sentences. I\'m here to help!',
         time: formatTime(),
       ));
       _showSuggestions = true;
@@ -197,7 +222,8 @@ class _ChatScreenState extends State<ChatScreen> {
                 borderRadius: BorderRadius.circular(12),
                 color: const Color(0xFFEEF0FF),
               ),
-              child: const Icon(Icons.auto_awesome, color: Color(0xFF4F46E5), size: 18),
+              child: const Icon(Icons.auto_awesome,
+                  color: Color(0xFF4F46E5), size: 18),
             ),
             const SizedBox(width: 12),
             Column(
@@ -249,18 +275,23 @@ class _ChatScreenState extends State<ChatScreen> {
             child: ListView.builder(
               controller: _scrollController,
               padding: const EdgeInsets.all(16),
-              itemCount: _messages.length + (_isTyping ? 1 : 0) + (_showSuggestions ? 1 : 0),
+              itemCount: _messages.length +
+                  (_isTyping ? 1 : 0) +
+                  (_showSuggestions ? 1 : 0),
               itemBuilder: (context, index) {
                 if (index < _messages.length) {
                   final msg = _messages[index];
                   final isAI = msg.role == 'ai';
 
                   return Align(
-                    alignment: isAI ? Alignment.centerLeft : Alignment.centerRight,
+                    alignment:
+                        isAI ? Alignment.centerLeft : Alignment.centerRight,
                     child: Padding(
                       padding: const EdgeInsets.only(bottom: 12.0),
                       child: Row(
-                        mainAxisAlignment: isAI ? MainAxisAlignment.start : MainAxisAlignment.end,
+                        mainAxisAlignment: isAI
+                            ? MainAxisAlignment.start
+                            : MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           if (isAI) ...[
@@ -272,23 +303,33 @@ class _ChatScreenState extends State<ChatScreen> {
                                 shape: BoxShape.circle,
                                 color: primaryColor,
                               ),
-                              child: const Icon(Icons.auto_awesome, color: Colors.white, size: 14),
+                              child: const Icon(Icons.auto_awesome,
+                                  color: Colors.white, size: 14),
                             ),
                           ],
                           Flexible(
                             child: Column(
-                              crossAxisAlignment: isAI ? CrossAxisAlignment.start : CrossAxisAlignment.end,
+                              crossAxisAlignment: isAI
+                                  ? CrossAxisAlignment.start
+                                  : CrossAxisAlignment.end,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 16, vertical: 12),
                                   decoration: BoxDecoration(
                                     color: isAI ? Colors.white : primaryColor,
-                                    border: isAI ? Border.all(color: cardBorderColor) : null,
+                                    border: isAI
+                                        ? Border.all(color: cardBorderColor)
+                                        : null,
                                     borderRadius: BorderRadius.only(
                                       topLeft: const Radius.circular(18),
                                       topRight: const Radius.circular(18),
-                                      bottomLeft: isAI ? const Radius.circular(4) : const Radius.circular(18),
-                                      bottomRight: isAI ? const Radius.circular(18) : const Radius.circular(4),
+                                      bottomLeft: isAI
+                                          ? const Radius.circular(4)
+                                          : const Radius.circular(18),
+                                      bottomRight: isAI
+                                          ? const Radius.circular(18)
+                                          : const Radius.circular(4),
                                     ),
                                   ),
                                   child: isAI
@@ -303,7 +344,8 @@ class _ChatScreenState extends State<ChatScreen> {
                                 ),
                                 const SizedBox(height: 4),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 4.0),
                                   child: Text(
                                     msg.time,
                                     style: GoogleFonts.inter(
@@ -337,10 +379,12 @@ class _ChatScreenState extends State<ChatScreen> {
                               shape: BoxShape.circle,
                               color: primaryColor,
                             ),
-                            child: const Icon(Icons.auto_awesome, color: Colors.white, size: 14),
+                            child: const Icon(Icons.auto_awesome,
+                                color: Colors.white, size: 14),
                           ),
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(color: cardBorderColor),
@@ -356,7 +400,8 @@ class _ChatScreenState extends State<ChatScreen> {
                                 return Container(
                                   width: 6,
                                   height: 6,
-                                  margin: const EdgeInsets.symmetric(horizontal: 2),
+                                  margin:
+                                      const EdgeInsets.symmetric(horizontal: 2),
                                   decoration: const BoxDecoration(
                                     color: Color(0xFF6B6B8A),
                                     shape: BoxShape.circle,
@@ -392,7 +437,8 @@ class _ChatScreenState extends State<ChatScreen> {
                           child: Container(
                             width: double.infinity,
                             margin: const EdgeInsets.only(bottom: 8),
-                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               border: Border.all(color: cardBorderColor),
@@ -454,7 +500,8 @@ class _ChatScreenState extends State<ChatScreen> {
                       color: primaryColor,
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    child: const Icon(Icons.send, color: Colors.white, size: 18),
+                    child:
+                        const Icon(Icons.send, color: Colors.white, size: 18),
                   ),
                 ),
               ],
@@ -469,7 +516,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget _buildFormattedAIText(String text) {
     final textSpans = <TextSpan>[];
     final regex = RegExp(r'\*\*([^*]+)\*\*');
-    
+
     int lastIndex = 0;
     for (final Match match in regex.allMatches(text)) {
       // Add text before the match
@@ -479,7 +526,7 @@ class _ChatScreenState extends State<ChatScreen> {
           style: GoogleFonts.inter(color: const Color(0xFF0F0E2A)),
         ));
       }
-      
+
       // Add the bold matched text
       textSpans.add(TextSpan(
         text: match.group(1),
@@ -488,10 +535,10 @@ class _ChatScreenState extends State<ChatScreen> {
           color: const Color(0xFF0F0E2A),
         ),
       ));
-      
+
       lastIndex = match.end;
     }
-    
+
     // Add remaining text
     if (lastIndex < text.length) {
       textSpans.add(TextSpan(
