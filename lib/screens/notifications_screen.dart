@@ -24,7 +24,14 @@ class NotificationItem {
 }
 
 class NotificationsScreen extends StatefulWidget {
-  const NotificationsScreen({super.key});
+  final Map<String, String> user;
+  final Function(int) onNavigate;
+
+  const NotificationsScreen({
+    super.key,
+    required this.user,
+    required this.onNavigate,
+  });
 
   @override
   State<NotificationsScreen> createState() => _NotificationsScreenState();
@@ -38,7 +45,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       color: Color(0xFF4F46E5),
       bg: Color(0xFFEEF0FF),
       title: 'Daily Vocabulary Challenge',
-      body: 'Learn 5 new words today and keep your streak alive! Today\'s theme: Business English.',
+      body:
+          'Learn 5 new words today and keep your streak alive! Today\'s theme: Business English.',
       time: 'Just now',
       unread: true,
     ),
@@ -48,7 +56,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       color: Color(0xFFF59E0B),
       bg: Color(0xFFFFFBEB),
       title: 'Grammar Quiz Ready',
-      body: 'A new grammar quiz is waiting for you. Test your knowledge of present perfect tense.',
+      body:
+          'A new grammar quiz is waiting for you. Test your knowledge of present perfect tense.',
       time: '2h ago',
       unread: true,
     ),
@@ -58,7 +67,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       color: Color(0xFF10B981),
       bg: Color(0xFFD1FAE5),
       title: '12-Day Streak! 🎉',
-      body: 'Amazing! You\'ve studied English for 12 days in a row. Keep it up — you\'re on fire!',
+      body:
+          'Amazing! You\'ve studied English for 12 days in a row. Keep it up — you\'re on fire!',
       time: 'Yesterday',
       unread: false,
     ),
@@ -68,7 +78,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       color: Color(0xFF0891B2),
       bg: Color(0xFFECFEFF),
       title: 'New AI Feature Available',
-      body: 'Try the new pronunciation guide in AI Chat. Just type any word and ask for pronunciation help.',
+      body:
+          'Try the new pronunciation guide in AI Chat. Just type any word and ask for pronunciation help.',
       time: '2 days ago',
       unread: false,
     ),
@@ -78,7 +89,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       color: Color(0xFFEC4899),
       bg: Color(0xFFFDF2F8),
       title: 'Word of the Day',
-      body: 'Today\'s word is \'Eloquent\'. Do you know what it means? Tap to find out!',
+      body:
+          'Today\'s word is \'Eloquent\'. Do you know what it means? Tap to find out!',
       time: '3 days ago',
       unread: false,
     ),
@@ -88,7 +100,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       color: Color(0xFF4F46E5),
       bg: Color(0xFFEEF0FF),
       title: 'You learned 50 words!',
-      body: 'Milestone reached: 50 vocabulary words learned. You\'ve unlocked the \'Word Explorer\' badge.',
+      body:
+          'Milestone reached: 50 vocabulary words learned. You\'ve unlocked the \'Word Explorer\' badge.',
       time: '1 week ago',
       unread: false,
     ),
@@ -138,29 +151,49 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             height: 1,
           ),
         ),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        title: Row(
           children: [
-            Text(
-              'Notifications',
-              style: GoogleFonts.outfit(
-                color: const Color(0xFF0F172A),
-                fontWeight: FontWeight.bold,
+            Container(
+              width: 36,
+              height: 36,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: const Color(0xFFEEF0FF),
               ),
+              child: const Icon(Icons.notifications,
+                  color: Color(0xFF4F46E5), size: 18),
             ),
-            Text(
-              unreadCount > 0 ? '$unreadCount new notifications' : 'You\'re all caught up',
-              style: GoogleFonts.inter(
-                color: const Color(0xFF64748B),
-                fontSize: 11,
-              ),
+            const SizedBox(width: 12),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Notifications',
+                  style: GoogleFonts.outfit(
+                    color: const Color(0xFF0F172A),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  unreadCount > 0
+                      ? '$unreadCount new notifications'
+                      : 'You\'re all caught up',
+                  style: GoogleFonts.inter(
+                    color: const Color(0xFF64748B),
+                    fontSize: 10,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
         actions: [
           if (unreadCount > 0)
             Padding(
-              padding: const EdgeInsets.only(right: 16.0),
+              padding: const EdgeInsets.only(
+                  right:
+                      18.0), // give it regular margin since it is the last item
               child: Center(
                 child: GestureDetector(
                   onTap: _markAllRead,
@@ -169,11 +202,13 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       color: const Color(0xFFEEF0FF),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Icon(Icons.done_all, color: Color(0xFF4F46E5), size: 16),
+                        const Icon(Icons.done_all,
+                            color: Color(0xFF4F46E5), size: 16),
                         const SizedBox(width: 6),
                         Text(
                           'Mark all read',
@@ -193,7 +228,6 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       ),
       body: Column(
         children: [
-
           // List of notifications
           Expanded(
             child: ListView.builder(
@@ -208,7 +242,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                   decoration: BoxDecoration(
                     color: n.unread ? const Color(0xFFEEF0FF) : Colors.white,
                     border: Border.all(
-                      color: n.unread ? const Color(0xFF4F46E5).withOpacity(0.18) : cardBorderColor,
+                      color: n.unread
+                          ? const Color(0xFF4F46E5).withOpacity(0.18)
+                          : cardBorderColor,
                     ),
                     borderRadius: BorderRadius.circular(20),
                   ),

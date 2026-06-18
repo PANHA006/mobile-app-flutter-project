@@ -62,7 +62,14 @@ class NumberGroup {
 }
 
 class VocabularyScreen extends StatefulWidget {
-  const VocabularyScreen({super.key});
+  final Map<String, String> user;
+  final Function(int) onNavigate;
+
+  const VocabularyScreen({
+    super.key,
+    required this.user,
+    required this.onNavigate,
+  });
 
   @override
   State<VocabularyScreen> createState() => _VocabularyScreenState();
@@ -73,6 +80,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   final _searchController = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
   Timer? _debounceTimer;
+  StreamSubscription? _favSubscription;
 
   // Selected level: 'beginner', 'intermediate', 'advanced'
   String _selectedLevel = 'beginner';
@@ -81,6 +89,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
 
   // Favorites Set (stored in Hive)
   final Set<String> _favorites = {};
+  List<WordItem> _favoriteWords = [];
 
   // Tab state
   String _activeTab = 'Words'; // 'Words', 'Tenses', 'Numbers'
@@ -107,10 +116,17 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     super.initState();
     _loadFavorites();
     _fetchWords(_selectedLevel);
+    // Watch for live changes on the vocabulary box to keep in sync
+    _favSubscription = Hive.box('vocabulary_box').watch().listen((event) {
+      if (mounted) {
+        _loadFavorites();
+      }
+    });
   }
 
   @override
   void dispose() {
+    _favSubscription?.cancel();
     _audioPlayer.dispose();
     _searchController.dispose();
     _searchFocusNode.dispose();
@@ -130,17 +146,31 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           _favorites.addAll(favs.cast<String>());
         });
       }
+      final String? favsDataStr = box.get('favorites_data');
+      if (favsDataStr != null) {
+        final List<dynamic> decoded = json.decode(favsDataStr);
+        setState(() {
+          _favoriteWords = decoded.map((e) => WordItem.fromJson(Map<String, dynamic>.from(e), e['level'] ?? '')).toList();
+        });
+      }
     } catch (_) {}
   }
 
-  Future<void> _toggleFav(String word) async {
-    if (word.isEmpty) return;
-    final w = word.trim().toLowerCase();
+  Future<void> _toggleFav(WordItem item) async {
+    final w = item.word.trim().toLowerCase();
     setState(() {
       if (_favorites.contains(w)) {
         _favorites.remove(w);
+        _favoriteWords.removeWhere((x) => x.word.trim().toLowerCase() == w);
+        if (_activeTab == 'favorites') {
+          _loadedWords.removeWhere((x) => x.word.trim().toLowerCase() == w);
+        }
       } else {
         _favorites.add(w);
+        _favoriteWords.insert(0, item); // Store new favorite word above/prepend
+        if (_activeTab == 'favorites') {
+          _loadedWords.insert(0, item); // Store new favorite word above/prepend
+        }
       }
     });
     try {
@@ -148,6 +178,25 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           ? Hive.box('vocabulary_box')
           : await Hive.openBox('vocabulary_box');
       await box.put('favorites_list', _favorites.toList());
+      final serialized = _favoriteWords.map((e) => e.toJson()).toList();
+      await box.put('favorites_data', json.encode(serialized));
+    } catch (_) {}
+  }
+
+  Future<void> _clearAllFavorites() async {
+    setState(() {
+      _favorites.clear();
+      _favoriteWords.clear();
+      if (_activeTab == 'favorites') {
+        _loadedWords.clear();
+      }
+    });
+    try {
+      final Box box = Hive.isBoxOpen('vocabulary_box')
+          ? Hive.box('vocabulary_box')
+          : await Hive.openBox('vocabulary_box');
+      await box.put('favorites_list', <String>[]);
+      await box.put('favorites_data', json.encode([]));
     } catch (_) {}
   }
 
@@ -173,7 +222,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   Future<void> _fetchWords(String level, {bool forceRefresh = false}) async {
     setState(() {
       _isLoading = true;
-      _selectedLevel = level;
+      if (level == 'beginner' || level == 'intermediate' || level == 'advanced') {
+        _selectedLevel = level;
+      }
       _loadedWords = [];
     });
 
@@ -203,13 +254,24 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
       }
 
       // 2. Load Local Asset JSON
-      final jsonStr = await rootBundle
-          .loadString('assets/data/api_vocabulary.json');
-      final Map<String, dynamic> data = json.decode(jsonStr);
-      final List<dynamic> levelWords = data[level] ?? [];
+      List<dynamic> levelWords = [];
+      if (level == 'nouns' || level == 'pronouns' || level == 'verbs' || level == 'adjectives') {
+        String assetPath = '';
+        if (level == 'nouns') assetPath = 'assets/data/api_vocabulary_nouns.json';
+        if (level == 'pronouns') assetPath = 'assets/data/api_vocabulary_pronoun.json';
+        if (level == 'verbs') assetPath = 'assets/data/api_vocabulary_verbs.json';
+        if (level == 'adjectives') assetPath = 'assets/data/api_vocabulary_adjective.json';
+        
+        final jsonStr = await rootBundle.loadString(assetPath);
+        levelWords = json.decode(jsonStr);
+      } else {
+        final jsonStr = await rootBundle.loadString('assets/data/api_vocabulary.json');
+        final Map<String, dynamic> data = json.decode(jsonStr);
+        levelWords = data[level] ?? [];
+      }
 
       if (levelWords.isEmpty) {
-        throw Exception("No words found for level $level in api_vocabulary.json");
+        throw Exception("No words found for level $level");
       }
 
       // 3. Select 25 Random Words
@@ -443,7 +505,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        toolbarHeight: 96,
+        toolbarHeight: 80,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
           child: Container(
@@ -451,25 +513,40 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
             height: 1,
           ),
         ),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
+        title: Row(
           children: [
-            Text(
-              'Words',
-              style: GoogleFonts.outfit(
-                color: const Color(0xFF0F172A),
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            Container(
+              width: 36,
+              height: 36,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: const Color(0xFFEEF0FF),
               ),
+              child: const Icon(Icons.book,
+                  color: Color(0xFF4F46E5), size: 18),
             ),
-            const SizedBox(height: 3),
-            Text(
-              'Learning vocabulary',
-              style: GoogleFonts.inter(
-                color: const Color(0xFF64748B),
-                fontSize: 12,
-              ),
+            const SizedBox(width: 12),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Words',
+                  style: GoogleFonts.outfit(
+                    color: const Color(0xFF0F172A),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 1),
+                Text(
+                  'Learning vocabulary',
+                  style: GoogleFonts.inter(
+                    color: const Color(0xFF64748B),
+                    fontSize: 10,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -524,41 +601,67 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               const SizedBox(height: 18),
 
               // Tab pills row
-              Row(
-                children: ['Words', 'Tenses', 'Numbers'].map((tab) {
-                  final isSelected = _activeTab == tab;
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _activeTab = tab;
-                      });
-                      if (tab == 'Tenses') {
-                        _loadTensesData();
-                      } else if (tab == 'Numbers') {
-                        _loadNumbersData();
-                      }
-                    },
-                    child: Container(
-                      margin: const EdgeInsets.only(right: 10),
-                      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-                      decoration: BoxDecoration(
-                        color: isSelected ? primaryColor : const Color(0xFFF1F5F9),
-                        borderRadius: BorderRadius.circular(100),
-                        border: Border.all(
-                          color: isSelected ? Colors.transparent : const Color(0xFFE2E8F0),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                child: Row(
+                  children: ['Words', 'favorites', 'nouns', 'pronouns', 'verbs', 'adjectives', 'Tenses', 'Numbers'].map((tab) {
+                    final isSelected = _activeTab == tab;
+                    return GestureDetector(
+                      onTap: () async {
+                        setState(() {
+                          _activeTab = tab;
+                        });
+                        if (tab == 'Tenses') {
+                          _loadTensesData();
+                        } else if (tab == 'Numbers') {
+                          _loadNumbersData();
+                        } else if (tab == 'favorites') {
+                          await _loadFavorites();
+                          setState(() {
+                            _loadedWords = List.from(_favoriteWords);
+                          });
+                        } else if (tab == 'Words') {
+                          await _loadFavorites();
+                          _fetchWords(_selectedLevel);
+                        } else {
+                          await _loadFavorites();
+                          _fetchWords(tab);
+                        }
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(right: 10),
+                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: isSelected ? primaryColor : const Color(0xFFF1F5F9),
+                          borderRadius: BorderRadius.circular(100),
+                          border: Border.all(
+                            color: isSelected ? Colors.transparent : const Color(0xFFE2E8F0),
+                          ),
+                        ),
+                        child: Text(
+                          // Capitalize first letter for display
+                          tab == 'favorites'
+                              ? 'Favorites'
+                              : tab == 'nouns'
+                                  ? 'Nouns'
+                                  : tab == 'pronouns'
+                                      ? 'Pronouns'
+                                      : tab == 'verbs'
+                                          ? 'Verbs'
+                                          : tab == 'adjectives'
+                                              ? 'Adjectives'
+                                              : tab,
+                          style: GoogleFonts.inter(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: isSelected ? Colors.white : const Color(0xFF64748B),
+                          ),
                         ),
                       ),
-                      child: Text(
-                        tab,
-                        style: GoogleFonts.inter(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                          color: isSelected ? Colors.white : const Color(0xFF64748B),
-                        ),
-                      ),
-                    ),
-                  );
-                }).toList(),
+                    );
+                  }).toList(),
+                ),
               ),
               const SizedBox(height: 20),
 
@@ -588,7 +691,19 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                         Row(
                           children: [
                             Text(
-                              _activeTab == 'Tenses' ? 'Tenses 12 In English' : _activeTab,
+                              _activeTab == 'Tenses'
+                                  ? 'Tenses 12 In English'
+                                  : _activeTab == 'favorites'
+                                      ? 'Favorites'
+                                      : _activeTab == 'nouns'
+                                          ? 'Nouns'
+                                          : _activeTab == 'pronouns'
+                                              ? 'Pronouns'
+                                              : _activeTab == 'verbs'
+                                                  ? 'Verbs'
+                                                  : _activeTab == 'adjectives'
+                                                      ? 'Adjectives'
+                                                      : _activeTab,
                               style: GoogleFonts.outfit(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -644,12 +759,20 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                               ),
                           ],
                         ),
-                        // Refresh Button (only show for Words)
-                        if (_activeTab == 'Words')
+                        // Refresh Button (show for Words, nouns, pronouns, verbs, adjectives)
+                        if (_activeTab == 'Words' ||
+                            _activeTab == 'nouns' ||
+                            _activeTab == 'pronouns' ||
+                            _activeTab == 'verbs' ||
+                            _activeTab == 'adjectives')
                           GestureDetector(
                             onTap: () {
                               if (!isSearchActive && !_isLoading) {
-                                _fetchWords(_selectedLevel, forceRefresh: true);
+                                if (_activeTab == 'Words') {
+                                  _fetchWords(_selectedLevel, forceRefresh: true);
+                                } else {
+                                  _fetchWords(_activeTab, forceRefresh: true);
+                                }
                               }
                             },
                             child: Container(
@@ -668,6 +791,63 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       color: primaryColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        else if (_activeTab == 'favorites')
+                          GestureDetector(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text(
+                                      'Clear All Favorites',
+                                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold),
+                                    ),
+                                    content: const Text('Are you sure you want to remove all words from your favorites?'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () => Navigator.of(context).pop(),
+                                        child: Text(
+                                          'Cancel',
+                                          style: GoogleFonts.inter(color: const Color(0xFF64748B), fontWeight: FontWeight.w600),
+                                        ),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          _clearAllFavorites();
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text(
+                                          'Clear All',
+                                          style: GoogleFonts.inter(color: const Color(0xFFEF4444), fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFEE2E2),
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              child: Row(
+                                children: [
+                                  const Icon(Icons.delete_sweep, color: Color(0xFFEF4444), size: 14),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    'Clear All',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                      color: const Color(0xFFEF4444),
                                     ),
                                   ),
                                 ],
@@ -792,7 +972,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   }
 
   Widget _buildWordCard(WordItem item, Color primaryColor) {
-    final isSaved = _favorites.contains(item.word.toLowerCase());
+    final isSaved = _favorites.contains(item.word.trim().toLowerCase());
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -845,7 +1025,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
             const SizedBox(width: 12),
             // Favorite Heart Icon
             GestureDetector(
-              onTap: () => _toggleFav(item.word),
+              onTap: () => _toggleFav(item),
               child: Icon(
                 isSaved ? Icons.favorite : Icons.favorite_border,
                 color: isSaved ? const Color(0xFFEF4444) : const Color(0xFF94A3B8),
@@ -1084,17 +1264,6 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: Text(
-            'Search Result',
-            style: GoogleFonts.outfit(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF64748B),
-            ),
-          ),
-        ),
         _buildWordCard(searchItem, primaryColor),
       ],
     );
@@ -1112,10 +1281,10 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     NumberGroup(title: "81 - 90 (Eighty-one - Ninety)", meaningKh: "ប៉ែតសិបមួយ ទៅ កៅសិប", startIndex: 80, endIndex: 90),
     NumberGroup(title: "91 - 100 (Ninety-one - One Hundred)", meaningKh: "កៅសិបមួយ ទៅ មួយរយ", startIndex: 90, endIndex: 100),
     NumberGroup(title: "Hundreds (200 - 900)", meaningKh: "ពីររយ ទៅ ប្រាំបួនរយ", startIndex: 100, endIndex: 109),
-    NumberGroup(title: "Thousands & Millions (1,000 - 1 Billion)", meaningKh: "ពាន់ ម៉ឺន សែន លាន ប៊ីលាន", startIndex: 109, endIndex: 122),
-    NumberGroup(title: "Ordinals: 1st - 10th", meaningKh: "លំដាប់ទី ១ ទៅ ទី ១០", startIndex: 122, endIndex: 132),
-    NumberGroup(title: "Ordinals: 11th - 20th", meaningKh: "លំដាប់ទី ១១ ទៅ ទី ២០", startIndex: 132, endIndex: 142),
-    NumberGroup(title: "Ordinals: 30th - Millionth", meaningKh: "លំដាប់ទី ៣០ ទៅ ទី ១ លាន", startIndex: 142, endIndex: 152),
+    NumberGroup(title: "Thousands & Millions (1,000 - 1 Billion)", meaningKh: "ពាន់ ម៉ឺន សែន លាន ប៊ីលាន", startIndex: 109, endIndex: 121),
+    NumberGroup(title: "Ordinals: 1st - 10th", meaningKh: "លំដាប់ទី ១ ទៅ ទី ១០", startIndex: 121, endIndex: 131),
+    NumberGroup(title: "Ordinals: 11th - 20th", meaningKh: "លំដាប់ទី ១១ ទៅ ទី ២០", startIndex: 131, endIndex: 141),
+    NumberGroup(title: "Ordinals: 30th - Millionth", meaningKh: "លំដាប់ទី ៣០ ទៅ ទី ១ លាន", startIndex: 141, endIndex: 152),
   ];
 
   Widget _buildNumberGroupCard(NumberGroup group, Color primaryColor) {

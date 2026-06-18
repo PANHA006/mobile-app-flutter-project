@@ -26,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen>
   final _translateController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
   Timer? _debounceTimer;
+  StreamSubscription? _favSubscription;
 
   // Translator state
   String _sourceLang = 'en';
@@ -44,8 +45,18 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   void initState() {
     super.initState();
-    _translateController.text = '';
+    _translateController.text = 'anime';
     _loadFavorites();
+    // Watch for live changes on the vocabulary box to keep in sync
+    _favSubscription = Hive.box('vocabulary_box').watch().listen((event) {
+      if (mounted) {
+        _loadFavorites();
+      }
+    });
+    // Translate "anime" on startup
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _performTranslation('anime');
+    });
   }
 
   Future<void> _loadFavorites() async {
@@ -53,12 +64,19 @@ class _HomeScreenState extends State<HomeScreen>
       final Box box = Hive.isBoxOpen('vocabulary_box')
           ? Hive.box('vocabulary_box')
           : await Hive.openBox('vocabulary_box');
-      // Sync local favorite set with Hive cache if needed
+      final List<dynamic>? favs = box.get('favorites_list');
+      if (favs != null) {
+        setState(() {
+          _homeFavorites.clear();
+          _homeFavorites.addAll(favs.cast<String>());
+        });
+      }
     } catch (_) {}
   }
 
   @override
   void dispose() {
+    _favSubscription?.cancel();
     _audioPlayer.dispose();
     _translateController.dispose();
     _focusNode.dispose();
@@ -155,6 +173,11 @@ class _HomeScreenState extends State<HomeScreen>
           } catch (_) {}
         }
 
+        if (englishWordForDict.trim().toLowerCase() == 'anime') {
+          if (phonetic.isEmpty || phonetic == '/.../') phonetic = '/ˈæn.ɪ.meɪ/';
+          if (example.isEmpty || example == '"..."') example = 'I can draw an anime version of you, if you want.';
+        }
+
         setState(() {
           _translationResult = translation;
           _phonetic = phonetic;
@@ -192,16 +215,54 @@ class _HomeScreenState extends State<HomeScreen>
     } catch (_) {}
   }
 
-  void _toggleFav(String word) {
+  Future<void> _toggleFav(String word) async {
     if (word.isEmpty) return;
+    final w = word.trim().toLowerCase();
+    
+    // Create a WordItem representation using current translation state
+    final item = {
+      'word_en': word.trim(),
+      'word_kh': _translationResult,
+      'example': _example,
+      'level': 'FAVORITE',
+      'phonetic': _phonetic,
+      'audio_url': _audioUrl,
+    };
+
     setState(() {
-      final w = word.toLowerCase();
       if (_homeFavorites.contains(w)) {
         _homeFavorites.remove(w);
       } else {
         _homeFavorites.add(w);
       }
     });
+
+    try {
+      final Box box = Hive.isBoxOpen('vocabulary_box')
+          ? Hive.box('vocabulary_box')
+          : await Hive.openBox('vocabulary_box');
+      
+      // Update favorites_list (the set of strings)
+      await box.put('favorites_list', _homeFavorites.toList());
+      
+      // Update favorites_data (the serialized WordItem objects)
+      final List<dynamic>? currentData = box.get('favorites_data') != null
+          ? json.decode(box.get('favorites_data'))
+          : [];
+      
+      List<dynamic> updatedList = currentData != null ? List.from(currentData) : [];
+      if (_homeFavorites.contains(w)) {
+        // Add if not already present
+        if (!updatedList.any((x) => x['word_en'].toString().trim().toLowerCase() == w)) {
+          updatedList.insert(0, item); // Store new favorite word above/prepend
+        }
+      } else {
+        // Remove if present
+        updatedList.removeWhere((x) => x['word_en'].toString().trim().toLowerCase() == w);
+      }
+      
+      await box.put('favorites_data', json.encode(updatedList));
+    } catch (_) {}
   }
 
   @override
@@ -387,76 +448,7 @@ class _HomeScreenState extends State<HomeScreen>
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            // Daily progress banner
-            Container(
-              width: double.infinity,
-              margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-              padding: const EdgeInsets.all(18),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(24),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.03),
-                    blurRadius: 20,
-                    offset: const Offset(0, 8),
-                  ),
-                ],
-                border: Border.all(color: const Color(0xFFE2E8F0)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.auto_awesome,
-                              color: primaryColor, size: 18),
-                          const SizedBox(width: 8),
-                          Text(
-                            'Daily Study Goal',
-                            style: GoogleFonts.outfit(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
-                              color: const Color(0xFF1E293B),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        '80%',
-                        style: GoogleFonts.outfit(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: primaryColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: LinearProgressIndicator(
-                      value: 0.8,
-                      minHeight: 8,
-                      backgroundColor: const Color(0xFFF1F5F9),
-                      valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'Almost there! Study for 6 more minutes to hit your goal.',
-                    style: GoogleFonts.inter(
-                      fontSize: 11.5,
-                      color: const Color(0xFF64748B),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
+            const SizedBox(height: 10),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -539,8 +531,8 @@ class _HomeScreenState extends State<HomeScreen>
                     },
                     child: Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.only(
-                          left: 22, right: 22, top: 18, bottom: 14),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 22, vertical: 12),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [primaryColor, const Color(0xFF7C3AED)],
@@ -556,220 +548,287 @@ class _HomeScreenState extends State<HomeScreen>
                           ),
                         ],
                       ),
-                      child: SizedBox(
-                        height: 240,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // Card Header Row
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 12, vertical: 5),
-                                      decoration: BoxDecoration(
-                                        color: Colors.white.withOpacity(0.16),
-                                        borderRadius:
-                                            BorderRadius.circular(100),
-                                        border: Border.all(
-                                            color:
-                                                Colors.white.withOpacity(0.15)),
-                                      ),
-                                      child: Row(
-                                        children: [
-                                          const Icon(Icons.translate,
-                                              color: Colors.white, size: 12),
-                                          const SizedBox(width: 6),
-                                          Text(
-                                            'Translate',
-                                            style: GoogleFonts.inter(
-                                              color: Colors.white,
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // Card Header Row
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 12, vertical: 5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(0.16),
+                                      borderRadius:
+                                          BorderRadius.circular(100),
+                                      border: Border.all(
+                                          color:
+                                              Colors.white.withOpacity(0.15)),
                                     ),
-                                    const SizedBox(width: 8),
-                                    // Flag English + Khmer + Swap button
-                                    GestureDetector(
-                                      onTap: _swapLanguages,
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 12, vertical: 5),
-                                        decoration: BoxDecoration(
-                                          color: Colors.white.withOpacity(0.15),
-                                          borderRadius:
-                                              BorderRadius.circular(100),
-                                          border: Border.all(
-                                              color: Colors.white.withOpacity(0.15)),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              _sourceLang == 'en'
-                                                  ? '🇬🇧 EN'
-                                                  : '🇰🇭 KH',
-                                              style: GoogleFonts.inter(
-                                                color: Colors.white,
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            const Padding(
-                                              padding: EdgeInsets.symmetric(
-                                                  horizontal: 4.0),
-                                              child: Icon(Icons.swap_horiz,
-                                                  color: Colors.white,
-                                                  size: 12),
-                                            ),
-                                            Text(
-                                              _targetLang == 'en'
-                                                  ? '🇬🇧 EN'
-                                                  : '🇰🇭 KH',
-                                              style: GoogleFonts.inter(
-                                                color: Colors.white,
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                IconButton(
-                                  onPressed: () =>
-                                      _toggleFav(_translateController.text),
-                                  icon: Icon(
-                                    isSaved ? Icons.star : Icons.star_border,
-                                    color: isSaved
-                                        ? const Color(0xFFF59E0B)
-                                        : Colors.white,
-                                    size: 24,
-                                  ),
-                                  padding: EdgeInsets.zero,
-                                  constraints: const BoxConstraints(),
-                                ),
-                              ],
-                            ),
-                            // Input field for translating
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(
-                                  child: SizedBox(
-                                    height: 75,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                    child: Row(
                                       children: [
-                                        TextField(
-                                          controller: _translateController,
-                                          focusNode: _focusNode,
-                                          onChanged: _onTextChanged,
-                                          cursorColor: Colors.white,
-                                          style: GoogleFonts.outfit(
-                                            fontSize: 34,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                            letterSpacing: -0.5,
-                                          ),
-                                          decoration: InputDecoration(
-                                            hintText: _sourceLang == 'en'
-                                                ? 'Type English...'
-                                                : 'វាយបញ្ចូលពាក្យខ្មែរ...',
-                                            hintStyle: TextStyle(
-                                                color: Colors.white
-                                                    .withOpacity(0.5)),
-                                            border: InputBorder.none,
-                                            isDense: true,
-                                            contentPadding: EdgeInsets.zero,
-                                          ),
-                                        ),
-                                        const SizedBox(height: 2),
+                                        const Icon(Icons.translate,
+                                            color: Colors.white, size: 12),
+                                        const SizedBox(width: 6),
                                         Text(
-                                          _phonetic.isNotEmpty ? _phonetic : '/.../',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
+                                          'Translate',
                                           style: GoogleFonts.inter(
-                                            color:
-                                                Colors.white.withOpacity(0.65),
-                                            fontSize: 14.5,
-                                            letterSpacing: 0.5,
+                                            color: Colors.white,
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.w600,
                                           ),
                                         ),
                                       ],
                                     ),
                                   ),
-                                ),
-                                GestureDetector(
-                                  onTap: () => _playAudio(_audioUrl),
-                                  child: Container(
-                                    width: 35,
-                                    height: 35,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white.withOpacity(0.2),
-                                      shape: BoxShape.circle,
+                                  const SizedBox(width: 8),
+                                  // Flag English + Khmer + Swap button
+                                  GestureDetector(
+                                    onTap: _swapLanguages,
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12, vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0.15),
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        border: Border.all(
+                                            color: Colors.white.withOpacity(0.15)),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            _sourceLang == 'en'
+                                                ? '🇬🇧 EN'
+                                                : '🇰🇭 KH',
+                                            style: GoogleFonts.inter(
+                                              color: Colors.white,
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          const Padding(
+                                            padding: EdgeInsets.symmetric(
+                                                horizontal: 4.0),
+                                            child: Icon(Icons.swap_horiz,
+                                                color: Colors.white,
+                                                size: 12),
+                                          ),
+                                          Text(
+                                            _targetLang == 'en'
+                                                ? '🇬🇧 EN'
+                                                : '🇰🇭 KH',
+                                            style: GoogleFonts.inter(
+                                              color: Colors.white,
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                    child: const Icon(Icons.volume_up,
-                                        color: Colors.white, size: 18),
+                                  ),
+                                ],
+                              ),
+                              IconButton(
+                                onPressed: () =>
+                                    _toggleFav(_translateController.text),
+                                icon: Icon(
+                                  isSaved ? Icons.favorite : Icons.favorite_border,
+                                  color: isSaved
+                                      ? const Color(0xFFEF4444)
+                                      : Colors.white,
+                                  size: 24,
+                                ),
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 1),
+                          // Input field for translating
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                  children: [
+                                    TextField(
+                                      controller: _translateController,
+                                      focusNode: _focusNode,
+                                      onChanged: _onTextChanged,
+                                      cursorColor: Colors.white,
+                                      style: GoogleFonts.outfit(
+                                        fontSize: 40,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        letterSpacing: -0.5,
+                                      ),
+                                      decoration: InputDecoration(
+                                        hintText: _sourceLang == 'en'
+                                            ? 'Type English...'
+                                            : 'វាយបញ្ចូលពាក្យខ្មែរ...',
+                                        hintStyle: TextStyle(
+                                            color: Colors.white
+                                                .withOpacity(0.5)),
+                                        border: InputBorder.none,
+                                        isDense: true,
+                                        contentPadding: EdgeInsets.zero,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      _phonetic.isNotEmpty ? _phonetic : '/.../',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: GoogleFonts.inter(
+                                        color:
+                                            Colors.white.withOpacity(0.65),
+                                        fontSize: 16,
+                                        letterSpacing: 0.5,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () => _playAudio(_audioUrl),
+                                child: Container(
+                                  width: 35,
+                                  height: 35,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.2),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: const Icon(Icons.volume_up,
+                                      color: Colors.white, size: 18),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 10),
+                          // Translation result and example sentence column
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              if (_isTranslating)
+                                const SizedBox(
+                                  width: 14,
+                                  height: 14,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                        Colors.white),
+                                  ),
+                                )
+                              else
+                                Text(
+                                  _translationResult.isNotEmpty
+                                      ? _translationResult
+                                      : '...',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: GoogleFonts.inter(
+                                    color: const Color(0xFFFCD34D),
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    height: 1.2,
+                                  ),
+                                ),
+                              const SizedBox(height: 8),
+                              Text(
+                                _example.isNotEmpty ? '"$_example"' : '"..."',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.inter(
+                                  color: const Color.fromARGB(255, 255, 255, 255),
+                                  fontSize: 15,
+                                  fontStyle: FontStyle.italic,
+                                  height: 1.7,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+
+                  // Daily progress banner
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(24),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.03),
+                          blurRadius: 20,
+                          offset: const Offset(0, 8),
+                        ),
+                      ],
+                      border: Border.all(color: const Color(0xFFE2E8F0)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(Icons.auto_awesome,
+                                    color: primaryColor, size: 18),
+                                const SizedBox(width: 8),
+                                Text(
+                                  'Daily Study Goal',
+                                  style: GoogleFonts.outfit(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 14,
+                                    color: const Color(0xFF1E293B),
                                   ),
                                 ),
                               ],
                             ),
-                            // Translation result and example sentence column
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                if (_isTranslating)
-                                  const SizedBox(
-                                    width: 14,
-                                    height: 14,
-                                    child: CircularProgressIndicator(
-                                      strokeWidth: 2,
-                                      valueColor: AlwaysStoppedAnimation<Color>(
-                                          Colors.white),
-                                    ),
-                                  )
-                                else
-                                  Text(
-                                    _translationResult.isNotEmpty
-                                        ? _translationResult
-                                        : '...',
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: GoogleFonts.inter(
-                                      color: const Color(0xFFFCD34D),
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                      height: 1.8,
-                                    ),
-                                  ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  _example.isNotEmpty ? '"$_example"' : '"..."',
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.inter(
-                                    color: const Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 13.5,
-                                    fontStyle: FontStyle.italic,
-                                    height: 1.5,
-                                  ),
-                                ),
-                              ],
+                            Text(
+                              '80%',
+                              style: GoogleFonts.outfit(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                                color: primaryColor,
+                              ),
                             ),
                           ],
                         ),
-                      ),
+                        const SizedBox(height: 12),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(100),
+                          child: LinearProgressIndicator(
+                            value: 0.8,
+                            minHeight: 8,
+                            backgroundColor: const Color(0xFFF1F5F9),
+                            valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          'Almost there! Study for 6 more minutes to hit your goal.',
+                          style: GoogleFonts.inter(
+                            fontSize: 11.5,
+                            color: const Color(0xFF64748B),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 28),
