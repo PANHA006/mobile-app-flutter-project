@@ -564,40 +564,74 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                 child: GestureDetector(
                                   onTap: _pickImage,
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: const Color(0xFFEFF6FF),
-                                      image: _localImageBytes != null
-                                          ? DecorationImage(
-                                              image: MemoryImage(_localImageBytes!),
-                                              fit: BoxFit.cover,
-                                            )
-                                          : (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty)
-                                              ? DecorationImage(
-                                                  image: kIsWeb || widget.user['photoUrl']!.startsWith('http') || widget.user['photoUrl']!.startsWith('https') || widget.user['photoUrl']!.startsWith('blob:')
-                                                      ? NetworkImage(widget.user['photoUrl']!) as ImageProvider
-                                                      : FileImage(File(widget.user['photoUrl']!)),
-                                                  fit: BoxFit.cover,
-                                                )
-                                              : null,
+                                      color: Color(0xFFEFF6FF),
                                     ),
                                     alignment: Alignment.center,
-                                    child: _isUploadingPhoto
-                                        ? const SizedBox(
-                                            width: 28,
-                                            height: 28,
-                                            child: CircularProgressIndicator(strokeWidth: 2.5),
-                                          )
-                                        : (_localImageBytes != null || (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty))
-                                            ? null
-                                            : Text(
-                                                firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
-                                                style: GoogleFonts.outfit(
-                                                  color: primaryColor,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 34,
+                                    child: ClipOval(
+                                      child: SizedBox(
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        child: _isUploadingPhoto
+                                            ? const Center(
+                                                child: SizedBox(
+                                                  width: 28,
+                                                  height: 28,
+                                                  child: CircularProgressIndicator(strokeWidth: 2.5),
                                                 ),
-                                              ),
+                                              )
+                                            : _localImageBytes != null
+                                                ? Image.memory(
+                                                    _localImageBytes!,
+                                                    fit: BoxFit.cover,
+                                                  )
+                                                : (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty)
+                                                    ? (kIsWeb || widget.user['photoUrl']!.startsWith('http') || widget.user['photoUrl']!.startsWith('https') || widget.user['photoUrl']!.startsWith('blob:')
+                                                        ? Image.network(
+                                                            widget.user['photoUrl']!,
+                                                            fit: BoxFit.cover,
+                                                            errorBuilder: (context, error, stackTrace) {
+                                                              return Center(
+                                                                child: Text(
+                                                                  firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                                                  style: GoogleFonts.outfit(
+                                                                    color: primaryColor,
+                                                                    fontWeight: FontWeight.bold,
+                                                                    fontSize: 34,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                          )
+                                                        : Image.file(
+                                                            File(widget.user['photoUrl']!),
+                                                            fit: BoxFit.cover,
+                                                            errorBuilder: (context, error, stackTrace) {
+                                                              return Center(
+                                                                child: Text(
+                                                                  firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                                                  style: GoogleFonts.outfit(
+                                                                    color: primaryColor,
+                                                                    fontWeight: FontWeight.bold,
+                                                                    fontSize: 34,
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                          ))
+                                                    : Center(
+                                                        child: Text(
+                                                          firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                                          style: GoogleFonts.outfit(
+                                                            color: primaryColor,
+                                                            fontWeight: FontWeight.bold,
+                                                            fontSize: 34,
+                                                          ),
+                                                        ),
+                                                      ),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),

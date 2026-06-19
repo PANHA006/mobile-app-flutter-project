@@ -503,44 +503,64 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           padding: const EdgeInsets.all(4),
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: const Color(0xFFEFF6FF),
-                              image: (widget.user['photoUrl'] != null &&
-                                      widget.user['photoUrl']!.isNotEmpty &&
-                                      !widget.user['photoUrl']!
-                                          .startsWith('blob:'))
-                                  ? DecorationImage(
-                                      image: kIsWeb ||
-                                              widget.user['photoUrl']!
-                                                  .startsWith('http') ||
-                                              widget.user['photoUrl']!
-                                                  .startsWith('https')
-                                          ? NetworkImage(
-                                                  widget.user['photoUrl']!)
-                                              as ImageProvider
-                                          : FileImage(
-                                              File(widget.user['photoUrl']!)),
-                                      fit: BoxFit.cover,
-                                    )
-                                  : null,
+                              color: Color(0xFFEFF6FF),
                             ),
-                            alignment: Alignment.center,
-                            child: (widget.user['photoUrl'] != null &&
-                                    widget.user['photoUrl']!.isNotEmpty &&
-                                    !widget.user['photoUrl']!
-                                        .startsWith('blob:'))
-                                ? null
-                                : Text(
-                                    firstName.isNotEmpty
-                                        ? firstName[0].toUpperCase()
-                                        : 'U',
-                                    style: GoogleFonts.outfit(
-                                      color: const Color(0xFF4F46E5),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 34,
+                            child: ClipOval(
+                              child: (widget.user['photoUrl'] != null &&
+                                      widget.user['photoUrl']!.isNotEmpty &&
+                                      !widget.user['photoUrl']!.startsWith('blob:'))
+                                  ? (kIsWeb ||
+                                          widget.user['photoUrl']!.startsWith('http') ||
+                                          widget.user['photoUrl']!.startsWith('https')
+                                      ? Image.network(
+                                          widget.user['photoUrl']!,
+                                          fit: BoxFit.cover,
+                                          width: double.infinity,
+                                          height: double.infinity,
+                                          errorBuilder: (context, error, stackTrace) {
+                                            return Center(
+                                              child: Text(
+                                                firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                                style: GoogleFonts.outfit(
+                                                  color: const Color(0xFF4F46E5),
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 34,
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        )
+                                      : Image.file(
+                                          File(widget.user['photoUrl']!),
+                                          fit: BoxFit.cover,
+                                          width: double.infinity,
+                                          height: double.infinity,
+                                          errorBuilder: (context, error, stackTrace) {
+                                            return Center(
+                                              child: Text(
+                                                firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                                style: GoogleFonts.outfit(
+                                                  color: const Color(0xFF4F46E5),
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 34,
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ))
+                                  : Center(
+                                      child: Text(
+                                        firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                        style: GoogleFonts.outfit(
+                                          color: const Color(0xFF4F46E5),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 34,
+                                        ),
+                                      ),
                                     ),
-                                  ),
+                            ),
                           ),
                         ),
                         // Online status indicator green dot
