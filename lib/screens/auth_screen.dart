@@ -741,7 +741,7 @@ class _AuthScreenState extends State<AuthScreen> {
             color: inputBgColor,
             borderRadius: BorderRadius.circular(100),
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.only(left: 16, right: suffix != null ? 4 : 16),
           child: Row(
             children: [
               Icon(icon, color: mutedColor, size: 20),
