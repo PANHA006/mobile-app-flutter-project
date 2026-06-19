@@ -430,6 +430,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.12);
     final firstName = widget.user['name']?.split(' ')[0] ?? 'Student';
 
+    String? photoUrl = widget.user['photoUrl'];
+    if (photoUrl != null) {
+      if (photoUrl.contains('localhost:3000')) {
+        photoUrl = photoUrl.replaceAll('http://localhost:3000', 'https://english-ai-study-backend.onrender.com');
+      } else if (photoUrl.contains('10.0.2.2:3000')) {
+        photoUrl = photoUrl.replaceAll('http://10.0.2.2:3000', 'https://english-ai-study-backend.onrender.com');
+      }
+    }
+
     return Scaffold(
       backgroundColor: const Color(0xFFF7F8FF),
       appBar: AppBar(
@@ -586,10 +595,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                                     _localImageBytes!,
                                                     fit: BoxFit.cover,
                                                   )
-                                                : (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty)
-                                                    ? (kIsWeb || widget.user['photoUrl']!.startsWith('http') || widget.user['photoUrl']!.startsWith('https') || widget.user['photoUrl']!.startsWith('blob:')
+                                                : (photoUrl != null && photoUrl.isNotEmpty)
+                                                    ? (kIsWeb || photoUrl.startsWith('http') || photoUrl.startsWith('https') || photoUrl.startsWith('blob:')
                                                         ? Image.network(
-                                                            widget.user['photoUrl']!,
+                                                            photoUrl,
                                                             fit: BoxFit.cover,
                                                             errorBuilder: (context, error, stackTrace) {
                                                               return Center(
@@ -605,7 +614,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                                             },
                                                           )
                                                         : Image.file(
-                                                            File(widget.user['photoUrl']!),
+                                                            File(photoUrl),
                                                             fit: BoxFit.cover,
                                                             errorBuilder: (context, error, stackTrace) {
                                                               return Center(
