@@ -76,10 +76,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
       // Upload to local backend server
       try {
-        String uploadUrl = 'http://localhost:3000/api/upload';
-        if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
-          uploadUrl = 'http://10.0.2.2:3000/api/upload';
-        }
+        const String uploadUrl = 'https://english-ai-study-backend.onrender.com/api/upload';
         
         final base64Image = base64Encode(bytes);
         final response = await http.post(
