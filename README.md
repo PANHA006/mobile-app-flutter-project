@@ -39,7 +39,13 @@ Before starting, make sure the new computer has the following installed:
    flutter doctor
    ```
 
-5. **Run the Application**:
+5. **Configure Firebase**:
+   * Obtain the **`google-services.json`** configuration file from your Firebase console.
+   * Place it in the `android/app/` directory:
+     `android/app/google-services.json`
+   * Go to the Firebase console and ensure that **Firestore Security Rules** allow read/writes for authenticated users.
+
+6. **Run the Application**:
    Start the development server and run the app:
    ```bash
    flutter run

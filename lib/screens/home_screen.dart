@@ -8,6 +8,10 @@ import 'package:hive/hive.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../main.dart'; // To access isFirebaseInitialized
 
+import 'custom_snackbar.dart';
+import 'dart:io';
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 class HomeScreen extends StatefulWidget {
   final Map<String, String> user;
   final Function(int) onNavigate;
@@ -28,7 +32,6 @@ class _HomeScreenState extends State<HomeScreen>
   final _translateController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
   Timer? _debounceTimer;
-  StreamSubscription? _favSubscription;
 
   // Translator state
   String _sourceLang = 'en';
@@ -39,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen>
   String _example = '';
   bool _isTranslating = false;
 
-  final Set<String> _homeFavorites = {'computer'};
+  final Set<String> _homeFavorites = {};
 
   @override
   bool get wantKeepAlive => true;
@@ -49,16 +52,28 @@ class _HomeScreenState extends State<HomeScreen>
     super.initState();
     _translateController.text = 'anime';
     _loadFavorites();
-    // Watch for live changes on the vocabulary box to keep in sync
-    _favSubscription = Hive.box('vocabulary_box').watch().listen((event) {
-      if (mounted) {
-        _loadFavorites();
-      }
-    });
     // Translate "anime" on startup
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _performTranslation('anime');
     });
+  }
+
+  @override
+  void didUpdateWidget(covariant HomeScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _loadFavorites();
+  }
+
+  int _getCategoryLevel(String key) {
+    final refreshes = int.tryParse(widget.user[key] ?? '0') ?? 0;
+    if (refreshes < 1) return 0;
+    int level = 1;
+    int currentLevelRequirement = 1;
+    while (currentLevelRequirement * 2 <= refreshes) {
+      currentLevelRequirement *= 2;
+      level++;
+    }
+    return level;
   }
 
   Future<void> _loadFavorites() async {
@@ -67,18 +82,17 @@ class _HomeScreenState extends State<HomeScreen>
           ? Hive.box('vocabulary_box')
           : await Hive.openBox('vocabulary_box');
       final List<dynamic>? favs = box.get('favorites_list');
-      if (favs != null) {
-        setState(() {
-          _homeFavorites.clear();
+      setState(() {
+        _homeFavorites.clear();
+        if (favs != null) {
           _homeFavorites.addAll(favs.cast<String>());
-        });
-      }
+        }
+      });
     } catch (_) {}
   }
 
   @override
   void dispose() {
-    _favSubscription?.cancel();
     _audioPlayer.dispose();
     _translateController.dispose();
     _focusNode.dispose();
@@ -202,13 +216,7 @@ class _HomeScreenState extends State<HomeScreen>
   Future<void> _playAudio(String url) async {
     if (url.isEmpty) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Audio pronunciation not available.'),
-          duration: Duration(seconds: 2),
-          behavior: SnackBarBehavior.floating,
-        ),
-      );
+      showCustomSnackBar(context, 'Audio pronunciation not available.');
       return;
     }
     try {
@@ -249,9 +257,15 @@ class _HomeScreenState extends State<HomeScreen>
       await box.put('favorites_list', _homeFavorites.toList());
       
       // Update favorites_data (the serialized WordItem objects)
-      final List<dynamic>? currentData = box.get('favorites_data') != null
-          ? json.decode(box.get('favorites_data'))
-          : [];
+      final dynamic rawData = box.get('favorites_data');
+      List<dynamic> currentData = [];
+      if (rawData != null) {
+        if (rawData is String) {
+          currentData = json.decode(rawData);
+        } else if (rawData is List) {
+          currentData = rawData;
+        }
+      }
       
       List<dynamic> updatedList = currentData != null ? List.from(currentData) : [];
       if (_homeFavorites.contains(w)) {
@@ -263,7 +277,6 @@ class _HomeScreenState extends State<HomeScreen>
         // Remove if present
         updatedList.removeWhere((x) => x['word_en'].toString().trim().toLowerCase() == w);
       }
-      
       await box.put('favorites_data', json.encode(updatedList));
 
       if (isFirebaseInitialized && uid != null) {
@@ -273,6 +286,12 @@ class _HomeScreenState extends State<HomeScreen>
             'uid': uid,
             'wordId': w,
             'createdAt': FieldValue.serverTimestamp(),
+            'word_en': item['word_en'],
+            'word_kh': item['word_kh'],
+            'example': item['example'],
+            'level': item['level'],
+            'phonetic': item['phonetic'],
+            'audio_url': item['audio_url'],
           });
         } else {
           await docRef.delete();
@@ -288,6 +307,13 @@ class _HomeScreenState extends State<HomeScreen>
     final primaryColor = const Color(0xFF4F46E5);
     final statsBorderColor = const Color(0xFF4F46E5).withOpacity(0.08);
 
+    final minsToday = int.tryParse(widget.user['minsToday'] ?? '0') ?? 0;
+    final double goalProgress = (minsToday / 30.0).clamp(0.0, 1.0);
+    final int progressPercent = (goalProgress * 100).toInt();
+    final String goalText = minsToday >= 30
+        ? 'Goal achieved! Excellent job on studying today! 🎉'
+        : 'Almost there! Study for ${30 - minsToday} more minutes to hit your goal.';
+
     final firstName = widget.user['name']?.split(' ')[0] ?? 'Student';
     final hour = DateTime.now().hour;
     final greeting = hour < 12
@@ -296,24 +322,30 @@ class _HomeScreenState extends State<HomeScreen>
             ? 'Good afternoon'
             : 'Good evening';
 
+    final totalLevels = _getCategoryLevel('refresh_Words') +
+        _getCategoryLevel('refresh_nouns') +
+        _getCategoryLevel('refresh_pronouns') +
+        _getCategoryLevel('refresh_verbs') +
+        _getCategoryLevel('refresh_adjective');
+
     final stats = [
       {
-        'label': 'Words learned',
-        'value': widget.user['learnedWords'] ?? '0',
-        'icon': Icons.trending_up,
-        'color': const Color(0xFF4F46E5),
-        'glow': const Color(0xFFEEF0FF)
-      },
-      {
-        'label': 'Day streak',
-        'value': widget.user['streak'] ?? '0',
+        'label': 'Achieve',
+        'value': totalLevels.toString(),
         'icon': Icons.emoji_events,
         'color': const Color(0xFFF59E0B),
         'glow': const Color(0xFFFFFBEB)
       },
       {
+        'label': 'Favorites',
+        'value': _homeFavorites.length.toString(),
+        'icon': Icons.favorite_rounded,
+        'color': const Color(0xFFEF4444),
+        'glow': const Color(0xFFFEE2E2)
+      },
+      {
         'label': 'Mins today',
-        'value': '24',
+        'value': widget.user['minsToday'] ?? '0',
         'icon': Icons.access_time,
         'color': const Color(0xFF0891B2),
         'glow': const Color(0xFFECFEFF)
@@ -338,20 +370,20 @@ class _HomeScreenState extends State<HomeScreen>
         'tab': 2
       },
       {
-        'label': 'Daily Quiz',
-        'desc': 'Test your progress',
-        'icon': Icons.bolt_outlined,
+        'label': 'Alerts',
+        'desc': 'View your alerts',
+        'icon': Icons.notifications_none_outlined,
         'color': const Color(0xFFF59E0B),
         'bg': const Color(0xFFFFFBEB),
-        'tab': 1
+        'tab': 3
       },
       {
-        'label': 'Favorites',
-        'desc': 'Your starred words',
-        'icon': Icons.star_outline,
+        'label': 'Profile',
+        'desc': 'Manage your profile',
+        'icon': Icons.person_outline,
         'color': const Color(0xFFEC4899),
         'bg': const Color(0xFFFDF2F8),
-        'tab': 1
+        'tab': 4
       },
     ];
 
@@ -433,26 +465,53 @@ class _HomeScreenState extends State<HomeScreen>
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 18.0),
-            child: GestureDetector(
-              onTap: () => widget.onNavigate(4), // navigate to profile
-              child: Container(
-                width: 42,
-                height: 42,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: const Color(0xFFEEF0FF),
-                  border: Border.all(
-                      color: const Color(0xFF4F46E5).withOpacity(0.12),
-                      width: 1.5),
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
-                  style: GoogleFonts.outfit(
-                    color: primaryColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
+            padding: const EdgeInsets.only(right: 24.0),
+            child: Center(
+              child: GestureDetector(
+                onTap: () => widget.onNavigate(4), // navigate to profile
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: const Color.fromARGB(255, 180, 180, 238),
+                    border: Border.all(
+                      color: const Color(0xFF4F46E5).withOpacity(0.08),
+                      width: 1.0,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFF4F46E5).withOpacity(0.12),
+                        blurRadius: 8,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  padding: const EdgeInsets.all(3.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: const Color(0xFFEEF0FF),
+                      image: (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty && !widget.user['photoUrl']!.startsWith('blob:'))
+                          ? DecorationImage(
+                              image: kIsWeb || widget.user['photoUrl']!.startsWith('http') || widget.user['photoUrl']!.startsWith('https')
+                                  ? NetworkImage(widget.user['photoUrl']!) as ImageProvider
+                                  : FileImage(File(widget.user['photoUrl']!)),
+                              fit: BoxFit.cover,
+                            )
+                          : null,
+                    ),
+                    alignment: Alignment.center,
+                    child: (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty && !widget.user['photoUrl']!.startsWith('blob:'))
+                        ? null
+                        : Text(
+                            firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                            style: GoogleFonts.outfit(
+                              color: primaryColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
                   ),
                 ),
               ),
@@ -477,62 +536,75 @@ class _HomeScreenState extends State<HomeScreen>
                       final color = s['color'] as Color;
                       final glow = s['glow'] as Color;
                       return Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 4.0),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 14),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(24),
-                            border: Border.all(color: statsBorderColor),
-                            boxShadow: [
-                              BoxShadow(
-                                color: color.withOpacity(0.08),
-                                blurRadius: 16,
-                                offset: const Offset(0, 8),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    width: 32,
-                                    height: 32,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: glow,
+                        child: GestureDetector(
+                          onTap: () async {
+                            if (s['label'] == 'Favorites') {
+                              final box = Hive.box('vocabulary_box');
+                              await box.put('active_vocab_tab', 'favorites');
+                              widget.onNavigate(1); // Navigate to Words/Vocabulary screen
+                            } else if (s['label'] == 'Achieve') {
+                              widget.onNavigate(4); // Navigate to Profile screen (shows progress)
+                            } else if (s['label'] == 'Mins today') {
+                              showCustomSnackBar(context, "You've studied for ${widget.user['minsToday'] ?? '0'} minutes today. Keep it up!");
+                            }
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 14),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(24),
+                              border: Border.all(color: statsBorderColor),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: color.withOpacity(0.08),
+                                  blurRadius: 16,
+                                  offset: const Offset(0, 8),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(
+                                      width: 32,
+                                      height: 32,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: glow,
+                                      ),
+                                      child: Icon(s['icon'] as IconData,
+                                          color: color, size: 16),
                                     ),
-                                    child: Icon(s['icon'] as IconData,
-                                        color: color, size: 16),
-                                  ),
-                                  const SizedBox(width: 8),
-                                  Expanded(
-                                    child: Text(
-                                      s['value'] as String,
-                                      style: GoogleFonts.outfit(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.bold,
-                                        color: const Color(0xFF0F172A),
+                                    const SizedBox(width: 8),
+                                    Expanded(
+                                      child: Text(
+                                        s['value'] as String,
+                                        style: GoogleFonts.outfit(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold,
+                                          color: const Color(0xFF0F172A),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 10),
-                              Text(
-                                s['label'] as String,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.inter(
-                                  fontSize: 11,
-                                  color: const Color(0xFF64748B),
-                                  fontWeight: FontWeight.w500,
+                                  ],
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 10),
+                                Text(
+                                  s['label'] as String,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: GoogleFonts.inter(
+                                    fontSize: 11,
+                                    color: const Color(0xFF64748B),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       );
@@ -817,7 +889,7 @@ class _HomeScreenState extends State<HomeScreen>
                               ],
                             ),
                             Text(
-                              '80%',
+                              '$progressPercent%',
                               style: GoogleFonts.outfit(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14,
@@ -830,7 +902,7 @@ class _HomeScreenState extends State<HomeScreen>
                         ClipRRect(
                           borderRadius: BorderRadius.circular(100),
                           child: LinearProgressIndicator(
-                            value: 0.8,
+                            value: goalProgress,
                             minHeight: 8,
                             backgroundColor: const Color(0xFFF1F5F9),
                             valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
@@ -838,7 +910,7 @@ class _HomeScreenState extends State<HomeScreen>
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          'Almost there! Study for 6 more minutes to hit your goal.',
+                          goalText,
                           style: GoogleFonts.inter(
                             fontSize: 11.5,
                             color: const Color(0xFF64748B),
@@ -854,19 +926,11 @@ class _HomeScreenState extends State<HomeScreen>
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Learning Features',
+                        'Feature',
                         style: GoogleFonts.outfit(
                           fontWeight: FontWeight.bold,
                           fontSize: 19,
                           color: const Color(0xFF0F172A),
-                        ),
-                      ),
-                      Text(
-                        'View All',
-                        style: GoogleFonts.inter(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 13,
                         ),
                       ),
                     ],
