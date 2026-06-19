@@ -126,11 +126,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ]
       });
 
-      // Determine backend URL (localhost for Web/iOS, 10.0.2.2 for Android Emulator)
-      String backendUrl = 'http://localhost:3000/api/chat';
-      if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
-        backendUrl = 'http://10.0.2.2:3000/api/chat';
-      }
+      const String backendUrl = 'https://english-ai-study-backend.onrender.com/api/chat';
 
       // Call local backend server
       final response = await http.post(
