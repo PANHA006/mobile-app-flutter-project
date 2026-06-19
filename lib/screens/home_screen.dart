@@ -315,6 +315,17 @@ class _HomeScreenState extends State<HomeScreen>
         : 'Almost there! Study for ${30 - minsToday} more minutes to hit your goal.';
 
     final firstName = widget.user['name']?.split(' ')[0] ?? 'Student';
+    String? photoUrl = widget.user['photoUrl'];
+    if (photoUrl != null) {
+      if (photoUrl.contains('localhost:3000')) {
+        photoUrl = photoUrl.replaceAll('http://localhost:3000', 'https://english-ai-study-backend.onrender.com');
+      } else if (photoUrl.contains('10.0.2.2:3000')) {
+        photoUrl = photoUrl.replaceAll('http://10.0.2.2:3000', 'https://english-ai-study-backend.onrender.com');
+      }
+      if (photoUrl.startsWith('http://english-ai-study-backend.onrender.com')) {
+        photoUrl = photoUrl.replaceFirst('http://', 'https://');
+      }
+    }
     final hour = DateTime.now().hour;
     final greeting = hour < 12
         ? 'Good morning'
@@ -489,29 +500,60 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                   padding: const EdgeInsets.all(3.0),
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: const Color(0xFFEEF0FF),
-                      image: (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty && !widget.user['photoUrl']!.startsWith('blob:'))
-                          ? DecorationImage(
-                              image: kIsWeb || widget.user['photoUrl']!.startsWith('http') || widget.user['photoUrl']!.startsWith('https')
-                                  ? NetworkImage(widget.user['photoUrl']!) as ImageProvider
-                                  : FileImage(File(widget.user['photoUrl']!)),
-                              fit: BoxFit.cover,
-                            )
-                          : null,
+                      color: Color(0xFFEEF0FF),
                     ),
-                    alignment: Alignment.center,
-                    child: (widget.user['photoUrl'] != null && widget.user['photoUrl']!.isNotEmpty && !widget.user['photoUrl']!.startsWith('blob:'))
-                        ? null
-                        : Text(
-                            firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
-                            style: GoogleFonts.outfit(
-                              color: primaryColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
+                    child: ClipOval(
+                      child: (photoUrl != null && photoUrl.isNotEmpty && !photoUrl.startsWith('blob:'))
+                          ? (kIsWeb || photoUrl.startsWith('http') || photoUrl.startsWith('https')
+                              ? Image.network(
+                                  photoUrl,
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return Center(
+                                      child: Text(
+                                        firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                        style: GoogleFonts.outfit(
+                                          color: primaryColor,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                )
+                              : Image.file(
+                                  File(photoUrl),
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return Center(
+                                      child: Text(
+                                        firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                        style: GoogleFonts.outfit(
+                                          color: primaryColor,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ))
+                          : Center(
+                              child: Text(
+                                firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+                                style: GoogleFonts.outfit(
+                                  color: primaryColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
                             ),
-                          ),
+                    ),
                   ),
                 ),
               ),
