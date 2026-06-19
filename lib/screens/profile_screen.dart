@@ -360,6 +360,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
       } else if (photoUrl.contains('10.0.2.2:3000')) {
         photoUrl = photoUrl.replaceAll('http://10.0.2.2:3000', 'https://english-ai-study-backend.onrender.com');
       }
+      if (photoUrl.startsWith('http://english-ai-study-backend.onrender.com')) {
+        photoUrl = photoUrl.replaceFirst('http://', 'https://');
+      }
     }
 
     return Scaffold(
