@@ -115,6 +115,11 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   List<WordItem> _numbersData = [];
   bool _isLoadingNumbers = false;
 
+  // Topics State
+  List<dynamic> _topicsData = [];
+  Map<String, dynamic>? _selectedTopic;
+  bool _isLoadingTopics = false;
+
   @override
   void initState() {
     super.initState();
@@ -339,6 +344,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         if (cachedString != null) {
           try {
             final List<dynamic> cachedList = json.decode(cachedString);
+            if (!mounted) return;
             setState(() {
               _loadedWords = cachedList
                   .map((item) => WordItem.fromJson(Map<String, dynamic>.from(item), level))
@@ -386,15 +392,16 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
       final serialized = enrichedWords.map((e) => e.toJson()).toList();
       await box.put(todayKey, json.encode(serialized));
 
+      if (!mounted) return;
       setState(() {
         _loadedWords = enrichedWords;
         _isLoading = false;
       });
     } catch (e) {
+      if (!mounted) return;
       setState(() {
         _isLoading = false;
       });
-      if (!mounted) return;
       showCustomSnackBar(context, 'Failed to load words: $e');
     }
   }
@@ -408,11 +415,13 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     try {
       final jsonStr = await rootBundle.loadString('assets/data/api_english_tenses.json');
       final List<dynamic> decoded = json.decode(jsonStr);
+      if (!mounted) return;
       setState(() {
         _tensesData = decoded;
         _isLoadingTenses = false;
       });
     } catch (_) {
+      if (!mounted) return;
       setState(() {
         _isLoadingTenses = false;
       });
@@ -428,6 +437,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     try {
       final jsonStr = await rootBundle.loadString('assets/data/api_vocabulary_number.json');
       final List<dynamic> decoded = json.decode(jsonStr);
+      if (!mounted) return;
       setState(() {
         _numbersData = List<WordItem>.from(decoded.map((item) {
           final mapItem = item as Map<String, dynamic>;
@@ -443,8 +453,46 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         _isLoadingNumbers = false;
       });
     } catch (_) {
+      if (!mounted) return;
       setState(() {
         _isLoadingNumbers = false;
+      });
+    }
+  }
+
+  // Load topics data
+  Future<void> _loadTopicsData({bool forceRefresh = false}) async {
+    if (_topicsData.isNotEmpty && !forceRefresh) {
+      if (_selectedTopic == null && _topicsData.isNotEmpty) {
+        setState(() {
+          _topicsData.shuffle();
+          _selectedTopic = _topicsData.first;
+        });
+      }
+      return;
+    }
+    setState(() {
+      _isLoadingTopics = true;
+    });
+    try {
+      final jsonStr = await rootBundle.loadString('assets/data/api_english_topics.json');
+      final List<dynamic> decoded = json.decode(jsonStr);
+      if (!mounted) return;
+      setState(() {
+        _topicsData = decoded;
+        if (_topicsData.isNotEmpty) {
+          final List<dynamic> list = List.from(_topicsData);
+          list.shuffle();
+          _selectedTopic = list.first;
+        } else {
+          _selectedTopic = null;
+        }
+        _isLoadingTopics = false;
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() {
+        _isLoadingTopics = false;
       });
     }
   }
@@ -696,14 +744,16 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
                 child: Row(
-                  children: ['Words', 'favorites', 'nouns', 'pronouns', 'verbs', 'adjectives', 'Tenses', 'Numbers'].map((tab) {
+                  children: ['Words', 'favorites', 'nouns', 'pronouns', 'verbs', 'adjectives', 'Tenses', 'Numbers', 'Topics'].map((tab) {
                     final isSelected = _activeTab == tab;
                     return GestureDetector(
                       onTap: () async {
                         setState(() {
                           _activeTab = tab;
                         });
-                        if (tab == 'Tenses') {
+                        if (tab == 'Topics') {
+                          _loadTopicsData();
+                        } else if (tab == 'Tenses') {
                           _loadTensesData();
                         } else if (tab == 'Numbers') {
                           _loadNumbersData();
@@ -742,7 +792,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                           ? 'Verbs'
                                           : tab == 'adjectives'
                                               ? 'Adjectives'
-                                              : tab,
+                                              : tab == 'Topics'
+                                                  ? 'Topics'
+                                                  : tab,
                           style: GoogleFonts.inter(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
@@ -794,7 +846,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                                   ? 'Verbs'
                                                   : _activeTab == 'adjectives'
                                                       ? 'Adjectives'
-                                                      : _activeTab,
+                                                      : _activeTab == 'Topics'
+                                                          ? 'Topics'
+                                                          : _activeTab,
                               style: GoogleFonts.outfit(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -855,10 +909,13 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                             _activeTab == 'nouns' ||
                             _activeTab == 'pronouns' ||
                             _activeTab == 'verbs' ||
-                            _activeTab == 'adjectives')
+                            _activeTab == 'adjectives' ||
+                            _activeTab == 'Topics')
                           GestureDetector(
                             onTap: () {
-                              if (!isSearchActive && !_isLoading) {
+                              if (_activeTab == 'Topics') {
+                                _loadTopicsData(forceRefresh: true);
+                              } else if (!isSearchActive && !_isLoading) {
                                 if (_activeTab == 'Words') {
                                   _fetchWords(_selectedLevel, forceRefresh: true);
                                 } else {
@@ -1000,7 +1057,85 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                     const SizedBox(height: 18),
 
                     // ScrollView content inside the container
-                    if (_activeTab == 'Numbers')
+                    if (_activeTab == 'Topics')
+                      _isLoadingTopics
+                          ? Container(
+                              alignment: Alignment.center,
+                              padding: const EdgeInsets.symmetric(vertical: 60),
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+                              ),
+                            )
+                          : _selectedTopic == null
+                              ? Container(
+                                  alignment: Alignment.center,
+                                  padding: const EdgeInsets.symmetric(vertical: 10),
+                                  child: Text(
+                                    'Failed to load topic.',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 14,
+                                      color: const Color(0xFF64748B),
+                                    ),
+                                  ),
+                                )
+                              : Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      width: double.infinity,
+                                      padding: const EdgeInsets.all(20),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFEEF0FF),
+                                        borderRadius: BorderRadius.circular(20),
+                                        border: Border.all(
+                                          color: primaryColor.withOpacity(0.12),
+                                        ),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Container(
+                                                padding: const EdgeInsets.all(8),
+                                                decoration: BoxDecoration(
+                                                  color: primaryColor,
+                                                  shape: BoxShape.circle,
+                                                ),
+                                                child: const Icon(
+                                                  Icons.topic,
+                                                  color: Colors.white,
+                                                  size: 20,
+                                                ),
+                                              ),
+                                              const SizedBox(width: 12),
+                                              Expanded(
+                                                child: Text(
+                                                  _selectedTopic!['topic_title'] ?? 'No Title',
+                                                  style: GoogleFonts.outfit(
+                                                    fontSize: 22,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: const Color(0xFF0F172A),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(height: 16),
+                                          Text(
+                                            _selectedTopic!['topic_text'] ?? '',
+                                            style: GoogleFonts.inter(
+                                              fontSize: 15,
+                                              height: 1.6,
+                                              color: const Color(0xFF334155),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                )
+                    else if (_activeTab == 'Numbers')
                       _isLoadingNumbers
                           ? Container(
                               alignment: Alignment.center,
