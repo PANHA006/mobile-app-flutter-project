@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hive/hive.dart';
 import '../main.dart'; // To access isFirebaseInitialized
+import 'edit_profile_screen.dart';
+import 'dart:io';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class AchievementItem {
   final String label;
@@ -34,77 +37,300 @@ class _ProfileScreenState extends State<ProfileScreen> {
   bool _darkMode = false;
   bool _notifications = true;
 
+  Map<String, dynamic> _getCategoryLevelAndProgress(String key) {
+    final refreshes = int.tryParse(widget.user[key] ?? '0') ?? 0;
+    if (refreshes < 1) {
+      return {
+        'level': 0,
+        'percent': 0,
+      };
+    }
+
+    int level = 1;
+    int currentLevelRequirement = 1;
+
+    while (currentLevelRequirement * 2 <= refreshes) {
+      currentLevelRequirement *= 2;
+      level++;
+    }
+
+    int nextLevelRequirement = currentLevelRequirement * 2;
+    double progress = (refreshes - currentLevelRequirement) /
+        (nextLevelRequirement - currentLevelRequirement);
+    int percent = (progress * 100).toInt();
+
+    return {
+      'level': level,
+      'percent': percent,
+    };
+  }
+
   void _showEditProfileDialog() {
     final uid = widget.user['uid'];
     if (uid == null) return;
-    
+
     final nameController = TextEditingController(text: widget.user['name']);
     String selectedLevel = widget.user['level'] ?? 'Beginner';
 
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return StatefulBuilder(
-          builder: (context, setDialogState) {
-            return AlertDialog(
-              title: Text('Edit Profile', style: GoogleFonts.outfit(fontWeight: FontWeight.bold)),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  TextField(
-                    controller: nameController,
-                    decoration: const InputDecoration(labelText: 'Name'),
-                    style: GoogleFonts.inter(),
-                  ),
-                  const SizedBox(height: 16),
-                  DropdownButtonFormField<String>(
-                    value: selectedLevel,
-                    decoration: const InputDecoration(labelText: 'Level'),
-                    items: const [
-                      DropdownMenuItem(value: 'Beginner', child: Text('Beginner')),
-                      DropdownMenuItem(value: 'Intermediate', child: Text('Intermediate')),
-                      DropdownMenuItem(value: 'Advanced', child: Text('Advanced')),
-                    ],
-                    onChanged: (val) {
-                      if (val != null) {
-                        setDialogState(() {
-                          selectedLevel = val;
-                        });
-                      }
-                    },
-                  ),
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  child: Text('Cancel', style: GoogleFonts.inter(color: Colors.grey)),
+        return StatefulBuilder(builder: (context, setDialogState) {
+          return AlertDialog(
+            title: Text('Edit Profile',
+                style: GoogleFonts.outfit(fontWeight: FontWeight.bold)),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextField(
+                  controller: nameController,
+                  decoration: const InputDecoration(labelText: 'Name'),
+                  style: GoogleFonts.inter(),
                 ),
-                TextButton(
-                  onPressed: () async {
-                    final newName = nameController.text.trim();
-                    if (newName.isNotEmpty) {
-                      // Update locally in widget.user
-                      widget.user['name'] = newName;
-                      widget.user['level'] = selectedLevel;
-                      
-                      if (isFirebaseInitialized) {
-                        try {
-                          await FirebaseFirestore.instance.collection('users').doc(uid).update({
-                            'name': newName,
-                            'level': selectedLevel,
-                          });
-                        } catch (_) {}
-                      }
-                      setState(() {});
-                      Navigator.of(context).pop();
+                const SizedBox(height: 16),
+                DropdownButtonFormField<String>(
+                  value: selectedLevel,
+                  decoration: const InputDecoration(labelText: 'Level'),
+                  items: const [
+                    DropdownMenuItem(
+                        value: 'Beginner', child: Text('Beginner')),
+                    DropdownMenuItem(
+                        value: 'Intermediate', child: Text('Intermediate')),
+                    DropdownMenuItem(
+                        value: 'Advanced', child: Text('Advanced')),
+                  ],
+                  onChanged: (val) {
+                    if (val != null) {
+                      setDialogState(() {
+                        selectedLevel = val;
+                      });
                     }
                   },
-                  child: Text('Save', style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
                 ),
               ],
-            );
-          }
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text('Cancel',
+                    style: GoogleFonts.inter(color: Colors.grey)),
+              ),
+              TextButton(
+                onPressed: () async {
+                  final newName = nameController.text.trim();
+                  if (newName.isNotEmpty) {
+                    // Update locally in widget.user
+                    widget.user['name'] = newName;
+                    widget.user['level'] = selectedLevel;
+
+                    if (isFirebaseInitialized) {
+                      try {
+                        await FirebaseFirestore.instance
+                            .collection('users')
+                            .doc(uid)
+                            .update({
+                          'name': newName,
+                          'level': selectedLevel,
+                        });
+                      } catch (_) {}
+                    }
+                    setState(() {});
+                    Navigator.of(context).pop();
+                  }
+                },
+                child: Text('Save',
+                    style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
+              ),
+            ],
+          );
+        });
+      },
+    );
+  }
+
+  void _showLevelSelectionDialog() {
+    final uid = widget.user['uid'];
+    String selectedLevel = widget.user['level'] ?? 'Beginner';
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(builder: (context, setDialogState) {
+          return Dialog(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Header with title and red close button
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Select English Level',
+                        style: GoogleFonts.outfit(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: const Color(0xFF0F172A),
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close,
+                            color: Colors.redAccent, size: 24),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  // Option cards
+                  ...['Beginner', 'Intermediate', 'Advanced'].map((level) {
+                    final isSelected = selectedLevel == level;
+                    return GestureDetector(
+                      onTap: () async {
+                        setDialogState(() {
+                          selectedLevel = level;
+                        });
+                        widget.user['level'] = level;
+                        if (isFirebaseInitialized && uid != null) {
+                          try {
+                            await FirebaseFirestore.instance
+                                .collection('users')
+                                .doc(uid)
+                                .update({
+                              'level': level,
+                            });
+                          } catch (_) {}
+                        }
+                        setState(() {});
+                        Future.delayed(const Duration(milliseconds: 200), () {
+                          if (context.mounted) Navigator.of(context).pop();
+                        });
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 16),
+                        decoration: BoxDecoration(
+                          color: isSelected
+                              ? const Color(0xFFEEF0FF)
+                              : const Color(0xFFF8FAFC),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: isSelected
+                                ? const Color(0xFF4F46E5)
+                                : const Color(0xFFE2E8F0),
+                            width: isSelected ? 2.0 : 1.0,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              level,
+                              style: GoogleFonts.inter(
+                                fontWeight: isSelected
+                                    ? FontWeight.w600
+                                    : FontWeight.normal,
+                                color: isSelected
+                                    ? const Color(0xFF4F46E5)
+                                    : const Color(0xFF0F172A),
+                                fontSize: 15,
+                              ),
+                            ),
+                            if (isSelected)
+                              const Icon(Icons.check_circle,
+                                  color: Color(0xFF4F46E5), size: 20)
+                            else
+                              Container(
+                                width: 20,
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      color: const Color(0xFFCBD5E1),
+                                      width: 1.5),
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ],
+              ),
+            ),
+          );
+        });
+      },
+    );
+  }
+
+  void _showLanguageSelectionDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Select App Language',
+                      style: GoogleFonts.outfit(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: const Color(0xFF0F172A),
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close,
+                          color: Colors.redAccent, size: 24),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFEEF0FF),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: const Color(0xFF4F46E5),
+                      width: 2.0,
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'English',
+                        style: GoogleFonts.inter(
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF4F46E5),
+                          fontSize: 15,
+                        ),
+                      ),
+                      const Icon(Icons.check_circle,
+                          color: Color(0xFF4F46E5), size: 20),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 14),
+              ],
+            ),
+          ),
         );
       },
     );
@@ -133,6 +359,50 @@ class _ProfileScreenState extends State<ProfileScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         toolbarHeight: 80,
+        centerTitle: true,
+        title: Text(
+          'Profile',
+          style: GoogleFonts.outfit(
+            color: const Color(0xFF0F172A),
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: Center(
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EditProfileScreen(
+                        user: widget.user,
+                        onUpdate: () {
+                          setState(() {});
+                        },
+                      ),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: 38,
+                  height: 38,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xFF4F46E5),
+                  ),
+                  child: const Icon(
+                    Icons.edit_outlined,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
           child: Container(
@@ -140,274 +410,459 @@ class _ProfileScreenState extends State<ProfileScreen> {
             height: 1,
           ),
         ),
-        title: Row(
-          children: [
-            Container(
-              width: 44,
-              height: 44,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: const Color(0xFFEEF0FF),
-                border: Border.all(color: const Color(0xFF4F46E5).withOpacity(0.12), width: 1.5),
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
-                style: GoogleFonts.outfit(
-                  color: const Color(0xFF4F46E5),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.user['name'] ?? 'User',
-                  style: GoogleFonts.outfit(
-                    color: const Color(0xFF0F172A),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  email,
-                  style: GoogleFonts.inter(
-                    color: const Color(0xFF64748B),
-                    fontSize: 11,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF59E0B),
-                borderRadius: BorderRadius.circular(100),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.emoji_events, color: Colors.white, size: 12),
-                  const SizedBox(width: 4),
-                  Text(
-                    widget.user['level'] ?? 'Beginner',
-                    style: GoogleFonts.outfit(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 10,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(height: 16),
-
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
+      body: SafeArea(
+        top: false,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Custom Header Banner matching Mockup
+              Stack(
+                clipBehavior: Clip.none,
+                alignment: Alignment.center,
                 children: [
-                  // Stats grid
-                  Row(
-                    children: [
-                      _buildStatCard('Words', widget.user['learnedWords'] ?? '0', Icons.book, const Color(0xFF4F46E5)),
-                      _buildStatCard(
-                        'Favorites',
-                        (() {
-                          try {
-                            final box = Hive.box('vocabulary_box');
-                            final List<dynamic>? list = box.get('favorites_list');
-                            return (list?.length ?? 0).toString();
-                          } catch (_) {
-                            return '0';
-                          }
-                        })(),
-                        Icons.star,
-                        const Color(0xFFF59E0B),
+                  // Teal-Cyan gradient background banner
+                  Container(
+                    height: 180,
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(
+                        left: 16, right: 16, top: 16, bottom: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(28),
+                      gradient: const LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color(0xFF6366F1), // Lighter Indigo
+                          Color(0xFF4F46E5), // Indigo (Primary Color)
+                          Color(0xFF3730A3), // Darker Indigo
+                        ],
                       ),
-                      _buildStatCard('Streak', '${widget.user['streak'] ?? '0'}d', Icons.trending_up, const Color(0xFF10B981)),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Progress block
-                  _buildCard(
-                    title: 'Learning Progress',
-                    child: Column(
+                    ),
+                    child: Stack(
                       children: [
-                        _buildProgressBar('Vocabulary', 64, const Color(0xFF4F46E5)),
-                        _buildProgressBar('Grammar', 42, const Color(0xFF0891B2)),
-                        _buildProgressBar('Speaking', 28, const Color(0xFF10B981)),
+                        // Soft bokeh circles
+                        Positioned(
+                          left: -20,
+                          top: 20,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white.withOpacity(0.08),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 10,
+                          bottom: -30,
+                          child: Container(
+                            width: 140,
+                            height: 140,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white.withOpacity(0.06),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: -10,
+                          top: -10,
+                          child: Container(
+                            width: 80,
+                            height: 80,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white.withOpacity(0.08),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
-
-                  // Achievements block
-                  _buildCard(
-                    title: 'Achievements',
-                    child: GridView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 8,
-                        crossAxisSpacing: 8,
-                        childAspectRatio: 1.1,
-                      ),
-                      itemCount: _achievements.length,
-                      itemBuilder: (context, index) {
-                        final a = _achievements[index];
-                        return Opacity(
-                          opacity: a.earned ? 1.0 : 0.4,
+                  // Overlapping avatar
+                  Positioned(
+                    bottom: -36,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          width: 104,
+                          height: 104,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 8,
+                                offset: Offset(0, 4),
+                              ),
+                            ],
+                          ),
+                          padding: const EdgeInsets.all(4),
                           child: Container(
                             decoration: BoxDecoration(
-                              color: a.earned ? const Color(0xFFEEF0FF) : const Color(0xFFECECF5),
-                              borderRadius: BorderRadius.circular(16),
+                              shape: BoxShape.circle,
+                              color: const Color(0xFFEFF6FF),
+                              image: (widget.user['photoUrl'] != null &&
+                                      widget.user['photoUrl']!.isNotEmpty &&
+                                      !widget.user['photoUrl']!
+                                          .startsWith('blob:'))
+                                  ? DecorationImage(
+                                      image: kIsWeb ||
+                                              widget.user['photoUrl']!
+                                                  .startsWith('http') ||
+                                              widget.user['photoUrl']!
+                                                  .startsWith('https')
+                                          ? NetworkImage(
+                                                  widget.user['photoUrl']!)
+                                              as ImageProvider
+                                          : FileImage(
+                                              File(widget.user['photoUrl']!)),
+                                      fit: BoxFit.cover,
+                                    )
+                                  : null,
                             ),
-                            padding: const EdgeInsets.all(8),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(a.icon, style: const TextStyle(fontSize: 24)),
-                                const SizedBox(height: 4),
-                                Text(
-                                  a.label,
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.inter(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w500,
-                                    color: const Color(0xFF0F0E2A),
+                            alignment: Alignment.center,
+                            child: (widget.user['photoUrl'] != null &&
+                                    widget.user['photoUrl']!.isNotEmpty &&
+                                    !widget.user['photoUrl']!
+                                        .startsWith('blob:'))
+                                ? null
+                                : Text(
+                                    firstName.isNotEmpty
+                                        ? firstName[0].toUpperCase()
+                                        : 'U',
+                                    style: GoogleFonts.outfit(
+                                      color: const Color(0xFF4F46E5),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 34,
+                                    ),
                                   ),
+                          ),
+                        ),
+                        // Online status indicator green dot
+                        Positioned(
+                          right: 4,
+                          bottom: 4,
+                          child: Container(
+                            width: 18,
+                            height: 18,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.green,
+                              border: Border.all(
+                                color: Colors.white,
+                                width: 2.5,
+                              ),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 1),
                                 ),
                               ],
                             ),
                           ),
-                        );
-                      },
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Settings block
-                  _buildCard(
-                    title: 'Settings',
-                    child: Column(
-                      children: [
-                        _buildToggleSetting(
-                          icon: Icons.notifications_none,
-                          label: 'Push Notifications',
-                          color: const Color(0xFF4F46E5),
-                          bg: const Color(0xFFEEF0FF),
-                          value: _notifications,
-                          onChanged: (val) => setState(() => _notifications = val),
-                        ),
-                        _buildDivider(),
-                        _buildToggleSetting(
-                          icon: Icons.dark_mode_outlined,
-                          label: 'Dark Mode',
-                          color: const Color(0xFF0891B2),
-                          bg: const Color(0xFFECFEFF),
-                          value: _darkMode,
-                          onChanged: (val) => setState(() => _darkMode = val),
-                        ),
-                        _buildDivider(),
-                        GestureDetector(
-                          onTap: _showEditProfileDialog,
-                          child: _buildLinkSetting(
-                            icon: Icons.person_outline,
-                            label: 'Edit Profile',
-                            color: const Color(0xFF10B981),
-                            bg: const Color(0xFFD1FAE5),
-                          ),
-                        ),
-                        _buildDivider(),
-                        _buildLinkSetting(
-                          icon: Icons.language_outlined,
-                          label: 'App Language',
-                          color: const Color(0xFFF59E0B),
-                          bg: const Color(0xFFFFFBEB),
-                          trailingText: 'English',
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
+                ],
+              ),
 
-                  // Logout button
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton.icon(
-                      onPressed: widget.onLogout,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFFF1F2),
-                        foregroundColor: const Color(0xFFD4183D),
-                        shadowColor: Colors.transparent,
-                        surfaceTintColor: Colors.transparent,
-                        side: BorderSide(color: const Color(0xFFD4183D).withOpacity(0.25)),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                      ),
-                      icon: const Icon(Icons.logout, size: 18),
-                      label: Text(
-                        'Sign Out',
-                        style: GoogleFonts.outfit(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
+              const SizedBox(height: 48),
+
+              // Name & Level Text Details
+              Text(
+                widget.user['name'] ?? 'User',
+                style: GoogleFonts.outfit(
+                  color: const Color(0xFF0F172A),
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                email,
+                style: GoogleFonts.inter(
+                  color: const Color(0xFF64748B),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
+              // Social Badges Row matching Mockup
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _buildSocialIcon(
+                    color: const Color(0xFFEA4C89),
+                    bg: const Color(0xFFFFF1F2),
+                    icon: Icons.sports_basketball_outlined,
+                  ),
+                  _buildSocialIconText(
+                    color: const Color(0xFF0057FF),
+                    bg: const Color(0xFFEFF6FF),
+                    text: 'Bē',
+                  ),
+                  _buildSocialIcon(
+                    color: const Color(0xFFE1306C),
+                    bg: const Color(0xFFFFF1F2),
+                    icon: Icons.camera_alt_outlined,
+                  ),
+                  _buildSocialIconText(
+                    color: const Color(0xFF0A66C2),
+                    bg: const Color(0xFFF0F9FF),
+                    text: 'in',
                   ),
                 ],
               ),
-            ),
-          ],
+
+              const SizedBox(height: 20),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  children: [
+                    // Stats grid
+                    Row(
+                      children: [
+                        _buildStatCard(
+                          'Refresh',
+                          widget.user['refreshCount'] ?? '0',
+                          Icons.refresh_rounded,
+                          const Color(0xFF10B981),
+                        ),
+                        _buildStatCard(
+                          'Favorites',
+                          (() {
+                            try {
+                              final box = Hive.box('vocabulary_box');
+                              final List<dynamic>? list =
+                                  box.get('favorites_list');
+                              return (list?.length ?? 0).toString();
+                            } catch (_) {
+                              return '0';
+                            }
+                          })(),
+                          Icons.favorite_rounded,
+                          const Color(0xFFEF4444),
+                        ),
+                        _buildStatCard(
+                          'Achieve',
+                          (() {
+                            final wordsLevel = _getCategoryLevelAndProgress('refresh_Words')['level'] as int;
+                            final nounsLevel = _getCategoryLevelAndProgress('refresh_nouns')['level'] as int;
+                            final pronounsLevel = _getCategoryLevelAndProgress('refresh_pronouns')['level'] as int;
+                            final verbsLevel = _getCategoryLevelAndProgress('refresh_verbs')['level'] as int;
+                            final adjectiveLevel = _getCategoryLevelAndProgress('refresh_adjective')['level'] as int;
+                            return (wordsLevel + nounsLevel + pronounsLevel + verbsLevel + adjectiveLevel).toString();
+                          })(),
+                          Icons.emoji_events,
+                          const Color(0xFFF59E0B),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+
+                    // Progress block
+                    _buildCard(
+                      title: 'Learning Progress',
+                      child: Column(
+                        children: [
+                          (() {
+                            final stats =
+                                _getCategoryLevelAndProgress('refresh_Words');
+                            return _buildProgressBar(
+                                'Words Vocabulary (Level ${stats['level']})',
+                                stats['percent'],
+                                const Color(0xFF4F46E5));
+                          })(),
+                          (() {
+                            final stats =
+                                _getCategoryLevelAndProgress('refresh_nouns');
+                            return _buildProgressBar(
+                                'Nouns (Level ${stats['level']})',
+                                stats['percent'],
+                                const Color(0xFF0891B2));
+                          })(),
+                          (() {
+                            final stats = _getCategoryLevelAndProgress(
+                                'refresh_pronouns');
+                            return _buildProgressBar(
+                                'Pronouns (Level ${stats['level']})',
+                                stats['percent'],
+                                const Color(0xFF10B981));
+                          })(),
+                          (() {
+                            final stats =
+                                _getCategoryLevelAndProgress('refresh_verbs');
+                            return _buildProgressBar(
+                                'Verbs (Level ${stats['level']})',
+                                stats['percent'],
+                                const Color(0xFFF59E0B));
+                          })(),
+                          (() {
+                            final stats = _getCategoryLevelAndProgress(
+                                'refresh_adjective');
+                            return _buildProgressBar(
+                                'Adjective (Level ${stats['level']})',
+                                stats['percent'],
+                                const Color(0xFFEC4899));
+                          })(),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+
+                    // Settings block
+                    _buildCard(
+                      title: 'Settings',
+                      child: Column(
+                        children: [
+                          _buildToggleSetting(
+                            icon: Icons.notifications_none,
+                            label: 'Push Notifications',
+                            color: const Color(0xFF4F46E5),
+                            bg: const Color(0xFFEEF0FF),
+                            value: _notifications,
+                            onChanged: (val) =>
+                                setState(() => _notifications = val),
+                          ),
+                          _buildDivider(),
+                          _buildToggleSetting(
+                            icon: Icons.dark_mode_outlined,
+                            label: 'Dark Mode',
+                            color: const Color(0xFF0891B2),
+                            bg: const Color(0xFFECFEFF),
+                            value: _darkMode,
+                            onChanged: null,
+                          ),
+                          _buildDivider(),
+                          GestureDetector(
+                            onTap: _showLevelSelectionDialog,
+                            child: _buildLinkSetting(
+                              icon: Icons.school_outlined,
+                              label: 'English Level',
+                              color: const Color(0xFF10B981),
+                              bg: const Color(0xFFD1FAE5),
+                              trailingText: widget.user['level'] ?? 'Beginner',
+                            ),
+                          ),
+                          _buildDivider(),
+                          GestureDetector(
+                            onTap: _showLanguageSelectionDialog,
+                            child: _buildLinkSetting(
+                              icon: Icons.language_outlined,
+                              label: 'App Language',
+                              color: const Color(0xFFF59E0B),
+                              bg: const Color(0xFFFFFBEB),
+                              trailingText: 'English',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Logout button
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: OutlinedButton.icon(
+                        onPressed: widget.onLogout,
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: const Color(0xFFDC2626), // Red 600
+                          side: const BorderSide(
+                              color: Color(0xFFDC2626), width: 1.8),
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16)),
+                        ),
+                        icon: const Icon(Icons.logout,
+                            size: 18, color: Color(0xFFDC2626)),
+                        label: Text(
+                          'Sign Out',
+                          style: GoogleFonts.outfit(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 15,
+                            color: const Color(0xFFDC2626),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 30),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildStatCard(String label, String value, IconData icon, Color color) {
-    final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.12);
+  Widget _buildStatCard(
+      String label, String value, IconData icon, Color color) {
+    final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.08);
+    final glowColor = color.withOpacity(0.1);
     return Expanded(
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 4.0),
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
         decoration: BoxDecoration(
           color: Colors.white,
+          borderRadius: BorderRadius.circular(24),
           border: Border.all(color: cardBorderColor),
-          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: color.withOpacity(0.08),
+              blurRadius: 16,
+              offset: const Offset(0, 8),
+            ),
+          ],
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(icon, color: color, size: 18),
-            const SizedBox(height: 6),
-            Text(
-              value,
-              style: GoogleFonts.outfit(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xFF0F0E2A),
-              ),
+            Row(
+              children: [
+                Container(
+                  width: 32,
+                  height: 32,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: glowColor,
+                  ),
+                  child: Icon(icon, color: color, size: 16),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    value,
+                    style: GoogleFonts.outfit(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF0F172A),
+                    ),
+                  ),
+                ),
+              ],
             ),
+            const SizedBox(height: 10),
             Text(
               label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: GoogleFonts.inter(
-                fontSize: 10,
-                color: const Color(0xFF6B6B8A),
+                fontSize: 11,
+                color: const Color(0xFF64748B),
+                fontWeight: FontWeight.w500,
               ),
             ),
           ],
@@ -452,8 +907,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(label, style: GoogleFonts.inter(fontSize: 13, color: const Color(0xFF0F0E2A))),
-              Text('$value%', style: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 13, color: color)),
+              Text(label,
+                  style: GoogleFonts.inter(
+                      fontSize: 13, color: const Color(0xFF0F0E2A))),
+              Text('$value%',
+                  style: GoogleFonts.outfit(
+                      fontWeight: FontWeight.w600, fontSize: 13, color: color)),
             ],
           ),
           const SizedBox(height: 6),
@@ -477,24 +936,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
     required Color color,
     required Color bg,
     required bool value,
-    required ValueChanged<bool> onChanged,
+    required ValueChanged<bool>? onChanged,
   }) {
-    return Row(
-      children: [
-        Container(
-          width: 32,
-          height: 32,
-          decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(10)),
-          child: Icon(icon, color: color, size: 16),
-        ),
-        const SizedBox(width: 12),
-        Expanded(child: Text(label, style: GoogleFonts.inter(fontSize: 14, color: const Color(0xFF0F0E2A)))),
-        Switch(
-          value: value,
-          onChanged: onChanged,
-          activeColor: const Color(0xFF4F46E5),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6.0),
+      child: Row(
+        children: [
+          Container(
+            width: 32,
+            height: 32,
+            decoration: BoxDecoration(
+                color: bg, borderRadius: BorderRadius.circular(10)),
+            child: Icon(icon, color: color, size: 16),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+              child: Text(label,
+                  style: GoogleFonts.inter(
+                      fontSize: 14, color: const Color(0xFF0F0E2A)))),
+          Switch(
+            value: value,
+            onChanged: onChanged,
+            activeColor: const Color(0xFF4F46E5),
+          ),
+        ],
+      ),
     );
   }
 
@@ -505,27 +971,93 @@ class _ProfileScreenState extends State<ProfileScreen> {
     required Color bg,
     String? trailingText,
   }) {
-    return Row(
-      children: [
-        Container(
-          width: 32,
-          height: 32,
-          decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(10)),
-          child: Icon(icon, color: color, size: 16),
-        ),
-        const SizedBox(width: 12),
-        Expanded(child: Text(label, style: GoogleFonts.inter(fontSize: 14, color: const Color(0xFF0F0E2A)))),
-        if (trailingText != null)
-          Text(
-            trailingText,
-            style: GoogleFonts.inter(fontSize: 12, color: const Color(0xFF6B6B8A)),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Row(
+        children: [
+          Container(
+            width: 32,
+            height: 32,
+            decoration: BoxDecoration(
+                color: bg, borderRadius: BorderRadius.circular(10)),
+            child: Icon(icon, color: color, size: 16),
           ),
-        const Icon(Icons.chevron_right, size: 20, color: Color(0xFF6B6B8A)),
-      ],
+          const SizedBox(width: 12),
+          Expanded(
+              child: Text(label,
+                  style: GoogleFonts.inter(
+                      fontSize: 14, color: const Color(0xFF0F0E2A)))),
+          if (trailingText != null)
+            Text(
+              trailingText,
+              style: GoogleFonts.inter(
+                  fontSize: 12, color: const Color(0xFF6B6B8A)),
+            ),
+          const SizedBox(width: 4),
+          const Icon(Icons.chevron_right, size: 20, color: Color(0xFF6B6B8A)),
+        ],
+      ),
     );
   }
 
   Widget _buildDivider() {
-    return Divider(height: 12, color: const Color(0xFF4F46E5).withOpacity(0.12));
+    return Divider(
+        height: 12, color: const Color(0xFF4F46E5).withOpacity(0.12));
+  }
+
+  Widget _buildSocialIcon(
+      {required Color color, required Color bg, required IconData icon}) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8),
+      width: 44,
+      height: 44,
+      decoration: BoxDecoration(
+        color: bg,
+        shape: BoxShape.circle,
+        border: Border.all(color: color.withOpacity(0.35), width: 2.0),
+        boxShadow: [
+          BoxShadow(
+            color: color.withOpacity(0.15),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Icon(
+        icon,
+        color: color,
+        size: 20,
+      ),
+    );
+  }
+
+  Widget _buildSocialIconText(
+      {required Color color, required Color bg, required String text}) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8),
+      width: 44,
+      height: 44,
+      decoration: BoxDecoration(
+        color: bg,
+        shape: BoxShape.circle,
+        border: Border.all(color: color.withOpacity(0.35), width: 2.0),
+        boxShadow: [
+          BoxShadow(
+            color: color.withOpacity(0.15),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      alignment: Alignment.center,
+      child: Text(
+        text,
+        style: GoogleFonts.outfit(
+          color: color,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
   }
 }

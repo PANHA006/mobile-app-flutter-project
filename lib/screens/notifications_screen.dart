@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../main.dart'; // To access isFirebaseInitialized
 
 class NotificationItem {
   final int id;
@@ -107,35 +110,110 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     ),
   ];
 
-  late List<NotificationItem> _list;
-
-  @override
-  void initState() {
-    super.initState();
-    _list = List.from(_notifications);
+  List<NotificationItem> _getParsedNotifications() {
+    try {
+      final box = Hive.box('vocabulary_box');
+      final List<dynamic> rawList = box.get('notifications_list') ?? [];
+      
+      if (rawList.isEmpty) {
+        final defaultNotifs = _notifications.map((n) => {
+          'id': n.id,
+          'icon': n.icon == Icons.book ? 'welcome' : (n.icon == Icons.emoji_events ? 'congrats' : (n.icon == Icons.bolt ? 'level' : 'profile')),
+          'title': n.title,
+          'body': n.body,
+          'timestamp': DateTime.now().subtract(const Duration(hours: 2)).toIso8601String(),
+          'unread': n.unread,
+        }).toList();
+        box.put('notifications_list', defaultNotifs);
+        return _notifications;
+      }
+      
+      return rawList.map((item) {
+        final Map<String, dynamic> m = Map<String, dynamic>.from(item);
+        final String iconName = m['icon'] ?? 'welcome';
+        
+        IconData iconData = Icons.notifications;
+        Color color = const Color(0xFF0891B2);
+        Color bg = const Color(0xFFECFEFF);
+        
+        if (iconName == 'welcome') {
+          iconData = Icons.waving_hand_rounded;
+          color = const Color(0xFF4F46E5);
+          bg = const Color(0xFFEEF0FF);
+        } else if (iconName == 'congrats') {
+          iconData = Icons.emoji_events_rounded;
+          color = const Color(0xFF10B981);
+          bg = const Color(0xFFD1FAE5);
+        } else if (iconName == 'level') {
+          iconData = Icons.trending_up_rounded;
+          color = const Color(0xFFF59E0B);
+          bg = const Color(0xFFFFFBEB);
+        } else if (iconName == 'profile') {
+          iconData = Icons.person_rounded;
+          color = const Color(0xFF0891B2);
+          bg = const Color(0xFFECFEFF);
+        }
+        
+        String timeStr = 'Just now';
+        if (m['timestamp'] != null) {
+          try {
+            final dt = DateTime.parse(m['timestamp']);
+            final diff = DateTime.now().difference(dt);
+            if (diff.inMinutes < 1) {
+              timeStr = 'Just now';
+            } else if (diff.inMinutes < 60) {
+              timeStr = '${diff.inMinutes}m ago';
+            } else if (diff.inHours < 24) {
+              timeStr = '${diff.inHours}h ago';
+            } else {
+              timeStr = '${diff.inDays} days ago';
+            }
+          } catch (_) {}
+        }
+        
+        return NotificationItem(
+          id: m['id'] ?? 0,
+          icon: iconData,
+          color: color,
+          bg: bg,
+          title: m['title'] ?? '',
+          body: m['body'] ?? '',
+          time: timeStr,
+          unread: m['unread'] ?? false,
+        );
+      }).toList();
+    } catch (_) {
+      return [];
+    }
   }
 
   void _markAllRead() {
-    setState(() {
-      _list = _list.map((n) {
-        return NotificationItem(
-          id: n.id,
-          icon: n.icon,
-          color: n.color,
-          bg: n.bg,
-          title: n.title,
-          body: n.body,
-          time: n.time,
-          unread: false,
-        );
-      }).toList();
-    });
+    try {
+      final box = Hive.box('vocabulary_box');
+      final List<dynamic> rawList = box.get('notifications_list') ?? [];
+      final List<Map<String, dynamic>> list = rawList.map((e) => Map<String, dynamic>.from(e)).toList();
+      
+      for (var item in list) {
+        item['unread'] = false;
+      }
+      
+      box.put('notifications_list', list);
+      
+      final uid = widget.user['uid'];
+      if (uid != null && isFirebaseInitialized) {
+        FirebaseFirestore.instance.collection('users').doc(uid).update({
+          'notifications_list': list,
+        }).catchError((_) {});
+      }
+    } catch (_) {}
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     final primaryColor = const Color(0xFF4F46E5);
     final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.12);
+    final _list = _getParsedNotifications();
     final unreadCount = _list.where((n) => n.unread).length;
 
     return Scaffold(

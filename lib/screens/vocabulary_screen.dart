@@ -8,6 +8,8 @@ import 'package:hive/hive.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../main.dart'; // To access isFirebaseInitialized
+import 'custom_snackbar.dart';
+import '../utils/notification_helper.dart';
 
 class WordItem {
   final String word;
@@ -82,7 +84,6 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   final _searchController = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
   Timer? _debounceTimer;
-  StreamSubscription? _favSubscription;
 
   // Selected level: 'beginner', 'intermediate', 'advanced'
   String _selectedLevel = 'beginner';
@@ -118,18 +119,54 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   void initState() {
     super.initState();
     _loadFavorites();
-    _fetchWords(_selectedLevel);
-    // Watch for live changes on the vocabulary box to keep in sync
-    _favSubscription = Hive.box('vocabulary_box').watch().listen((event) {
-      if (mounted) {
-        _loadFavorites();
+    
+    // Check if there is an active tab requested from elsewhere (like home screen)
+    final box = Hive.box('vocabulary_box');
+    final String? requestedTab = box.get('active_vocab_tab');
+    if (requestedTab != null) {
+      _activeTab = requestedTab;
+      box.delete('active_vocab_tab');
+    }
+
+    if (_activeTab == 'favorites') {
+      _loadFavorites().then((_) {
+        setState(() {
+          _loadedWords = List.from(_favoriteWords);
+        });
+      });
+    } else {
+      _fetchWords(_selectedLevel);
+    }
+
+  }
+
+  @override
+  void didUpdateWidget(covariant VocabularyScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _loadFavorites();
+    final box = Hive.box('vocabulary_box');
+    final String? requestedTab = box.get('active_vocab_tab');
+    if (requestedTab != null) {
+      setState(() {
+        _activeTab = requestedTab;
+      });
+      box.delete('active_vocab_tab');
+      if (requestedTab == 'favorites') {
+        _loadFavorites().then((_) {
+          setState(() {
+            _loadedWords = List.from(_favoriteWords);
+          });
+        });
+      } else if (requestedTab == 'Words') {
+        _fetchWords(_selectedLevel);
+      } else {
+        _fetchWords(requestedTab);
       }
-    });
+    }
   }
 
   @override
   void dispose() {
-    _favSubscription?.cancel();
     _audioPlayer.dispose();
     _searchController.dispose();
     _searchFocusNode.dispose();
@@ -149,11 +186,32 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           _favorites.addAll(favs.cast<String>());
         });
       }
-      final String? favsDataStr = box.get('favorites_data');
-      if (favsDataStr != null) {
-        final List<dynamic> decoded = json.decode(favsDataStr);
+      final dynamic favsDataVal = box.get('favorites_data');
+      if (favsDataVal != null) {
+        List<dynamic> decoded = [];
+        if (favsDataVal is String) {
+          decoded = json.decode(favsDataVal);
+        } else if (favsDataVal is List) {
+          decoded = favsDataVal;
+        }
         setState(() {
-          _favoriteWords = decoded.map((e) => WordItem.fromJson(Map<String, dynamic>.from(e), e['level'] ?? '')).toList();
+          _favoriteWords = decoded
+              .where((e) => e is Map)
+              .map((e) {
+                final map = Map<String, dynamic>.from(e as Map);
+                return WordItem.fromJson(map, map['level'] ?? '');
+              })
+              .toList();
+          if (_activeTab == 'favorites') {
+            _loadedWords = List.from(_favoriteWords);
+          }
+        });
+      } else {
+        setState(() {
+          _favoriteWords = [];
+          if (_activeTab == 'favorites') {
+            _loadedWords = [];
+          }
         });
       }
       final List<dynamic>? learned = box.get('learned_words_list');
@@ -163,7 +221,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           _learnedWords.addAll(learned.cast<String>());
         });
       }
-    } catch (_) {}
+    } catch (e, s) {
+      debugPrint('Error loading favorites: $e\n$s');
+    }
   }
 
   Future<void> _toggleFav(WordItem item) async {
@@ -199,6 +259,12 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
             'uid': uid,
             'wordId': w,
             'createdAt': FieldValue.serverTimestamp(),
+            'word_en': item.word,
+            'word_kh': item.meaningKh,
+            'example': item.example,
+            'level': item.level,
+            'phonetic': item.phonetic,
+            'audio_url': item.audioUrl,
           });
         } else {
           await docRef.delete();
@@ -206,7 +272,6 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
       }
     } catch (_) {}
   }
-
 
   Future<void> _clearAllFavorites() async {
     setState(() {
@@ -241,13 +306,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   Future<void> _playAudio(String url) async {
     if (url.isEmpty) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Audio pronunciation not available.'),
-          duration: Duration(seconds: 2),
-          behavior: SnackBarBehavior.floating,
-        ),
-      );
+      showCustomSnackBar(context, 'Audio pronunciation not available.');
       return;
     }
     try {
@@ -336,13 +395,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         _isLoading = false;
       });
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Failed to load words: $e'),
-          backgroundColor: Colors.redAccent,
-          behavior: SnackBarBehavior.floating,
-        ),
-      );
+      showCustomSnackBar(context, 'Failed to load words: $e');
     }
   }
 
@@ -810,6 +863,56 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                   _fetchWords(_selectedLevel, forceRefresh: true);
                                 } else {
                                   _fetchWords(_activeTab, forceRefresh: true);
+                                }
+                                
+                                String tabKey = _activeTab;
+                                if (tabKey == 'adjectives') {
+                                  tabKey = 'adjective';
+                                }
+                                final catKey = 'refresh_$tabKey';
+                                
+                                final catCount = int.tryParse(widget.user[catKey] ?? '0') ?? 0;
+                                
+                                int getLvl(int ref) {
+                                  if (ref < 1) return 0;
+                                  int lvl = 1;
+                                  int req = 1;
+                                  while (req * 2 <= ref) {
+                                    req *= 2;
+                                    lvl++;
+                                  }
+                                  return lvl;
+                                }
+                                
+                                final oldLevel = getLvl(catCount);
+                                final newLevel = getLvl(catCount + 1);
+
+                                widget.user[catKey] = (catCount + 1).toString();
+                                
+                                final currentCount = int.tryParse(widget.user['refreshCount'] ?? '0') ?? 0;
+                                widget.user['refreshCount'] = (currentCount + 1).toString();
+                                
+                                try {
+                                  final box = Hive.box('vocabulary_box');
+                                  box.put('user_profile', widget.user);
+                                } catch (_) {}
+                                
+                                final uid = widget.user['uid'];
+                                if (newLevel > oldLevel) {
+                                  final categoryName = _activeTab == 'Words' ? 'Words Vocabulary' : _activeTab;
+                                  addAppNotification(
+                                    title: 'New Level Unlocked! 🚀',
+                                    body: 'Congratulations! Your $categoryName level has increased to Level $newLevel!',
+                                    iconName: 'level',
+                                    uid: uid,
+                                  );
+                                }
+
+                                if (uid != null && isFirebaseInitialized) {
+                                  FirebaseFirestore.instance.collection('users').doc(uid).update({
+                                    catKey: catCount + 1,
+                                    'refreshCount': currentCount + 1,
+                                  }).catchError((_) {});
                                 }
                               }
                             },
