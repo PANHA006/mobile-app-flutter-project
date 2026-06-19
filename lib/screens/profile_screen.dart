@@ -806,7 +806,52 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       width: double.infinity,
                       height: 50,
                       child: OutlinedButton.icon(
-                        onPressed: widget.onLogout,
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(24),
+                                ),
+                                title: Text(
+                                  'Sign Out',
+                                  style: GoogleFonts.outfit(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                content: const Text(
+                                  'Are you sure you want to sign out of your account?',
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.of(context).pop(),
+                                    child: Text(
+                                      'Cancel',
+                                      style: GoogleFonts.inter(
+                                        color: const Color(0xFF64748B),
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                      widget.onLogout();
+                                    },
+                                    child: Text(
+                                      'Sign Out',
+                                      style: GoogleFonts.inter(
+                                        color: const Color(0xFFDC2626),
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           backgroundColor: Colors.white,
                           foregroundColor: const Color(0xFFDC2626), // Red 600
