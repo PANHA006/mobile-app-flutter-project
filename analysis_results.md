@@ -83,7 +83,7 @@ backend/
 | Active Days Tracking | `main.dart` | ✅ Working |
 | Achievement Milestones | `main.dart`, `profile_screen.dart` | ✅ Working |
 | Dark Mode | `profile_screen.dart` | ❌ UI toggle only (not wired) |
-| Push Notifications | `profile_screen.dart` | ❌ UI toggle only (not wired) |
+| Push Notifications | `utils/notification_helper.dart` | ✅ Working (Local OS Notifications) |
 | Notification Badge on Bottom Nav | `main.dart` | ✅ Working |
 
 ---
@@ -103,6 +103,7 @@ backend/
 | `cloud_firestore` | ^4.17.5 | User data, favorites, chat history | ✅ |
 | `firebase_storage` | ^11.7.7 | File storage | ⚠️ **Imported but not used** (uploads go to backend) |
 | `image_picker` | ^1.2.2 | Photo selection for profile | ✅ |
+| `flutter_local_notifications` | ^18.0.1 | OS-level push notifications | ✅ |
 | `http_parser` | (transitive) | Used in edit_profile_screen | ⚠️ **Imported but never used** |
 
 ---
@@ -128,7 +129,7 @@ backend/
 | 8 | **Duplicated avatar widget** | `home_screen.dart`, `profile_screen.dart`, `edit_profile_screen.dart` | The avatar rendering logic (network/file/fallback initial) is duplicated across 3 screens. Should be a shared `UserAvatar` widget. |
 | 9 | **Duplicated level selection dialog** | `profile_screen.dart`, `edit_profile_screen.dart` | Identical dialog code appears in both files. Should be extracted to a shared widget. |
 | 10 | **No state management** | Entire project | Uses raw `setState` + passing data through constructor props. For this app size, consider using Provider, Riverpod, or BLoC. |
-| 11 | **Empty catch blocks swallowing errors** | Throughout (40+ instances) | `catch (_) {}` silently swallows errors everywhere, making debugging extremely difficult. |
+| 11 | **Empty catch blocks swallowing errors** | Throughout (Fixed!) | `catch (_) {}` blocks were replaced with `debugPrint` for better visibility. |
 | 12 | **No loading/error states for many operations** | Favorites sync, Firestore writes | Many Firestore operations have no user-facing feedback on failure. |
 | 13 | **Hardcoded default word "anime"** | [home_screen.dart:53-58](file:///c:/Users/Daro/Documents/mobile-app-flutter-project/lib/screens/home_screen.dart#L53-L58) and [home_screen.dart:192-195](file:///c:/Users/Daro/Documents/mobile-app-flutter-project/lib/screens/home_screen.dart#L192-L195) | The translator starts with "anime" and has a hardcoded phonetic/example fallback for it. Should be random or configurable. |
 

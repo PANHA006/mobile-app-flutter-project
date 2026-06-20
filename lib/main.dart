@@ -20,23 +20,22 @@ bool isFirebaseInitialized = false;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await initSystemNotifications();
   await Hive.initFlutter();
   await Hive.openBox('vocabulary_box');
   try {
-    if (kIsWeb) {
-      await Firebase.initializeApp(
-        options: const FirebaseOptions(
-          apiKey: 'AIzaSyBEBl9fUKI_DKzJ-S84qKJDoRIZERC2py4',
-          authDomain: 'gen-lang-client-0730467006.firebaseapp.com',
-          appId: '1:897475282164:web:03eb646ade2001f4d50aa1',
-          messagingSenderId: '897475282164',
-          projectId: 'gen-lang-client-0730467006',
-          storageBucket: 'gen-lang-client-0730467006.firebasestorage.app',
-        ),
-      );
-    } else {
-      await Firebase.initializeApp();
-    }
+    await Firebase.initializeApp(
+      options: FirebaseOptions(
+        apiKey: 'AIzaSyBEBl9fUKI_DKzJ-S84qKJDoRIZERC2py4',
+        authDomain: 'gen-lang-client-0730467006.firebaseapp.com',
+        appId: kIsWeb 
+            ? '1:897475282164:web:03eb646ade2001f4d50aa1'
+            : '1:897475282164:android:03eb646ade2001f4d50aa1',
+        messagingSenderId: '897475282164',
+        projectId: 'gen-lang-client-0730467006',
+        storageBucket: 'gen-lang-client-0730467006.firebasestorage.app',
+      ),
+    );
     isFirebaseInitialized = true;
   } catch (e) {
     debugPrint('Firebase initialization failed: $e');

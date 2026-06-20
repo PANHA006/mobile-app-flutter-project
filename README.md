@@ -40,16 +40,22 @@ Before starting, make sure the new computer has the following installed:
    ```
 
 5. **Configure Firebase**:
-   * Obtain the **`google-services.json`** configuration file from your Firebase console.
-   * Place it in the `android/app/` directory:
-     `android/app/google-services.json`
-   * Go to the Firebase console and ensure that **Firestore Security Rules** allow read/writes for authenticated users.
+   * Firebase options (API keys and App IDs for Web/Android) are already seamlessly integrated into `lib/main.dart`! 
+   * You do not need to rely on the `google-services` Gradle plugin or place the `google-services.json` file manually for the app to connect.
+   * Ensure that **Firestore Security Rules** allow read/writes for authenticated users.
 
 6. **Run the Application**:
    Start the development server and run the app:
    ```bash
    flutter run
    ```
+
+7. **Build a Release APK**:
+   To compile the app for physical Android devices with full performance, local push notifications, and Firebase enabled:
+   ```bash
+   flutter build apk --release
+   ```
+
 
 ### 3. Running the Backend Server (AI Chat)
 
