@@ -85,8 +85,8 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   final FocusNode _searchFocusNode = FocusNode();
   Timer? _debounceTimer;
 
-  // Selected level: 'beginner', 'intermediate', 'advanced'
-  String _selectedLevel = 'beginner';
+  // Selected level: derived from user profile
+  late String _selectedLevel;
   List<WordItem> _loadedWords = [];
   bool _isLoading = false;
 
@@ -123,6 +123,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   @override
   void initState() {
     super.initState();
+    _selectedLevel = (widget.user['level'] ?? 'Beginner').toLowerCase();
     _loadFavorites();
     
     // Check if there is an active tab requested from elsewhere (like home screen)
@@ -201,9 +202,9 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         }
         setState(() {
           _favoriteWords = decoded
-              .where((e) => e is Map)
+              .whereType<Map>()
               .map((e) {
-                final map = Map<String, dynamic>.from(e as Map);
+                final map = Map<String, dynamic>.from(e);
                 return WordItem.fromJson(map, map['level'] ?? '');
               })
               .toList();
@@ -275,7 +276,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           await docRef.delete();
         }
       }
-    } catch (_) {}
+    } catch (e) { debugPrint('Error toggling favorite in VocabularyScreen: $e'); }
   }
 
   Future<void> _clearAllFavorites() async {
@@ -305,7 +306,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         }
         await batch.commit();
       }
-    } catch (_) {}
+    } catch (e) { debugPrint('Error clearing all favorites: $e'); }
   }
 
   Future<void> _playAudio(String url) async {
@@ -317,7 +318,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
     try {
       await _audioPlayer.stop();
       await _audioPlayer.play(UrlSource(url));
-    } catch (_) {}
+    } catch (e) { debugPrint('Error playing audio in VocabularyScreen: $e'); }
   }
 
   // Fetch and enrich 25 daily words
@@ -352,7 +353,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               _isLoading = false;
             });
             return;
-          } catch (_) {}
+          } catch (e) { debugPrint('Error decoding cached words: $e'); }
         }
       }
 
@@ -601,7 +602,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               }
             }
           }
-        } catch (_) {}
+        } catch (e) { debugPrint('Error fetching dictionary data in search: $e'); }
       }
 
       if (phonetic.isEmpty) {
@@ -831,78 +832,30 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              _activeTab == 'Tenses'
-                                  ? 'Tenses 12 In English'
-                                  : _activeTab == 'favorites'
-                                      ? 'Favorites'
-                                      : _activeTab == 'nouns'
-                                          ? 'Nouns'
-                                          : _activeTab == 'pronouns'
-                                              ? 'Pronouns'
-                                              : _activeTab == 'verbs'
-                                                  ? 'Verbs'
-                                                  : _activeTab == 'adjectives'
-                                                      ? 'Adjectives'
-                                                      : _activeTab == 'Topics'
-                                                          ? 'Topics'
-                                                          : _activeTab,
-                              style: GoogleFonts.outfit(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: const Color(0xFF0F172A),
-                              ),
+                        Expanded(
+                          child: Text(
+                            _activeTab == 'Tenses'
+                                ? 'Tenses 12 In English'
+                                : _activeTab == 'favorites'
+                                    ? 'Favorites'
+                                    : _activeTab == 'nouns'
+                                        ? 'Nouns'
+                                        : _activeTab == 'pronouns'
+                                            ? 'Pronouns'
+                                            : _activeTab == 'verbs'
+                                                ? 'Verbs'
+                                                : _activeTab == 'adjectives'
+                                                    ? 'Adjectives'
+                                                    : _activeTab == 'Topics'
+                                                        ? 'Topics'
+                                                        : _activeTab,
+                            style: GoogleFonts.outfit(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF0F172A),
                             ),
-                            const SizedBox(width: 8),
-                            // Popup selector for user level (only show for Words)
-                            if (_activeTab == 'Words')
-                              PopupMenuButton<String>(
-                                initialValue: _selectedLevel,
-                                onSelected: (String level) {
-                                  _fetchWords(level);
-                                },
-                                itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-                                  const PopupMenuItem<String>(
-                                    value: 'beginner',
-                                    child: Text('Beginner'),
-                                  ),
-                                  const PopupMenuItem<String>(
-                                    value: 'intermediate',
-                                    child: Text('Intermediate'),
-                                  ),
-                                  const PopupMenuItem<String>(
-                                    value: 'advanced',
-                                    child: Text('Advanced'),
-                                  ),
-                                ],
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFFEEF0FF),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        _selectedLevel == 'beginner'
-                                            ? 'Beginner'
-                                            : _selectedLevel == 'intermediate'
-                                                ? 'Intermediate'
-                                                : 'Advanced',
-                                        style: GoogleFonts.inter(
-                                          fontSize: 11,
-                                          color: primaryColor,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      const Icon(Icons.arrow_drop_down, color: primaryColor, size: 14),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                          ],
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                         // Refresh Button (show for Words, nouns, pronouns, verbs, adjectives)
                         if (_activeTab == 'Words' ||
@@ -952,7 +905,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                 try {
                                   final box = Hive.box('vocabulary_box');
                                   box.put('user_profile', widget.user);
-                                } catch (_) {}
+                                } catch (e) { debugPrint('Error saving user profile on refresh: $e'); }
                                 
                                 final uid = widget.user['uid'];
                                 if (newLevel > oldLevel) {
@@ -969,7 +922,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                   FirebaseFirestore.instance.collection('users').doc(uid).update({
                                     catKey: catCount + 1,
                                     'refreshCount': currentCount + 1,
-                                  }).catchError((_) {});
+                                  }).catchError((e) { debugPrint('Error updating refresh count in Firestore: $e'); });
                                 }
                               }
                             },

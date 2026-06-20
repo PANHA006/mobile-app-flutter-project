@@ -131,7 +131,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
           try {
             Hive.box('vocabulary_box').delete('notifications_list');
-          } catch (_) {}
+          } catch (e) { debugPrint('Error clearing notifications on register: $e'); }
 
           addAppNotification(
             title: 'Welcome to English AI Study App! 👋',
@@ -174,11 +174,11 @@ class _AuthScreenState extends State<AuthScreen> {
             if (notifs != null) {
               try {
                 Hive.box('vocabulary_box').put('notifications_list', notifs);
-              } catch (_) {}
+              } catch (e) { debugPrint('Error saving notifications to Hive on login: $e'); }
             } else {
               try {
                 Hive.box('vocabulary_box').delete('notifications_list');
-              } catch (_) {}
+              } catch (e) { debugPrint('Error clearing notifications on login (no data): $e'); }
             }
 
             addAppNotification(
@@ -250,7 +250,7 @@ class _AuthScreenState extends State<AuthScreen> {
         final displayName = _mode == 'register' ? name : (email.split('@')[0]);
         try {
           Hive.box('vocabulary_box').delete('notifications_list');
-        } catch (_) {}
+        } catch (e) { debugPrint('Error clearing notifications in fallback mode: $e'); }
 
         addAppNotification(
           title: _mode == 'register' ? 'Welcome to English AI Study App! 👋' : 'Welcome back, $displayName! 🎉',

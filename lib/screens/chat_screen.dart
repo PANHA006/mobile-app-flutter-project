@@ -162,7 +162,7 @@ class _ChatScreenState extends State<ChatScreen> {
               'answer': reply,
               'createdAt': FieldValue.serverTimestamp(),
             });
-          } catch (_) {}
+          } catch (e) { debugPrint('Error saving chat history to Firestore: $e'); }
         }
       } else {
         setState(() {

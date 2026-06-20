@@ -168,7 +168,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             } else {
               timeStr = '${diff.inDays} days ago';
             }
-          } catch (_) {}
+          } catch (e) { debugPrint('Error parsing notification timestamp: $e'); }
         }
         
         return NotificationItem(
@@ -203,9 +203,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       if (uid != null && isFirebaseInitialized) {
         FirebaseFirestore.instance.collection('users').doc(uid).update({
           'notifications_list': list,
-        }).catchError((_) {});
+        }).catchError((e) { debugPrint('Error syncing notifications to Firestore: $e'); });
       }
-    } catch (_) {}
+    } catch (e) { debugPrint('Error marking all notifications as read: $e'); }
     setState(() {});
   }
 
@@ -213,8 +213,8 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   Widget build(BuildContext context) {
     final primaryColor = const Color(0xFF4F46E5);
     final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.12);
-    final _list = _getParsedNotifications();
-    final unreadCount = _list.where((n) => n.unread).length;
+    final notificationList = _getParsedNotifications();
+    final unreadCount = notificationList.where((n) => n.unread).length;
 
     return Scaffold(
       backgroundColor: const Color(0xFFF7F8FF),
@@ -310,9 +310,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(20),
-              itemCount: _list.length,
+              itemCount: notificationList.length,
               itemBuilder: (context, index) {
-                final n = _list[index];
+                final n = notificationList[index];
 
                 return Container(
                   margin: const EdgeInsets.only(bottom: 12),

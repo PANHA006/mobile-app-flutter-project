@@ -132,10 +132,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           'name': newName,
                           'level': selectedLevel,
                         });
-                      } catch (_) {}
+                      } catch (e) { debugPrint('Error updating profile in Firestore: $e'); }
                     }
-                    setState(() {});
-                    Navigator.of(context).pop();
+                    if (mounted) setState(() {});
+                    if (mounted) Navigator.of(context).pop();
                   }
                 },
                 child: Text('Save',
@@ -202,9 +202,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 .update({
                               'level': level,
                             });
-                          } catch (_) {}
+                          } catch (e) { debugPrint('Error updating level in Firestore: $e'); }
                         }
-                        setState(() {});
+                        if (mounted) setState(() {});
                         Future.delayed(const Duration(milliseconds: 200), () {
                           if (context.mounted) Navigator.of(context).pop();
                         });
@@ -258,7 +258,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     );
-                  }).toList(),
+                  }),
                 ],
               ),
             ),
@@ -336,20 +336,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  final List<AchievementItem> _achievements = const [
-    AchievementItem(label: 'First Word', icon: '📖', earned: true),
-    AchievementItem(label: 'Word Explorer', icon: '🔍', earned: true),
-    AchievementItem(label: 'Grammar Pro', icon: '✏️', earned: false),
-    AchievementItem(label: 'AI Chatter', icon: '🤖', earned: true),
-    AchievementItem(label: '50 Words', icon: '🏅', earned: true),
-    AchievementItem(label: '100 Words', icon: '🥇', earned: false),
-  ];
+
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = const Color(0xFF4F46E5);
-    final secondaryColor = const Color(0xFFEEF0FF);
-    final cardBorderColor = const Color(0xFF4F46E5).withOpacity(0.12);
     final firstName = widget.user['name']?.split(' ')[0] ?? 'Student';
     final email = widget.user['email'] ?? 'student@englishai.app';
 

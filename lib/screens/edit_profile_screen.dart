@@ -133,7 +133,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       try {
         final box = Hive.box('vocabulary_box');
         box.put('user_profile', widget.user);
-      } catch (_) {}
+      } catch (e) { debugPrint('Error saving user profile to Hive after photo upload: $e'); }
 
       widget.onUpdate();
     } catch (e) {
@@ -213,7 +213,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                               await FirebaseFirestore.instance.collection('users').doc(uid).update({
                                 'level': level,
                               });
-                            } catch (_) {}
+                            } catch (e) { debugPrint('Error updating level in Firestore from edit profile: $e'); }
                           }
                           setState(() {});
                           Future.delayed(const Duration(milliseconds: 200), () {
@@ -372,7 +372,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       try {
         final box = Hive.box('vocabulary_box');
         box.put('user_profile', widget.user);
-      } catch (_) {}
+      } catch (e) { debugPrint('Error saving user profile to Hive in edit profile: $e'); }
 
       // 4. Update Password if entered
       if (password.isNotEmpty) {

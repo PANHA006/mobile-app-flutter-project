@@ -128,7 +128,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
         FirebaseFirestore.instance.collection('users').doc(uid).update({
           'minsToday': int.parse(_user!['minsToday']!),
           'lastActiveDate': todayStr,
-        }).catchError((_) {});
+        }).catchError((e) { debugPrint('Error updating minsToday in Firestore: $e'); });
       }
 
       // Trigger notification if goal (30 mins) is met
@@ -140,7 +140,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
           uid: uid,
         );
       }
-    } catch (_) {}
+    } catch (e) { debugPrint('Error incrementing minutes today: $e'); }
   }
 
   Future<void> _checkSessionInBackground() async {
@@ -175,11 +175,11 @@ class _MainScreenControllerState extends State<MainScreenController> {
             if (notifs != null) {
               try {
                 Hive.box('vocabulary_box').put('notifications_list', notifs);
-              } catch (_) {}
+              } catch (e) { debugPrint('Error saving notifications to Hive: $e'); }
             }
             try {
               Hive.box('vocabulary_box').put('user_profile', _user);
-            } catch (_) {}
+            } catch (e) { debugPrint('Error saving user profile to Hive: $e'); }
             await _syncFavoritesFromFirestore(currentUser.uid);
             _targetScreen = 'app';
             return;
@@ -202,7 +202,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
           _targetScreen = 'app';
           return;
         }
-      } catch (_) {}
+      } catch (e) { debugPrint('Error loading saved user from Hive: $e'); }
       _targetScreen = 'auth';
     }
   }
@@ -258,7 +258,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
       List<dynamic> activeDaysList = [];
       try {
         activeDaysList = json.decode(activeDaysRaw);
-      } catch (_) {}
+      } catch (e) { debugPrint('Error decoding activeDays JSON: $e'); }
       
       if (!activeDaysList.contains(todayStr)) {
         activeDaysList.add(todayStr);
@@ -268,7 +268,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
         try {
           final box = Hive.box('vocabulary_box');
           box.put('user_profile', user);
-        } catch (_) {}
+        } catch (e) { debugPrint('Error saving user profile to Hive in _recordActiveDay: $e'); }
         
         final uid = user['uid'];
         final newDaysCount = activeDaysList.length;
@@ -286,10 +286,10 @@ class _MainScreenControllerState extends State<MainScreenController> {
           FirebaseFirestore.instance.collection('users').doc(uid).update({
             'activeDays': activeDaysList,
             'daysUsedCount': activeDaysList.length,
-          }).catchError((_) {});
+          }).catchError((e) { debugPrint('Error updating activeDays in Firestore: $e'); });
         }
       }
-    } catch (_) {}
+    } catch (e) { debugPrint('Error recording active day: $e'); }
   }
 
   void _onSplashDone() async {
@@ -308,7 +308,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
     _recordActiveDay(user);
     try {
       Hive.box('vocabulary_box').put('user_profile', user);
-    } catch (_) {}
+    } catch (e) { debugPrint('Error saving user profile to Hive in _onAuth: $e'); }
     final uid = user['uid'];
     if (uid != null) {
       _syncFavoritesFromFirestore(uid);
@@ -324,7 +324,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
     if (isFirebaseInitialized) {
       try {
         await FirebaseAuth.instance.signOut();
-      } catch (_) {}
+      } catch (e) { debugPrint('Error signing out from Firebase: $e'); }
     }
     try {
       final box = Hive.box('vocabulary_box');
@@ -332,7 +332,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
       await box.delete('favorites_list');
       await box.delete('favorites_data');
       await box.delete('notifications_list');
-    } catch (_) {}
+    } catch (e) { debugPrint('Error clearing Hive data on logout: $e'); }
     setState(() {
       _user = null;
       _screen = 'auth';

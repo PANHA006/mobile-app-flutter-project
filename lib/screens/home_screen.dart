@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen>
           _homeFavorites.addAll(favs.cast<String>());
         }
       });
-    } catch (_) {}
+    } catch (e) { debugPrint('Error loading favorites in HomeScreen: $e'); }
   }
 
   @override
@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen>
                 }
               }
             }
-          } catch (_) {}
+          } catch (e) { debugPrint('Error fetching dictionary data: $e'); }
         }
 
         if (englishWordForDict.trim().toLowerCase() == 'anime') {
@@ -222,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen>
     try {
       await _audioPlayer.stop();
       await _audioPlayer.play(UrlSource(url));
-    } catch (_) {}
+    } catch (e) { debugPrint('Error playing audio: $e'); }
   }
 
   Future<void> _toggleFav(String word) async {
@@ -297,7 +297,7 @@ class _HomeScreenState extends State<HomeScreen>
           await docRef.delete();
         }
       }
-    } catch (_) {}
+    } catch (e) { debugPrint('Error toggling favorite in HomeScreen: $e'); }
   }
 
   @override

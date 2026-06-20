@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -36,7 +36,7 @@ void addAppNotification({
     if (uid != null && isFirebaseInitialized) {
       FirebaseFirestore.instance.collection('users').doc(uid).update({
         'notifications_list': list,
-      }).catchError((_) {});
+      }).catchError((e) { debugPrint('Error syncing notification to Firestore: $e'); });
     }
-  } catch (_) {}
+  } catch (e) { debugPrint('Error adding app notification: $e'); }
 }
