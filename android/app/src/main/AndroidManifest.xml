@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:label="english_ai_study_app"
+        android:label="English AI Study"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon"
         android:usesCleartextTraffic="true">

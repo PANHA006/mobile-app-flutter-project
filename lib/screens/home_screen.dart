@@ -15,11 +15,13 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 class HomeScreen extends StatefulWidget {
   final Map<String, String> user;
   final Function(int) onNavigate;
+  final VoidCallback? onOpenDrawer;
 
   const HomeScreen({
     super.key,
     required this.user,
     required this.onNavigate,
+    this.onOpenDrawer,
   });
 
   @override
@@ -418,24 +420,27 @@ class _HomeScreenState extends State<HomeScreen>
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Row(
             children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Icon(
-                    Icons.school,
-                    size: 44,
-                    color: primaryColor,
-                  ),
-                  Positioned(
-                    top: 0,
-                    right: 0,
-                    child: Icon(
-                      Icons.auto_awesome,
-                      size: 15,
-                      color: Colors.amber[600],
+              GestureDetector(
+                onTap: widget.onOpenDrawer,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Icon(
+                      Icons.school,
+                      size: 44,
+                      color: primaryColor,
                     ),
-                  ),
-                ],
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Icon(
+                        Icons.auto_awesome,
+                        size: 15,
+                        color: Colors.amber[600],
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(width: 14),
               Column(

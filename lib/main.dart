@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'dart:convert';
+import 'dart:io';
 import 'screens/splash_screen.dart';
 import 'screens/auth_screen.dart';
 import 'screens/home_screen.dart';
@@ -82,6 +83,7 @@ class _MainScreenControllerState extends State<MainScreenController> {
   Future<void>? _initSessionFuture;
   String _targetScreen = 'auth';
   Timer? _usageTimer;
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -356,14 +358,35 @@ class _MainScreenControllerState extends State<MainScreenController> {
 
     // Main App with Tabs
     final screens = [
-      HomeScreen(user: _user!, onNavigate: _navigateToTab),
-      VocabularyScreen(user: _user!, onNavigate: _navigateToTab),
-      ChatScreen(user: _user!),
-      NotificationsScreen(user: _user!, onNavigate: _navigateToTab),
-      ProfileScreen(user: _user!, onLogout: _onLogout),
+      HomeScreen(
+        user: _user!,
+        onNavigate: _navigateToTab,
+        onOpenDrawer: () => _scaffoldKey.currentState?.openDrawer(),
+      ),
+      VocabularyScreen(
+        user: _user!,
+        onNavigate: _navigateToTab,
+        onOpenDrawer: () => _scaffoldKey.currentState?.openDrawer(),
+      ),
+      ChatScreen(
+        user: _user!,
+        onOpenDrawer: () => _scaffoldKey.currentState?.openDrawer(),
+      ),
+      NotificationsScreen(
+        user: _user!,
+        onNavigate: _navigateToTab,
+        onOpenDrawer: () => _scaffoldKey.currentState?.openDrawer(),
+      ),
+      ProfileScreen(
+        user: _user!,
+        onLogout: _onLogout,
+        onOpenDrawer: () => _scaffoldKey.currentState?.openDrawer(),
+      ),
     ];
 
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: _buildDrawer(),
       body: IndexedStack(
         index: _currentTabIndex,
         children: screens,
@@ -446,6 +469,253 @@ class _MainScreenControllerState extends State<MainScreenController> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildDrawer() {
+    final primaryColor = const Color(0xFF4F46E5);
+    final user = _user ?? {};
+    final firstName = user['name']?.split(' ')[0] ?? 'Student';
+    final email = user['email'] ?? '';
+    
+    String? photoUrl = user['photoUrl'];
+    if (photoUrl != null) {
+      if (photoUrl.contains('localhost:3000')) {
+        photoUrl = photoUrl.replaceAll('http://localhost:3000', 'https://english-ai-study-backend.onrender.com');
+      } else if (photoUrl.contains('10.0.2.2:3000')) {
+        photoUrl = photoUrl.replaceAll('http://10.0.2.2:3000', 'https://english-ai-study-backend.onrender.com');
+      }
+      if (photoUrl.startsWith('http://english-ai-study-backend.onrender.com')) {
+        photoUrl = photoUrl.replaceFirst('http://', 'https://');
+      }
+    }
+
+    return Drawer(
+      backgroundColor: Colors.white,
+      child: Column(
+        children: [
+          UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              color: primaryColor,
+              image: DecorationImage(
+                image: NetworkImage('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000&auto=format&fit=crop'),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.darken),
+              ),
+            ),
+            accountName: Text(
+              user['name'] ?? 'Student',
+              style: GoogleFonts.outfit(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            accountEmail: Text(
+              email,
+              style: GoogleFonts.inter(
+                fontSize: 14,
+                color: Colors.white.withOpacity(0.9),
+              ),
+            ),
+            currentAccountPicture: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white, width: 2),
+                color: const Color(0xFFEFF6FF),
+              ),
+              child: ClipOval(
+                child: (photoUrl != null && photoUrl.isNotEmpty && !photoUrl.startsWith('blob:'))
+                    ? (kIsWeb || photoUrl.startsWith('http') || photoUrl.startsWith('https')
+                        ? Image.network(
+                            photoUrl,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) => _buildFallbackAvatar(firstName, primaryColor),
+                          )
+                        : Image.file(
+                            File(photoUrl),
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) => _buildFallbackAvatar(firstName, primaryColor),
+                          ))
+                    : _buildFallbackAvatar(firstName, primaryColor),
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              physics: const BouncingScrollPhysics(),
+              children: [
+                _buildDrawerItem(
+                  icon: Icons.home_outlined,
+                  title: 'Home',
+                  onTap: () {
+                    Navigator.pop(context);
+                    _navigateToTab(0);
+                  },
+                ),
+                _buildDrawerItem(
+                  icon: Icons.book_outlined,
+                  title: 'Vocabulary',
+                  onTap: () {
+                    _scaffoldKey.currentState?.closeDrawer();
+                    _navigateToTab(1);
+                  },
+                ),
+                _buildDrawerItem(
+                  icon: Icons.chat_bubble_outline,
+                  title: 'AI Chat',
+                  onTap: () {
+                    _scaffoldKey.currentState?.closeDrawer();
+                    _navigateToTab(2);
+                  },
+                ),
+                _buildDrawerItem(
+                  icon: Icons.notifications_outlined,
+                  title: 'Alerts',
+                  onTap: () {
+                    _scaffoldKey.currentState?.closeDrawer();
+                    _navigateToTab(3);
+                  },
+                ),
+                _buildDrawerItem(
+                  icon: Icons.person_outline,
+                  title: 'Profile',
+                  onTap: () {
+                    _scaffoldKey.currentState?.closeDrawer();
+                    _navigateToTab(4);
+                  },
+                ),
+                const Divider(),
+                _buildDrawerItem(
+                  icon: Icons.settings_outlined,
+                  title: 'Settings',
+                  onTap: () {
+                    _scaffoldKey.currentState?.closeDrawer();
+                    _navigateToTab(4); // Navigates to profile for now
+                  },
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(top: BorderSide(color: Colors.grey.shade200)),
+            ),
+            child: SafeArea(
+              top: false,
+              child: InkWell(
+                onTap: () {
+                  _scaffoldKey.currentState?.closeDrawer(); // Close the drawer
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext dialogContext) {
+                      return AlertDialog(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        title: Text(
+                          'Sign Out',
+                          style: GoogleFonts.outfit(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        content: const Text(
+                          'Are you sure you want to sign out of your account?',
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.of(dialogContext).pop(),
+                            child: Text(
+                              'Cancel',
+                              style: GoogleFonts.inter(
+                                color: const Color(0xFF64748B),
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(dialogContext).pop();
+                              _onLogout();
+                            },
+                            child: Text(
+                              'Sign Out',
+                              style: GoogleFonts.inter(
+                                color: const Color(0xFFDC2626),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFEF2F2),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.logout, color: Color(0xFFDC2626), size: 20),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Sign Out',
+                        style: GoogleFonts.outfit(
+                          color: const Color(0xFFDC2626),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFallbackAvatar(String firstName, Color color) {
+    return Center(
+      child: Text(
+        firstName.isNotEmpty ? firstName[0].toUpperCase() : 'U',
+        style: GoogleFonts.outfit(
+          color: color,
+          fontWeight: FontWeight.bold,
+          fontSize: 28,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDrawerItem({
+    required IconData icon,
+    required String title,
+    required VoidCallback onTap,
+  }) {
+    return ListTile(
+      leading: Icon(icon, color: const Color(0xFF6B6B8A)),
+      title: Text(
+        title,
+        style: GoogleFonts.inter(
+          fontSize: 15,
+          fontWeight: FontWeight.w500,
+          color: const Color(0xFF0F172A),
+        ),
+      ),
+      onTap: onTap,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 24),
+      hoverColor: const Color(0xFF4F46E5).withOpacity(0.05),
     );
   }
 }

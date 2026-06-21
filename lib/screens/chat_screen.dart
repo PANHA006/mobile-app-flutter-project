@@ -40,7 +40,9 @@ const String GEMINI_API_KEY = 'GEMINI_API_KEY';
 
 class ChatScreen extends StatefulWidget {
   final Map<String, String> user;
-  const ChatScreen({super.key, required this.user});
+  final VoidCallback? onOpenDrawer;
+
+  const ChatScreen({super.key, required this.user, this.onOpenDrawer});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -247,15 +249,18 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
         title: Row(
           children: [
-            Container(
-              width: 36,
-              height: 36,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFFEEF0FF),
+            GestureDetector(
+              onTap: widget.onOpenDrawer,
+              child: Container(
+                width: 36,
+                height: 36,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: const Color(0xFFEEF0FF),
+                ),
+                child: const Icon(Icons.auto_awesome,
+                    color: Color(0xFF4F46E5), size: 18),
               ),
-              child: const Icon(Icons.auto_awesome,
-                  color: Color(0xFF4F46E5), size: 18),
             ),
             const SizedBox(width: 12),
             Column(

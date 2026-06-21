@@ -68,11 +68,13 @@ class NumberGroup {
 class VocabularyScreen extends StatefulWidget {
   final Map<String, String> user;
   final Function(int) onNavigate;
+  final VoidCallback? onOpenDrawer;
 
   const VocabularyScreen({
     super.key,
     required this.user,
     required this.onNavigate,
+    this.onOpenDrawer,
   });
 
   @override
@@ -655,15 +657,18 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         ),
         title: Row(
           children: [
-            Container(
-              width: 36,
-              height: 36,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: const Color(0xFFEEF0FF),
+            GestureDetector(
+              onTap: widget.onOpenDrawer,
+              child: Container(
+                width: 36,
+                height: 36,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: const Color(0xFFEEF0FF),
+                ),
+                child: const Icon(Icons.book,
+                    color: Color(0xFF4F46E5), size: 18),
               ),
-              child: const Icon(Icons.book,
-                  color: Color(0xFF4F46E5), size: 18),
             ),
             const SizedBox(width: 12),
             Column(

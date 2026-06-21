@@ -22,11 +22,13 @@ class AchievementItem {
 class ProfileScreen extends StatefulWidget {
   final Map<String, String> user;
   final VoidCallback onLogout;
+  final VoidCallback? onOpenDrawer;
 
   const ProfileScreen({
     super.key,
     required this.user,
     required this.onLogout,
+    this.onOpenDrawer,
   });
 
   @override
@@ -362,6 +364,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         elevation: 0,
         toolbarHeight: 80,
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.menu, color: Color(0xFF4F46E5)),
+          onPressed: widget.onOpenDrawer,
+        ),
         title: Text(
           'Profile',
           style: GoogleFonts.outfit(
